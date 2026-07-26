@@ -449,62 +449,123 @@ a {
   border-top: 1px solid var(--border);
 }
 
-.process-ladder {
+.process-editorial {
   position: relative;
-  width: min(100%, 1040px);
-  margin: 3.5rem auto 0;
+  width: min(100%, 1180px);
+  margin: 2.75rem auto 0;
+  display: grid;
+  gap: clamp(5rem, 7vw, 6.5rem);
 }
 
-.process-ladder::before {
+.process-editorial::before {
   content: "";
   position: absolute;
   top: 24px;
   bottom: 24px;
-  left: 76px;
-  width: 2px;
-  background: var(--brand-blue);
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(42, 104, 225, 0.35) 5%,
+    rgba(42, 104, 225, 0.35) 95%,
+    transparent
+  );
+  transform: translateX(-50%);
 }
 
-.process-row {
+.editorial-step {
   position: relative;
-  min-height: 94px;
   display: grid;
-  grid-template-columns: 54px 44px 150px 1fr;
-  gap: 0.75rem;
-  align-items: start;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(3rem, 7vw, 6.5rem);
+  align-items: center;
 }
 
-.process-number {
-  padding-top: 0.33rem;
+.editorial-step::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--background);
+  border-radius: 50%;
+  background: var(--brand-blue);
+  box-shadow: 0 0 0 1px rgba(42, 104, 225, 0.5);
+  transform: translate(-50%, -50%);
+}
+
+.editorial-step-reverse .process-icon-tile {
+  grid-column: 2;
+}
+
+.editorial-step-reverse .editorial-content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.editorial-content {
+  max-width: 470px;
+}
+
+.editorial-number {
+  display: block;
   color: var(--brand-blue-hover);
   font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
 }
 
-.process-marker {
-  position: relative;
-  z-index: 1;
-  width: 14px;
-  height: 14px;
-  margin: 0.3rem auto 0;
-  border: 3px solid var(--background);
-  border-radius: 50%;
-  background: var(--brand-blue);
-  box-shadow: 0 0 0 1px var(--brand-blue);
-}
-
-.process-row h3 {
-  margin: 0;
-  font-size: 1.05rem;
+.editorial-content h3 {
+  margin: 0.45rem 0 0;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 700;
+  letter-spacing: -0.035em;
 }
 
-.process-row p {
+.editorial-content > i {
+  width: 42px;
+  height: 2px;
+  margin: 1rem 0;
+  display: block;
+  background: var(--brand-blue);
+}
+
+.editorial-content p {
   margin: 0;
+  max-width: 460px;
   color: var(--text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.62;
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.process-icon-tile {
+  aspect-ratio: 1;
+  width: min(100%, 300px);
+  margin-inline: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 28px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(59, 120, 238, 0.16),
+      transparent 58%
+    ),
+    #0b1c3a;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+.process-icon-tile svg {
+  width: clamp(72px, 8vw, 110px);
+  height: clamp(72px, 8vw, 110px);
+  color: #2a68e1;
+  stroke-width: 1.5;
 }
 
 .technology-block {
@@ -927,6 +988,40 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .process-editorial {
+    gap: 3.75rem;
+    padding-left: 1.5rem;
+  }
+
+  .process-editorial::before {
+    left: 5px;
+    transform: none;
+  }
+
+  .editorial-step,
+  .editorial-step-reverse {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .editorial-step::after {
+    top: 12px;
+    left: -19px;
+  }
+
+  .editorial-step .editorial-content,
+  .editorial-step-reverse .editorial-content {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: 620px;
+  }
+
+  .editorial-step .process-icon-tile,
+  .editorial-step-reverse .process-icon-tile {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
   .about-layout {
     gap: 2.5rem;
   }
@@ -1002,27 +1097,8 @@ a {
     min-height: 220px;
   }
 
-  .process-ladder::before {
-    left: 44px;
-  }
-
-  .process-row {
-    min-height: 142px;
-    grid-template-columns: 28px 32px 1fr;
-    gap: 0.5rem;
-  }
-
-  .process-number {
-    padding-top: 0.25rem;
-  }
-
-  .process-row h3 {
-    grid-column: 3;
-  }
-
-  .process-row p {
-    grid-column: 3;
-    margin-top: -0.25rem;
+  .process-editorial {
+    gap: 3rem;
   }
 
   .contact-details,
