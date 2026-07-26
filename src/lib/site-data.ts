@@ -1,210 +1,143 @@
+import type { IconType } from "react-icons";
+import {
+  SiDjango,
+  SiExpo,
+  SiGit,
+  SiGithub,
+  SiGo,
+  SiNextdotjs,
+  SiPostgresql,
+  SiPython,
+  SiReact,
+  SiResend,
+  SiTypescript,
+} from "react-icons/si";
 import {
   Blocks,
-  Braces,
-  Code2,
   Globe2,
-  LifeBuoy,
-  ListChecks,
   Megaphone,
-  MessagesSquare,
   Palette,
   PanelsTopLeft,
-  PenTool,
-  RefreshCcw,
-  Rocket,
-  Search,
-  ShieldCheck,
   Smartphone,
-  Target,
+  type LucideIcon,
 } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
 
 export type NavigationItem = { label: string; href: `#${string}` };
 export type Service = {
-  number: string;
   title: string;
   description: string;
-  capabilities: readonly string[];
   icon: LucideIcon;
 };
-export type ProcessStage = {
-  number: string;
+export type ProcessStep = {
   title: string;
   description: string;
-  icon: LucideIcon;
+};
+export type Technology = {
+  name: string;
+  icon?: IconType;
+  textMark?: string;
 };
 
 export const navigation = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Technology", href: "#technology" },
-  { label: "Process", href: "#process" },
+  { label: "How We Work", href: "#how-we-work" },
   { label: "Contact", href: "#contact" },
 ] as const satisfies readonly NavigationItem[];
 
 export const services = [
   {
-    number: "01",
     title: "Custom Software Development",
     description:
-      "Business-focused software designed around your workflows, operations, and long-term goals.",
-    capabilities: [
-      "Internal systems",
-      "Workflow automation",
-      "Business dashboards",
-      "API integrations",
-      "Data-driven tools",
-      "AI-assisted functionality",
-    ],
+      "Purpose-built software that improves workflows, operations, reporting, and internal business processes.",
     icon: Blocks,
   },
   {
-    number: "02",
     title: "Web Application Development",
     description:
-      "Secure, responsive, and scalable web platforms that turn complex processes into clear digital experiences.",
-    capabilities: [
-      "SaaS platforms",
-      "Customer portals",
-      "Booking systems",
-      "Management apps",
-      "Secure interfaces",
-    ],
+      "Secure and scalable web applications designed around users, business requirements, and long-term growth.",
     icon: PanelsTopLeft,
   },
   {
-    number: "03",
     title: "Mobile Application Development",
     description:
-      "Cross-platform mobile experiences built for customers, teams, and business-critical workflows.",
-    capabilities: [
-      "Expo",
-      "React Native",
-      "API-connected experiences",
-      "Push workflows",
-      "Mobile-first interfaces",
-    ],
+      "Cross-platform mobile applications built with modern technologies for customers, teams, and business workflows.",
     icon: Smartphone,
   },
   {
-    number: "04",
     title: "Modern Website Development",
     description:
-      "Custom-designed websites engineered around your brand, audience, content, and business goals.",
-    capabilities: [
-      "Custom interface design",
-      "Next.js development",
-      "Responsive implementation",
-      "SEO-ready architecture",
-      "Performance",
-    ],
+      "Fast, responsive, and custom-designed websites that reflect the business and support its goals.",
     icon: Globe2,
   },
   {
-    number: "05",
     title: "Digital Marketing",
     description:
-      "Connected campaigns that help businesses improve visibility, reach the right audience, and create meaningful engagement.",
-    capabilities: [
-      "Social media",
-      "SEO",
-      "Content marketing",
-      "Paid advertising",
-      "Campaign reporting",
-    ],
+      "Practical digital strategies that improve visibility, audience reach, engagement, and measurable online growth.",
     icon: Megaphone,
   },
   {
-    number: "06",
     title: "Digital Branding",
     description:
-      "Clear and consistent digital identities that help businesses look credible, recognizable, and ready to grow.",
-    capabilities: [
-      "Brand strategy",
-      "Visual identity",
-      "Logo systems",
-      "Social identity",
-      "Digital guidelines",
-    ],
+      "Professional brand systems, visual identities, and digital assets that create clarity and consistency.",
     icon: Palette,
   },
 ] as const satisfies readonly Service[];
 
-export const processStages = [
+export const processSteps = [
   {
-    number: "01",
     title: "Discover",
     description:
-      "We learn about the business, audience, challenges, existing systems, and desired outcomes.",
-    icon: Search,
+      "We understand the business, users, objectives, challenges, and project context.",
   },
   {
-    number: "02",
-    title: "Define",
+    title: "Plan",
     description:
-      "We translate the opportunity into clear requirements, priorities, scope, architecture, and delivery milestones.",
-    icon: ListChecks,
+      "We define scope, priorities, requirements, timeline, and technical direction.",
   },
   {
-    number: "03",
     title: "Design",
     description:
-      "We shape user journeys, wireframes, interface systems, and interactive experiences before full production.",
-    icon: PenTool,
+      "We create the structure, user experience, visual direction, and important interactions.",
   },
   {
-    number: "04",
     title: "Develop",
     description:
-      "We build in manageable iterations, sharing progress and collecting feedback throughout the process.",
-    icon: Code2,
+      "We build the solution using appropriate, maintainable, and scalable technologies.",
   },
   {
-    number: "05",
     title: "Test",
     description:
-      "We validate functionality, responsiveness, accessibility, performance, reliability, and user experience.",
-    icon: ShieldCheck,
+      "We review functionality, responsiveness, accessibility, usability, and performance.",
   },
   {
-    number: "06",
     title: "Launch",
     description:
-      "We prepare the environment, deploy the solution, complete final checks, and make it ready for real users.",
-    icon: Rocket,
+      "We prepare the production environment and release the solution carefully.",
   },
   {
-    number: "07",
     title: "Improve",
     description:
-      "We support, monitor, refine, and extend the solution as needs and opportunities evolve.",
-    icon: RefreshCcw,
+      "We use feedback and future requirements to continue improving the product.",
   },
-] as const satisfies readonly ProcessStage[];
+] as const satisfies readonly ProcessStep[];
 
-export const whyItems = [
-  {
-    title: "Solutions shaped around the business",
-    text: "We begin by understanding what the business needs to achieve, not with a template or preferred answer.",
-    icon: Target,
-  },
-  {
-    title: "Engineering with purpose",
-    text: "Technology choices are guided by reliability, maintainability, performance, and the value they create.",
-    icon: Braces,
-  },
-  {
-    title: "Clear, collaborative delivery",
-    text: "Progress, priorities, and decisions remain visible throughout the work.",
-    icon: MessagesSquare,
-  },
-  {
-    title: "Support beyond launch",
-    text: "Digital products and presence keep evolving, and our approach is designed with that reality in mind.",
-    icon: LifeBuoy,
-  },
-] as const;
+export const technologies: readonly Technology[] = [
+  { name: "Next.js", icon: SiNextdotjs },
+  { name: "React", icon: SiReact },
+  { name: "TypeScript", icon: SiTypescript },
+  { name: "React Native", icon: SiReact },
+  { name: "Expo", icon: SiExpo },
+  { name: "Python", icon: SiPython },
+  { name: "Django", icon: SiDjango },
+  { name: "Go", icon: SiGo },
+  { name: "Gin", textMark: "Gi" },
+  { name: "PostgreSQL", icon: SiPostgresql },
+  { name: "Git", icon: SiGit },
+  { name: "GitHub", icon: SiGithub },
+  { name: "Resend", icon: SiResend },
+];
 
 export const socialLinks = {
   instagram: "https://www.instagram.com/grosbyte.tech/",

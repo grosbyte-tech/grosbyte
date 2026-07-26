@@ -1,139 +1,70 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import {
-  ArrowDown,
-  Check,
-  Code2,
-  Megaphone,
-  Palette,
-  Smartphone,
-  Sparkles,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowRight, MapPin } from "lucide-react";
+
+const nodes = [
+  { label: "Software", className: "node-software" },
+  { label: "Web", className: "node-web" },
+  { label: "Mobile", className: "node-mobile" },
+  { label: "Brand", className: "node-brand" },
+  { label: "Growth", className: "node-growth" },
+];
 
 export function HeroSection() {
-  const reduce = useReducedMotion();
-  const reveal = (delay: number) => ({
-    initial: reduce ? false : { opacity: 0, y: 24 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.75, delay, ease: [0.22, 1, 0.36, 1] as const },
-  });
+  const reduceMotion = useReducedMotion();
+  const transition = { duration: 0.55, ease: [0.22, 1, 0.36, 1] as const };
+
   return (
-    <section id="home" className="hero">
-      <div className="hero-grid" aria-hidden="true" />
-      <motion.div
-        className="hero-glow"
-        aria-hidden="true"
-        animate={
-          reduce
-            ? undefined
-            : { opacity: [0.55, 0.9, 0.55], scale: [0.96, 1.04, 0.96] }
-        }
-        transition={{ duration: 7, repeat: Infinity }}
-      />
-      <div className="container hero-content">
-        <motion.p className="eyebrow hero-eyebrow" {...reveal(0.1)}>
-          <Sparkles size={15} aria-hidden="true" /> Innovating Ideas. Empowering
-          Businesses.
-        </motion.p>
-        <motion.h1 {...reveal(0.2)}>
-          We build digital experiences that move businesses forward.
-        </motion.h1>
-        <motion.p className="hero-copy" {...reveal(0.3)}>
-          Grosbyte Technologies turns ideas and business challenges into
-          reliable software, modern websites, scalable applications, stronger
-          digital brands, and meaningful online growth.
-        </motion.p>
-        <motion.div className="hero-actions" {...reveal(0.4)}>
-          <Button href="#contact" arrow>
-            Start a Project
-          </Button>
-          <Button href="#services" variant="dark">
-            Explore Our Services
-          </Button>
-        </motion.div>
-        <motion.div className="hero-showcase" {...reveal(0.52)}>
-          <div className="interface-browser">
-            <div className="browser-bar">
-              <div className="browser-dots">
-                <i />
-                <i />
-                <i />
-              </div>
-              <span>Digital product workspace</span>
-              <span className="status">
-                <i /> Product ready
-              </span>
-            </div>
-            <div className="browser-layout">
-              <aside className="mock-sidebar">
-                <div className="mock-mark">G</div>
-                {["Discover", "Plan", "Design", "Build", "Launch"].map(
-                  (item, index) => (
-                    <span key={item} className={index === 2 ? "selected" : ""}>
-                      {item}
-                    </span>
-                  ),
-                )}
-              </aside>
-              <div className="mock-canvas">
-                <div className="mock-heading">
-                  <span>Experience system</span>
-                  <button type="button">Preview</button>
-                </div>
-                <div className="mock-hero-block">
-                  <span>Built around your business</span>
-                  <div className="mock-lines">
-                    <i />
-                    <i />
-                  </div>
-                </div>
-                <div className="mock-card-row">
-                  {[
-                    [Code2, "Web platform"],
-                    [Smartphone, "Mobile experience"],
-                    [Megaphone, "Campaign planned"],
-                  ].map(([Icon, label]) => {
-                    const ItemIcon = Icon as typeof Code2;
-                    return (
-                      <div className="mock-card" key={label as string}>
-                        <ItemIcon size={19} />
-                        <span>{label as string}</span>
-                        <Check size={14} />
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
+    <section className="hero" id="home">
+      <div className="container hero-layout">
+        <motion.div
+          className="hero-content"
+          initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={transition}
+        >
+          <p className="eyebrow">Technology, design, and digital growth</p>
+          <h1>Digital solutions built around your business.</h1>
+          <p className="hero-copy">
+            Grosbyte Technologies creates modern software, web and mobile
+            applications, custom websites, digital brands, and growth strategies
+            that help businesses move forward.
+          </p>
+          <div className="hero-actions">
+            <a className="button button-primary" href="#contact">
+              Start a Project <ArrowRight aria-hidden="true" />
+            </a>
+            <a className="button button-secondary" href="#services">
+              Explore Services
+            </a>
           </div>
-          <motion.div
-            className="floating-card floating-card--left"
-            animate={reduce ? undefined : { y: [0, -7, 0] }}
-            transition={{ duration: 5, repeat: Infinity }}
-          >
-            <Palette size={19} />
-            <div>
-              <small>Brand system</small>
-              <strong>Aligned &amp; consistent</strong>
-            </div>
-          </motion.div>
-          <motion.div
-            className="floating-card floating-card--right"
-            animate={reduce ? undefined : { y: [0, 6, 0] }}
-            transition={{ duration: 5.8, repeat: Infinity }}
-          >
-            <Sparkles size={19} />
-            <div>
-              <small>Smart workflow</small>
-              <strong>AI where useful</strong>
-            </div>
-          </motion.div>
+          <p className="hero-location">
+            <MapPin aria-hidden="true" />
+            Based in Kathmandu, working with businesses remotely.
+          </p>
         </motion.div>
-        <a className="explore-cue" href="#about">
-          <ArrowDown size={16} aria-hidden="true" /> Explore
-        </a>
+        <motion.div
+          className="hero-visual"
+          initial={reduceMotion ? false : { opacity: 0, x: 18 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ ...transition, delay: 0.12 }}
+          aria-label="Connected services: software, web, mobile, brand, and growth"
+        >
+          <svg viewBox="0 0 520 430" aria-hidden="true">
+            <path d="M260 215 L125 95 M260 215 L395 95 M260 215 L100 305 M260 215 L420 305" />
+          </svg>
+          <div className="visual-core">
+            <span>Grosbyte</span>
+            <small>Connected thinking</small>
+          </div>
+          {nodes.map((node) => (
+            <div className={`visual-node ${node.className}`} key={node.label}>
+              <i aria-hidden="true" />
+              <span>{node.label}</span>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

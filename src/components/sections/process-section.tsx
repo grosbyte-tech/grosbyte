@@ -1,122 +1,75 @@
 "use client";
 
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
-import { useState } from "react";
-import { processStages } from "@/lib/site-data";
-import { SectionHeading } from "@/components/ui/section-heading";
+import { motion, useReducedMotion } from "framer-motion";
+import { processSteps, technologies } from "@/lib/site-data";
 
 export function ProcessSection() {
-  const [active, setActive] = useState(0);
-  const reduce = useReducedMotion();
-  const stage = processStages[active];
-  const Icon = stage.icon;
+  const reduceMotion = useReducedMotion();
+
   return (
-    <section id="process" className="section process-section">
+    <section className="section process-section" id="how-we-work">
       <div className="container">
-        <SectionHeading
-          eyebrow="How we work"
-          title="Clear steps. Flexible collaboration. Better outcomes."
-          text="We use an agile, iterative process that keeps priorities visible, communication open, and progress aligned with the purpose of the project."
-          centered
-        />
-        <div className="process-desktop">
-          <div className="process-line">
-            <motion.i
-              initial={false}
-              animate={{ scaleX: active / (processStages.length - 1) }}
-              transition={reduce ? { duration: 0 } : { duration: 0.45 }}
-            />
+        <motion.div
+          className="section-heading"
+          initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+        >
+          <p className="eyebrow">How We Work</p>
+          <h2>A clear process from idea to improvement.</h2>
+          <p>
+            We keep every project structured, collaborative, and focused on the
+            result the business needs.
+          </p>
+        </motion.div>
+        <div className="process-timeline">
+          <motion.div
+            className="process-progress"
+            initial={reduceMotion ? false : { scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: reduceMotion ? 0 : 0.85 }}
+          />
+          {processSteps.map((step, index) => (
+            <motion.article
+              className="process-step"
+              key={step.title}
+              initial={reduceMotion ? false : { opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: reduceMotion ? 0 : index * 0.05 }}
+            >
+              <span className="step-point">{index + 1}</span>
+              <h3>{step.title}</h3>
+              <p>{step.description}</p>
+            </motion.article>
+          ))}
+        </div>
+        <div className="technology-block">
+          <div className="technology-heading">
+            <h3>Technologies we work with</h3>
+            <p>
+              We choose tools according to the product, users, scale,
+              maintainability, and long-term needs.
+            </p>
           </div>
-          <div
-            className="process-buttons"
-            role="tablist"
-            aria-label="Project lifecycle stages"
-          >
-            {processStages.map((item, index) => {
-              const StageIcon = item.icon;
+          <div className="technology-grid">
+            {technologies.map((technology) => {
+              const Icon = technology.icon;
               return (
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={index === active}
-                  aria-controls="process-panel"
-                  id={`process-tab-${index}`}
-                  key={item.title}
-                  className={index === active ? "active" : ""}
-                  onClick={() => setActive(index)}
-                >
-                  <span>
-                    <StageIcon aria-hidden="true" />
-                  </span>
-                  <small>{item.number}</small>
-                  <strong>{item.title}</strong>
-                </button>
+                <div className="technology-item" key={technology.name}>
+                  {Icon ? (
+                    <Icon aria-hidden="true" />
+                  ) : (
+                    <span className="technology-mark" aria-hidden="true">
+                      {technology.textMark}
+                    </span>
+                  )}
+                  <span>{technology.name}</span>
+                </div>
               );
             })}
           </div>
-          <div
-            id="process-panel"
-            className="process-panel"
-            role="tabpanel"
-            aria-labelledby={`process-tab-${active}`}
-          >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={stage.title}
-                initial={reduce ? false : { opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-              >
-                <span className="process-panel-icon">
-                  <Icon aria-hidden="true" />
-                </span>
-                <div>
-                  <small>{stage.number} · Our process</small>
-                  <h3>{stage.title}</h3>
-                  <p>{stage.description}</p>
-                </div>
-                <div className="process-visual">
-                  <i />
-                  <i />
-                  <i />
-                  <span>Aligned for the next step</span>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </div>
-        <div className="process-mobile">
-          {processStages.map((item, index) => {
-            const StageIcon = item.icon;
-            const expanded = index === active;
-            return (
-              <div className="process-accordion" key={item.title}>
-                <button
-                  type="button"
-                  aria-expanded={expanded}
-                  aria-controls={`mobile-stage-${index}`}
-                  onClick={() => setActive(index)}
-                >
-                  <span>
-                    <StageIcon aria-hidden="true" />
-                  </span>
-                  <small>{item.number}</small>
-                  <strong>{item.title}</strong>
-                  <ChevronDown className={expanded ? "rotated" : ""} />
-                </button>
-                {expanded && (
-                  <motion.div
-                    id={`mobile-stage-${index}`}
-                    initial={reduce ? false : { opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                  >
-                    <p>{item.description}</p>
-                  </motion.div>
-                )}
-              </div>
-            );
-          })}
         </div>
       </div>
     </section>

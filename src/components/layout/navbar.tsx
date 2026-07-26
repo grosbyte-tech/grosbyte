@@ -3,124 +3,108 @@
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { navigation } from "@/lib/site-data";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("home");
-  const menuButton = useRef<HTMLButtonElement>(null);
-  const reduce = useReducedMotion();
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 30);
+    const sections = navigation
+      .map(({ href }) => document.querySelector(href))
+      .filter(Boolean) as Element[];
     const observer = new IntersectionObserver(
-      (entries) =>
-        entries.forEach(
-          (entry) => entry.isIntersecting && setActive(entry.target.id),
-        ),
-      { rootMargin: "-35% 0px -55%" },
+      (entries) => {
+        const visible = entries.find((entry) => entry.isIntersecting);
+        if (visible) setActive(visible.target.id);
+      },
+      { rootMargin: "-30% 0px -60%" },
     );
-    navigation.forEach(({ href }) => {
-      const element = document.querySelector(href);
-      if (element) observer.observe(element);
-    });
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("scroll", onScroll);
-    };
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
-    const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape" && open) {
-        setOpen(false);
-        menuButton.current?.focus();
-      }
+    const close = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
     };
-    document.addEventListener("keydown", onKey);
+    document.addEventListener("keydown", close);
     return () => {
       document.body.style.overflow = "";
-      document.removeEventListener("keydown", onKey);
+      document.removeEventListener("keydown", close);
     };
   }, [open]);
 
-  const closeMenu = () => {
-    setOpen(false);
-    menuButton.current?.focus();
-  };
-
   return (
     <motion.header
-      className={`site-header ${scrolled ? "site-header--scrolled" : ""}`}
-      initial={reduce ? false : { opacity: 0, y: -24 }}
+      className="site-header"
+      initial={reduceMotion ? false : { opacity: 0, y: -12 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.45 }}
     >
-      <nav className="navbar" aria-label="Main navigation">
+      <nav className="nav-shell" aria-label="Main navigation">
         <a
-          href="#home"
           className="brand"
+          href="#home"
           aria-label="Grosbyte Technologies home"
         >
           <span className="brand-logo">
-            <Image
-              src="/logo.png"
-              alt="Grosbyte Technologies logo"
-              width={44}
-              height={24}
-              priority
-            />
+            <Image src="/logo.png" alt="" width={40} height={24} priority />
           </span>
-          <span className="brand-name">Grosbyte</span>
+          <span>Grosbyte Technologies</span>
         </a>
         <div className="nav-links">
-          {navigation.map(({ label, href }) => (
+          {navigation.map((item) => (
             <a
-              key={href}
-              href={href}
-              className={active === href.slice(1) ? "active" : ""}
+              key={item.href}
+              href={item.href}
+              className={active === item.href.slice(1) ? "active" : ""}
             >
-              {label}
+              {item.label}
             </a>
           ))}
         </div>
-        <a href="#contact" className="nav-cta">
-          Let&apos;s Work Together
+        <a className="nav-cta" href="#contact">
+          Start a Project
         </a>
         <button
-          ref={menuButton}
           className="menu-button"
           type="button"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
+          aria-controls="mobile-menu"
           onClick={() => setOpen((value) => !value)}
         >
-          {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+          {open ? <X /> : <Menu />}
         </button>
       </nav>
       <AnimatePresence>
         {open && (
           <motion.div
+            id="mobile-menu"
             className="mobile-menu"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Mobile navigation"
-            initial={reduce ? false : { opacity: 0, y: -10, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -10, scale: 0.98 }}
+            initial={reduceMotion ? false : { opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
           >
-            {navigation.map(({ label, href }) => (
-              <a key={href} href={href} onClick={closeMenu}>
-                {label}
+            {navigation.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
               </a>
             ))}
-            <a href="#contact" className="mobile-menu-cta" onClick={closeMenu}>
-              Let&apos;s Work Together
+            <a
+              className="mobile-cta"
+              href="#contact"
+              onClick={() => setOpen(false)}
+            >
+              Start a Project
             </a>
           </motion.div>
         )}
