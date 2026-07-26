@@ -57,7 +57,6 @@ export function Footer() {
       </div>
       <div className="container footer-bottom">
         <span>© {new Date().getFullYear()} Grosbyte Technologies</span>
-        <span>Kathmandu, Nepal</span>
       </div>
     </footer>
   );

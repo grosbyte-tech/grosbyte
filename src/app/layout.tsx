@@ -17,10 +17,10 @@ export const metadata: Metadata = {
   description,
   keywords: [
     "custom software Nepal",
-    "web application development",
+    "web platforms and ecommerce",
     "mobile app development",
-    "digital marketing Kathmandu",
-    "digital branding",
+    "digital growth strategy",
+    "product design and brand growth",
     "AI integration",
   ],
   icons: { icon: "/favicon.ico", shortcut: "/favicon.ico" },
@@ -55,11 +55,6 @@ const jsonLd = {
   logo: "https://grosbyte.com/logo.png",
   email: "contact@grosbyte.com",
   telephone: "+9779869793130",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Kathmandu",
-    addressCountry: "NP",
-  },
   sameAs: [
     "https://www.instagram.com/grosbyte.tech/",
     "https://www.facebook.com/profile.php?id=61591801983966",
