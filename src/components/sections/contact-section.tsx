@@ -63,6 +63,10 @@ export function ContactSection() {
         </Reveal>
         <div className="contact-layout">
           <Reveal className="contact-info">
+            <div className="contact-panel-heading">
+              <h3>Contact Details</h3>
+              <p>Reach out directly or send your enquiry using the form.</p>
+            </div>
             <div className="contact-details">
               <div>
                 <MapPin aria-hidden="true" />
@@ -93,35 +97,45 @@ export function ContactSection() {
                 </span>
               </a>
             </div>
-            <div className="social-links">
-              <a
-                href={socialLinks.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Grosbyte on Instagram"
-              >
-                <FaInstagram />
-              </a>
-              <a
-                href={socialLinks.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Grosbyte on Facebook"
-              >
-                <FaFacebookF />
-              </a>
-              <a
-                href={socialLinks.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Grosbyte on LinkedIn"
-              >
-                <FaLinkedinIn />
-              </a>
+            <div className="contact-social">
+              <h4>Follow Grosbyte</h4>
+              <div className="social-links">
+                <a
+                  href={socialLinks.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Grosbyte on Instagram"
+                >
+                  <FaInstagram />
+                </a>
+                <a
+                  href={socialLinks.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Grosbyte on Facebook"
+                >
+                  <FaFacebookF />
+                </a>
+                <a
+                  href={socialLinks.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Grosbyte on LinkedIn"
+                >
+                  <FaLinkedinIn />
+                </a>
+              </div>
             </div>
           </Reveal>
           <Reveal delay={0.08}>
             <form className="contact-form" noValidate onSubmit={handleSubmit}>
+              <div className="form-heading">
+                <h3>Send an Enquiry</h3>
+                <p>
+                  Tell us briefly about your project, service requirement, or
+                  business goal.
+                </p>
+              </div>
               <div className="form-grid">
                 <FormField
                   id="name"

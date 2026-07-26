@@ -48,7 +48,6 @@ export function AboutSection() {
             </Reveal>
           </Reveal>
         </div>
-
       </div>
     </section>
   );

@@ -43,7 +43,6 @@ export type ProcessStep = {
 export type Technology = {
   name: string;
   description: string;
-  category: "Frontend" | "Backend" | "Data and AI" | "Development and delivery";
   icon: ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
 };
 
@@ -178,123 +177,103 @@ export const technologies: readonly Technology[] = [
   {
     name: "Next.js",
     description: "Modern React framework for scalable web products.",
-    category: "Frontend",
     icon: SiNextdotjs,
   },
   {
     name: "React",
     description: "Component-based library for interactive interfaces.",
-    category: "Frontend",
     icon: SiReact,
   },
   {
     name: "TypeScript",
     description: "Typed JavaScript for safer and maintainable applications.",
-    category: "Frontend",
     icon: SiTypescript,
   },
   {
     name: "Tailwind CSS",
     description: "Utility-first styling for consistent responsive interfaces.",
-    category: "Frontend",
     icon: SiTailwindcss,
   },
   {
     name: "Node.js",
     description: "JavaScript runtime for APIs and server-side applications.",
-    category: "Frontend",
     icon: SiNodedotjs,
   },
   {
     name: "React Native",
     description: "Cross-platform framework for native mobile applications.",
-    category: "Frontend",
     icon: SiReact,
   },
   {
     name: "Expo",
     description: "Tooling and platform for developing React Native apps.",
-    category: "Frontend",
     icon: SiExpo,
   },
   {
     name: "Python",
     description:
       "Flexible language for applications, automation, and AI systems.",
-    category: "Backend",
     icon: SiPython,
   },
   {
     name: "Django",
     description: "Structured Python framework for secure web applications.",
-    category: "Backend",
     icon: SiDjango,
   },
   {
     name: "Go",
     description: "High-performance language for scalable backend services.",
-    category: "Backend",
     icon: SiGo,
   },
   {
     name: "Gin",
     description: "Lightweight Go framework for fast APIs and services.",
-    category: "Backend",
     icon: Network,
   },
   {
     name: "REST APIs",
     description: "Reliable communication between applications and services.",
-    category: "Backend",
     icon: DatabaseZap,
   },
   {
     name: "PostgreSQL",
     description: "Reliable relational database for production applications.",
-    category: "Data and AI",
     icon: SiPostgresql,
   },
   {
     name: "SQL",
     description: "Language for querying and managing structured business data.",
-    category: "Data and AI",
     icon: Database,
   },
   {
     name: "RAG",
     description: "Retrieval-augmented generation for grounded AI applications.",
-    category: "Data and AI",
     icon: Search,
   },
   {
     name: "Vector Databases",
-    description: "Semantic data storage for intelligent search and AI systems.",
-    category: "Data and AI",
+    description: "Semantic storage for intelligent search and AI systems.",
     icon: DatabaseZap,
   },
   {
     name: "Git",
     description: "Version control for structured and reliable development.",
-    category: "Development and delivery",
     icon: SiGit,
   },
   {
     name: "GitHub",
     description: "Collaboration, code review, and source management platform.",
-    category: "Development and delivery",
     icon: SiGithub,
   },
   {
     name: "Docker",
     description:
       "Consistent containerised environments for development and deployment.",
-    category: "Development and delivery",
     icon: SiDocker,
   },
   {
     name: "Resend",
     description: "Modern email infrastructure for application communication.",
-    category: "Development and delivery",
     icon: SiResend,
   },
 ];

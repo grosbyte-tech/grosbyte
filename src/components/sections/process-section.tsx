@@ -5,12 +5,6 @@ import { processSteps, technologies } from "@/lib/site-data";
 
 export function ProcessSection() {
   const reduceMotion = useReducedMotion();
-  const categories = [
-    "Frontend",
-    "Backend",
-    "Data and AI",
-    "Development and delivery",
-  ] as const;
 
   return (
     <section className="section process-section" id="how-we-work">
@@ -61,36 +55,29 @@ export function ProcessSection() {
               maintainability, scale, security, and long-term needs.
             </p>
           </motion.div>
-          {categories.map((category) => (
-            <div className="technology-category" key={category}>
-              <h4>{category}</h4>
-              <div className="technology-grid">
-                {technologies
-                  .filter((technology) => technology.category === category)
-                  .map((technology, index) => {
-                    const Icon = technology.icon;
-                    return (
-                      <motion.article
-                        className="technology-item"
-                        key={technology.name}
-                        initial={reduceMotion ? false : { opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.5 }}
-                        transition={{
-                          delay: reduceMotion ? 0 : (index % 6) * 0.035,
-                        }}
-                      >
-                        <Icon aria-hidden={true} />
-                        <div>
-                          <h5>{technology.name}</h5>
-                          <p>{technology.description}</p>
-                        </div>
-                      </motion.article>
-                    );
-                  })}
-              </div>
-            </div>
-          ))}
+          <div className="technology-grid">
+            {technologies.map((technology, index) => {
+              const Icon = technology.icon;
+              return (
+                <motion.article
+                  className="technology-item"
+                  key={technology.name}
+                  initial={reduceMotion ? false : { opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{
+                    delay: reduceMotion ? 0 : (index % 8) * 0.025,
+                  }}
+                >
+                  <Icon aria-hidden={true} />
+                  <div>
+                    <h4>{technology.name}</h4>
+                    <p>{technology.description}</p>
+                  </div>
+                </motion.article>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
