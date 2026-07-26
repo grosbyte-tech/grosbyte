@@ -95,14 +95,15 @@ export const services = [
     icon: Smartphone,
   },
   {
-    title: "AI and Automation Solutions",
+    title: "AI Automation and Data Analysis",
     description:
       "Practical AI integrations and automation systems that reduce repetitive work, improve access to information, and support better decisions.",
     keywords: [
       "AI Assistants",
       "RAG Systems",
       "Process Automation",
-      "Intelligent Search",
+      "Data Preprocessing",
+      "Model Training",
       "Document Processing",
     ],
     icon: Bot,
@@ -139,39 +140,39 @@ export const processSteps = [
   {
     title: "Discover",
     description:
-      "We understand the business, users, objectives, challenges, and project context.",
+      "We begin by understanding your business, users, goals, challenges, and project context. This stage helps us identify the real problem, clarify expectations, and make sure the solution is based on genuine business needs rather than assumptions.",
   },
   {
     title: "Plan",
     description:
-      "We define the scope, priorities, requirements, timeline, and technical direction.",
+      "We define the project scope, priorities, requirements, timeline, and technical direction. This creates a clear roadmap for the work ahead and helps everyone understand what will be built, how it will be approached, and what success should look like.",
   },
   {
     title: "Design",
     description:
-      "We create the structure, user experience, visual direction, and key interactions.",
+      "We shape the structure, user experience, visual direction, and key interactions of the product. Our focus is on making the solution clear, intuitive, accessible, and aligned with both the brand and the needs of the people who will use it.",
   },
   {
     title: "Develop",
     description:
-      "We build the solution using appropriate, maintainable, and scalable technologies.",
+      "We build the solution using technologies that are suitable, maintainable, secure, and scalable. The development process is organised carefully so features work together consistently and the final product remains reliable as the business grows.",
   },
   {
     title: "Test",
     description:
-      "We review functionality, responsiveness, accessibility, usability, and performance.",
+      "We review functionality, responsiveness, usability, accessibility, performance, and important edge cases. This helps us identify issues early, improve the overall experience, and make sure the product works properly across different devices and environments.",
   },
   {
     title: "Launch",
     description:
-      "We prepare the production environment and release the solution carefully.",
+      "We prepare the production environment, complete final checks, and release the solution carefully. The launch is handled in a structured way to reduce risk, confirm everything is working correctly, and make the transition as smooth as possible.",
   },
   {
     title: "Improve",
     description:
-      "We use feedback, data, and future requirements to continue improving the product.",
+      "After launch, we use feedback, performance insights, and future business requirements to continue improving the product. This stage supports long-term growth by helping the solution evolve as users, technology, and business priorities change.",
   },
-] as const satisfies readonly ProcessStep[];
+];
 
 export const technologies: readonly Technology[] = [
   {
