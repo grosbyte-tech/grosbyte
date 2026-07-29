@@ -1,8 +1,13 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { Mail, MapPin, Phone, Send, Users } from "lucide-react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import { Reveal } from "@/components/motion/reveal";
 import { socialLinks } from "@/lib/site-data";
 
@@ -15,6 +20,9 @@ type ContactFormValues = {
 };
 
 type ContactFormErrors = Partial<Record<keyof ContactFormValues, string>>;
+type FormStatus =
+  | { type: "idle"; message: "" }
+  | { type: "success" | "error"; message: string };
 
 const initialValues: ContactFormValues = {
   name: "",
@@ -27,27 +35,91 @@ const initialValues: ContactFormValues = {
 export function ContactSection() {
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState<ContactFormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<FormStatus>({
+    type: "idle",
+    message: "",
+  });
+  const submissionLock = useRef(false);
+  const submissionId = useRef<string | null>(null);
 
   const update = (field: keyof ContactFormValues, value: string) => {
     setValues((current) => ({ ...current, [field]: value }));
+    setStatus({ type: "idle", message: "" });
+    submissionId.current = null;
     if (errors[field]) {
       setErrors((current) => ({ ...current, [field]: undefined }));
     }
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // TODO: Connect this form to a secure server action and Resend.
+    if (submissionLock.current) return;
+
     const nextErrors: ContactFormErrors = {};
-    if (!values.name.trim()) nextErrors.name = "Please enter your name.";
+    if (values.name.trim().length < 2) {
+      nextErrors.name = "Please enter your name.";
+    }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
       nextErrors.email = "Please enter a valid email address.";
     }
     if (!values.service) nextErrors.service = "Please select a service.";
-    if (!values.message.trim()) {
-      nextErrors.message = "Please tell us a little about your enquiry.";
+    if (values.message.trim().length < 10) {
+      nextErrors.message = "Please add at least 10 characters.";
     }
     setErrors(nextErrors);
+    setStatus({ type: "idle", message: "" });
+
+    if (Object.keys(nextErrors).length > 0) return;
+
+    submissionLock.current = true;
+    setIsSubmitting(true);
+    submissionId.current ??= crypto.randomUUID();
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...values,
+          submissionId: submissionId.current,
+        }),
+      });
+      const result = (await response.json()) as {
+        message?: string;
+        errors?: ContactFormErrors;
+      };
+
+      if (!response.ok) {
+        setErrors(result.errors ?? {});
+        setStatus({
+          type: "error",
+          message:
+            result.message ??
+            "We couldn’t send your enquiry. Please try again shortly.",
+        });
+        return;
+      }
+
+      setValues(initialValues);
+      setErrors({});
+      submissionId.current = null;
+      setStatus({
+        type: "success",
+        message:
+          result.message ??
+          "Thank you! Your enquiry has been sent successfully.",
+      });
+    } catch {
+      setStatus({
+        type: "error",
+        message:
+          "We couldn’t send your enquiry. Please check your connection and try again.",
+      });
+    } finally {
+      submissionLock.current = false;
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -99,7 +171,7 @@ export function ContactSection() {
             </div>
             <div className="contact-social">
               <h4>Follow Grosbyte</h4>
-              <div className="social-links">
+              <div className="contact-social-list">
                 <a
                   href={socialLinks.instagram}
                   target="_blank"
@@ -107,6 +179,10 @@ export function ContactSection() {
                   aria-label="Grosbyte on Instagram"
                 >
                   <FaInstagram />
+                  <span>
+                    <small>Instagram</small>
+                    grosbyte.tech
+                  </span>
                 </a>
                 <a
                   href={socialLinks.facebook}
@@ -115,6 +191,10 @@ export function ContactSection() {
                   aria-label="Grosbyte on Facebook"
                 >
                   <FaFacebookF />
+                  <span>
+                    <small>Facebook</small>
+                    Grosbyte Technologies
+                  </span>
                 </a>
                 <a
                   href={socialLinks.linkedin}
@@ -123,6 +203,22 @@ export function ContactSection() {
                   aria-label="Grosbyte on LinkedIn"
                 >
                   <FaLinkedinIn />
+                  <span>
+                    <small>LinkedIn</small>
+                    Grosbyte Technologies
+                  </span>
+                </a>
+                <a
+                  href={socialLinks.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Grosbyte on GitHub"
+                >
+                  <FaGithub />
+                  <span>
+                    <small>GitHub</small>
+                    grosbyte-tech
+                  </span>
                 </a>
               </div>
             </div>
@@ -209,9 +305,20 @@ export function ContactSection() {
               <button
                 className="button button-primary submit-button"
                 type="submit"
+                disabled={isSubmitting}
               >
-                Send Enquiry <Send aria-hidden="true" />
+                {isSubmitting ? "Sending..." : "Send Enquiry"}{" "}
+                <Send aria-hidden="true" />
               </button>
+              {status.type !== "idle" && (
+                <p
+                  className={`form-status form-status-${status.type}`}
+                  role={status.type === "error" ? "alert" : "status"}
+                  aria-live="polite"
+                >
+                  {status.message}
+                </p>
+              )}
             </form>
           </Reveal>
         </div>

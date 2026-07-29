@@ -57,8 +57,9 @@ export function ProcessSection() {
 
             return (
               <article
-                className={`editorial-step ${isReversed ? "editorial-step-reverse" : ""
-                  }`}
+                className={`editorial-step ${
+                  isReversed ? "editorial-step-reverse" : ""
+                }`}
                 key={step.title}
               >
                 <motion.div
@@ -67,9 +68,9 @@ export function ProcessSection() {
                     reduceMotion
                       ? false
                       : {
-                        opacity: 0,
-                        x: isReversed ? 24 : -24,
-                      }
+                          opacity: 0,
+                          x: isReversed ? 24 : -24,
+                        }
                   }
                   whileInView={{
                     opacity: 1,
@@ -93,9 +94,9 @@ export function ProcessSection() {
                     reduceMotion
                       ? false
                       : {
-                        opacity: 0,
-                        x: isReversed ? -24 : 24,
-                      }
+                          opacity: 0,
+                          x: isReversed ? -24 : 24,
+                        }
                   }
                   whileInView={{
                     opacity: 1,
@@ -163,7 +164,7 @@ export function ProcessSection() {
                     delay: reduceMotion ? 0 : (index % 8) * 0.025,
                   }}
                 >
-                  <TechnologyIcon aria-hidden={true} className="object-center scale-200" />
+                  <TechnologyIcon aria-hidden={true} />
 
                   <div>
                     <h4>{technology.name}</h4>

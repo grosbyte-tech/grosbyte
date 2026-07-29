@@ -14,7 +14,9 @@ export function Footer() {
             <span>Grosbyte Technologies</span>
           </a>
           <p>
-            Technology, design, and digital growth built around your business.
+            We build reliable digital products, thoughtful brand experiences,
+            and growth-focused technology that help businesses move forward with
+            confidence.
           </p>
         </div>
         <nav className="footer-nav" aria-label="Footer navigation">

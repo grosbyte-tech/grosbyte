@@ -14,7 +14,7 @@ export function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
       >
-        <p className="eyebrow">Technology, design, and digital growth</p>
+        <p className="eyebrow">Innovating Ideas. Empowering Businesses.</p>
         <h1>Digital solutions built around your business.</h1>
         <p className="hero-copy">
           Grosbyte Technologies creates modern software, web and mobile

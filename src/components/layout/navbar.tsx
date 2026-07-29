@@ -52,7 +52,14 @@ export function Navbar() {
           aria-label="Grosbyte Technologies home"
         >
           <span className="brand-logo">
-            <Image src="/logo.png" alt="" width={40} height={24} priority className="object-center scale-200" />
+            <Image
+              src="/logo.png"
+              alt=""
+              width={40}
+              height={24}
+              priority
+              className="object-center scale-200"
+            />
           </span>
           <span>Grosbyte Technologies</span>
         </a>

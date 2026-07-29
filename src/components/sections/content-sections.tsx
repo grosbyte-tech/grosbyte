@@ -61,8 +61,11 @@ export function ServicesSection() {
           <p className="eyebrow">Services</p>
           <h2>Practical expertise for your digital business.</h2>
           <p>
-            Focused services that connect product development, automation, user
-            experience, and digital growth without unnecessary complexity.
+            Focused services that bring product development, intelligent
+            automation, user experience, and digital growth into one practical
+            approach. We help turn ideas and business challenges into reliable,
+            user-friendly solutions that are easier to launch, manage, and
+            scale—without adding unnecessary complexity.
           </p>
         </Reveal>
         <div className="services-grid">

@@ -177,104 +177,102 @@ export const processSteps = [
 export const technologies: readonly Technology[] = [
   {
     name: "Next.js",
-    description: "Modern React framework for scalable web products.",
+    description: "Scalable React web products.",
     icon: SiNextdotjs,
   },
   {
     name: "React",
-    description: "Component-based library for interactive interfaces.",
+    description: "Interactive component-based interfaces.",
     icon: SiReact,
   },
   {
     name: "TypeScript",
-    description: "Typed JavaScript for safer and maintainable applications.",
+    description: "Safer, maintainable JavaScript.",
     icon: SiTypescript,
   },
   {
     name: "Tailwind CSS",
-    description: "Utility-first styling for consistent responsive interfaces.",
+    description: "Fast, responsive interface styling.",
     icon: SiTailwindcss,
   },
   {
     name: "Node.js",
-    description: "JavaScript runtime for APIs and server-side applications.",
+    description: "APIs and server applications.",
     icon: SiNodedotjs,
   },
   {
     name: "React Native",
-    description: "Cross-platform framework for native mobile applications.",
+    description: "Cross-platform mobile applications.",
     icon: SiReact,
   },
   {
     name: "Expo",
-    description: "Tooling and platform for developing React Native apps.",
+    description: "React Native app tooling.",
     icon: SiExpo,
   },
   {
     name: "Python",
-    description:
-      "Flexible language for applications, automation, and AI systems.",
+    description: "Applications, automation, and AI.",
     icon: SiPython,
   },
   {
     name: "Django",
-    description: "Structured Python framework for secure web applications.",
+    description: "Secure Python web applications.",
     icon: SiDjango,
   },
   {
     name: "Go",
-    description: "High-performance language for scalable backend services.",
+    description: "Fast, scalable backend services.",
     icon: SiGo,
   },
   {
     name: "Gin",
-    description: "Lightweight Go framework for fast APIs and services.",
+    description: "Lightweight Go APIs and services.",
     icon: Network,
   },
   {
     name: "REST APIs",
-    description: "Reliable communication between applications and services.",
+    description: "Reliable service communication.",
     icon: DatabaseZap,
   },
   {
     name: "PostgreSQL",
-    description: "Reliable relational database for production applications.",
+    description: "Production-ready relational data.",
     icon: SiPostgresql,
   },
   {
     name: "SQL",
-    description: "Language for querying and managing structured business data.",
+    description: "Structured data querying.",
     icon: Database,
   },
   {
     name: "RAG",
-    description: "Retrieval-augmented generation for grounded AI applications.",
+    description: "Grounded, context-aware AI.",
     icon: Search,
   },
   {
     name: "Vector Databases",
-    description: "Semantic storage for intelligent search and AI systems.",
+    description: "Semantic search and AI storage.",
     icon: DatabaseZap,
   },
   {
     name: "Git",
-    description: "Version control for structured and reliable development.",
+    description: "Reliable source version control.",
     icon: SiGit,
   },
   {
     name: "GitHub",
-    description: "Collaboration, code review, and source management platform.",
+    description: "Code collaboration and reviews.",
     icon: SiGithub,
   },
   {
     name: "Docker",
-    description:
-      "Consistent containerised environments for development and deployment.",
+    description: "Consistent development and deployment.",
     icon: SiDocker,
   },
   {
     name: "Resend",
-    description: "Modern email infrastructure for application communication.",
+    description: "Application email infrastructure.",
     icon: SiResend,
   },
 ];
@@ -284,4 +282,5 @@ export const socialLinks = {
   facebook: "https://www.facebook.com/profile.php?id=61591801983966",
   linkedin:
     "https://www.linkedin.com/search/results/all/?keywords=Grosbyte%20Technologies&origin=ENTITY_SEARCH_HOME_HISTORY&heroEntityKey=urn%3Ali%3Aorganization%3A133457329&position=0",
+  github: "https://github.com/grosbyte-tech",
 } as const;
