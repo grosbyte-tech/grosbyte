@@ -5,6 +5,9 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Home, Info, Blocks, Workflow, Mail, ChevronUp } from "lucide-react";
 import { navigation } from "@/lib/site-data";
+import { useTranslation } from "@/contexts/language-context";
+import { LanguageSwitcher } from "@/components/ui/language-switcher";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const icons = {
   "#home": Home,
@@ -14,10 +17,19 @@ const icons = {
   "#contact": Mail,
 } as const;
 
+const navKeys: Record<string, string> = {
+  "#home": "nav.home",
+  "#about": "nav.about",
+  "#services": "nav.services",
+  "#how-we-work": "nav.process",
+  "#contact": "nav.contact",
+};
+
 export function Navbar() {
   const [active, setActive] = useState("home");
   const [showScrollTop, setShowScrollTop] = useState(false);
   const reduceMotion = useReducedMotion();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,7 +70,7 @@ export function Navbar() {
           >
             <span className="brand-logo">
               <Image
-                src="/logo.png"
+                src="/icons/logo-removebg.png"
                 alt=""
                 width={40}
                 height={24}
@@ -75,13 +87,17 @@ export function Navbar() {
                 href={item.href}
                 className={active === item.href.slice(1) ? "active" : ""}
               >
-                {item.label}
+                {t(navKeys[item.href])}
               </a>
             ))}
           </div>
-          <a className="nav-cta" href="#contact">
-            Start a Project
-          </a>
+          <div className="flex items-center gap-3 ml-auto md:ml-0">
+            <ThemeToggle />
+            <LanguageSwitcher />
+            <a className="nav-cta" href="#contact">
+              {t("nav.cta")}
+            </a>
+          </div>
         </nav>
       </motion.header>
 
@@ -102,7 +118,7 @@ export function Navbar() {
             >
               <Icon className="h-[18px] w-[18px]" />
               <span className="text-[9px] font-semibold tracking-wider uppercase">
-                {item.label === "How We Work" ? "Process" : item.label}
+                {item.href === "#how-we-work" ? t("nav.processMobile") : t(navKeys[item.href])}
               </span>
             </a>
           );

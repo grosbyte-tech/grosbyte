@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/contexts/language-context";
+import { ThemeProvider } from "@/contexts/theme-context";
 
 const urbanist = Urbanist({
   variable: "--font-urbanist",
@@ -23,7 +25,7 @@ export const metadata: Metadata = {
     "product design and brand growth",
     "AI integration",
   ],
-  icons: { icon: "/favicon.ico", shortcut: "/favicon.ico" },
+  icons: { icon: "/icons/logo-removebg.png", shortcut: "/icons/logo-removebg.png" },
   openGraph: {
     title,
     description,
@@ -68,7 +70,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={urbanist.variable}>
       <body>
-        {children}
+        <LanguageProvider>
+          <ThemeProvider>
+            {children}
+          </ThemeProvider>
+        </LanguageProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

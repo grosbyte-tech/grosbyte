@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { processSteps, technologies } from "@/lib/site-data";
+import { useTranslation } from "@/contexts/language-context";
 
 const processIcons: LucideIcon[] = [
   Search,
@@ -24,8 +25,19 @@ const processIcons: LucideIcon[] = [
   RefreshCw,
 ];
 
+const stepKeys: Record<string, string> = {
+  "Discover": "discover",
+  "Plan": "plan",
+  "Design": "design",
+  "Develop": "develop",
+  "Test": "test",
+  "Launch": "launch",
+  "Improve": "improve",
+};
+
 export function ProcessSection() {
   const reduceMotion = useReducedMotion();
+  const { t } = useTranslation();
 
   return (
     <section className="section process-section" id="how-we-work">
@@ -40,20 +52,20 @@ export function ProcessSection() {
             ease: [0.22, 1, 0.36, 1],
           }}
         >
-          <p className="eyebrow">How We Work</p>
+          <p className="eyebrow">{t("process.eyebrow")}</p>
 
-          <h2>A clear process from idea to improvement.</h2>
+          <h2>{t("process.title")}</h2>
 
-          <p>
-            We keep every project structured, collaborative, and focused on the
-            result the business needs.
-          </p>
+          <p>{t("process.description")}</p>
         </motion.div>
 
         <div className="process-editorial">
           {processSteps.map((step, index) => {
             const Icon = processIcons[index] ?? Search;
             const isReversed = index % 2 !== 0;
+            const key = stepKeys[step.title];
+            const translatedTitle = t(`process.steps.${key}.title`);
+            const translatedDescription = t(`process.steps.${key}.description`);
 
             return (
               <article
@@ -116,11 +128,11 @@ export function ProcessSection() {
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <h3>{step.title}</h3>
+                  <h3>{translatedTitle}</h3>
 
                   <i className="editorial-divider" aria-hidden="true" />
 
-                  <p>{step.description}</p>
+                  <p>{translatedDescription}</p>
                 </motion.div>
               </article>
             );
@@ -138,14 +150,11 @@ export function ProcessSection() {
               ease: [0.22, 1, 0.36, 1],
             }}
           >
-            <p className="eyebrow">Technology Stack</p>
+            <p className="eyebrow">{t("process.techStack.eyebrow")}</p>
 
-            <h3>Technologies we work with</h3>
+            <h3>{t("process.techStack.title")}</h3>
 
-            <p>
-              We choose technologies according to the product, users,
-              maintainability, scale, security, and long-term needs.
-            </p>
+            <p>{t("process.techStack.description")}</p>
           </motion.div>
 
           <div className="technology-grid">

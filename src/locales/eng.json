@@ -1,0 +1,153 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "process": "How We Work",
+    "processMobile": "Process",
+    "contact": "Contact",
+    "cta": "Start a Project"
+  },
+  "hero": {
+    "eyebrow": "Innovating Ideas. Empowering Businesses.",
+    "title": "Digital solutions built around your business.",
+    "copy": "Grosbyte Technologies creates modern software, web and mobile applications, intelligent automation, digital products, and growth strategies that help businesses move forward.",
+    "ctaPrimary": "Start a Project",
+    "ctaSecondary": "Explore Services"
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "A technology partner focused on practical business outcomes.",
+    "imageAlt": "Two professionals reviewing a digital product plan",
+    "p1": "Grosbyte Technologies helps businesses plan, design, build, and improve their digital presence. We combine software engineering, product design, intelligent automation, and digital growth strategies to create solutions that support real business goals.",
+    "p2": "From a company's first digital product to custom software supporting daily operations, we focus on usability, maintainability, clear communication, and long-term value.",
+    "stats": {
+      "services": "Core Services",
+      "stages": "Delivery Stages",
+      "technologies": "Modern Technologies"
+    }
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Practical expertise for your digital business.",
+    "description": "Focused services that bring product development, intelligent automation, user experience, and digital growth into one practical approach. We help turn ideas and business challenges into reliable, user-friendly solutions that are easier to launch, manage, and scale—without adding unnecessary complexity.",
+    "list": {
+      "customSoftware": {
+        "title": "Custom Software Development",
+        "description": "Purpose-built software that improves workflows, operations, reporting, and internal business processes.",
+        "keywords": ["Internal Systems", "Workflow Automation", "Dashboards", "API Integration", "Business Tools"]
+      },
+      "webPlatforms": {
+        "title": "Web Platforms and E-commerce",
+        "description": "Secure, scalable, and responsive web platforms designed around customers, teams, transactions, and business requirements.",
+        "keywords": ["E-commerce", "SaaS Platforms", "Customer Portals", "Booking Systems", "Admin Dashboards"]
+      },
+      "mobileApp": {
+        "title": "Mobile Application Development",
+        "description": "Cross-platform mobile applications built for customers, teams, services, and business-critical workflows.",
+        "keywords": ["React Native", "Expo", "Mobile Commerce", "Push Notifications", "API Integration"]
+      },
+      "aiAutomation": {
+        "title": "AI Automation and Data Analysis",
+        "description": "Practical AI integrations and automation systems that reduce repetitive work, improve access to information, and support better decisions.",
+        "keywords": ["AI Assistants", "RAG Systems", "Process Automation", "Data Preprocessing", "Model Training", "Document Processing"]
+      },
+      "uiuxDesign": {
+        "title": "UI/UX and Product Design",
+        "description": "Clear, accessible, and user-focused interfaces designed around business goals, real users, and meaningful digital experiences.",
+        "keywords": ["UX Research", "Interface Design", "Wireframing", "Prototyping", "Design Systems"]
+      },
+      "digitalMarketing": {
+        "title": "Digital Marketing and Brand Growth",
+        "description": "Connected marketing and brand strategies that improve visibility, consistency, audience engagement, and long-term digital growth.",
+        "keywords": ["SEO", "Social Media", "Paid Campaigns", "Brand Identity", "Content Strategy"]
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "How We Work",
+    "title": "A clear process from idea to improvement.",
+    "description": "We keep every project structured, collaborative, and focused on the result the business needs.",
+    "steps": {
+      "discover": {
+        "title": "Discover",
+        "description": "We begin by understanding your business, users, goals, challenges, and project context. This stage helps us identify the real problem, clarify expectations, and make sure the solution is based on genuine business needs rather than assumptions."
+      },
+      "plan": {
+        "title": "Plan",
+        "description": "We define the project scope, priorities, requirements, timeline, and technical direction. This creates a clear roadmap for the work ahead and helps everyone understand what will be built, how it will be approached, and what success should look like."
+      },
+      "design": {
+        "title": "Design",
+        "description": "We shape the structure, user experience, visual direction, and key interactions of the product. Our focus is on making the solution clear, intuitive, accessible, and aligned with both the brand and the needs of the people who will use it."
+      },
+      "develop": {
+        "title": "Develop",
+        "description": "We build the solution using technologies that are suitable, maintainable, secure, and scalable. The development process is organised carefully so features work together consistently and the final product remains reliable as the business grows."
+      },
+      "test": {
+        "title": "Test",
+        "description": "We review functionality, responsiveness, usability, accessibility, performance, and important edge cases. This helps us identify issues early, improve the overall experience, and make sure the product works properly across different devices and environments."
+      },
+      "launch": {
+        "title": "Launch",
+        "description": "We prepare the production environment, complete final checks, and release the solution carefully. The launch is handled in a structured way to reduce risk, confirm everything is working correctly, and make the transition as smooth as possible."
+      },
+      "improve": {
+        "title": "Improve",
+        "description": "After launch, we use feedback, performance insights, and future business requirements to continue improving the product. This stage supports long-term growth by helping the solution evolve as users, technology, and business priorities change."
+      }
+    },
+    "techStack": {
+      "eyebrow": "Technology Stack",
+      "title": "Technologies we work with",
+      "description": "We choose technologies according to the product, users, maintainability, scale, security, and long-term needs."
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact Us",
+    "title": "Let's discuss what you want to build or improve.",
+    "description": "Share your project, business challenge, or digital growth goal. We'll review the details and discuss the next step.",
+    "details": {
+      "title": "Contact Details",
+      "subtitle": "Reach out directly or send your enquiry using the form.",
+      "location": "Location",
+      "nepal": "Kathmandu, Nepal",
+      "workingModel": "Working model",
+      "remote": "Available for remote collaboration",
+      "email": "Email",
+      "phone": "Phone",
+      "follow": "Follow Grosbyte"
+    },
+    "form": {
+      "title": "Send an Enquiry",
+      "description": "Tell us briefly about your project, service requirement, or business goal.",
+      "nameLabel": "Name",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "phoneLabel": "Phone",
+      "phonePlaceholder": "e.g. +977 9869000000",
+      "serviceLabel": "Service",
+      "servicePlaceholder": "Select a service",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell us about your project or goal.",
+      "submit": "Send Enquiry",
+      "submitting": "Sending..."
+    },
+    "validation": {
+      "name": "Please enter your name.",
+      "email": "Please enter a valid email address.",
+      "service": "Please select a service.",
+      "message": "Please add at least 10 characters."
+    },
+    "status": {
+      "success": "Thank you! Your enquiry has been sent successfully.",
+      "errorDefault": "We couldn’t send your enquiry. Please try again shortly.",
+      "errorConnection": "We couldn’t send your enquiry. Please check your connection and try again."
+    }
+  },
+  "footer": {
+    "description": "We build reliable digital products, thoughtful brand experiences, and growth-focused technology that help businesses move forward with confidence."
+  }
+}

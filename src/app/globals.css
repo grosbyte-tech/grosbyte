@@ -10,6 +10,20 @@
   --text-primary: #ffffff;
   --text-secondary: #aab7cf;
   --border: rgba(255, 255, 255, 0.1);
+  --header-bg: rgba(3, 11, 28, 0.96);
+  --mobile-nav-bg: rgba(3, 11, 28, 0.7);
+}
+
+html.light {
+  --background: #f8fafc;
+  --background-deep: #f1f5f9;
+  --surface: #ffffff;
+  --surface-hover: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border: rgba(15, 23, 42, 0.08);
+  --header-bg: rgba(255, 255, 255, 0.92);
+  --mobile-nav-bg: rgba(255, 255, 255, 0.75);
 }
 
 * {
@@ -19,6 +33,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 84px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
@@ -27,6 +42,7 @@ body {
   background: var(--background);
   color: var(--text-primary);
   font-family: var(--font-urbanist), "Urbanist", system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -39,6 +55,8 @@ input,
 textarea,
 select {
   font: inherit;
+  color: inherit;
+  background: transparent;
 }
 
 button,
@@ -137,6 +155,7 @@ a {
 
 .button-primary {
   background: var(--brand-blue);
+  color: #ffffff;
 }
 
 .button-primary:hover {
@@ -161,7 +180,8 @@ a {
   left: 0;
   width: 100%;
   border-bottom: 1px solid var(--border);
-  background: rgba(3, 11, 28, 0.96);
+  background: var(--header-bg);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .nav-shell {
@@ -189,7 +209,7 @@ a {
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: var(--text-primary);
+  background: #ffffff;
 }
 
 .brand-logo img {
@@ -199,7 +219,7 @@ a {
 }
 
 .nav-links {
-  margin-left: auto;
+  margin-inline: auto;
   display: flex;
   align-items: center;
   gap: 0.25rem;
@@ -247,7 +267,7 @@ a {
   padding: 0.68rem 0.9rem;
   border-radius: 8px;
   background: var(--brand-blue);
-  color: var(--text-primary);
+  color: #ffffff;
   font-size: 0.8rem;
   font-weight: 800;
   transition: background-color 0.2s ease;
@@ -276,8 +296,9 @@ a {
       rgba(42, 104, 225, 0.2),
       transparent 36%
     ),
-    #06142e;
+    var(--background);
   scroll-margin-top: 70px;
+  transition: background-color 0.3s ease;
 }
 
 .hero-content {
