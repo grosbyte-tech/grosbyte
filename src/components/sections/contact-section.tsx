@@ -10,6 +10,14 @@ import {
 } from "react-icons/fa";
 import { Reveal } from "@/components/motion/reveal";
 import { socialLinks } from "@/lib/site-data";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 
 type ContactFormValues = {
   name: string;
@@ -239,6 +247,7 @@ export function ContactSection() {
                   value={values.name}
                   error={errors.name}
                   onChange={(value) => update("name", value)}
+                  placeholder="Your name"
                 />
                 <FormField
                   id="email"
@@ -247,6 +256,7 @@ export function ContactSection() {
                   value={values.email}
                   error={errors.email}
                   onChange={(value) => update("email", value)}
+                  placeholder="you@example.com"
                 />
                 <FormField
                   id="phone"
@@ -256,26 +266,44 @@ export function ContactSection() {
                   error={errors.phone}
                   onChange={(value) => update("phone", value)}
                   required={false}
+                  placeholder="e.g. +977 9869000000"
                 />
                 <div className="form-field">
                   <label htmlFor="service">Service</label>
-                  <select
-                    id="service"
+                  <Select
                     value={values.service}
-                    onChange={(event) => update("service", event.target.value)}
-                    aria-invalid={Boolean(errors.service)}
-                    aria-describedby={
-                      errors.service ? "service-error" : undefined
-                    }
+                    onValueChange={(value) => update("service", value)}
                   >
-                    <option value="">Select a service</option>
-                    <option>Custom Software Development</option>
-                    <option>Web Platforms and E-commerce</option>
-                    <option>Mobile Application Development</option>
-                    <option>AI and Automation Solutions</option>
-                    <option>UI/UX and Product Design</option>
-                    <option>Digital Marketing and Brand Growth</option>
-                  </select>
+                    <SelectTrigger
+                      id="service"
+                      aria-invalid={Boolean(errors.service)}
+                      aria-describedby={
+                        errors.service ? "service-error" : undefined
+                      }
+                    >
+                      <SelectValue placeholder="Select a service" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="Custom Software Development">
+                        Custom Software Development
+                      </SelectItem>
+                      <SelectItem value="Web Platforms and E-commerce">
+                        Web Platforms and E-commerce
+                      </SelectItem>
+                      <SelectItem value="Mobile Application Development">
+                        Mobile Application Development
+                      </SelectItem>
+                      <SelectItem value="AI and Automation Solutions">
+                        AI and Automation Solutions
+                      </SelectItem>
+                      <SelectItem value="UI/UX and Product Design">
+                        UI/UX and Product Design
+                      </SelectItem>
+                      <SelectItem value="Digital Marketing and Brand Growth">
+                        Digital Marketing and Brand Growth
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
                   {errors.service && (
                     <span className="field-error" id="service-error">
                       {errors.service}
@@ -335,6 +363,7 @@ function FormField({
   error,
   onChange,
   required = true,
+  placeholder,
 }: {
   id: keyof ContactFormValues;
   label: string;
@@ -343,6 +372,7 @@ function FormField({
   error?: string;
   onChange: (value: string) => void;
   required?: boolean;
+  placeholder?: string;
 }) {
   return (
     <div className="form-field">
@@ -353,6 +383,7 @@ function FormField({
         value={value}
         required={required}
         onChange={(event) => onChange(event.target.value)}
+        placeholder={placeholder}
         aria-invalid={Boolean(error)}
         aria-describedby={error ? `${id}-error` : undefined}
       />

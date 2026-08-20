@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Nunito_Sans } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import "./globals.css";
 
-const nunito = Nunito_Sans({
-  variable: "--font-nunito-sans",
+const urbanist = Urbanist({
+  variable: "--font-urbanist",
   subsets: ["latin"],
   display: "swap",
 });
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Grosbyte Technologies",
     images: [
       {
-        url: "/logo.png",
+        url: "/icons/logo-removebg.png",
         width: 1408,
         height: 768,
         alt: "Grosbyte Technologies",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/logo.png"],
+    images: ["/icons/logo-removebg.png"],
   },
 };
 
@@ -66,7 +66,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={nunito.variable}>
+    <html lang="en" className={urbanist.variable}>
       <body>
         {children}
         <script
