@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Nunito_Sans } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/contexts/language-context";
+import { ThemeProvider } from "@/contexts/theme-context";
 
-const nunito = Nunito_Sans({
-  variable: "--font-nunito-sans",
+const urbanist = Urbanist({
+  variable: "--font-urbanist",
   subsets: ["latin"],
   display: "swap",
 });
@@ -23,7 +25,7 @@ export const metadata: Metadata = {
     "product design and brand growth",
     "AI integration",
   ],
-  icons: { icon: "/favicon.ico", shortcut: "/favicon.ico" },
+  icons: { icon: "/icons/logo-removebg.png", shortcut: "/icons/logo-removebg.png" },
   openGraph: {
     title,
     description,
@@ -32,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "Grosbyte Technologies",
     images: [
       {
-        url: "/logo.png",
+        url: "/icons/logo-removebg.png",
         width: 1408,
         height: 768,
         alt: "Grosbyte Technologies",
@@ -43,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/logo.png"],
+    images: ["/icons/logo-removebg.png"],
   },
 };
 
@@ -66,9 +68,13 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={nunito.variable}>
+    <html lang="en" className={urbanist.variable}>
       <body>
-        {children}
+        <LanguageProvider>
+          <ThemeProvider>
+            {children}
+          </ThemeProvider>
+        </LanguageProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

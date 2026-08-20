@@ -10,6 +10,20 @@
   --text-primary: #ffffff;
   --text-secondary: #aab7cf;
   --border: rgba(255, 255, 255, 0.1);
+  --header-bg: rgba(3, 11, 28, 0.96);
+  --mobile-nav-bg: rgba(3, 11, 28, 0.7);
+}
+
+html.light {
+  --background: #f8fafc;
+  --background-deep: #f1f5f9;
+  --surface: #ffffff;
+  --surface-hover: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border: rgba(15, 23, 42, 0.08);
+  --header-bg: rgba(255, 255, 255, 0.92);
+  --mobile-nav-bg: rgba(255, 255, 255, 0.75);
 }
 
 * {
@@ -19,6 +33,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 84px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
@@ -26,7 +41,8 @@ body {
   overflow-x: hidden;
   background: var(--background);
   color: var(--text-primary);
-  font-family: var(--font-nunito-sans), "Nunito Sans", system-ui, sans-serif;
+  font-family: var(--font-urbanist), "Urbanist", system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -39,6 +55,8 @@ input,
 textarea,
 select {
   font: inherit;
+  color: inherit;
+  background: transparent;
 }
 
 button,
@@ -137,6 +155,7 @@ a {
 
 .button-primary {
   background: var(--brand-blue);
+  color: #ffffff;
 }
 
 .button-primary:hover {
@@ -161,7 +180,8 @@ a {
   left: 0;
   width: 100%;
   border-bottom: 1px solid var(--border);
-  background: rgba(3, 11, 28, 0.96);
+  background: var(--header-bg);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .nav-shell {
@@ -189,7 +209,7 @@ a {
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: var(--text-primary);
+  background: #ffffff;
 }
 
 .brand-logo img {
@@ -199,27 +219,46 @@ a {
 }
 
 .nav-links {
-  margin-left: auto;
+  margin-inline: auto;
   display: flex;
   align-items: center;
   gap: 0.25rem;
 }
 
 .nav-links a {
-  padding: 0.55rem 0.7rem;
-  border-radius: 6px;
+  position: relative;
+  padding: 0.4rem 0.6rem;
   color: var(--text-secondary);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  transition:
-    color 0.2s ease,
-    background-color 0.2s ease;
+  transition: color 0.25s ease;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-  background: rgba(42, 104, 225, 0.12);
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0.6rem;
+  right: 0.6rem;
+  height: 2px;
+  background-color: var(--brand-blue-hover);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-links a:hover {
   color: var(--text-primary);
+}
+
+.nav-links a.active {
+  color: var(--text-primary);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .nav-cta,
@@ -228,7 +267,7 @@ a {
   padding: 0.68rem 0.9rem;
   border-radius: 8px;
   background: var(--brand-blue);
-  color: var(--text-primary);
+  color: #ffffff;
   font-size: 0.8rem;
   font-weight: 800;
   transition: background-color 0.2s ease;
@@ -257,8 +296,9 @@ a {
       rgba(42, 104, 225, 0.2),
       transparent 36%
     ),
-    #06142e;
+    var(--background);
   scroll-margin-top: 70px;
+  transition: background-color 0.3s ease;
 }
 
 .hero-content {
@@ -1014,6 +1054,10 @@ a {
   .nav-links,
   .nav-cta {
     display: none;
+  }
+
+  .footer {
+    padding-bottom: calc(1.75rem + 64px) !important;
   }
 
   .menu-button {

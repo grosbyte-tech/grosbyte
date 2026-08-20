@@ -1,0 +1,153 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Dienstleistungen",
+    "process": "Arbeitsweise",
+    "processMobile": "Prozess",
+    "contact": "Kontakt",
+    "cta": "Projekt starten"
+  },
+  "hero": {
+    "eyebrow": "Ideen innovieren. Unternehmen stärken.",
+    "title": "Digitale Lösungen, die auf Ihr Unternehmen zugeschnitten sind.",
+    "copy": "Grosbyte Technologies entwickelt moderne Software, Web- und mobile Anwendungen, intelligente Automatisierung, digitale Produkte und Wachstumsstrategien, die Unternehmen voranbringen.",
+    "ctaPrimary": "Projekt starten",
+    "ctaSecondary": "Dienstleistungen erkunden"
+  },
+  "about": {
+    "eyebrow": "Über uns",
+    "title": "Ein Technologiepartner, der sich auf praktische Geschäftsergebnisse konzentriert.",
+    "imageAlt": "Zwei Fachleute überprüfen einen digitalen Produktplan",
+    "p1": "Grosbyte Technologies hilft Unternehmen bei der Planung, dem Entwurf, dem Aufbau und der Verbesserung ihrer digitalen Präsenz. Wir kombinieren Softwareentwicklung, Produktdesign, intelligente Automatisierung und digitale Wachstumsstrategien, um Lösungen zu schaffen, die echte Geschäftsziele unterstützen.",
+    "p2": "Vom ersten digitalen Produkt eines Unternehmens bis hin zu maßgeschneiderter Software für den täglichen Betrieb konzentrieren wir uns auf Benutzerfreundlichkeit, Wartbarkeit, klare Kommunikation und langfristigen Wert.",
+    "stats": {
+      "services": "Kerndienste",
+      "stages": "Lieferphasen",
+      "technologies": "Moderne Technologien"
+    }
+  },
+  "services": {
+    "eyebrow": "Dienstleistungen",
+    "title": "Praktische Expertise für Ihr digitales Unternehmen.",
+    "description": "Fokussierte Dienstleistungen, die Produktentwicklung, intelligente Automatisierung, Benutzererfahrung und digitales Wachstum in einem praktischen Ansatz vereinen. Wir helfen dabei, Ideen und geschäftliche Herausforderungen in zuverlässige, benutzerfreundliche Lösungen zu verwandeln, die einfacher zu starten, zu verwalten und zu skalieren sind – ohne unnötige Komplexität hinzuzufügen.",
+    "list": {
+      "customSoftware": {
+        "title": "Maßgeschneiderte Softwareentwicklung",
+        "description": "Speziell entwickelte Software zur Verbesserung von Arbeitsabläufen, Abläufen, Berichten und internen Geschäftsprozessen.",
+        "keywords": ["Interne Systeme", "Workflow-Automatisierung", "Dashboards", "API-Integration", "Business-Tools"]
+      },
+      "webPlatforms": {
+        "title": "Webplattformen und E-Commerce",
+        "description": "Sichere, skalierbare und responsive Webplattformen, die auf Kunden, Teams, Transaktionen und geschäftliche Anforderungen zugeschnitten sind.",
+        "keywords": ["E-Commerce", "SaaS-Plattformen", "Kundenportale", "Buchungssysteme", "Admin-Dashboards"]
+      },
+      "mobileApp": {
+        "title": "Entwicklung mobiler Anwendungen",
+        "description": "Plattformübergreifende mobile Anwendungen für Kunden, Teams, Dienste und geschäftskritische Workflows.",
+        "keywords": ["React Native", "Expo", "Mobile Commerce", "Push-Benachrichtigungen", "API-Integration"]
+      },
+      "aiAutomation": {
+        "title": "KI-Automatisierung und Datenanalyse",
+        "description": "Praktische KI-Integrationen und Automatisierungssysteme, die sich wiederholende Arbeit reduzieren, den Zugang zu Informationen verbessern und bessere Entscheidungen unterstützen.",
+        "keywords": ["KI-Assistenten", "RAG-Systeme", "Prozessautomatisierung", "Datenvorverarbeitung", "Modelltraining", "Dokumentenverarbeitung"]
+      },
+      "uiuxDesign": {
+        "title": "UI/UX und Produktdesign",
+        "description": "Klare, barrierefreie und benutzerorientierte Schnittstellen, die auf Geschäftsziele, reale Benutzer und sinnvolle digitale Erlebnisse ausgerichtet sind.",
+        "keywords": ["UX-Forschung", "Schnittstellendesign", "Wireframing", "Prototyping", "Design-Systeme"]
+      },
+      "digitalMarketing": {
+        "title": "Digitales Marketing und Markenwachstum",
+        "description": "Verbundene Marketing- und Markenstrategien, die die Sichtbarkeit, Konsistenz, das Engagement des Publikums und das langfristige digitale Wachstum verbessern.",
+        "keywords": ["SEO", "Social Media", "Bezahlte Kampagnen", "Markenidentität", "Content-Strategie"]
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "Arbeitsweise",
+    "title": "Ein klarer Prozess von der Idee bis zur Verbesserung.",
+    "description": "Wir halten jedes Projekt strukturiert, partnerschaftlich und auf das vom Unternehmen benötigte Ergebnis ausgerichtet.",
+    "steps": {
+      "discover": {
+        "title": "Entdecken",
+        "description": "Wir beginnen damit, Ihr Unternehmen, Ihre Benutzer, Ziele, Herausforderungen und den Projektkontext zu verstehen. Diese Phase hilft uns, das tatsächliche Problem zu identifizieren, Erwartungen zu klären und sicherzustellen, dass die Lösung auf echten geschäftlichen Anforderungen und nicht auf Annahmen basiert."
+      },
+      "plan": {
+        "title": "Planen",
+        "description": "Wir definieren den Projektumfang, die Prioritäten, Anforderungen, den Zeitplan und die technische Ausrichtung. Dies schafft eine klare Roadmap für die zukünftige Arbeit und hilft jedem zu verstehen, was gebaut wird, wie es angegangen wird und wie Erfolg aussehen sollte."
+      },
+      "design": {
+        "title": "Entwerfen",
+        "description": "Wir gestalten die Struktur, die Benutzererfahrung, die visuelle Ausrichtung und die wichtigsten Interaktionen des Produkts. Unser Fokus liegt darauf, die Lösung klar, intuitiv, zugänglich und sowohl auf die Marke als auch auf die Bedürfnisse der Benutzer auszurichten."
+      },
+      "develop": {
+        "title": "Entwickeln",
+        "description": "Wir bauen die Lösung mit Technologien, die geeignet, wartbar, sicher und skalierbar sind. Der Entwicklungsprozess ist sorgfältig organisiert, damit die Funktionen konsistent zusammenarbeiten und das Endprodukt auch bei wachsendem Unternehmen zuverlässig bleibt."
+      },
+      "test": {
+        "title": "Testen",
+        "description": "Wir überprüfen Funktionalität, Reaktionsfähigkeit, Benutzerfreundlichkeit, Barrierefreiheit, Leistung und wichtige Sonderfälle. Dies hilft uns, Probleme frühzeitig zu erkennen, die Gesamterfahrung zu verbessern und sicherzustellen, dass das Produkt auf verschiedenen Geräten und in unterschiedlichen Umgebungen ordnungsgemäß funktioniert."
+      },
+      "launch": {
+        "title": "Starten",
+        "description": "Wir bereiten die Produktionsumgebung vor, führen letzte Prüfungen durch und veröffentlichen die Lösung sorgfältig. Der Start wird strukturiert durchgeführt, um Risiken zu minimieren, die ordnungsgemäße Funktion von allem zu bestätigen und den Übergang so reibungslos wie möglich zu gestalten."
+      },
+      "improve": {
+        "title": "Verbessern",
+        "description": "Nach dem Start nutzen wir Feedback, Leistungserkenntnisse und zukünftige geschäftliche Anforderungen, um das Produkt kontinuierlich zu verbessern. Diese Phase unterstützt das langfristige Wachstum, indem sie hilft, die Lösung anzupassen, wenn sich Benutzer, Technologien und geschäftliche Prioritäten ändern."
+      }
+    },
+    "techStack": {
+      "eyebrow": "Technologie-Stack",
+      "title": "Technologien, mit denen wir arbeiten",
+      "description": "Wir wählen Technologien basierend auf dem Produkt, den Benutzern, der Wartbarkeit, der Skalierbarkeit, der Sicherheit und den langfristigen Anforderungen aus."
+    }
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Lassen Sie uns besprechen, was Sie aufbauen oder verbessern möchten.",
+    "description": "Teilen Sie Ihr Projekt, Ihre geschäftliche Herausforderung oder Ihr digitales Wachstumsziel mit uns. Wir werden die Details prüfen und den nächsten Schritt besprechen.",
+    "details": {
+      "title": "Kontaktdetails",
+      "subtitle": "Kontaktieren Sie uns direkt oder senden Sie Ihre Anfrage über das Formular.",
+      "location": "Standort",
+      "nepal": "Kathmandu, Nepal",
+      "workingModel": "Arbeitsmodell",
+      "remote": "Verfügbar für Remote-Zusammenarbeit",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "follow": "Grosbyte folgen"
+    },
+    "form": {
+      "title": "Eine Anfrage senden",
+      "description": "Erzählen Sie uns kurz von Ihrem Projekt, Ihren Serviceanforderungen oder Ihren Geschäftszielen.",
+      "nameLabel": "Name",
+      "namePlaceholder": "Ihr Name",
+      "emailLabel": "E-Mail",
+      "emailPlaceholder": "sie@beispiel.de",
+      "phoneLabel": "Telefon",
+      "phonePlaceholder": "z. B. +977 9869000000",
+      "serviceLabel": "Dienstleistung",
+      "servicePlaceholder": "Wählen Sie eine Dienstleistung",
+      "messageLabel": "Nachricht",
+      "messagePlaceholder": "Erzählen Sie uns von Ihrem Projekt oder Ziel.",
+      "submit": "Anfrage senden",
+      "submitting": "Wird gesendet..."
+    },
+    "validation": {
+      "name": "Bitte geben Sie Ihren Namen ein.",
+      "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "service": "Bitte wählen Sie eine Dienstleistung aus.",
+      "message": "Bitte fügen Sie mindestens 10 Zeichen hinzu."
+    },
+    "status": {
+      "success": "Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet.",
+      "errorDefault": "Wir konnten Ihre Anfrage nicht senden. Bitte versuchen Sie es in Kürze noch einmal.",
+      "errorConnection": "Wir konnten Ihre Anfrage nicht senden. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut."
+    }
+  },
+  "footer": {
+    "description": "Wir entwickeln zuverlässige digitale Produkte, durchdachte Markenidentitäten und wachstumsorientierte Technologien, die Unternehmen helfen, selbstbewusst voranzukommen."
+  }
+}

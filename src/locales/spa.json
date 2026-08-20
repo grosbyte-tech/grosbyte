@@ -1,0 +1,153 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "process": "Cómo trabajamos",
+    "processMobile": "Proceso",
+    "contact": "Contacto",
+    "cta": "Iniciar Proyecto"
+  },
+  "hero": {
+    "eyebrow": "Innovando Ideas. Impulsando Negocios.",
+    "title": "Soluciones digitales diseñadas para tu negocio.",
+    "copy": "Grosbyte Technologies crea software moderno, aplicaciones web y móviles, automatización inteligente, productos digitales y estrategias de crecimiento que ayudan a las empresas a avanzar.",
+    "ctaPrimary": "Iniciar Proyecto",
+    "ctaSecondary": "Explorar Servicios"
+  },
+  "about": {
+    "eyebrow": "Nosotros",
+    "title": "Un socio tecnológico enfocado en resultados comerciales prácticos.",
+    "imageAlt": "Dos profesionales revisando un plan de producto digital",
+    "p1": "Grosbyte Technologies ayuda a las empresas a planificar, diseñar, crear y mejorar su presencia digital. Combinamos ingeniería de software, diseño de productos, automatización inteligente y estrategias de crecimiento digital para crear soluciones que respalden objetivos comerciales reales.",
+    "p2": "Desde el primer producto digital de una empresa hasta el software personalizado que respalda las operaciones diarias, nos enfocamos en la usabilidad, la mantenibilidad, la comunicación clara y el valor a largo plazo.",
+    "stats": {
+      "services": "Servicios Principales",
+      "stages": "Etapas de Entrega",
+      "technologies": "Tecnologías Modernas"
+    }
+  },
+  "services": {
+    "eyebrow": "Servicios",
+    "title": "Experiencia práctica para tu negocio digital.",
+    "description": "Servicios enfocados que integran el desarrollo de productos, la automatización inteligente, la experiencia del usuario y el crecimiento digital en un enfoque práctico. Ayudamos a transformar ideas y desafíos comerciales en soluciones confiables y fáciles de usar que son más fáciles de lanzar, gestionar y escalar, sin añadir complejidad innecesaria.",
+    "list": {
+      "customSoftware": {
+        "title": "Desarrollo de Software a Medida",
+        "description": "Software diseñado específicamente para mejorar los flujos de trabajo, las operaciones, los informes y los procesos comerciales internos.",
+        "keywords": ["Sistemas Internos", "Automatización de Procesos", "Paneles de Control", "Integración de APIs", "Herramientas de Negocio"]
+      },
+      "webPlatforms": {
+        "title": "Plataformas Web y Comercio Electrónico",
+        "description": "Plataformas web seguras, escalables y adaptables diseñadas en torno a clientes, equipos, transacciones y requisitos comerciales.",
+        "keywords": ["Comercio Electrónico", "Plataformas SaaS", "Portales de Clientes", "Sistemas de Reservas", "Paneles de Administración"]
+      },
+      "mobileApp": {
+        "title": "Desarrollo de Aplicaciones Móviles",
+        "description": "Aplicaciones móviles multiplataforma creadas para clientes, equipos, servicios y flujos de trabajo críticos para el negocio.",
+        "keywords": ["React Native", "Expo", "Comercio Móvil", "Notificaciones Push", "Integración de APIs"]
+      },
+      "aiAutomation": {
+        "title": "Automatización con IA y Análisis de Datos",
+        "description": "Integraciones prácticas de IA y sistemas de automatización que reducen el trabajo repetitivo, mejoran el acceso a la información y respaldan mejores decisiones.",
+        "keywords": ["Asistentes de IA", "Sistemas RAG", "Automatización de Procesos", "Preprocesamiento de Datos", "Entrenamiento de Modelos", "Procesamiento de Documentos"]
+      },
+      "uiuxDesign": {
+        "title": "Diseño de Producto y UI/UX",
+        "description": "Interfaces claras, accesibles y centradas en el usuario, diseñadas en torno a objetivos comerciales, usuarios reales y experiencias digitales significativas.",
+        "keywords": ["Investigación de UX", "Diseño de Interfaces", "Creación de Wireframes", "Prototipado", "Sistemas de Diseño"]
+      },
+      "digitalMarketing": {
+        "title": "Marketing Digital y Crecimiento de Marca",
+        "description": "Estrategias conectadas de marketing y marca que mejoran la visibilidad, la consistencia, el compromiso de la audiencia y el crecimiento digital a largo plazo.",
+        "keywords": ["SEO", "Redes Sociales", "Campañas Pagadas", "Identidad de Marca", "Estrategia de Contenido"]
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "Cómo trabajamos",
+    "title": "Un proceso claro desde la idea hasta la mejora.",
+    "description": "Mantenemos cada proyecto estructurado, colaborativo y enfocado en el resultado que el negocio necesita.",
+    "steps": {
+      "discover": {
+        "title": "Descubrir",
+        "description": "Comenzamos entendiendo su negocio, usuarios, objetivos, desafíos y el contexto del proyecto. Esta etapa nos ayuda a identificar el problema real, aclarar las expectativas y asegurar que la solución se base en necesidades comerciales reales y no en suposiciones."
+      },
+      "plan": {
+        "title": "Planificar",
+        "description": "Definimos el alcance del proyecto, las prioridades, los requisitos, el cronograma y la dirección técnica. Esto crea una hoja de ruta clara para el trabajo futuro y ayuda a todos a comprender qué se construirá, cómo se abordará y cómo debería ser el éxito."
+      },
+      "design": {
+        "title": "Diseñar",
+        "description": "Damos forma a la estructura, la experiencia del usuario, la dirección visual y las interacciones clave del producto. Nuestro enfoque está en hacer que la solución sea clara, intuitiva, accesible y alineada tanto con la marca como con las necesidades de las personas que la usarán."
+      },
+      "develop": {
+        "title": "Desarrollar",
+        "description": "Construimos la solución utilizando tecnologías que sean adecuadas, mantenibles, seguras y escalables. El proceso de desarrollo se organiza cuidadosamente para que las funciones funcionen juntas de manera consistente y el producto final siga siendo confiable a medida que el negocio crece."
+      },
+      "test": {
+        "title": "Probar",
+        "description": "Revisamos la funcionalidad, la adaptabilidad, la usabilidad, la accesibilidad, el rendimiento y los casos extremos importantes. Esto nos ayuda a identificar problemas a tiempo, mejorar la experiencia general y asegurar que el producto funcione correctamente en diferentes dispositivos y entornos."
+      },
+      "launch": {
+        "title": "Lanzar",
+        "description": "Preparamos el entorno de producción, completamos las comprobaciones finales y lanzamos la solución con cuidado. El lanzamiento se maneja de manera estructurada para reducir riesgos, confirmar que todo funcione correctamente y hacer que la transición sea lo más fluida posible."
+      },
+      "improve": {
+        "title": "Mejorar",
+        "description": "Después del lanzamiento, utilizamos los comentarios, los datos de rendimiento y los futuros requisitos comerciales para seguir mejorando el producto. Esta etapa respalda el crecimiento a largo plazo al ayudar a que la solución evolucione a medida que cambian los usuarios, la tecnología y las prioridades comerciales."
+      }
+    },
+    "techStack": {
+      "eyebrow": "Tecnologías",
+      "title": "Tecnologías con las que trabajamos",
+      "description": "Elegimos tecnologías de acuerdo con el producto, los usuarios, la mantenibilidad, la escala, la seguridad y las necesidades a largo plazo."
+    }
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos de lo que quieres construir o mejorar.",
+    "description": "Comparte tu proyecto, desafío comercial o meta de crecimiento digital. Revisaremos los detalles y discutiremos el siguiente paso.",
+    "details": {
+      "title": "Detalles de Contacto",
+      "subtitle": "Ponte en contacto directamente o envía tu consulta utilizando el formulario.",
+      "location": "Ubicación",
+      "nepal": "Katmandú, Nepal",
+      "workingModel": "Modelo de trabajo",
+      "remote": "Disponible para colaboración remota",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "follow": "Seguir a Grosbyte"
+    },
+    "form": {
+      "title": "Enviar una Consulta",
+      "description": "Cuéntanos brevemente sobre tu proyecto, requisito de servicio o meta comercial.",
+      "nameLabel": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "tu@ejemplo.com",
+      "phoneLabel": "Teléfono",
+      "phonePlaceholder": "ej. +977 9869000000",
+      "serviceLabel": "Servicio",
+      "servicePlaceholder": "Selecciona un servicio",
+      "messageLabel": "Mensaje",
+      "messagePlaceholder": "Cuéntanos sobre tu proyecto o meta.",
+      "submit": "Enviar Consulta",
+      "submitting": "Enviando..."
+    },
+    "validation": {
+      "name": "Por favor, introduce tu nombre.",
+      "email": "Por favor, introduce una dirección de correo electrónico válida.",
+      "service": "Por favor, selecciona un servicio.",
+      "message": "Por favor, añade al menos 10 caracteres."
+    },
+    "status": {
+      "success": "¡Gracias! Tu consulta ha sido enviada con éxito.",
+      "errorDefault": "No pudimos enviar tu consulta. Por favor, inténtalo de nuevo en breve.",
+      "errorConnection": "No pudimos enviar tu consulta. Por favor, comprueba tu conexión e inténtalo de nuevo."
+    }
+  },
+  "footer": {
+    "description": "Construimos productos digitales confiables, experiencias de marca reflexivas y tecnología orientada al crecimiento que ayuda a las empresas a avanzar con confianza."
+  }
+}

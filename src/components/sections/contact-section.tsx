@@ -10,6 +10,14 @@ import {
 } from "react-icons/fa";
 import { Reveal } from "@/components/motion/reveal";
 import { socialLinks } from "@/lib/site-data";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { useTranslation } from "@/contexts/language-context";
 
 type ContactFormValues = {
   name: string;
@@ -32,7 +40,26 @@ const initialValues: ContactFormValues = {
   message: "",
 };
 
+const serviceKeys: Record<string, string> = {
+  "Custom Software Development": "customSoftware",
+  "Web Platforms and E-commerce": "webPlatforms",
+  "Mobile Application Development": "mobileApp",
+  "AI Automation and Data Analysis": "aiAutomation",
+  "UI/UX and Product Design": "uiuxDesign",
+  "Digital Marketing and Brand Growth": "digitalMarketing",
+};
+
+const selectOptions = [
+  "Custom Software Development",
+  "Web Platforms and E-commerce",
+  "Mobile Application Development",
+  "AI Automation and Data Analysis",
+  "UI/UX and Product Design",
+  "Digital Marketing and Brand Growth",
+];
+
 export function ContactSection() {
+  const { t } = useTranslation();
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState<ContactFormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -58,14 +85,16 @@ export function ContactSection() {
 
     const nextErrors: ContactFormErrors = {};
     if (values.name.trim().length < 2) {
-      nextErrors.name = "Please enter your name.";
+      nextErrors.name = t("contact.validation.name");
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
-      nextErrors.email = "Please enter a valid email address.";
+      nextErrors.email = t("contact.validation.email");
     }
-    if (!values.service) nextErrors.service = "Please select a service.";
+    if (!values.service) {
+      nextErrors.service = t("contact.validation.service");
+    }
     if (values.message.trim().length < 10) {
-      nextErrors.message = "Please add at least 10 characters.";
+      nextErrors.message = t("contact.validation.message");
     }
     setErrors(nextErrors);
     setStatus({ type: "idle", message: "" });
@@ -96,7 +125,7 @@ export function ContactSection() {
           type: "error",
           message:
             result.message ??
-            "We couldn’t send your enquiry. Please try again shortly.",
+            t("contact.status.errorDefault"),
         });
         return;
       }
@@ -108,13 +137,13 @@ export function ContactSection() {
         type: "success",
         message:
           result.message ??
-          "Thank you! Your enquiry has been sent successfully.",
+          t("contact.status.success"),
       });
     } catch {
       setStatus({
         type: "error",
         message:
-          "We couldn’t send your enquiry. Please check your connection and try again.",
+          t("contact.status.errorConnection"),
       });
     } finally {
       submissionLock.current = false;
@@ -126,51 +155,48 @@ export function ContactSection() {
     <section className="section contact-section" id="contact">
       <div className="container">
         <Reveal className="section-heading section-heading-centered contact-heading">
-          <p className="eyebrow">Contact Us</p>
-          <h2>Let&apos;s discuss what you want to build or improve.</h2>
-          <p>
-            Share your project, business challenge, or digital growth goal.
-            We&apos;ll review the details and discuss the next step.
-          </p>
+          <p className="eyebrow">{t("contact.eyebrow")}</p>
+          <h2>{t("contact.title")}</h2>
+          <p>{t("contact.description")}</p>
         </Reveal>
         <div className="contact-layout">
           <Reveal className="contact-info">
             <div className="contact-panel-heading">
-              <h3>Contact Details</h3>
-              <p>Reach out directly or send your enquiry using the form.</p>
+              <h3>{t("contact.details.title")}</h3>
+              <p>{t("contact.details.subtitle")}</p>
             </div>
             <div className="contact-details">
               <div>
                 <MapPin aria-hidden="true" />
                 <span>
-                  <small>Location</small>
-                  Kathmandu, Nepal
+                  <small>{t("contact.details.location")}</small>
+                  {t("contact.details.nepal")}
                 </span>
               </div>
               <div>
                 <Users aria-hidden="true" />
                 <span>
-                  <small>Working model</small>
-                  Available for remote collaboration
+                  <small>{t("contact.details.workingModel")}</small>
+                  {t("contact.details.remote")}
                 </span>
               </div>
               <a href="mailto:contact@grosbyte.com">
                 <Mail aria-hidden="true" />
                 <span>
-                  <small>Email</small>
+                  <small>{t("contact.details.email")}</small>
                   contact@grosbyte.com
                 </span>
               </a>
               <a href="tel:+9779869793130">
                 <Phone aria-hidden="true" />
                 <span>
-                  <small>Phone</small>
+                  <small>{t("contact.details.phone")}</small>
                   +977 9869793130
                 </span>
               </a>
             </div>
             <div className="contact-social">
-              <h4>Follow Grosbyte</h4>
+              <h4>{t("contact.details.follow")}</h4>
               <div className="contact-social-list">
                 <a
                   href={socialLinks.instagram}
@@ -226,56 +252,60 @@ export function ContactSection() {
           <Reveal delay={0.08}>
             <form className="contact-form" noValidate onSubmit={handleSubmit}>
               <div className="form-heading">
-                <h3>Send an Enquiry</h3>
-                <p>
-                  Tell us briefly about your project, service requirement, or
-                  business goal.
-                </p>
+                <h3>{t("contact.form.title")}</h3>
+                <p>{t("contact.form.description")}</p>
               </div>
               <div className="form-grid">
                 <FormField
                   id="name"
-                  label="Name"
+                  label={t("contact.form.nameLabel")}
                   value={values.name}
                   error={errors.name}
                   onChange={(value) => update("name", value)}
+                  placeholder={t("contact.form.namePlaceholder")}
                 />
                 <FormField
                   id="email"
-                  label="Email"
+                  label={t("contact.form.emailLabel")}
                   type="email"
                   value={values.email}
                   error={errors.email}
                   onChange={(value) => update("email", value)}
+                  placeholder={t("contact.form.emailPlaceholder")}
                 />
                 <FormField
                   id="phone"
-                  label="Phone"
+                  label={t("contact.form.phoneLabel")}
                   type="tel"
                   value={values.phone}
                   error={errors.phone}
                   onChange={(value) => update("phone", value)}
                   required={false}
+                  placeholder={t("contact.form.phonePlaceholder")}
                 />
                 <div className="form-field">
-                  <label htmlFor="service">Service</label>
-                  <select
-                    id="service"
+                  <label htmlFor="service">{t("contact.form.serviceLabel")}</label>
+                  <Select
                     value={values.service}
-                    onChange={(event) => update("service", event.target.value)}
-                    aria-invalid={Boolean(errors.service)}
-                    aria-describedby={
-                      errors.service ? "service-error" : undefined
-                    }
+                    onValueChange={(value) => update("service", value)}
                   >
-                    <option value="">Select a service</option>
-                    <option>Custom Software Development</option>
-                    <option>Web Platforms and E-commerce</option>
-                    <option>Mobile Application Development</option>
-                    <option>AI and Automation Solutions</option>
-                    <option>UI/UX and Product Design</option>
-                    <option>Digital Marketing and Brand Growth</option>
-                  </select>
+                    <SelectTrigger
+                      id="service"
+                      aria-invalid={Boolean(errors.service)}
+                      aria-describedby={
+                        errors.service ? "service-error" : undefined
+                      }
+                    >
+                      <SelectValue placeholder={t("contact.form.servicePlaceholder")} />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {selectOptions.map((opt) => (
+                        <SelectItem key={opt} value={opt}>
+                          {t(`services.list.${serviceKeys[opt]}.title`)}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                   {errors.service && (
                     <span className="field-error" id="service-error">
                       {errors.service}
@@ -283,13 +313,13 @@ export function ContactSection() {
                   )}
                 </div>
                 <div className="form-field form-field-full">
-                  <label htmlFor="message">Message</label>
+                  <label htmlFor="message">{t("contact.form.messageLabel")}</label>
                   <textarea
                     id="message"
                     rows={5}
                     value={values.message}
                     onChange={(event) => update("message", event.target.value)}
-                    placeholder="Tell us about your project or goal."
+                    placeholder={t("contact.form.messagePlaceholder")}
                     aria-invalid={Boolean(errors.message)}
                     aria-describedby={
                       errors.message ? "message-error" : undefined
@@ -307,7 +337,7 @@ export function ContactSection() {
                 type="submit"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Sending..." : "Send Enquiry"}{" "}
+                {isSubmitting ? t("contact.form.submitting") : t("contact.form.submit")}{" "}
                 <Send aria-hidden="true" />
               </button>
               {status.type !== "idle" && (
@@ -315,6 +345,11 @@ export function ContactSection() {
                   className={`form-status form-status-${status.type}`}
                   role={status.type === "error" ? "alert" : "status"}
                   aria-live="polite"
+                  style={{
+                    color: status.type === "success" ? "#10b981" : "#ef4444",
+                    fontSize: "0.875rem",
+                    marginTop: "0.75rem",
+                  }}
                 >
                   {status.message}
                 </p>
@@ -335,6 +370,7 @@ function FormField({
   error,
   onChange,
   required = true,
+  placeholder,
 }: {
   id: keyof ContactFormValues;
   label: string;
@@ -343,6 +379,7 @@ function FormField({
   error?: string;
   onChange: (value: string) => void;
   required?: boolean;
+  placeholder?: string;
 }) {
   return (
     <div className="form-field">
@@ -353,6 +390,7 @@ function FormField({
         value={value}
         required={required}
         onChange={(event) => onChange(event.target.value)}
+        placeholder={placeholder}
         aria-invalid={Boolean(error)}
         aria-describedby={error ? `${id}-error` : undefined}
       />

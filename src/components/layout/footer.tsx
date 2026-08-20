@@ -1,28 +1,37 @@
+"use client";
+
 import Image from "next/image";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { navigation, socialLinks } from "@/lib/site-data";
+import { useTranslation } from "@/contexts/language-context";
+
+const navKeys: Record<string, string> = {
+  "#home": "nav.home",
+  "#about": "nav.about",
+  "#services": "nav.services",
+  "#how-we-work": "nav.process",
+  "#contact": "nav.contact",
+};
 
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="container footer-main">
         <div className="footer-identity">
           <a className="brand" href="#home">
             <span className="brand-logo">
-              <Image src="/logo.png" alt="" width={40} height={24} />
+              <Image src="/icons/logo-removebg.png" alt="" width={40} height={24} />
             </span>
             <span>Grosbyte Technologies</span>
           </a>
-          <p>
-            We build reliable digital products, thoughtful brand experiences,
-            and growth-focused technology that help businesses move forward with
-            confidence.
-          </p>
+          <p>{t("footer.description")}</p>
         </div>
         <nav className="footer-nav" aria-label="Footer navigation">
           {navigation.map((item) => (
             <a href={item.href} key={item.href}>
-              {item.label}
+              {t(navKeys[item.href])}
             </a>
           ))}
         </nav>
