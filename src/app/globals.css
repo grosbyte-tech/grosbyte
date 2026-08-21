@@ -263,19 +263,54 @@ a {
 
 .nav-cta,
 .mobile-cta {
-  margin-left: 1.25rem;
+  position: relative;
+  overflow: hidden;
   padding: 0.68rem 0.9rem;
-  border-radius: 8px;
-  background: var(--brand-blue);
+  border-radius: 100px;
+  background: transparent;
   color: #ffffff;
   font-size: 0.8rem;
   font-weight: 800;
-  transition: background-color 0.2s ease;
+  border: none;
+  z-index: 1;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
-.nav-cta:hover,
-.mobile-cta:hover {
-  background: var(--brand-blue-hover);
+.nav-cta::before,
+.mobile-cta::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 100deg,
+    #ffffff 180deg,
+    transparent 260deg,
+    transparent 360deg
+  );
+  animation: rotate-gradient 3s linear infinite;
+  z-index: -2;
+}
+
+.nav-cta::after,
+.mobile-cta::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: linear-gradient(180deg, #2a68e1 0%, #16439e 100%);
+  border-radius: inherit;
+  z-index: -1;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transition: background-image 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-cta:hover::after,
+.mobile-cta:hover::after {
+  background: linear-gradient(180deg, #3b78ee 0%, #1e4eb8 100%);
 }
 
 .menu-button,
@@ -1286,4 +1321,69 @@ a {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+.mobile-nav-glass {
+  background: rgba(3, 11, 28, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+}
+
+html.light .mobile-nav-glass {
+  background: rgba(255, 255, 255, 0.65) !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Rotating border glow animation */
+@keyframes rotate-gradient {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.border-glow-container {
+  position: relative;
+  overflow: hidden;
+  padding: 1px !important;
+  background: transparent;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.border-glow-line {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 100deg,
+    #ffffff 180deg,
+    transparent 260deg,
+    transparent 360deg
+  );
+  animation: rotate-gradient 3s linear infinite;
+  z-index: 0;
+}
+
+.border-glow-content {
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(180deg, #2a68e1 0%, #16439e 100%);
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 4px 15px rgba(42, 104, 225, 0.3);
+  transition: background-color 0.2s ease;
+}
+
+.border-glow-container:hover .border-glow-content {
+  background: linear-gradient(180deg, #3b78ee 0%, #1e4eb8 100%);
 }

@@ -8,6 +8,7 @@ import { navigation } from "@/lib/site-data";
 import { useTranslation } from "@/contexts/language-context";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { useTheme } from "@/contexts/theme-context";
 
 const icons = {
   "#home": Home,
@@ -30,6 +31,7 @@ export function Navbar() {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const reduceMotion = useReducedMotion();
   const { t } = useTranslation();
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -102,7 +104,16 @@ export function Navbar() {
       </motion.header>
 
       {/* Floating Glassmorphism Sticky Bottom Navigation for Mobile */}
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2.5rem)] max-w-[450px] h-[62px] rounded-full border border-white/10 bg-[#030b1c]/70 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] flex justify-around items-center px-5 md:hidden">
+      <div
+        className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2.5rem)] max-w-[450px] h-[62px] rounded-full shadow-[0_8px_32px_0_rgba(0,0,0,0.18)] flex justify-around items-center px-5 md:hidden border transition-all duration-250 backdrop-blur-[24px] saturate-[180%] ${
+          theme === "light"
+            ? "bg-white/60 border-slate-900/10"
+            : "bg-[#030b1c]/50 border-white/10"
+        }`}
+        style={{
+          WebkitBackdropFilter: "blur(24px) saturate(180%)",
+        }}
+      >
         {navigation.map((item) => {
           const Icon = icons[item.href];
           const isActive = active === item.href.slice(1);
