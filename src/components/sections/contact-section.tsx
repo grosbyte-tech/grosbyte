@@ -2,6 +2,7 @@
 
 import { useRef, useState, type FormEvent } from "react";
 import { Mail, MapPin, Phone, Send, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   FaFacebookF,
   FaGithub,
@@ -332,14 +333,15 @@ export function ContactSection() {
                   )}
                 </div>
               </div>
-              <button
-                className="button button-primary submit-button"
+              <Button
+                variant="glowing"
                 type="submit"
                 disabled={isSubmitting}
+                className="mt-4 h-12 w-full max-w-[200px] text-sm font-bold uppercase tracking-wider"
               >
                 {isSubmitting ? t("contact.form.submitting") : t("contact.form.submit")}{" "}
-                <Send aria-hidden="true" />
-              </button>
+                <Send className="ml-1.5 h-4 w-4" aria-hidden="true" />
+              </Button>
               {status.type !== "idle" && (
                 <p
                   className={`form-status form-status-${status.type}`}
