@@ -43,7 +43,8 @@ export type ProcessStep = {
 export type Technology = {
   name: string;
   description: string;
-  icon: ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
+  icon: string | ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
+  invertOnDark?: boolean;
 };
 
 export const navigation = [
@@ -178,102 +179,106 @@ export const technologies: readonly Technology[] = [
   {
     name: "Next.js",
     description: "Scalable React web products.",
-    icon: SiNextdotjs,
+    icon: "https://cdn.svgporn.com/logos/nextjs.svg",
+    invertOnDark: true,
   },
   {
     name: "React",
     description: "Interactive component-based interfaces.",
-    icon: SiReact,
+    icon: "https://cdn.svgporn.com/logos/react.svg",
   },
   {
     name: "TypeScript",
     description: "Safer, maintainable JavaScript.",
-    icon: SiTypescript,
+    icon: "https://cdn.svgporn.com/logos/typescript-icon.svg",
   },
   {
     name: "Tailwind CSS",
     description: "Fast, responsive interface styling.",
-    icon: SiTailwindcss,
+    icon: "https://cdn.svgporn.com/logos/tailwindcss-icon.svg",
   },
   {
     name: "Node.js",
     description: "APIs and server applications.",
-    icon: SiNodedotjs,
+    icon: "https://cdn.svgporn.com/logos/nodejs.svg",
   },
   {
     name: "React Native",
     description: "Cross-platform mobile applications.",
-    icon: SiReact,
+    icon: "https://cdn.svgporn.com/logos/react.svg",
   },
   {
     name: "Expo",
     description: "React Native app tooling.",
-    icon: SiExpo,
+    icon: "https://cdn.svgporn.com/logos/expo-icon.svg",
+    invertOnDark: true,
   },
   {
     name: "Python",
     description: "Applications, automation, and AI.",
-    icon: SiPython,
+    icon: "https://cdn.svgporn.com/logos/python.svg",
   },
   {
     name: "Django",
     description: "Secure Python web applications.",
-    icon: SiDjango,
+    icon: "https://cdn.svgporn.com/logos/django.svg",
   },
   {
     name: "Go",
     description: "Fast, scalable backend services.",
-    icon: SiGo,
+    icon: "https://cdn.svgporn.com/logos/go.svg",
   },
   {
     name: "Gin",
     description: "Lightweight Go APIs and services.",
-    icon: Network,
+    icon: "https://api.iconify.design/lucide/network.svg?color=%232a68e1",
   },
   {
     name: "REST APIs",
     description: "Reliable service communication.",
-    icon: DatabaseZap,
+    icon: "https://api.iconify.design/lucide/database-zap.svg?color=%232a68e1",
   },
   {
     name: "PostgreSQL",
     description: "Production-ready relational data.",
-    icon: SiPostgresql,
+    icon: "https://cdn.svgporn.com/logos/postgresql.svg",
   },
   {
     name: "SQL",
     description: "Structured data querying.",
-    icon: Database,
+    icon: "https://api.iconify.design/lucide/database.svg?color=%232a68e1",
   },
   {
     name: "RAG",
     description: "Grounded, context-aware AI.",
-    icon: Search,
+    icon: "https://api.iconify.design/lucide/brain-circuit.svg?color=%232a68e1",
   },
   {
     name: "Vector Databases",
     description: "Semantic search and AI storage.",
-    icon: DatabaseZap,
+    icon: "https://api.iconify.design/lucide/database-zap.svg?color=%232a68e1",
   },
   {
     name: "Git",
     description: "Reliable source version control.",
-    icon: SiGit,
+    icon: "https://cdn.svgporn.com/logos/git-icon.svg",
   },
   {
     name: "GitHub",
     description: "Code collaboration and reviews.",
-    icon: SiGithub,
+    icon: "https://cdn.svgporn.com/logos/github-icon.svg",
+    invertOnDark: true,
   },
   {
     name: "Docker",
     description: "Consistent development and deployment.",
-    icon: SiDocker,
+    icon: "https://cdn.svgporn.com/logos/docker-icon.svg",
   },
   {
     name: "Resend",
     description: "Application email infrastructure.",
-    icon: SiResend,
+    icon: "https://cdn.svgporn.com/logos/resend-icon.svg",
+    invertOnDark: true,
   },
 ];
 
