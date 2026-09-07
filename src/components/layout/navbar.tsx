@@ -129,7 +129,9 @@ export function Navbar() {
             >
               <Icon className="h-[18px] w-[18px]" />
               <span className="text-[9px] font-semibold tracking-wider uppercase">
-                {item.href === "#how-we-work" ? t("nav.processMobile") : t(navKeys[item.href])}
+                {item.href === "#how-we-work"
+                  ? t("nav.processMobile")
+                  : t(navKeys[item.href])}
               </span>
             </a>
           );

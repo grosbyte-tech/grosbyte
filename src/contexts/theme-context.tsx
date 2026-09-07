@@ -1,8 +1,15 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useSyncExternalStore,
+  ReactNode,
+} from "react";
 
-export type Theme = "light" | "dark";
+export type Theme = "dark" | "light";
 
 interface ThemeContextType {
   theme: Theme;
@@ -10,26 +17,36 @@ interface ThemeContextType {
   setTheme: (theme: Theme) => void;
 }
 
+const emptySubscribe = () => () => {};
+
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>("dark");
-  const [mounted, setMounted] = useState(false);
+  const isMounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false,
+  );
+
+  const [theme, setThemeState] = useState<Theme>(() => {
+    if (typeof window !== "undefined") {
+      const savedTheme = localStorage.getItem("grosbyte-theme") as Theme;
+      if (savedTheme === "dark" || savedTheme === "light") {
+        return savedTheme;
+      }
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
+      }
+      return "light";
+    }
+    return "dark";
+  });
 
   useEffect(() => {
-    // Read persisted theme or system preference
-    const savedTheme = localStorage.getItem("grosbyte-theme") as Theme;
-    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initialTheme = savedTheme || (systemPrefersDark ? "dark" : "light");
-
-    setThemeState(initialTheme);
-    setMounted(true);
-
-    // Apply theme class to documentElement
     const root = window.document.documentElement;
     root.classList.remove("light", "dark");
-    root.classList.add(initialTheme);
-  }, []);
+    root.classList.add(theme);
+  }, [theme]);
 
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
@@ -47,7 +64,10 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   // Prevent flash of unstyled content during SSR by rendering children directly once client is loaded
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme, setTheme }}>
-      <div style={{ visibility: mounted ? "visible" : "hidden" }} className="w-full min-h-screen bg-[var(--background)]">
+      <div
+        style={{ visibility: isMounted ? "visible" : "hidden" }}
+        className="w-full min-h-screen bg-[var(--background)]"
+      >
         {children}
       </div>
     </ThemeContext.Provider>

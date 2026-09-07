@@ -10,6 +10,8 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import { Reveal } from "@/components/motion/reveal";
+import { RollingText } from "@/components/motion/rolling-text";
+import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
 import { socialLinks } from "@/lib/site-data";
 import {
   Select,
@@ -124,9 +126,7 @@ export function ContactSection() {
         setErrors(result.errors ?? {});
         setStatus({
           type: "error",
-          message:
-            result.message ??
-            t("contact.status.errorDefault"),
+          message: result.message ?? t("contact.status.errorDefault"),
         });
         return;
       }
@@ -136,15 +136,12 @@ export function ContactSection() {
       submissionId.current = null;
       setStatus({
         type: "success",
-        message:
-          result.message ??
-          t("contact.status.success"),
+        message: result.message ?? t("contact.status.success"),
       });
     } catch {
       setStatus({
         type: "error",
-        message:
-          t("contact.status.errorConnection"),
+        message: t("contact.status.errorConnection"),
       });
     } finally {
       submissionLock.current = false;
@@ -157,8 +154,8 @@ export function ContactSection() {
       <div className="container">
         <Reveal className="section-heading section-heading-centered contact-heading">
           <p className="eyebrow">{t("contact.eyebrow")}</p>
-          <h2>{t("contact.title")}</h2>
-          <p>{t("contact.description")}</p>
+          <RollingText as="h2" text={t("contact.title")} />
+          <AnimatedParagraph text={t("contact.description")} delay={0.25} />
         </Reveal>
         <div className="contact-layout">
           <Reveal className="contact-info">
@@ -285,7 +282,9 @@ export function ContactSection() {
                   placeholder={t("contact.form.phonePlaceholder")}
                 />
                 <div className="form-field">
-                  <label htmlFor="service">{t("contact.form.serviceLabel")}</label>
+                  <label htmlFor="service">
+                    {t("contact.form.serviceLabel")}
+                  </label>
                   <Select
                     value={values.service}
                     onValueChange={(value) => update("service", value)}
@@ -297,7 +296,9 @@ export function ContactSection() {
                         errors.service ? "service-error" : undefined
                       }
                     >
-                      <SelectValue placeholder={t("contact.form.servicePlaceholder")} />
+                      <SelectValue
+                        placeholder={t("contact.form.servicePlaceholder")}
+                      />
                     </SelectTrigger>
                     <SelectContent>
                       {selectOptions.map((opt) => (
@@ -314,7 +315,9 @@ export function ContactSection() {
                   )}
                 </div>
                 <div className="form-field form-field-full">
-                  <label htmlFor="message">{t("contact.form.messageLabel")}</label>
+                  <label htmlFor="message">
+                    {t("contact.form.messageLabel")}
+                  </label>
                   <textarea
                     id="message"
                     rows={5}
@@ -339,7 +342,9 @@ export function ContactSection() {
                 disabled={isSubmitting}
                 className="mt-4 h-12 w-full max-w-[200px] text-sm font-bold uppercase tracking-wider"
               >
-                {isSubmitting ? t("contact.form.submitting") : t("contact.form.submit")}{" "}
+                {isSubmitting
+                  ? t("contact.form.submitting")
+                  : t("contact.form.submit")}{" "}
                 <Send className="ml-1.5 h-4 w-4" aria-hidden="true" />
               </Button>
               {status.type !== "idle" && (

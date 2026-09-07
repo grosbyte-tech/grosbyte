@@ -25,7 +25,10 @@ export const metadata: Metadata = {
     "product design and brand growth",
     "AI integration",
   ],
-  icons: { icon: "/icons/logo-removebg.png", shortcut: "/icons/logo-removebg.png" },
+  icons: {
+    icon: "/icons/logo-removebg.png",
+    shortcut: "/icons/logo-removebg.png",
+  },
   openGraph: {
     title,
     description,
@@ -71,9 +74,7 @@ export default function RootLayout({
     <html lang="en" className={urbanist.variable}>
       <body>
         <LanguageProvider>
-          <ThemeProvider>
-            {children}
-          </ThemeProvider>
+          <ThemeProvider>{children}</ThemeProvider>
         </LanguageProvider>
         <script
           type="application/ld+json"

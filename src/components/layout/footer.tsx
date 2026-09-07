@@ -22,7 +22,12 @@ export function Footer() {
         <div className="footer-identity">
           <a className="brand" href="#home">
             <span className="brand-logo">
-              <Image src="/icons/logo-removebg.png" alt="" width={40} height={24} />
+              <Image
+                src="/icons/logo-removebg.png"
+                alt=""
+                width={40}
+                height={24}
+              />
             </span>
             <span>Grosbyte Technologies</span>
           </a>

@@ -35,32 +35,69 @@
       "customSoftware": {
         "title": "Desarrollo de Software a Medida",
         "description": "Software diseñado específicamente para mejorar los flujos de trabajo, las operaciones, los informes y los procesos comerciales internos.",
-        "keywords": ["Sistemas Internos", "Automatización de Procesos", "Paneles de Control", "Integración de APIs", "Herramientas de Negocio"]
+        "keywords": [
+          "Sistemas Internos",
+          "Automatización de Procesos",
+          "Paneles de Control",
+          "Integración de APIs",
+          "Herramientas de Negocio"
+        ]
       },
       "webPlatforms": {
         "title": "Plataformas Web y Comercio Electrónico",
         "description": "Plataformas web seguras, escalables y adaptables diseñadas en torno a clientes, equipos, transacciones y requisitos comerciales.",
-        "keywords": ["Comercio Electrónico", "Plataformas SaaS", "Portales de Clientes", "Sistemas de Reservas", "Paneles de Administración"]
+        "keywords": [
+          "Comercio Electrónico",
+          "Plataformas SaaS",
+          "Portales de Clientes",
+          "Sistemas de Reservas",
+          "Paneles de Administración"
+        ]
       },
       "mobileApp": {
         "title": "Desarrollo de Aplicaciones Móviles",
         "description": "Aplicaciones móviles multiplataforma creadas para clientes, equipos, servicios y flujos de trabajo críticos para el negocio.",
-        "keywords": ["React Native", "Expo", "Comercio Móvil", "Notificaciones Push", "Integración de APIs"]
+        "keywords": [
+          "React Native",
+          "Expo",
+          "Comercio Móvil",
+          "Notificaciones Push",
+          "Integración de APIs"
+        ]
       },
       "aiAutomation": {
         "title": "Automatización con IA y Análisis de Datos",
         "description": "Integraciones prácticas de IA y sistemas de automatización que reducen el trabajo repetitivo, mejoran el acceso a la información y respaldan mejores decisiones.",
-        "keywords": ["Asistentes de IA", "Sistemas RAG", "Automatización de Procesos", "Preprocesamiento de Datos", "Entrenamiento de Modelos", "Procesamiento de Documentos"]
+        "keywords": [
+          "Asistentes de IA",
+          "Sistemas RAG",
+          "Automatización de Procesos",
+          "Preprocesamiento de Datos",
+          "Entrenamiento de Modelos",
+          "Procesamiento de Documentos"
+        ]
       },
       "uiuxDesign": {
         "title": "Diseño de Producto y UI/UX",
         "description": "Interfaces claras, accesibles y centradas en el usuario, diseñadas en torno a objetivos comerciales, usuarios reales y experiencias digitales significativas.",
-        "keywords": ["Investigación de UX", "Diseño de Interfaces", "Creación de Wireframes", "Prototipado", "Sistemas de Diseño"]
+        "keywords": [
+          "Investigación de UX",
+          "Diseño de Interfaces",
+          "Creación de Wireframes",
+          "Prototipado",
+          "Sistemas de Diseño"
+        ]
       },
       "digitalMarketing": {
         "title": "Marketing Digital y Crecimiento de Marca",
         "description": "Estrategias conectadas de marketing y marca que mejoran la visibilidad, la consistencia, el compromiso de la audiencia y el crecimiento digital a largo plazo.",
-        "keywords": ["SEO", "Redes Sociales", "Campañas Pagadas", "Identidad de Marca", "Estrategia de Contenido"]
+        "keywords": [
+          "SEO",
+          "Redes Sociales",
+          "Campañas Pagadas",
+          "Identidad de Marca",
+          "Estrategia de Contenido"
+        ]
       }
     }
   },

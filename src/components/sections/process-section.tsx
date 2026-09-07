@@ -1,7 +1,13 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useReducedMotion, useScroll, useSpring, useInView } from "framer-motion";
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useSpring,
+  useInView,
+} from "framer-motion";
 import {
   ClipboardCheck,
   CloudUpload,
@@ -15,6 +21,9 @@ import {
 
 import { processSteps, technologies } from "@/lib/site-data";
 import { useTranslation } from "@/contexts/language-context";
+import { RollingText } from "@/components/motion/rolling-text";
+import { ScrollRevealText } from "@/components/motion/scroll-reveal-text";
+import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
 
 const processIcons: LucideIcon[] = [
   Search,
@@ -27,13 +36,13 @@ const processIcons: LucideIcon[] = [
 ];
 
 const stepKeys: Record<string, string> = {
-  "Discover": "discover",
-  "Plan": "plan",
-  "Design": "design",
-  "Develop": "develop",
-  "Test": "test",
-  "Launch": "launch",
-  "Improve": "improve",
+  Discover: "discover",
+  Plan: "plan",
+  Design: "design",
+  Develop: "develop",
+  Test: "test",
+  Launch: "launch",
+  Improve: "improve",
 };
 
 interface ProcessIconTileProps {
@@ -42,7 +51,11 @@ interface ProcessIconTileProps {
   reduceMotion: boolean | null;
 }
 
-function ProcessIconTile({ icon: Icon, isReversed, reduceMotion }: ProcessIconTileProps) {
+function ProcessIconTile({
+  icon: Icon,
+  isReversed,
+  reduceMotion,
+}: ProcessIconTileProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.35 });
 
@@ -63,8 +76,8 @@ function ProcessIconTile({ icon: Icon, isReversed, reduceMotion }: ProcessIconTi
         isInView
           ? { opacity: 1, x: 0 }
           : reduceMotion
-          ? {}
-          : { opacity: 0, x: isReversed ? 24 : -24 }
+            ? {}
+            : { opacity: 0, x: isReversed ? 24 : -24 }
       }
       transition={{
         duration: 0.55,
@@ -79,7 +92,7 @@ function ProcessIconTile({ icon: Icon, isReversed, reduceMotion }: ProcessIconTi
 export function ProcessSection() {
   const reduceMotion = useReducedMotion();
   const { t } = useTranslation();
-  
+
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -106,10 +119,8 @@ export function ProcessSection() {
           }}
         >
           <p className="eyebrow">{t("process.eyebrow")}</p>
-
-          <h2>{t("process.title")}</h2>
-
-          <p>{t("process.description")}</p>
+          <RollingText as="h2" text={t("process.title")} />
+          <AnimatedParagraph text={t("process.description")} delay={0.25} />
         </motion.div>
 
         <div className="process-editorial" ref={containerRef}>
@@ -175,7 +186,7 @@ export function ProcessSection() {
 
                   <i className="editorial-divider" aria-hidden="true" />
 
-                  <p>{translatedDescription}</p>
+                  <ScrollRevealText text={translatedDescription} />
                 </motion.div>
               </article>
             );
@@ -194,23 +205,36 @@ export function ProcessSection() {
             }}
           >
             <p className="eyebrow">{t("process.techStack.eyebrow")}</p>
-
-            <h3>{t("process.techStack.title")}</h3>
-
-            <p>{t("process.techStack.description")}</p>
+            <RollingText as="h3" text={t("process.techStack.title")} />
+            <AnimatedParagraph
+              text={t("process.techStack.description")}
+              delay={0.25}
+            />
           </motion.div>
 
           <div className="tech-marquee-container">
             {(() => {
-              const columns: (typeof technologies[number])[][] = [[], [], [], []];
+              const columns: (typeof technologies)[number][][] = [
+                [],
+                [],
+                [],
+                [],
+              ];
               technologies.forEach((tech, i) => {
                 columns[i % 4].push(tech);
               });
 
               return columns.map((columnItems, colIndex) => {
-                const repeatedItems = [...columnItems, ...columnItems, ...columnItems];
+                const repeatedItems = [
+                  ...columnItems,
+                  ...columnItems,
+                  ...columnItems,
+                ];
                 return (
-                  <div key={colIndex} className={`tech-marquee-column tech-col-${colIndex + 1}`}>
+                  <div
+                    key={colIndex}
+                    className={`tech-marquee-column tech-col-${colIndex + 1}`}
+                  >
                     <div className="tech-marquee-track">
                       {repeatedItems.map((technology, index) => {
                         const icon = technology.icon;

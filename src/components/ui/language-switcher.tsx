@@ -18,7 +18,10 @@ export function LanguageSwitcher() {
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     }
@@ -26,7 +29,8 @@ export function LanguageSwitcher() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const currentLang = languages.find((lang) => lang.code === language) || languages[0];
+  const currentLang =
+    languages.find((lang) => lang.code === language) || languages[0];
 
   return (
     <div className="relative inline-block text-left" ref={containerRef}>
@@ -38,7 +42,9 @@ export function LanguageSwitcher() {
       >
         <Globe className="h-3.5 w-3.5 opacity-80" />
         <span className="uppercase">{currentLang.short}</span>
-        <ChevronDown className={`h-3 w-3 opacity-50 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+        <ChevronDown
+          className={`h-3 w-3 opacity-50 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+        />
       </button>
 
       {isOpen && (
@@ -57,7 +63,9 @@ export function LanguageSwitcher() {
               }`}
             >
               <span>{lang.label}</span>
-              <span className="text-[10px] opacity-40 uppercase font-mono">{lang.short}</span>
+              <span className="text-[10px] opacity-40 uppercase font-mono">
+                {lang.short}
+              </span>
             </button>
           ))}
         </div>

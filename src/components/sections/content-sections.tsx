@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { Reveal } from "@/components/motion/reveal";
+import { RollingText } from "@/components/motion/rolling-text";
+import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
 import { services } from "@/lib/site-data";
 import { useTranslation } from "@/contexts/language-context";
 
@@ -27,7 +29,7 @@ export function AboutSection() {
       <div className="container">
         <Reveal className="section-heading section-heading-centered">
           <p className="eyebrow">{t("about.eyebrow")}</p>
-          <h2>{t("about.title")}</h2>
+          <RollingText as="h2" text={t("about.title")} />
         </Reveal>
         <div className="about-layout">
           <Reveal className="about-image">
@@ -57,7 +59,6 @@ export function AboutSection() {
   );
 }
 
-
 export function ServicesSection() {
   const { t } = useTranslation();
 
@@ -66,8 +67,8 @@ export function ServicesSection() {
       <div className="container">
         <Reveal className="section-heading section-heading-centered">
           <p className="eyebrow">{t("services.eyebrow")}</p>
-          <h2>{t("services.title")}</h2>
-          <p>{t("services.description")}</p>
+          <RollingText as="h2" text={t("services.title")} />
+          <AnimatedParagraph text={t("services.description")} delay={0.25} />
         </Reveal>
         <div className="services-grid">
           {services.map((service, index) => {
@@ -75,7 +76,9 @@ export function ServicesSection() {
             const key = serviceKeys[service.title];
             const translatedTitle = t(`services.list.${key}.title`);
             const translatedDescription = t(`services.list.${key}.description`);
-            const translatedKeywords = t(`services.list.${key}.keywords`) as string[];
+            const translatedKeywords = t(
+              `services.list.${key}.keywords`,
+            ) as string[];
 
             return (
               <Reveal
