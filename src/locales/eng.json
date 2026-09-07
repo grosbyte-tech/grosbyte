@@ -35,32 +35,69 @@
       "customSoftware": {
         "title": "Custom Software Development",
         "description": "Purpose-built software that improves workflows, operations, reporting, and internal business processes.",
-        "keywords": ["Internal Systems", "Workflow Automation", "Dashboards", "API Integration", "Business Tools"]
+        "keywords": [
+          "Internal Systems",
+          "Workflow Automation",
+          "Dashboards",
+          "API Integration",
+          "Business Tools"
+        ]
       },
       "webPlatforms": {
         "title": "Web Platforms and E-commerce",
         "description": "Secure, scalable, and responsive web platforms designed around customers, teams, transactions, and business requirements.",
-        "keywords": ["E-commerce", "SaaS Platforms", "Customer Portals", "Booking Systems", "Admin Dashboards"]
+        "keywords": [
+          "E-commerce",
+          "SaaS Platforms",
+          "Customer Portals",
+          "Booking Systems",
+          "Admin Dashboards"
+        ]
       },
       "mobileApp": {
         "title": "Mobile Application Development",
         "description": "Cross-platform mobile applications built for customers, teams, services, and business-critical workflows.",
-        "keywords": ["React Native", "Expo", "Mobile Commerce", "Push Notifications", "API Integration"]
+        "keywords": [
+          "React Native",
+          "Expo",
+          "Mobile Commerce",
+          "Push Notifications",
+          "API Integration"
+        ]
       },
       "aiAutomation": {
         "title": "AI Automation and Data Analysis",
         "description": "Practical AI integrations and automation systems that reduce repetitive work, improve access to information, and support better decisions.",
-        "keywords": ["AI Assistants", "RAG Systems", "Process Automation", "Data Preprocessing", "Model Training", "Document Processing"]
+        "keywords": [
+          "AI Assistants",
+          "RAG Systems",
+          "Process Automation",
+          "Data Preprocessing",
+          "Model Training",
+          "Document Processing"
+        ]
       },
       "uiuxDesign": {
         "title": "UI/UX and Product Design",
         "description": "Clear, accessible, and user-focused interfaces designed around business goals, real users, and meaningful digital experiences.",
-        "keywords": ["UX Research", "Interface Design", "Wireframing", "Prototyping", "Design Systems"]
+        "keywords": [
+          "UX Research",
+          "Interface Design",
+          "Wireframing",
+          "Prototyping",
+          "Design Systems"
+        ]
       },
       "digitalMarketing": {
         "title": "Digital Marketing and Brand Growth",
         "description": "Connected marketing and brand strategies that improve visibility, consistency, audience engagement, and long-term digital growth.",
-        "keywords": ["SEO", "Social Media", "Paid Campaigns", "Brand Identity", "Content Strategy"]
+        "keywords": [
+          "SEO",
+          "Social Media",
+          "Paid Campaigns",
+          "Brand Identity",
+          "Content Strategy"
+        ]
       }
     }
   },

@@ -1,6 +1,11 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+} from "react";
 import eng from "../locales/eng.json";
 import nep from "../locales/nep.json";
 import ger from "../locales/ger.json";
@@ -11,41 +16,57 @@ export type Language = "eng" | "nep" | "ger" | "spa";
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: string) => any;
+  t: <T = string>(key: string) => T;
 }
 
-const translations: Record<Language, any> = {
+const translations: Record<Language, Record<string, unknown>> = {
   eng,
   nep,
   ger,
   spa,
 };
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined,
+);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>("eng");
-
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem("grosbyte-lang") as Language;
-    if (savedLanguage && (savedLanguage === "eng" || savedLanguage === "nep" || savedLanguage === "ger" || savedLanguage === "spa")) {
-      setLanguageState(savedLanguage);
+  const [language, setLanguageState] = useState<Language>(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("grosbyte-lang");
+      if (
+        saved === "eng" ||
+        saved === "nep" ||
+        saved === "ger" ||
+        saved === "spa"
+      ) {
+        return saved;
+      }
     }
-  }, []);
+    return "eng";
+  });
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem("grosbyte-lang", lang);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("grosbyte-lang", lang);
+    }
   };
 
-  const getNestedValue = (obj: any, path: string): any => {
-    return path.split(".").reduce((acc, part) => {
-      return acc && acc[part] !== undefined ? acc[part] : null;
+  const getNestedValue = (obj: unknown, path: string): unknown => {
+    return path.split(".").reduce((acc: unknown, part: string) => {
+      if (
+        acc &&
+        typeof acc === "object" &&
+        part in (acc as Record<string, unknown>)
+      ) {
+        return (acc as Record<string, unknown>)[part];
+      }
+      return null;
     }, obj);
   };
 
-  const t = (key: string): any => {
-  
+  const t = <T = string>(key: string): T => {
     const currentTranslation = translations[language];
     let value = getNestedValue(currentTranslation, key);
 
@@ -54,7 +75,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       value = getNestedValue(translations["eng"], key);
     }
 
-    return value !== null ? value : key;
+    return (value !== null ? value : key) as T;
   };
 
   return (

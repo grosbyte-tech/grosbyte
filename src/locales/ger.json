@@ -35,32 +35,69 @@
       "customSoftware": {
         "title": "Maßgeschneiderte Softwareentwicklung",
         "description": "Speziell entwickelte Software zur Verbesserung von Arbeitsabläufen, Abläufen, Berichten und internen Geschäftsprozessen.",
-        "keywords": ["Interne Systeme", "Workflow-Automatisierung", "Dashboards", "API-Integration", "Business-Tools"]
+        "keywords": [
+          "Interne Systeme",
+          "Workflow-Automatisierung",
+          "Dashboards",
+          "API-Integration",
+          "Business-Tools"
+        ]
       },
       "webPlatforms": {
         "title": "Webplattformen und E-Commerce",
         "description": "Sichere, skalierbare und responsive Webplattformen, die auf Kunden, Teams, Transaktionen und geschäftliche Anforderungen zugeschnitten sind.",
-        "keywords": ["E-Commerce", "SaaS-Plattformen", "Kundenportale", "Buchungssysteme", "Admin-Dashboards"]
+        "keywords": [
+          "E-Commerce",
+          "SaaS-Plattformen",
+          "Kundenportale",
+          "Buchungssysteme",
+          "Admin-Dashboards"
+        ]
       },
       "mobileApp": {
         "title": "Entwicklung mobiler Anwendungen",
         "description": "Plattformübergreifende mobile Anwendungen für Kunden, Teams, Dienste und geschäftskritische Workflows.",
-        "keywords": ["React Native", "Expo", "Mobile Commerce", "Push-Benachrichtigungen", "API-Integration"]
+        "keywords": [
+          "React Native",
+          "Expo",
+          "Mobile Commerce",
+          "Push-Benachrichtigungen",
+          "API-Integration"
+        ]
       },
       "aiAutomation": {
         "title": "KI-Automatisierung und Datenanalyse",
         "description": "Praktische KI-Integrationen und Automatisierungssysteme, die sich wiederholende Arbeit reduzieren, den Zugang zu Informationen verbessern und bessere Entscheidungen unterstützen.",
-        "keywords": ["KI-Assistenten", "RAG-Systeme", "Prozessautomatisierung", "Datenvorverarbeitung", "Modelltraining", "Dokumentenverarbeitung"]
+        "keywords": [
+          "KI-Assistenten",
+          "RAG-Systeme",
+          "Prozessautomatisierung",
+          "Datenvorverarbeitung",
+          "Modelltraining",
+          "Dokumentenverarbeitung"
+        ]
       },
       "uiuxDesign": {
         "title": "UI/UX und Produktdesign",
         "description": "Klare, barrierefreie und benutzerorientierte Schnittstellen, die auf Geschäftsziele, reale Benutzer und sinnvolle digitale Erlebnisse ausgerichtet sind.",
-        "keywords": ["UX-Forschung", "Schnittstellendesign", "Wireframing", "Prototyping", "Design-Systeme"]
+        "keywords": [
+          "UX-Forschung",
+          "Schnittstellendesign",
+          "Wireframing",
+          "Prototyping",
+          "Design-Systeme"
+        ]
       },
       "digitalMarketing": {
         "title": "Digitales Marketing und Markenwachstum",
         "description": "Verbundene Marketing- und Markenstrategien, die die Sichtbarkeit, Konsistenz, das Engagement des Publikums und das langfristige digitale Wachstum verbessern.",
-        "keywords": ["SEO", "Social Media", "Bezahlte Kampagnen", "Markenidentität", "Content-Strategie"]
+        "keywords": [
+          "SEO",
+          "Social Media",
+          "Bezahlte Kampagnen",
+          "Markenidentität",
+          "Content-Strategie"
+        ]
       }
     }
   },
