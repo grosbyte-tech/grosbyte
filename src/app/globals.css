@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
-:root {
-  --background: #06142e;
-  --background-deep: #030b1c;
-  --surface: #0b1c3a;
-  --surface-hover: #10264d;
+:root,
+html.dark {
+  --background: #08080a;
+  --background-deep: #000000;
+  --surface: #121215;
+  --surface-hover: #1a1a20;
   --brand-blue: #2a68e1;
   --brand-blue-hover: #3b78ee;
   --text-primary: #ffffff;
-  --text-secondary: #aab7cf;
-  --border: rgba(255, 255, 255, 0.1);
-  --header-bg: rgba(3, 11, 28, 0.96);
-  --mobile-nav-bg: rgba(3, 11, 28, 0.7);
+  --text-secondary: #9ca3af;
+  --border: rgba(255, 255, 255, 0.08);
+  --header-bg: rgba(8, 8, 10, 0.85);
+  --mobile-nav-bg: rgba(8, 8, 10, 0.85);
 }
 
 html.light {
@@ -226,6 +227,8 @@ a {
   width: 100%;
   border-bottom: 1px solid var(--border);
   background: var(--header-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   transition:
     background-color 0.3s ease,
     border-color 0.3s ease;
@@ -377,8 +380,8 @@ a {
   background:
     radial-gradient(
       circle at 50% 28%,
-      rgba(42, 104, 225, 0.2),
-      transparent 36%
+      rgba(42, 104, 225, 0.08),
+      transparent 45%
     ),
     var(--background);
   scroll-margin-top: 70px;
@@ -682,20 +685,20 @@ a {
   aspect-ratio: 1;
   width: min(100%, 130px);
   margin-inline: auto;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
   border-radius: 28px;
   display: grid;
   place-items: center;
   background:
     radial-gradient(
       circle at 50% 40%,
-      rgba(59, 120, 238, 0.16),
+      rgba(59, 120, 238, 0.12),
       transparent 58%
     ),
-    #0b1c3a;
+    var(--surface);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.04),
-    0 20px 50px rgba(0, 0, 0, 0.18);
+    0 20px 50px rgba(0, 0, 0, 0.25);
 }
 
 .process-icon-tile svg {
@@ -952,6 +955,10 @@ a {
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--surface);
+}
+
+.contact-quick-details {
+  display: none;
 }
 
 .contact-panel-heading h3,
@@ -1359,9 +1366,79 @@ a {
     padding-top: 125px;
   }
 
-  .about-layout,
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
   .contact-layout {
     grid-template-columns: 1fr;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-info {
+    display: none !important;
+  }
+
+  .contact-quick-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .quick-detail-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .quick-detail-item:hover {
+    color: var(--text-primary);
+  }
+
+  .quick-detail-icon {
+    width: 17px;
+    height: 17px;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+  }
+
+  .quick-detail-socials {
+    display: flex;
+    gap: 0.65rem;
+    margin-top: 0.35rem;
+  }
+
+  .quick-detail-socials a {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    display: grid;
+    place-items: center;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+  }
+
+  .quick-detail-socials a:hover {
+    border-color: var(--brand-blue);
+    color: var(--text-primary);
+    background: var(--surface-hover);
+  }
+
+  .services-grid {
+    perspective: 1200px;
+    -webkit-perspective: 1200px;
   }
 
   .process-editorial {
@@ -1487,6 +1564,10 @@ a {
     gap: 3rem;
   }
 
+  .contact-layout {
+    gap: 2rem;
+  }
+
   .contact-details,
   .contact-social-list,
   .form-grid,
@@ -1542,7 +1623,7 @@ a {
 }
 
 .mobile-nav-glass {
-  background: rgba(3, 11, 28, 0.5) !important;
+  background: rgba(8, 8, 10, 0.75) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   backdrop-filter: blur(24px) saturate(180%) !important;
   -webkit-backdrop-filter: blur(24px) saturate(180%) !important;

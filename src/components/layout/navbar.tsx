@@ -108,7 +108,7 @@ export function Navbar() {
         className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2.5rem)] max-w-[450px] h-[62px] rounded-full shadow-[0_8px_32px_0_rgba(0,0,0,0.18)] flex justify-around items-center px-5 md:hidden border transition-all duration-250 backdrop-blur-[24px] saturate-[180%] ${
           theme === "light"
             ? "bg-white/60 border-slate-900/10"
-            : "bg-[#030b1c]/50 border-white/10"
+            : "bg-[#08080a]/80 border-white/10"
         }`}
         style={{
           WebkitBackdropFilter: "blur(24px) saturate(180%)",
@@ -142,7 +142,7 @@ export function Navbar() {
       {showScrollTop && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-[90px] right-6 z-50 h-11 w-11 rounded-full border border-white/10 bg-[#030b1c]/70 backdrop-blur-xl shadow-lg flex items-center justify-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-all duration-200 active:scale-90 md:hidden"
+          className="fixed bottom-[90px] right-6 z-50 h-11 w-11 rounded-full border border-white/10 bg-[#08080a]/85 backdrop-blur-xl shadow-lg flex items-center justify-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-all duration-200 active:scale-90 md:hidden"
           aria-label="Scroll to top"
         >
           <ChevronUp className="h-5 w-5" />

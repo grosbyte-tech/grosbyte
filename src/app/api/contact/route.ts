@@ -233,9 +233,9 @@ function emailShell(content: string, preview: string) {
         <td align="center">
           <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:620px;background:#ffffff;border:1px solid #dce4f0;border-radius:14px;overflow:hidden;">
             <tr>
-              <td style="background:#06142e;padding:24px 30px;border-top:5px solid #2a68e1;">
+              <td style="background:#09090b;padding:24px 30px;border-top:5px solid #2a68e1;">
                 <p style="margin:0;color:#ffffff;font-size:20px;font-weight:700;">Grosbyte Technologies</p>
-                <p style="margin:6px 0 0;color:#aebbd0;font-size:13px;">Technology built around real business goals</p>
+                <p style="margin:6px 0 0;color:#9ca3af;font-size:13px;">Technology built around real business goals</p>
               </td>
             </tr>
             <tr>

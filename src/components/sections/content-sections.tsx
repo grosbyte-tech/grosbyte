@@ -1,6 +1,8 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import { motion, useReducedMotion } from "framer-motion";
 import { Reveal } from "@/components/motion/reveal";
 import { RollingText } from "@/components/motion/rolling-text";
 import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
@@ -59,6 +61,75 @@ export function AboutSection() {
   );
 }
 
+function ServiceCard({
+  service,
+  index,
+  translatedTitle,
+  translatedDescription,
+  translatedKeywords,
+}: {
+  service: (typeof services)[number];
+  index: number;
+  translatedTitle: string;
+  translatedDescription: string;
+  translatedKeywords: string[];
+}) {
+  const [isMobile, setIsMobile] = useState(false);
+  const reduce = useReducedMotion();
+  const Icon = service.icon;
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 820);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  return (
+    <motion.div
+      className="service-card"
+      key={service.title}
+      initial={
+        reduce
+          ? false
+          : isMobile
+            ? { opacity: 0, y: 50, rotateX: 28, scale: 0.94 }
+            : { opacity: 0, y: 24 }
+      }
+      whileInView={
+        reduce
+          ? undefined
+          : isMobile
+            ? { opacity: 1, y: 0, rotateX: 0, scale: 1 }
+            : { opacity: 1, y: 0 }
+      }
+      viewport={{ once: true, amount: 0.18 }}
+      transition={{
+        duration: isMobile ? 0.75 : 0.7,
+        delay: isMobile ? 0.05 : index * 0.05,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      style={{
+        transformStyle: "preserve-3d",
+        transformPerspective: 1200,
+        transformOrigin: "center bottom",
+        willChange: "transform, opacity",
+      }}
+    >
+      <Icon aria-hidden="true" />
+      <h3>{translatedTitle}</h3>
+      <p>{translatedDescription}</p>
+      <div className="service-keywords">
+        {translatedKeywords.map((keyword) => (
+          <span key={keyword}>{keyword}</span>
+        ))}
+      </div>
+    </motion.div>
+  );
+}
+
 export function ServicesSection() {
   const { t } = useTranslation();
 
@@ -72,7 +143,6 @@ export function ServicesSection() {
         </Reveal>
         <div className="services-grid">
           {services.map((service, index) => {
-            const Icon = service.icon;
             const key = serviceKeys[service.title];
             const translatedTitle = t(`services.list.${key}.title`);
             const translatedDescription = t(`services.list.${key}.description`);
@@ -81,20 +151,14 @@ export function ServicesSection() {
             ) as string[];
 
             return (
-              <Reveal
-                className="service-card"
-                delay={index * 0.05}
+              <ServiceCard
                 key={service.title}
-              >
-                <Icon aria-hidden="true" />
-                <h3>{translatedTitle}</h3>
-                <p>{translatedDescription}</p>
-                <div className="service-keywords">
-                  {translatedKeywords.map((keyword) => (
-                    <span key={keyword}>{keyword}</span>
-                  ))}
-                </div>
-              </Reveal>
+                service={service}
+                index={index}
+                translatedTitle={translatedTitle}
+                translatedDescription={translatedDescription}
+                translatedKeywords={translatedKeywords}
+              />
             );
           })}
         </div>
