@@ -247,12 +247,63 @@ export function ContactSection() {
               </div>
             </div>
           </Reveal>
-          <Reveal delay={0.08}>
+          <Reveal delay={0.08} className="contact-form-reveal">
             <form className="contact-form" noValidate onSubmit={handleSubmit}>
               <div className="form-heading">
                 <h3>{t("contact.form.title")}</h3>
                 <p>{t("contact.form.description")}</p>
               </div>
+
+              {/* Quick Contact Details for Mobile (Reference: Screenshot 2) */}
+              <div className="contact-quick-details">
+                <a href="mailto:contact@grosbyte.com" className="quick-detail-item">
+                  <Mail className="quick-detail-icon" aria-hidden="true" />
+                  <span>contact@grosbyte.com</span>
+                </a>
+                <a href="tel:+9779869793130" className="quick-detail-item">
+                  <Phone className="quick-detail-icon" aria-hidden="true" />
+                  <span>+977 9869793130</span>
+                </a>
+                <div className="quick-detail-item">
+                  <MapPin className="quick-detail-icon" aria-hidden="true" />
+                  <span>Kathmandu, Nepal</span>
+                </div>
+                <div className="quick-detail-socials">
+                  <a
+                    href={socialLinks.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Grosbyte on Instagram"
+                  >
+                    <FaInstagram />
+                  </a>
+                  <a
+                    href={socialLinks.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Grosbyte on Facebook"
+                  >
+                    <FaFacebookF />
+                  </a>
+                  <a
+                    href={socialLinks.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Grosbyte on LinkedIn"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                  <a
+                    href={socialLinks.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Grosbyte on GitHub"
+                  >
+                    <FaGithub />
+                  </a>
+                </div>
+              </div>
+
               <div className="form-grid">
                 <FormField
                   id="name"
