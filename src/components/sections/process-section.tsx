@@ -9,6 +9,12 @@ import {
   useInView,
 } from "framer-motion";
 import {
+  BarChart3,
+  Megaphone,
+  MessageCircle,
+  PenTool,
+  Target,
+  TrendingUp,
   ClipboardCheck,
   CloudUpload,
   Code2,
@@ -44,6 +50,16 @@ const stepKeys: Record<string, string> = {
   Launch: "launch",
   Improve: "improve",
 };
+
+const marketingSteps = [
+  { key: "discover", icon: Search },
+  { key: "strategy", icon: Target },
+  { key: "create", icon: PenTool },
+  { key: "campaigns", icon: Megaphone },
+  { key: "nurture", icon: MessageCircle },
+  { key: "measure", icon: BarChart3 },
+  { key: "grow", icon: TrendingUp },
+];
 
 interface ProcessIconTileProps {
   icon: LucideIcon;
@@ -89,9 +105,17 @@ function ProcessIconTile({
   );
 }
 
-export function ProcessSection() {
+function TeamProcessSection({ marketing = false }: { marketing?: boolean }) {
   const reduceMotion = useReducedMotion();
   const { t } = useTranslation();
+
+  const translationKey = marketing ? "marketingProcess" : "process";
+  const steps = marketing
+    ? marketingSteps
+    : processSteps.map((step, index) => ({
+        key: stepKeys[step.title],
+        icon: processIcons[index] ?? Search,
+      }));
 
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -106,7 +130,10 @@ export function ProcessSection() {
   });
 
   return (
-    <section className="section process-section" id="how-we-work">
+    <section
+      className="section process-section"
+      id={marketing ? "digital-marketing-process" : "how-we-work"}
+    >
       <div className="container">
         <motion.div
           className="section-heading section-heading-centered"
@@ -118,9 +145,12 @@ export function ProcessSection() {
             ease: [0.22, 1, 0.36, 1],
           }}
         >
-          <p className="eyebrow">{t("process.eyebrow")}</p>
-          <RollingText as="h2" text={t("process.title")} />
-          <AnimatedParagraph text={t("process.description")} delay={0.25} />
+          <p className="eyebrow">{t(`${translationKey}.eyebrow`)}</p>
+          <RollingText as="h2" text={t(`${translationKey}.title`)} />
+          <AnimatedParagraph
+            text={t(`${translationKey}.description`)}
+            delay={0.25}
+          />
         </motion.div>
 
         <div className="process-editorial" ref={containerRef}>
@@ -134,19 +164,21 @@ export function ProcessSection() {
             }}
           />
 
-          {processSteps.map((step, index) => {
-            const Icon = processIcons[index] ?? Search;
+          {steps.map((step, index) => {
+            const Icon = step.icon;
             const isReversed = index % 2 !== 0;
-            const key = stepKeys[step.title];
-            const translatedTitle = t(`process.steps.${key}.title`);
-            const translatedDescription = t(`process.steps.${key}.description`);
+            const key = step.key;
+            const translatedTitle = t(`${translationKey}.steps.${key}.title`);
+            const translatedDescription = t(
+              `${translationKey}.steps.${key}.description`,
+            );
 
             return (
               <article
                 className={`editorial-step ${
                   isReversed ? "editorial-step-reverse" : ""
                 }`}
-                key={step.title}
+                key={step.key}
               >
                 <ProcessIconTile
                   icon={Icon}
@@ -193,81 +225,92 @@ export function ProcessSection() {
           })}
         </div>
 
-        <div className="technology-block">
-          <motion.div
-            className="technology-heading"
-            initial={reduceMotion ? false : { opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.35 }}
-            transition={{
-              duration: 0.5,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-          >
-            <p className="eyebrow">{t("process.techStack.eyebrow")}</p>
-            <RollingText as="h3" text={t("process.techStack.title")} />
-            <AnimatedParagraph
-              text={t("process.techStack.description")}
-              delay={0.25}
-            />
-          </motion.div>
+        {!marketing && (
+          <div className="technology-block">
+            <motion.div
+              className="technology-heading"
+              initial={reduceMotion ? false : { opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.35 }}
+              transition={{
+                duration: 0.5,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
+              <p className="eyebrow">{t("process.techStack.eyebrow")}</p>
+              <RollingText as="h3" text={t("process.techStack.title")} />
+              <AnimatedParagraph
+                text={t("process.techStack.description")}
+                delay={0.25}
+              />
+            </motion.div>
 
-          <div className="tech-marquee-container">
-            {(() => {
-              const columns: (typeof technologies)[number][][] = [
-                [],
-                [],
-                [],
-                [],
-              ];
-              technologies.forEach((tech, i) => {
-                columns[i % 4].push(tech);
-              });
-
-              return columns.map((columnItems, colIndex) => {
-                const repeatedItems = [
-                  ...columnItems,
-                  ...columnItems,
-                  ...columnItems,
+            <div className="tech-marquee-container">
+              {(() => {
+                const columns: (typeof technologies)[number][][] = [
+                  [],
+                  [],
+                  [],
+                  [],
                 ];
-                return (
-                  <div
-                    key={colIndex}
-                    className={`tech-marquee-column tech-col-${colIndex + 1}`}
-                  >
-                    <div className="tech-marquee-track">
-                      {repeatedItems.map((technology, index) => {
-                        const icon = technology.icon;
-                        return (
-                          <article
-                            className="technology-item"
-                            key={`${technology.name}-${index}`}
-                          >
-                            {typeof icon === "string" ? (
-                              <img
-                                src={icon}
-                                alt={`${technology.name} icon`}
-                                className={`tech-icon-img ${technology.invertOnDark ? "invert-white" : ""}`}
-                                aria-hidden={true}
-                              />
-                            ) : (
-                              (() => {
-                                const IconComp = icon;
-                                return <IconComp aria-hidden={true} />;
-                              })()
-                            )}
-                            <h4>{technology.name}</h4>
-                          </article>
-                        );
-                      })}
+                technologies.forEach((tech, i) => {
+                  columns[i % 4].push(tech);
+                });
+
+                return columns.map((columnItems, colIndex) => {
+                  const repeatedItems = [
+                    ...columnItems,
+                    ...columnItems,
+                    ...columnItems,
+                  ];
+                  return (
+                    <div
+                      key={colIndex}
+                      className={`tech-marquee-column tech-col-${colIndex + 1}`}
+                    >
+                      <div className="tech-marquee-track">
+                        {repeatedItems.map((technology, index) => {
+                          const icon = technology.icon;
+                          return (
+                            <article
+                              className="technology-item"
+                              key={`${technology.name}-${index}`}
+                            >
+                              {typeof icon === "string" ? (
+                                <img
+                                  src={icon}
+                                  alt={`${technology.name} icon`}
+                                  className={`tech-icon-img ${technology.invertOnDark ? "invert-white" : ""}`}
+                                  aria-hidden={true}
+                                />
+                              ) : (
+                                (() => {
+                                  const IconComp = icon;
+                                  return <IconComp aria-hidden={true} />;
+                                })()
+                              )}
+                              <h4>{technology.name}</h4>
+                            </article>
+                          );
+                        })}
+                      </div>
                     </div>
-                  </div>
-                );
-              });
-            })()}
+                  );
+                });
+              })()}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
+  );
+}
+
+export function ProcessSection() {
+  return (
+    <>
+      <TeamProcessSection />
+      <TeamProcessSection marketing />
+    </>
   );
 }

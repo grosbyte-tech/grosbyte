@@ -103,8 +103,8 @@
   },
   "process": {
     "eyebrow": "How We Work",
-    "title": "A clear process from idea to improvement.",
-    "description": "We keep every project structured, collaborative, and focused on the result the business needs.",
+    "title": "How Our Software Development Team Works",
+    "description": "From discovery to launch, we work with your team in short Agile cycles: prioritising useful features, sharing working software, and adapting to feedback as your business grows.",
     "steps": {
       "discover": {
         "title": "Discover",
@@ -112,7 +112,7 @@
       },
       "plan": {
         "title": "Plan",
-        "description": "We define the project scope, priorities, requirements, timeline, and technical direction. This creates a clear roadmap for the work ahead and helps everyone understand what will be built, how it will be approached, and what success should look like."
+        "description": "We turn requirements into a prioritised product backlog with clear user stories and acceptance criteria. Together, we agree on the architecture, release roadmap, and sprint goals so the most valuable features come first."
       },
       "design": {
         "title": "Design",
@@ -120,11 +120,11 @@
       },
       "develop": {
         "title": "Develop",
-        "description": "We build the solution using technologies that are suitable, maintainable, secure, and scalable. The development process is organised carefully so features work together consistently and the final product remains reliable as the business grows."
+        "description": "We build working software in short Agile sprints, using maintainable code, peer reviews, and continuous integration. Regular demos keep you involved and help us adjust priorities before the next sprint."
       },
       "test": {
         "title": "Test",
-        "description": "We review functionality, responsiveness, usability, accessibility, performance, and important edge cases. This helps us identify issues early, improve the overall experience, and make sure the product works properly across different devices and environments."
+        "description": "Testing runs throughout development. We check functionality, integrations, accessibility, security, and performance, combine automated checks with hands-on testing, and review features with your team against agreed acceptance criteria."
       },
       "launch": {
         "title": "Launch",
@@ -132,7 +132,7 @@
       },
       "improve": {
         "title": "Improve",
-        "description": "After launch, we use feedback, performance insights, and future business requirements to continue improving the product. This stage supports long-term growth by helping the solution evolve as users, technology, and business priorities change."
+        "description": "After launch, we monitor the product and use customer feedback to refine the backlog. Sprint reviews and retrospectives help us improve both the software and how we deliver it, keeping each release aligned with your business needs."
       }
     },
     "techStack": {
@@ -186,5 +186,40 @@
   },
   "footer": {
     "description": "We build reliable digital products, thoughtful brand experiences, and growth-focused technology that help businesses move forward with confidence."
+  },
+  "marketingProcess": {
+    "eyebrow": "How We Work",
+    "title": "How Our Digital Marketing Team Works",
+    "description": "We partner with brands and growing businesses to reach the right people, build trust, and turn interest into qualified enquiries through social media, search, content, and other relevant channels.",
+    "steps": {
+      "discover": {
+        "title": "Understand Your Business",
+        "description": "We start with your brand, customers, offers, and growth goals. Together, we review your digital presence and sales process to understand who you want to reach and what makes an enquiry valuable to your business."
+      },
+      "strategy": {
+        "title": "Build a Growth Strategy",
+        "description": "We agree on your audience, message, budget, and measures of success. We choose a practical mix of social media, search engine optimisation, paid advertising, email, and other channels that fit your goals and resources."
+      },
+      "create": {
+        "title": "Create Content That Connects",
+        "description": "We develop clear messaging, useful content, campaign visuals, and landing pages around your customers’ needs. We collaborate with you to keep every touchpoint consistent with your brand and give people a clear next step."
+      },
+      "campaigns": {
+        "title": "Launch and Reach Your Audience",
+        "description": "We publish content and launch campaigns across the agreed channels. We test audiences, messages, and creative approaches to learn what attracts relevant visitors and encourages them to enquire."
+      },
+      "nurture": {
+        "title": "Capture and Nurture Leads",
+        "description": "We make it easy for potential customers to connect through forms, messages, calls, or bookings. We help organise enquiries and plan timely follow-ups with your team so interested people can move towards becoming customers."
+      },
+      "measure": {
+        "title": "Measure What Matters",
+        "description": "We review enquiries, lead quality, conversions, and cost per lead where relevant. Clear reporting and feedback from your sales team help us understand which activities contribute to business growth."
+      },
+      "grow": {
+        "title": "Refine and Grow",
+        "description": "We use what we learn to improve content, targeting, landing pages, and follow-ups. Together, we adjust the channel mix and budget, expand effective campaigns, and keep testing as your business grows."
+      }
+    }
   }
 }

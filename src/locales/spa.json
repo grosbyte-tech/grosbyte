@@ -103,8 +103,8 @@
   },
   "process": {
     "eyebrow": "Cómo trabajamos",
-    "title": "Un proceso claro desde la idea hasta la mejora.",
-    "description": "Mantenemos cada proyecto estructurado, colaborativo y enfocado en el resultado que el negocio necesita.",
+    "title": "Cómo trabaja nuestro equipo de desarrollo de software",
+    "description": "Desde la idea hasta el lanzamiento, colaboramos en ciclos ágiles cortos: priorizamos funciones útiles, mostramos software en funcionamiento y nos adaptamos a tus comentarios.",
     "steps": {
       "discover": {
         "title": "Descubrir",
@@ -112,7 +112,7 @@
       },
       "plan": {
         "title": "Planificar",
-        "description": "Definimos el alcance del proyecto, las prioridades, los requisitos, el cronograma y la dirección técnica. Esto crea una hoja de ruta clara para el trabajo futuro y ayuda a todos a comprender qué se construirá, cómo se abordará y cómo debería ser el éxito."
+        "description": "Convertimos los requisitos en un backlog priorizado con historias de usuario y criterios de aceptación. Acordamos la arquitectura, el plan de entregas y los objetivos de cada sprint para desarrollar primero lo que aporta más valor."
       },
       "design": {
         "title": "Diseñar",
@@ -120,11 +120,11 @@
       },
       "develop": {
         "title": "Desarrollar",
-        "description": "Construimos la solución utilizando tecnologías que sean adecuadas, mantenibles, seguras y escalables. El proceso de desarrollo se organiza cuidadosamente para que las funciones funcionen juntas de manera consistente y el producto final siga siendo confiable a medida que el negocio crece."
+        "description": "Desarrollamos software en sprints ágiles cortos, con código mantenible, revisiones entre compañeros e integración continua. Las demostraciones periódicas te permiten participar y ajustar las prioridades del siguiente sprint."
       },
       "test": {
         "title": "Probar",
-        "description": "Revisamos la funcionalidad, la adaptabilidad, la usabilidad, la accesibilidad, el rendimiento y los casos extremos importantes. Esto nos ayuda a identificar problemas a tiempo, mejorar la experiencia general y asegurar que el producto funcione correctamente en diferentes dispositivos y entornos."
+        "description": "Probamos durante todo el desarrollo la funcionalidad, las integraciones, la accesibilidad, la seguridad y el rendimiento. Combinamos pruebas automáticas y manuales y revisamos contigo los criterios de aceptación."
       },
       "launch": {
         "title": "Lanzar",
@@ -132,7 +132,7 @@
       },
       "improve": {
         "title": "Mejorar",
-        "description": "Después del lanzamiento, utilizamos los comentarios, los datos de rendimiento y los futuros requisitos comerciales para seguir mejorando el producto. Esta etapa respalda el crecimiento a largo plazo al ayudar a que la solución evolucione a medida que cambian los usuarios, la tecnología y las prioridades comerciales."
+        "description": "Tras el lanzamiento, supervisamos el producto y actualizamos el backlog con los comentarios de los clientes. Las revisiones de sprint y las retrospectivas mejoran tanto el software como nuestra forma de trabajar."
       }
     },
     "techStack": {
@@ -186,5 +186,40 @@
   },
   "footer": {
     "description": "Construimos productos digitales confiables, experiencias de marca reflexivas y tecnología orientada al crecimiento que ayuda a las empresas a avanzar con confianza."
+  },
+  "marketingProcess": {
+    "eyebrow": "Cómo trabajamos",
+    "title": "Cómo trabaja nuestro equipo de marketing digital",
+    "description": "Colaboramos con marcas y empresas en crecimiento para llegar al público adecuado, generar confianza y convertir el interés en consultas cualificadas mediante redes sociales, buscadores, contenidos y otros canales relevantes.",
+    "steps": {
+      "discover": {
+        "title": "Conocer tu negocio",
+        "description": "Empezamos por tu marca, clientes, oferta y objetivos de crecimiento. Revisamos juntos tu presencia digital y proceso comercial para definir a quién llegar y qué consultas aportan valor a tu negocio."
+      },
+      "strategy": {
+        "title": "Definir una estrategia de crecimiento",
+        "description": "Acordamos el público, el mensaje, el presupuesto y los indicadores de éxito. Elegimos una combinación de redes sociales, SEO, publicidad de pago, correo electrónico y otros canales adecuados a tus recursos."
+      },
+      "create": {
+        "title": "Crear contenido que conecte",
+        "description": "Desarrollamos mensajes claros, contenido útil, piezas de campaña y páginas de destino centradas en tus clientes. Trabajamos contigo para mantener la coherencia de marca y ofrecer un siguiente paso claro."
+      },
+      "campaigns": {
+        "title": "Lanzar campañas",
+        "description": "Publicamos contenido y lanzamos campañas en los canales acordados. Probamos públicos, mensajes y creatividades para descubrir qué atrae visitantes relevantes y anima a contactar."
+      },
+      "nurture": {
+        "title": "Captar y acompañar contactos",
+        "description": "Facilitamos el contacto mediante formularios, mensajes, llamadas o reservas. Ayudamos a organizar las consultas y a planificar el seguimiento con tu equipo para que las personas interesadas puedan convertirse en clientes."
+      },
+      "measure": {
+        "title": "Medir los resultados",
+        "description": "Revisamos las consultas, la calidad de los contactos, las conversiones y el coste por contacto cuando corresponde. Los informes claros y los comentarios del equipo comercial muestran qué contribuye al crecimiento."
+      },
+      "grow": {
+        "title": "Optimizar y crecer",
+        "description": "Mejoramos el contenido, la segmentación, las páginas de destino y el seguimiento. Ajustamos contigo los canales y el presupuesto, ampliamos las campañas eficaces y seguimos probando a medida que crece tu negocio."
+      }
+    }
   }
 }

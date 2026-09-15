@@ -103,8 +103,8 @@
   },
   "process": {
     "eyebrow": "Arbeitsweise",
-    "title": "Ein klarer Prozess von der Idee bis zur Verbesserung.",
-    "description": "Wir halten jedes Projekt strukturiert, partnerschaftlich und auf das vom Unternehmen benötigte Ergebnis ausgerichtet.",
+    "title": "So arbeitet unser Softwareentwicklungsteam",
+    "description": "Von der ersten Idee bis zum Start arbeiten wir mit Ihrem Team in kurzen agilen Zyklen: Wir priorisieren wichtige Funktionen, zeigen lauffähige Software und passen uns Ihrem Feedback an.",
     "steps": {
       "discover": {
         "title": "Entdecken",
@@ -112,7 +112,7 @@
       },
       "plan": {
         "title": "Planen",
-        "description": "Wir definieren den Projektumfang, die Prioritäten, Anforderungen, den Zeitplan und die technische Ausrichtung. Dies schafft eine klare Roadmap für die zukünftige Arbeit und hilft jedem zu verstehen, was gebaut wird, wie es angegangen wird und wie Erfolg aussehen sollte."
+        "description": "Wir übersetzen Anforderungen in ein priorisiertes Product Backlog mit User Stories und Abnahmekriterien. Gemeinsam legen wir Architektur, Release-Plan und Sprint-Ziele fest, damit die wertvollsten Funktionen zuerst entstehen."
       },
       "design": {
         "title": "Entwerfen",
@@ -120,11 +120,11 @@
       },
       "develop": {
         "title": "Entwickeln",
-        "description": "Wir bauen die Lösung mit Technologien, die geeignet, wartbar, sicher und skalierbar sind. Der Entwicklungsprozess ist sorgfältig organisiert, damit die Funktionen konsistent zusammenarbeiten und das Endprodukt auch bei wachsendem Unternehmen zuverlässig bleibt."
+        "description": "Wir entwickeln lauffähige Software in kurzen agilen Sprints mit wartbarem Code, Code-Reviews und kontinuierlicher Integration. Regelmäßige Demos beziehen Sie ein und helfen uns, die nächsten Prioritäten anzupassen."
       },
       "test": {
         "title": "Testen",
-        "description": "Wir überprüfen Funktionalität, Reaktionsfähigkeit, Benutzerfreundlichkeit, Barrierefreiheit, Leistung und wichtige Sonderfälle. Dies hilft uns, Probleme frühzeitig zu erkennen, die Gesamterfahrung zu verbessern und sicherzustellen, dass das Produkt auf verschiedenen Geräten und in unterschiedlichen Umgebungen ordnungsgemäß funktioniert."
+        "description": "Wir testen während der gesamten Entwicklung Funktionen, Integrationen, Barrierefreiheit, Sicherheit und Leistung. Automatisierte und manuelle Tests sowie die gemeinsame Prüfung der Abnahmekriterien sichern die Qualität."
       },
       "launch": {
         "title": "Starten",
@@ -132,7 +132,7 @@
       },
       "improve": {
         "title": "Verbessern",
-        "description": "Nach dem Start nutzen wir Feedback, Leistungserkenntnisse und zukünftige geschäftliche Anforderungen, um das Produkt kontinuierlich zu verbessern. Diese Phase unterstützt das langfristige Wachstum, indem sie hilft, die Lösung anzupassen, wenn sich Benutzer, Technologien und geschäftliche Prioritäten ändern."
+        "description": "Nach dem Start beobachten wir das Produkt und verbessern das Backlog anhand von Kundenfeedback. Sprint-Reviews und Retrospektiven helfen uns, Software und Zusammenarbeit an Ihren Geschäftszielen auszurichten."
       }
     },
     "techStack": {
@@ -186,5 +186,40 @@
   },
   "footer": {
     "description": "Wir entwickeln zuverlässige digitale Produkte, durchdachte Markenidentitäten und wachstumsorientierte Technologien, die Unternehmen helfen, selbstbewusst voranzukommen."
+  },
+  "marketingProcess": {
+    "eyebrow": "Arbeitsweise",
+    "title": "So arbeitet unser Digitalmarketingteam",
+    "description": "Wir unterstützen Marken und wachsende Unternehmen dabei, die richtigen Menschen zu erreichen, Vertrauen aufzubauen und über soziale Medien, Suchmaschinen und Inhalte qualifizierte Anfragen zu gewinnen.",
+    "steps": {
+      "discover": {
+        "title": "Ihr Unternehmen verstehen",
+        "description": "Wir lernen Ihre Marke, Kunden, Angebote und Wachstumsziele kennen. Gemeinsam prüfen wir Ihren digitalen Auftritt und Vertriebsprozess und klären, welche Anfragen für Ihr Unternehmen wertvoll sind."
+      },
+      "strategy": {
+        "title": "Wachstum planen",
+        "description": "Wir stimmen Zielgruppe, Botschaft, Budget und Erfolgskriterien ab. Dazu wählen wir passende Kanäle wie soziale Medien, Suchmaschinenoptimierung, bezahlte Werbung und E-Mail aus."
+      },
+      "create": {
+        "title": "Relevante Inhalte erstellen",
+        "description": "Wir entwickeln verständliche Botschaften, hilfreiche Inhalte, Kampagnenmotive und Landingpages. Gemeinsam sorgen wir für einen einheitlichen Markenauftritt und klare nächste Schritte für Interessenten."
+      },
+      "campaigns": {
+        "title": "Kampagnen starten",
+        "description": "Wir veröffentlichen Inhalte und starten Kampagnen auf den vereinbarten Kanälen. Wir testen Zielgruppen, Botschaften und Gestaltung, um relevante Besucher und Anfragen zu gewinnen."
+      },
+      "nurture": {
+        "title": "Kontakte gewinnen und begleiten",
+        "description": "Formulare, Nachrichten, Anrufe und Buchungen erleichtern die Kontaktaufnahme. Wir helfen Ihrem Team, Anfragen zu organisieren und zeitnah nachzufassen, damit aus Interesse Kundenbeziehungen entstehen können."
+      },
+      "measure": {
+        "title": "Ergebnisse messen",
+        "description": "Wir betrachten Anfragen, Kontaktqualität, Abschlüsse und gegebenenfalls Kosten pro Anfrage. Verständliche Berichte und Rückmeldungen Ihres Vertriebsteams zeigen, welche Aktivitäten zum Wachstum beitragen."
+      },
+      "grow": {
+        "title": "Verbessern und wachsen",
+        "description": "Wir optimieren Inhalte, Zielgruppen, Landingpages und die Nachverfolgung von Anfragen. Gemeinsam passen wir Kanäle und Budget an, erweitern erfolgreiche Kampagnen und testen weiter."
+      }
+    }
   }
 }
