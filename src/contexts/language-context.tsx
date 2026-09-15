@@ -4,6 +4,7 @@ import React, {
   createContext,
   useContext,
   useState,
+  useSyncExternalStore,
   ReactNode,
 } from "react";
 import eng from "../locales/eng.json";
@@ -26,12 +27,19 @@ const translations: Record<Language, Record<string, unknown>> = {
   spa,
 };
 
+const emptySubscribe = () => () => {};
+
 const LanguageContext = createContext<LanguageContextType | undefined>(
   undefined,
 );
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(() => {
+  const isMounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false,
+  );
+  const [preferredLanguage, setLanguageState] = useState<Language>(() => {
     if (typeof window !== "undefined") {
       const saved = localStorage.getItem("grosbyte-lang");
       if (
@@ -45,6 +53,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }
     return "eng";
   });
+
+  // Saved preferences apply only after the server HTML has hydrated.
+  const language = isMounted ? preferredLanguage : "eng";
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
@@ -66,7 +77,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }, obj);
   };
 
-  const t = <T = string>(key: string): T => {
+  const t = <T = string,>(key: string): T => {
     const currentTranslation = translations[language];
     let value = getNestedValue(currentTranslation, key);
 

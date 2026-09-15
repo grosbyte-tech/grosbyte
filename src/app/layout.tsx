@@ -72,7 +72,8 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={urbanist.variable}>
-      <body>
+      {/* Extensions may inject body attributes such as cz-shortcut-listen before hydration. */}
+      <body suppressHydrationWarning>
         <LanguageProvider>
           <ThemeProvider>{children}</ThemeProvider>
         </LanguageProvider>

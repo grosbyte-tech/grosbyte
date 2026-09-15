@@ -1,6 +1,16 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
+import {
+  SiMeta,
+  SiInstagram,
+  SiGoogleads,
+  SiGoogleanalytics,
+  SiGooglesearchconsole,
+  SiSemrush,
+  SiMailchimp,
+} from "react-icons/si";
 import {
   motion,
   useReducedMotion,
@@ -25,7 +35,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-import { processSteps, technologies } from "@/lib/site-data";
+import { processSteps, technologies, type Technology } from "@/lib/site-data";
 import { useTranslation } from "@/contexts/language-context";
 import { RollingText } from "@/components/motion/rolling-text";
 import { ScrollRevealText } from "@/components/motion/scroll-reveal-text";
@@ -60,6 +70,92 @@ const marketingSteps = [
   { key: "measure", icon: BarChart3 },
   { key: "grow", icon: TrendingUp },
 ];
+
+const marketingTools: readonly Technology[] = [
+  { name: "Meta", description: "", icon: SiMeta },
+  { name: "Instagram", description: "", icon: SiInstagram },
+  { name: "Meta Ads Manager", description: "", icon: Megaphone },
+  { name: "Canva", description: "", icon: PenTool },
+  { name: "Google Ads", description: "", icon: SiGoogleads },
+  { name: "Google Analytics", description: "", icon: SiGoogleanalytics },
+  {
+    name: "Google Search Console",
+    description: "",
+    icon: SiGooglesearchconsole,
+  },
+  { name: "Semrush", description: "", icon: SiSemrush },
+  { name: "Mailchimp", description: "", icon: SiMailchimp },
+];
+
+function TeamToolkit({ marketing }: { marketing: boolean }) {
+  const { t } = useTranslation();
+  const items = marketing ? marketingTools : technologies;
+  const columns = Array.from({ length: marketing ? 3 : 4 }, (_, column) =>
+    items.filter((_, index) => index % (marketing ? 3 : 4) === column),
+  );
+  const key = marketing ? "marketingProcess.techStack" : "process.techStack";
+  const Emblem = marketing ? TrendingUp : Code2;
+
+  return (
+    <aside className="team-toolkit" aria-label={t(`${key}.title`)}>
+      <div className="team-toolkit-intro">
+        <span className="toolkit-emblem">
+          <Emblem aria-hidden="true" />
+        </span>
+        <p className="eyebrow">{t(`${key}.eyebrow`)}</p>
+        <h4>{t(`${key}.title`)}</h4>
+        <p>{t(`${key}.description`)}</p>
+      </div>
+      <div className="toolkit-marquee-area">
+        <div className="tech-marquee-container toolkit-marquee">
+          {columns.map((column, columnIndex) => (
+            <div
+              className={`tech-marquee-column tech-col-${columnIndex + 1}`}
+              key={columnIndex}
+            >
+              <div className="tech-marquee-track">
+                {[0, 1, 2].map((copy) => (
+                  <ul
+                    className="toolkit-marquee-group"
+                    key={copy}
+                    aria-hidden={copy > 0 ? true : undefined}
+                  >
+                    {column.map((tool) => {
+                      const Icon = tool.icon;
+                      return (
+                        <li className="toolkit-card" key={tool.name}>
+                          <span className="toolkit-icon">
+                            {typeof Icon === "string" ? (
+                              <Image
+                                src={Icon}
+                                alt=""
+                                width={30}
+                                height={30}
+                                unoptimized
+                                className={
+                                  tool.invertOnDark
+                                    ? "tech-icon-img invert-white"
+                                    : "tech-icon-img"
+                                }
+                              />
+                            ) : (
+                              <Icon aria-hidden={true} />
+                            )}
+                          </span>
+                          <span>{tool.name}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </aside>
+  );
+}
 
 interface ProcessIconTileProps {
   icon: LucideIcon;
@@ -131,10 +227,13 @@ function TeamProcessSection({ marketing = false }: { marketing?: boolean }) {
 
   return (
     <section
-      className="section process-section"
-      id={marketing ? "digital-marketing-process" : "how-we-work"}
+      className={`team-process ${marketing ? "team-process-marketing" : "team-process-development"}`}
+      id={
+        marketing ? "digital-marketing-process" : "software-development-process"
+      }
+      aria-labelledby={`${translationKey}-title`}
     >
-      <div className="container">
+      <div>
         <motion.div
           className="section-heading section-heading-centered"
           initial={reduceMotion ? false : { opacity: 0, y: 18 }}
@@ -145,11 +244,10 @@ function TeamProcessSection({ marketing = false }: { marketing?: boolean }) {
             ease: [0.22, 1, 0.36, 1],
           }}
         >
-          <p className="eyebrow">{t(`${translationKey}.eyebrow`)}</p>
-          <RollingText as="h2" text={t(`${translationKey}.title`)} />
-          <AnimatedParagraph
-            text={t(`${translationKey}.description`)}
-            delay={0.25}
+          <RollingText
+            as="h3"
+            id={`${translationKey}-title`}
+            text={t(`${translationKey}.title`)}
           />
         </motion.div>
 
@@ -214,7 +312,7 @@ function TeamProcessSection({ marketing = false }: { marketing?: boolean }) {
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <h3>{translatedTitle}</h3>
+                  <h4>{translatedTitle}</h4>
 
                   <i className="editorial-divider" aria-hidden="true" />
 
@@ -224,93 +322,36 @@ function TeamProcessSection({ marketing = false }: { marketing?: boolean }) {
             );
           })}
         </div>
-
-        {!marketing && (
-          <div className="technology-block">
-            <motion.div
-              className="technology-heading"
-              initial={reduceMotion ? false : { opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.35 }}
-              transition={{
-                duration: 0.5,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-            >
-              <p className="eyebrow">{t("process.techStack.eyebrow")}</p>
-              <RollingText as="h3" text={t("process.techStack.title")} />
-              <AnimatedParagraph
-                text={t("process.techStack.description")}
-                delay={0.25}
-              />
-            </motion.div>
-
-            <div className="tech-marquee-container">
-              {(() => {
-                const columns: (typeof technologies)[number][][] = [
-                  [],
-                  [],
-                  [],
-                  [],
-                ];
-                technologies.forEach((tech, i) => {
-                  columns[i % 4].push(tech);
-                });
-
-                return columns.map((columnItems, colIndex) => {
-                  const repeatedItems = [
-                    ...columnItems,
-                    ...columnItems,
-                    ...columnItems,
-                  ];
-                  return (
-                    <div
-                      key={colIndex}
-                      className={`tech-marquee-column tech-col-${colIndex + 1}`}
-                    >
-                      <div className="tech-marquee-track">
-                        {repeatedItems.map((technology, index) => {
-                          const icon = technology.icon;
-                          return (
-                            <article
-                              className="technology-item"
-                              key={`${technology.name}-${index}`}
-                            >
-                              {typeof icon === "string" ? (
-                                <img
-                                  src={icon}
-                                  alt={`${technology.name} icon`}
-                                  className={`tech-icon-img ${technology.invertOnDark ? "invert-white" : ""}`}
-                                  aria-hidden={true}
-                                />
-                              ) : (
-                                (() => {
-                                  const IconComp = icon;
-                                  return <IconComp aria-hidden={true} />;
-                                })()
-                              )}
-                              <h4>{technology.name}</h4>
-                            </article>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  );
-                });
-              })()}
-            </div>
-          </div>
-        )}
+        <TeamToolkit marketing={marketing} />
       </div>
     </section>
   );
 }
 
 export function ProcessSection() {
+  const { t } = useTranslation();
   return (
-    <>
-      <TeamProcessSection />
-      <TeamProcessSection marketing />
-    </>
+    <section
+      className="section process-section"
+      id="how-we-work"
+      aria-labelledby="how-we-work-title"
+    >
+      <div className="container">
+        <div className="section-heading section-heading-centered">
+          <p className="eyebrow">{t("process.eyebrow")}</p>
+          <RollingText
+            as="h2"
+            id="how-we-work-title"
+            text={t("process.overview.title")}
+          />
+          <AnimatedParagraph
+            text={t("process.overview.description")}
+            delay={0.25}
+          />
+        </div>
+        <TeamProcessSection />
+        <TeamProcessSection marketing />
+      </div>
+    </section>
   );
 }

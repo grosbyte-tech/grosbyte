@@ -139,7 +139,12 @@
       "eyebrow": "Tecnologías",
       "title": "Tecnologías con las que trabajamos",
       "description": "Elegimos tecnologías de acuerdo con el producto, los usuarios, la mantenibilidad, la escala, la seguridad y las necesidades a largo plazo."
-    }
+    },
+    "overview": {
+      "title": "De tu próxima idea a tu próxima etapa de crecimiento.",
+      "description": "Empezamos por conocer tu negocio, tus clientes y lo que quieres conseguir. Nuestro equipo de desarrollo convierte esas necesidades en productos digitales fiables mediante planificación ágil, sprints cortos, pruebas y comentarios periódicos. Nuestro equipo de marketing digital crea estrategias de redes sociales, buscadores, contenido y campañas de pago para llegar al público adecuado y generar consultas relevantes. En ambos procesos trabajamos contigo, compartimos los avances con claridad y utilizamos los resultados para guiar las mejoras a medida que crece tu negocio."
+    },
+    "teamLabel": "Desarrollo de software"
   },
   "contact": {
     "eyebrow": "Contacto",
@@ -220,6 +225,12 @@
         "title": "Optimizar y crecer",
         "description": "Mejoramos el contenido, la segmentación, las páginas de destino y el seguimiento. Ajustamos contigo los canales y el presupuesto, ampliamos las campañas eficaces y seguimos probando a medida que crece tu negocio."
       }
+    },
+    "teamLabel": "Marketing digital",
+    "techStack": {
+      "eyebrow": "Herramientas para crecer",
+      "title": "Herramientas que conectan marcas y clientes",
+      "description": "Desde contenidos y campañas hasta análisis de búsquedas y seguimiento, elegimos herramientas que se adaptan a tu público, objetivos y presupuesto."
     }
   }
 }

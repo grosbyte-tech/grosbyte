@@ -139,7 +139,12 @@
       "eyebrow": "Technologie-Stack",
       "title": "Technologien, mit denen wir arbeiten",
       "description": "Wir wählen Technologien basierend auf dem Produkt, den Benutzern, der Wartbarkeit, der Skalierbarkeit, der Sicherheit und den langfristigen Anforderungen aus."
-    }
+    },
+    "overview": {
+      "title": "Von Ihrer nächsten Idee zur nächsten Wachstumsphase.",
+      "description": "Wir beginnen damit, Ihr Unternehmen, Ihre Kunden und Ihre Ziele zu verstehen. Unser Softwareentwicklungsteam setzt diese Anforderungen durch agile Planung, kurze Sprints, Tests und regelmäßiges Feedback in zuverlässige digitale Produkte um. Unser Digitalmarketingteam entwickelt Strategien für soziale Medien, Suchmaschinen, Inhalte und bezahlte Kampagnen, um die richtigen Menschen zu erreichen und relevante Anfragen zu gewinnen. In beiden Bereichen arbeiten wir eng mit Ihnen zusammen, teilen Fortschritte verständlich mit und nutzen konkrete Ergebnisse, um Verbesserungen an Ihrem Unternehmenswachstum auszurichten."
+    },
+    "teamLabel": "Softwareentwicklung"
   },
   "contact": {
     "eyebrow": "Kontakt",
@@ -220,6 +225,12 @@
         "title": "Verbessern und wachsen",
         "description": "Wir optimieren Inhalte, Zielgruppen, Landingpages und die Nachverfolgung von Anfragen. Gemeinsam passen wir Kanäle und Budget an, erweitern erfolgreiche Kampagnen und testen weiter."
       }
+    },
+    "teamLabel": "Digitalmarketing",
+    "techStack": {
+      "eyebrow": "Werkzeuge für Wachstum",
+      "title": "Tools, die Marken und Kunden verbinden",
+      "description": "Von Inhalten und Kampagnen bis zu Suchanalysen und Kundenkontakt: Wir wählen passende Tools für Ihre Zielgruppe, Ziele und Ihr Budget."
     }
   }
 }

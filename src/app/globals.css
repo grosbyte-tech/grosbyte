@@ -576,6 +576,144 @@ a {
   border-top: 1px solid var(--border);
 }
 
+.team-process {
+  --team-accent: #6b9fff;
+  padding-top: clamp(3rem, 6vw, 5rem);
+  scroll-margin-top: 7rem;
+}
+
+.team-process + .team-process {
+  margin-top: clamp(4rem, 8vw, 7rem);
+  border-top: 1px solid var(--border);
+}
+
+.team-process .section-heading .rolling-heading {
+  max-width: 720px;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  line-height: 1.2;
+}
+
+.team-toolkit {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr);
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  margin: clamp(3rem, 6vw, 5rem) 0 0;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background:
+    radial-gradient(
+      ellipse at top left,
+      color-mix(in srgb, var(--team-accent) 12%, transparent),
+      transparent 65%
+    ),
+    var(--background-deep);
+}
+
+.team-toolkit-intro h4 {
+  margin: 0;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.team-toolkit-intro > p:last-child {
+  margin: 1rem 0 0;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.toolkit-emblem {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1.5rem;
+  border: 1px solid color-mix(in srgb, var(--team-accent) 35%, transparent);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--team-accent) 10%, transparent);
+  box-shadow: 0 0 40px color-mix(in srgb, var(--team-accent) 12%, transparent);
+  color: var(--team-accent);
+  transform: rotate(-6deg);
+}
+
+.toolkit-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-width: 0;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.025);
+  transition:
+    background 200ms ease,
+    border-color 200ms ease;
+}
+
+.toolkit-card:hover {
+  border-color: var(--team-accent);
+  background: color-mix(in srgb, var(--team-accent) 9%, transparent);
+}
+
+.toolkit-card > span:last-child {
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.toolkit-icon {
+  display: grid;
+  place-items: center;
+  color: var(--team-accent);
+  transition: transform 250ms ease;
+}
+
+.toolkit-icon svg,
+.toolkit-icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.toolkit-card:hover .toolkit-icon {
+  transform: translateY(-4px) rotate(-6deg) scale(1.1);
+}
+
+.team-process-marketing .editorial-number,
+.team-process-marketing .process-icon-tile svg {
+  color: var(--team-accent);
+}
+
+@media (max-width: 900px) {
+  .team-toolkit {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .team-toolkit-intro {
+    max-width: 560px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toolkit-card,
+  .toolkit-icon {
+    transition: none;
+  }
+  .toolkit-card:hover .toolkit-icon {
+    transform: none;
+  }
+}
+
 .process-editorial {
   position: relative;
   width: min(100%, 1180px);
@@ -658,7 +796,7 @@ a {
   letter-spacing: 0.12em;
 }
 
-.editorial-content h3 {
+.editorial-content h4 {
   margin: 0.45rem 0 0;
   font-size: clamp(1.4rem, 2.1vw, 1.85rem);
   font-weight: 700;
@@ -928,6 +1066,64 @@ a {
   color: var(--text-secondary);
   font-size: 0.72rem;
   line-height: 1.4;
+}
+
+.toolkit-marquee-area {
+  min-width: 0;
+}
+
+.toolkit-marquee.tech-marquee-container {
+  margin: 0;
+  width: 100%;
+  gap: 0.7rem;
+  height: 420px;
+}
+
+.team-process-marketing .toolkit-marquee {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.toolkit-marquee .tech-marquee-track {
+  gap: 0;
+}
+
+.toolkit-marquee-group {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0 0 0.7rem;
+  list-style: none;
+}
+
+.toolkit-marquee .toolkit-card {
+  min-height: 115px;
+}
+
+@media (max-width: 480px) {
+  .toolkit-marquee.tech-marquee-container {
+    gap: 0.4rem;
+  }
+  .toolkit-marquee .toolkit-card {
+    padding-inline: 0.2rem;
+  }
+  .toolkit-marquee .toolkit-card > span:last-child {
+    font-size: 0.65rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toolkit-marquee.tech-marquee-container {
+    height: auto;
+    overflow: visible;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  .toolkit-marquee .tech-marquee-track {
+    animation: none;
+  }
+  .toolkit-marquee-group[aria-hidden="true"] {
+    display: none;
+  }
 }
 
 /* Contact */

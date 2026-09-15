@@ -139,7 +139,12 @@
       "eyebrow": "Technology Stack",
       "title": "Technologies we work with",
       "description": "We choose technologies according to the product, users, maintainability, scale, security, and long-term needs."
-    }
+    },
+    "overview": {
+      "title": "From your next idea to your next stage of growth.",
+      "description": "We start by understanding your business, your customers, and what you want to achieve. Our software development team turns those needs into reliable digital products through Agile planning, short sprints, testing, and regular feedback. Our digital marketing team builds strategies across social media, search, content, and paid campaigns to reach the right people and generate meaningful enquiries. Throughout both processes, we work closely with you, share progress clearly, and use real results to guide improvements as your business grows."
+    },
+    "teamLabel": "Software Development"
   },
   "contact": {
     "eyebrow": "Contact Us",
@@ -220,6 +225,12 @@
         "title": "Refine and Grow",
         "description": "We use what we learn to improve content, targeting, landing pages, and follow-ups. Together, we adjust the channel mix and budget, expand effective campaigns, and keep testing as your business grows."
       }
+    },
+    "teamLabel": "Digital Marketing",
+    "techStack": {
+      "eyebrow": "Growth Toolkit",
+      "title": "Tools that connect brands with customers",
+      "description": "From content and campaigns to search insights and follow-ups, we choose the tools that fit your audience, goals, and budget."
     }
   }
 }

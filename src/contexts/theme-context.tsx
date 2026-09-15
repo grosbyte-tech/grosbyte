@@ -28,7 +28,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     () => false,
   );
 
-  const [theme, setThemeState] = useState<Theme>(() => {
+  const [preferredTheme, setThemeState] = useState<Theme>(() => {
     if (typeof window !== "undefined") {
       const savedTheme = localStorage.getItem("grosbyte-theme") as Theme;
       if (savedTheme === "dark" || savedTheme === "light") {
@@ -41,6 +41,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     }
     return "dark";
   });
+
+  // Keep the server render and first hydration render identical.
+  const theme = isMounted ? preferredTheme : "dark";
 
   useEffect(() => {
     const root = window.document.documentElement;
