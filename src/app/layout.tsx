@@ -9,7 +9,7 @@ const urbanist = Urbanist({
   subsets: ["latin"],
   display: "swap",
 });
-const title = "Grosbyte Technologies | Software, Web, Mobile & Digital Growth";
+const title = "Grosbyte Technologies | Software, Web & Digital Growth";
 const description =
   "Grosbyte Technologies builds custom software, web applications, mobile apps, modern websites, AI-integrated solutions, digital marketing strategies, and digital brands for growing businesses.";
 

@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Home, Info, Blocks, Workflow, Mail, ChevronUp } from "lucide-react";
 import { navigation } from "@/lib/site-data";
@@ -29,7 +28,6 @@ const navKeys: Record<string, string> = {
 export function Navbar() {
   const [active, setActive] = useState("home");
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const reduceMotion = useReducedMotion();
   const { t } = useTranslation();
   const { theme } = useTheme();
 
@@ -58,26 +56,21 @@ export function Navbar() {
 
   return (
     <>
-      <motion.header
-        className="site-header"
-        initial={reduceMotion ? false : { opacity: 0, y: -12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.45 }}
-      >
+      <header className="site-header">
         <nav className="nav-shell" aria-label="Main navigation">
           <a
             className="brand"
             href="#home"
             aria-label="Grosbyte Technologies home"
           >
-            <span className="brand-logo">
+            <span className="navbar-logo">
               <Image
-                src="/icons/logo-removebg.png"
+                src="/logo.png"
                 alt=""
-                width={40}
-                height={24}
-                priority
-                className="object-center scale-200"
+                width={1254}
+                height={1254}
+                preload
+                unoptimized
               />
             </span>
             <span>Grosbyte Technologies</span>
@@ -101,7 +94,7 @@ export function Navbar() {
             </a>
           </div>
         </nav>
-      </motion.header>
+      </header>
 
       {/* Floating Glassmorphism Sticky Bottom Navigation for Mobile */}
       <div

@@ -268,6 +268,17 @@ a {
   object-fit: contain;
 }
 
+.navbar-logo {
+  width: 38px;
+  flex-shrink: 0;
+}
+
+.navbar-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .nav-links {
   margin-inline: auto;
   display: flex;
