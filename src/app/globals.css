@@ -504,6 +504,11 @@ a {
   display: block;
 }
 
+html:not(.light) .about-image {
+  border-color: transparent;
+  background: transparent;
+}
+
 /* Services */
 .services-section {
   border-top: 1px solid var(--border);
