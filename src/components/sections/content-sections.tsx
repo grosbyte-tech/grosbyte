@@ -6,8 +6,10 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Reveal } from "@/components/motion/reveal";
 import { RollingText } from "@/components/motion/rolling-text";
 import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
+import { AnimatedCounter } from "@/components/motion/counter";
 import { services } from "@/lib/site-data";
 import { useTranslation } from "@/contexts/language-context";
+import { ServicesGridBeams } from "@/components/ui/services-grid-beams";
 
 const serviceKeys: Record<string, string> = {
   "Custom Software Development": "customSoftware",
@@ -47,10 +49,12 @@ export function AboutSection() {
             <p>{t("about.p1")}</p>
             <p>{t("about.p2")}</p>
             <Reveal className="statistics-grid" delay={0.08}>
-              {statistics.map((statistic) => (
+              {statistics.map((statistic, idx) => (
                 <div className="statistic" key={statistic.label}>
-                  <strong>{statistic.value}</strong>
-                  <span>{statistic.label}</span>
+                  <strong className="statistic-value">
+                    <AnimatedCounter value={statistic.value} delay={idx * 0.12} />
+                  </strong>
+                  <span className="statistic-label">{statistic.label}</span>
                 </div>
               ))}
             </Reveal>
@@ -141,26 +145,29 @@ export function ServicesSection() {
           <RollingText as="h2" text={t("services.title")} />
           <AnimatedParagraph text={t("services.description")} delay={0.25} />
         </Reveal>
-        <div className="services-grid">
-          {services.map((service, index) => {
-            const key = serviceKeys[service.title];
-            const translatedTitle = t(`services.list.${key}.title`);
-            const translatedDescription = t(`services.list.${key}.description`);
-            const translatedKeywords = t(
-              `services.list.${key}.keywords`,
-            ) as string[];
+        <div className="services-grid-wrapper">
+          <ServicesGridBeams />
+          <div className="services-grid">
+            {services.map((service, index) => {
+              const key = serviceKeys[service.title];
+              const translatedTitle = t(`services.list.${key}.title`);
+              const translatedDescription = t(`services.list.${key}.description`);
+              const translatedKeywords = t(
+                `services.list.${key}.keywords`,
+              ) as string[];
 
-            return (
-              <ServiceCard
-                key={service.title}
-                service={service}
-                index={index}
-                translatedTitle={translatedTitle}
-                translatedDescription={translatedDescription}
-                translatedKeywords={translatedKeywords}
-              />
-            );
-          })}
+              return (
+                <ServiceCard
+                  key={service.title}
+                  service={service}
+                  index={index}
+                  translatedTitle={translatedTitle}
+                  translatedDescription={translatedDescription}
+                  translatedKeywords={translatedKeywords}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

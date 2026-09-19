@@ -7,6 +7,7 @@ import { navigation } from "@/lib/site-data";
 import { useTranslation } from "@/contexts/language-context";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { Button } from "@/components/ui/button";
 import { useTheme } from "@/contexts/theme-context";
 
 const icons = {
@@ -88,12 +89,14 @@ export function Navbar() {
               </a>
             ))}
           </div>
-          <div className="flex items-center gap-2.5 ml-auto md:ml-0">
+          <div className="flex items-center gap-2 sm:gap-2.5 ml-auto md:ml-0">
             <ThemeToggle />
             <LanguageSwitcher />
-            <a className="nav-cta hidden md:inline-flex" href="#contact">
-              {t("nav.cta")}
-            </a>
+            <div className="hidden md:inline-flex">
+              <Button href="#contact" variant="glowing" size="sm" className="nav-cta">
+                {t("nav.cta")}
+              </Button>
+            </div>
           </div>
         </nav>
       </header>
