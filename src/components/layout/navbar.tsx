@@ -66,14 +66,16 @@ export function Navbar() {
             <span className="navbar-logo">
               <Image
                 src="/logo.png"
-                alt=""
-                width={1254}
-                height={1254}
+                alt="Grosbyte Technologies Logo"
+                width={38}
+                height={38}
                 preload
-                unoptimized
+                className="w-full h-full object-contain"
               />
             </span>
-            <span>Grosbyte Technologies</span>
+            <span className="font-extrabold tracking-tight">
+              Grosbyte Technologies
+            </span>
           </a>
           <div className="nav-links">
             {navigation.map((item) => (
@@ -86,7 +88,7 @@ export function Navbar() {
               </a>
             ))}
           </div>
-          <div className="flex items-center gap-3 ml-auto md:ml-0">
+          <div className="flex items-center gap-2.5 ml-auto md:ml-0">
             <ThemeToggle />
             <LanguageSwitcher />
             <a className="nav-cta" href="#contact">

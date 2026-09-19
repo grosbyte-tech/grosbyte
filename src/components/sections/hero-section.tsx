@@ -6,6 +6,7 @@ import { useTranslation } from "@/contexts/language-context";
 import { RollingText } from "@/components/motion/rolling-text";
 import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
 import { Button } from "@/components/ui/button";
+import { HeroLightBeams } from "@/components/ui/hero-light-beams";
 
 export function HeroSection() {
   const reduceMotion = useReducedMotion();
@@ -13,6 +14,7 @@ export function HeroSection() {
 
   return (
     <section className="hero" id="home">
+      <HeroLightBeams />
       <motion.div
         className="container hero-content"
         initial={reduceMotion ? false : { opacity: 0, y: 18 }}
