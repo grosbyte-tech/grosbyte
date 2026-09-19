@@ -91,7 +91,7 @@ export function Navbar() {
           <div className="flex items-center gap-2.5 ml-auto md:ml-0">
             <ThemeToggle />
             <LanguageSwitcher />
-            <a className="nav-cta" href="#contact">
+            <a className="nav-cta hidden md:inline-flex" href="#contact">
               {t("nav.cta")}
             </a>
           </div>
