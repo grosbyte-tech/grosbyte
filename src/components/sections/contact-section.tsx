@@ -4,11 +4,11 @@ import { useRef, useState, type FormEvent } from "react";
 import { Mail, MapPin, Phone, Send, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
-  FaFacebookF,
-  FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
+  RealFacebookIcon,
+  RealGithubIcon,
+  RealInstagramIcon,
+  RealLinkedinIcon,
+} from "@/components/ui/brand-icons";
 import { Reveal } from "@/components/motion/reveal";
 import { RollingText } from "@/components/motion/rolling-text";
 import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
@@ -202,7 +202,7 @@ export function ContactSection() {
                   rel="noopener noreferrer"
                   aria-label="Grosbyte on Instagram"
                 >
-                  <FaInstagram />
+                  <RealInstagramIcon />
                   <span>
                     <small>Instagram</small>
                     grosbyte.tech
@@ -214,7 +214,7 @@ export function ContactSection() {
                   rel="noopener noreferrer"
                   aria-label="Grosbyte on Facebook"
                 >
-                  <FaFacebookF />
+                  <RealFacebookIcon />
                   <span>
                     <small>Facebook</small>
                     Grosbyte Technologies
@@ -226,7 +226,7 @@ export function ContactSection() {
                   rel="noopener noreferrer"
                   aria-label="Grosbyte on LinkedIn"
                 >
-                  <FaLinkedinIn />
+                  <RealLinkedinIcon />
                   <span>
                     <small>LinkedIn</small>
                     Grosbyte Technologies
@@ -238,7 +238,7 @@ export function ContactSection() {
                   rel="noopener noreferrer"
                   aria-label="Grosbyte on GitHub"
                 >
-                  <FaGithub />
+                  <RealGithubIcon />
                   <span>
                     <small>GitHub</small>
                     grosbyte-tech
@@ -275,7 +275,7 @@ export function ContactSection() {
                     rel="noopener noreferrer"
                     aria-label="Grosbyte on Instagram"
                   >
-                    <FaInstagram />
+                    <RealInstagramIcon />
                   </a>
                   <a
                     href={socialLinks.facebook}
@@ -283,7 +283,7 @@ export function ContactSection() {
                     rel="noopener noreferrer"
                     aria-label="Grosbyte on Facebook"
                   >
-                    <FaFacebookF />
+                    <RealFacebookIcon />
                   </a>
                   <a
                     href={socialLinks.linkedin}
@@ -291,7 +291,7 @@ export function ContactSection() {
                     rel="noopener noreferrer"
                     aria-label="Grosbyte on LinkedIn"
                   >
-                    <FaLinkedinIn />
+                    <RealLinkedinIcon />
                   </a>
                   <a
                     href={socialLinks.github}
@@ -299,7 +299,7 @@ export function ContactSection() {
                     rel="noopener noreferrer"
                     aria-label="Grosbyte on GitHub"
                   >
-                    <FaGithub />
+                    <RealGithubIcon />
                   </a>
                 </div>
               </div>
@@ -390,13 +390,14 @@ export function ContactSection() {
               <Button
                 variant="glowing"
                 type="submit"
+                size="lg"
                 disabled={isSubmitting}
-                className="mt-4 h-12 w-full max-w-[200px] text-sm font-bold uppercase tracking-wider"
+                className="mt-4 h-12 w-full max-w-[210px] text-sm font-bold uppercase tracking-wider"
               >
                 {isSubmitting
                   ? t("contact.form.submitting")
                   : t("contact.form.submit")}{" "}
-                <Send className="ml-1.5 h-4 w-4" aria-hidden="true" />
+                <Send className="ml-1.5 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
               </Button>
               {status.type !== "idle" && (
                 <p

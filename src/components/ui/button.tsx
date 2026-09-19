@@ -1,76 +1,96 @@
+"use client";
+
+import * as React from "react";
 import { Button as ButtonPrimitive } from "@base-ui/react/button";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "group/button relative inline-flex shrink-0 items-center justify-center rounded-full font-semibold whitespace-nowrap outline-none select-none transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 active:scale-[0.97] [&_svg]:pointer-events-none [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/80",
-        outline:
-          "border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
+        default: "capsule-btn capsule-btn-primary text-white",
+        glowing: "capsule-btn capsule-btn-primary text-white",
+        outline: "capsule-btn capsule-btn-secondary text-white",
+        "glowing-secondary": "capsule-btn capsule-btn-secondary text-white",
+        secondary: "capsule-btn capsule-btn-secondary text-white",
         ghost:
-          "hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
-        destructive:
-          "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
-        link: "text-primary underline-offset-4 hover:underline",
-        glowing:
-          "relative rounded-full text-white transition-all duration-200 active:scale-95 border-glow-container inline-flex items-center justify-center overflow-hidden border-0",
+          "hover:bg-white/10 text-white rounded-full transition-colors duration-200 px-4 py-2",
+        link: "text-[var(--brand-blue-hover)] underline-offset-4 hover:underline",
       },
       size: {
-        default:
-          "h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
-        xs: "h-6 gap-1 rounded-[min(var(--radius-md),10px)] px-2 text-xs in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3",
-        sm: "h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3.5",
-        lg: "h-9 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
-        icon: "size-8",
-        "icon-xs":
-          "size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&_svg:not([class*='size-'])]:size-3",
-        "icon-sm":
-          "size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg",
-        "icon-lg": "size-9",
+        default: "h-11 min-h-[44px] px-7 text-sm",
+        xs: "h-7 min-h-[28px] px-3.5 text-xs",
+        sm: "h-9 min-h-[36px] px-5 text-xs",
+        lg: "h-12 min-h-[48px] px-8 text-[15px]",
+        icon: "size-10 rounded-full",
+        "icon-xs": "size-7 rounded-full",
+        "icon-sm": "size-9 rounded-full",
+        "icon-lg": "size-12 rounded-full",
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: "glowing",
       size: "default",
     },
   },
 );
 
-function Button({
-  className,
-  variant = "default",
-  size = "default",
-  children,
-  ...props
-}: ButtonPrimitive.Props & VariantProps<typeof buttonVariants>) {
-  if (variant === "glowing") {
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  href?: string;
+  target?: string;
+  rel?: string;
+}
+
+const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
+  (
+    {
+      className,
+      variant = "glowing",
+      size = "default",
+      children,
+      href,
+      target,
+      rel,
+      ...props
+    },
+    ref,
+  ) => {
+    if (href) {
+      return (
+        <a
+          ref={ref as React.Ref<HTMLAnchorElement>}
+          href={href}
+          target={target}
+          rel={rel}
+          data-slot="button"
+          data-size={size}
+          className={cn(buttonVariants({ variant, size, className }))}
+          {...(props as unknown as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
+        >
+          {children}
+        </a>
+      );
+    }
+
     return (
       <ButtonPrimitive
+        ref={ref as React.Ref<HTMLButtonElement>}
         data-slot="button"
+        data-size={size}
         className={cn(buttonVariants({ variant, size, className }))}
         {...props}
       >
-        <span className="border-glow-line" aria-hidden="true" />
-        <span className="border-glow-content">{children}</span>
+        {children}
       </ButtonPrimitive>
     );
-  }
+  },
+);
 
-  return (
-    <ButtonPrimitive
-      data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
-      {...props}
-    >
-      {children}
-    </ButtonPrimitive>
-  );
-}
+Button.displayName = "Button";
 
 export { Button, buttonVariants };

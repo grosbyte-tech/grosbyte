@@ -31,18 +31,21 @@ export function HeroSection() {
         <div className="hero-actions">
           <Button
             variant="glowing"
+            size="lg"
             className="h-12 text-sm font-bold"
             onClick={() => (window.location.href = "#contact")}
           >
             {t("hero.ctaPrimary")}{" "}
-            <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden="true" />
+            <ArrowRight className="ml-1.5 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
           </Button>
           <Button
             variant="outline"
-            className="h-12 rounded-full px-6 border-slate-700 hover:bg-white/5 text-sm font-bold"
+            size="lg"
+            className="h-12 text-sm font-bold"
             onClick={() => (window.location.href = "#services")}
           >
-            {t("hero.ctaSecondary")}
+            {t("hero.ctaSecondary")}{" "}
+            <ArrowRight className="ml-1.5 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
           </Button>
         </div>
       </motion.div>
