@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { Reveal } from "@/components/motion/reveal";
@@ -19,6 +19,20 @@ const serviceKeys: Record<string, string> = {
   "UI/UX and Product Design": "uiuxDesign",
   "Digital Marketing and Brand Growth": "digitalMarketing",
 };
+
+function subscribeToMobile(callback: () => void) {
+  const mql = window.matchMedia("(max-width: 767.98px)");
+  mql.addEventListener("change", callback);
+  return () => mql.removeEventListener("change", callback);
+}
+
+function getMobileSnapshot() {
+  return window.matchMedia("(max-width: 767.98px)").matches;
+}
+
+function getMobileServerSnapshot() {
+  return false;
+}
 
 export function AboutSection() {
   const { t } = useTranslation();
@@ -78,49 +92,90 @@ function ServiceCard({
   translatedDescription: string;
   translatedKeywords: string[];
 }) {
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useSyncExternalStore(
+    subscribeToMobile,
+    getMobileSnapshot,
+    getMobileServerSnapshot,
+  );
+  const [isIntersected, setIsIntersected] = useState(false);
+  const [animationDone, setAnimationDone] = useState(false);
+  const [desktopSettled, setDesktopSettled] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
   const Icon = service.icon;
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 820);
+    // Only apply Intersection Observer on mobile screens
+    if (!isMobile || isIntersected) return;
+
+    const node = cardRef.current;
+    if (!node) return;
+
+    // Trigger flip once as the card enters the viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsIntersected(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -60px 0px",
+      }
+    );
+
+    observer.observe(node);
+
+    return () => {
+      observer.disconnect();
     };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+  }, [isMobile, isIntersected]);
+
+  useEffect(() => {
+    if (isIntersected && !animationDone) {
+      const timer = setTimeout(() => {
+        setAnimationDone(true);
+      }, 800);
+      return () => clearTimeout(timer);
+    }
+  }, [isIntersected, animationDone]);
+
+  const mobileStatusClass =
+    !isMobile || reduce
+      ? ""
+      : animationDone
+        ? "mobile-flip-settled"
+        : isIntersected
+          ? "mobile-flip-animating"
+          : "mobile-flip-waiting";
 
   return (
     <motion.div
-      className="service-card"
+      ref={cardRef}
+      className={`service-card ${mobileStatusClass}`.trim()}
       key={service.title}
-      initial={
-        reduce
-          ? false
-          : isMobile
-            ? { opacity: 0, y: 50, rotateX: 28, scale: 0.94 }
-            : { opacity: 0, y: 24 }
-      }
-      whileInView={
-        reduce
-          ? undefined
-          : isMobile
-            ? { opacity: 1, y: 0, rotateX: 0, scale: 1 }
-            : { opacity: 1, y: 0 }
-      }
+      initial={reduce || isMobile ? false : { opacity: 0, y: 24 }}
+      whileInView={reduce || isMobile ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.18 }}
       transition={{
-        duration: isMobile ? 0.75 : 0.7,
-        delay: isMobile ? 0.05 : index * 0.05,
+        duration: 0.7,
+        delay: index * 0.05,
         ease: [0.22, 1, 0.36, 1],
       }}
-      style={{
-        transformStyle: "preserve-3d",
-        transformPerspective: 1200,
-        transformOrigin: "center bottom",
-        willChange: "transform, opacity",
+      onAnimationComplete={() => {
+        if (!isMobile) {
+          setDesktopSettled(true);
+        }
       }}
+      onAnimationEnd={() => {
+        if (isMobile) {
+          setAnimationDone(true);
+        }
+      }}
+      style={!isMobile && desktopSettled ? { transform: "none" } : undefined}
     >
       <Icon aria-hidden="true" />
       <h3>{translatedTitle}</h3>
