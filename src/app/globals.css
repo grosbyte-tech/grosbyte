@@ -959,6 +959,67 @@ html.light .beam-pulse-v {
   line-height: 1.2;
 }
 
+/* Mobile 3D Flip Entrance Animation for Services Section (Mobile view only, < 768px) */
+@media (max-width: 767.98px) {
+  .service-card.mobile-flip-waiting {
+    opacity: 0;
+    pointer-events: none;
+    transform: perspective(1000px) rotateY(-85deg);
+    transform-origin: center center;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .service-card.mobile-flip-animating {
+    animation: mobileCardFlip 0.75s cubic-bezier(0.2, 0.85, 0.35, 1.1) forwards;
+    transform-origin: center center;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform, opacity;
+  }
+
+  .service-card.mobile-flip-settled {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    will-change: auto;
+    pointer-events: auto;
+  }
+}
+
+@keyframes mobileCardFlip {
+  0% {
+    opacity: 0.15;
+    transform: perspective(1000px) rotateY(-85deg) scale(0.92);
+  }
+  25% {
+    opacity: 0.9;
+  }
+  65% {
+    transform: perspective(1000px) rotateY(12deg) scale(1.02);
+    opacity: 1;
+  }
+  85% {
+    transform: perspective(1000px) rotateY(-4deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateY(0deg) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card.mobile-flip-waiting,
+  .service-card.mobile-flip-animating,
+  .service-card.mobile-flip-settled {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    pointer-events: auto !important;
+  }
+}
+
 /* Process */
 .process-section {
   border-top: 1px solid var(--border);
