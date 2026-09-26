@@ -9,7 +9,6 @@ import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
 import { AnimatedCounter } from "@/components/motion/counter";
 import { services } from "@/lib/site-data";
 import { useTranslation } from "@/contexts/language-context";
-import { ServicesGridBeams } from "@/components/ui/services-grid-beams";
 
 const serviceKeys: Record<string, string> = {
   "Custom Software Development": "customSoftware",
@@ -138,7 +137,7 @@ function ServiceCard({
     if (isIntersected && !animationDone) {
       const timer = setTimeout(() => {
         setAnimationDone(true);
-      }, 800);
+      }, 950);
       return () => clearTimeout(timer);
     }
   }, [isIntersected, animationDone]);
@@ -201,7 +200,6 @@ export function ServicesSection() {
           <AnimatedParagraph text={t("services.description")} delay={0.25} />
         </Reveal>
         <div className="services-grid-wrapper">
-          <ServicesGridBeams />
           <div className="services-grid">
             {services.map((service, index) => {
               const key = serviceKeys[service.title];

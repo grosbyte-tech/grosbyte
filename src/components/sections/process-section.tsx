@@ -3,15 +3,6 @@
 import { useRef } from "react";
 import Image from "next/image";
 import {
-  SiMeta,
-  SiInstagram,
-  SiGoogleads,
-  SiGoogleanalytics,
-  SiGooglesearchconsole,
-  SiSemrush,
-  SiMailchimp,
-} from "react-icons/si";
-import {
   motion,
   useReducedMotion,
   useScroll,
@@ -72,19 +63,51 @@ const marketingSteps = [
 ];
 
 const marketingTools: readonly Technology[] = [
-  { name: "Meta", description: "", icon: SiMeta },
-  { name: "Instagram", description: "", icon: SiInstagram },
-  { name: "Meta Ads Manager", description: "", icon: Megaphone },
-  { name: "Canva", description: "", icon: PenTool },
-  { name: "Google Ads", description: "", icon: SiGoogleads },
-  { name: "Google Analytics", description: "", icon: SiGoogleanalytics },
+  {
+    name: "Meta",
+    description: "Social and campaign platform.",
+    icon: "https://api.iconify.design/logos/meta-icon.svg",
+  },
+  {
+    name: "Instagram",
+    description: "Visual storytelling and reach.",
+    icon: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Instagram.svg",
+  },
+  {
+    name: "Meta Ads Manager",
+    description: "Targeted ad campaigns and management.",
+    icon: "https://api.iconify.design/logos/facebook.svg",
+  },
+  {
+    name: "Canva",
+    description: "Brand asset design and creative media.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
+  },
+  {
+    name: "Google Ads",
+    description: "High-intent search advertising.",
+    icon: "https://api.iconify.design/logos/google-ads.svg",
+  },
+  {
+    name: "Google Analytics",
+    description: "Traffic, conversion, and user data.",
+    icon: "https://api.iconify.design/logos/google-analytics.svg",
+  },
   {
     name: "Google Search Console",
-    description: "",
-    icon: SiGooglesearchconsole,
+    description: "Organic search visibility and indexing.",
+    icon: "https://cdn.svgporn.com/logos/google-search-console.svg",
   },
-  { name: "Semrush", description: "", icon: SiSemrush },
-  { name: "Mailchimp", description: "", icon: SiMailchimp },
+  {
+    name: "Semrush",
+    description: "SEO audits, rankings, and competitor data.",
+    icon: "https://api.iconify.design/simple-icons/semrush.svg?color=%23FF642D",
+  },
+  {
+    name: "Mailchimp",
+    description: "Email marketing, flows, and audience data.",
+    icon: "https://api.iconify.design/logos/mailchimp-freddie.svg",
+  },
 ];
 
 function TeamToolkit({ marketing }: { marketing: boolean }) {
