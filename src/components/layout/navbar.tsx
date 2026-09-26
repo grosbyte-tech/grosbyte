@@ -28,15 +28,18 @@ const navKeys: Record<string, string> = {
 
 export function Navbar() {
   const [active, setActive] = useState("home");
+  const [isScrolled, setIsScrolled] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const { t } = useTranslation();
   const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
       setShowScrollTop(window.scrollY > 400);
     };
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -57,7 +60,7 @@ export function Navbar() {
 
   return (
     <>
-      <header className="site-header">
+      <header className={`site-header ${isScrolled ? "is-scrolled" : ""}`}>
         <nav className="nav-shell" aria-label="Main navigation">
           <a
             className="brand"
