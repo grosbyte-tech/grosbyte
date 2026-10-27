@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { Reveal } from "@/components/motion/reveal";
-import { RollingText } from "@/components/motion/rolling-text";
+import { FoldingText } from "@/components/ui/folding-text";
 import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
 import { AnimatedCounter } from "@/components/motion/counter";
 import { services } from "@/lib/site-data";
@@ -46,7 +46,7 @@ export function AboutSection() {
       <div className="container">
         <Reveal className="section-heading section-heading-centered">
           <p className="eyebrow">{t("about.eyebrow")}</p>
-          <RollingText as="h2" text={t("about.title")} />
+          <FoldingText as="h2" text={t("about.title")} />
         </Reveal>
         <div className="about-layout">
           <Reveal className="about-image">
@@ -65,7 +65,10 @@ export function AboutSection() {
               {statistics.map((statistic, idx) => (
                 <div className="statistic" key={statistic.label}>
                   <strong className="statistic-value">
-                    <AnimatedCounter value={statistic.value} delay={idx * 0.12} />
+                    <AnimatedCounter
+                      value={statistic.value}
+                      delay={idx * 0.12}
+                    />
                   </strong>
                   <span className="statistic-label">{statistic.label}</span>
                 </div>
@@ -123,7 +126,7 @@ function ServiceCard({
       {
         threshold: 0.1,
         rootMargin: "0px 0px -60px 0px",
-      }
+      },
     );
 
     observer.observe(node);
@@ -196,7 +199,7 @@ export function ServicesSection() {
       <div className="container">
         <Reveal className="section-heading section-heading-centered">
           <p className="eyebrow">{t("services.eyebrow")}</p>
-          <RollingText as="h2" text={t("services.title")} />
+          <FoldingText as="h2" text={t("services.title")} />
           <AnimatedParagraph text={t("services.description")} delay={0.25} />
         </Reveal>
         <div className="services-grid-wrapper">
@@ -204,7 +207,9 @@ export function ServicesSection() {
             {services.map((service, index) => {
               const key = serviceKeys[service.title];
               const translatedTitle = t(`services.list.${key}.title`);
-              const translatedDescription = t(`services.list.${key}.description`);
+              const translatedDescription = t(
+                `services.list.${key}.description`,
+              );
               const translatedKeywords = t(
                 `services.list.${key}.keywords`,
               ) as string[];

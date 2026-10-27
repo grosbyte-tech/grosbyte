@@ -3,7 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "@/contexts/language-context";
-import { RollingText } from "@/components/motion/rolling-text";
+import { FoldingText } from "@/components/ui/folding-text";
 import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
 import { Button } from "@/components/ui/button";
 import { HeroLightBeams } from "@/components/ui/hero-light-beams";
@@ -22,7 +22,7 @@ export function HeroSection() {
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
       >
         <p className="eyebrow">{t("hero.eyebrow")}</p>
-        <RollingText as="h1" text={t("hero.title")} delay={0.1} />
+        <FoldingText as="h1" text={t("hero.title")} delay={0.1} />
         <AnimatedParagraph
           className="hero-copy"
           text={t("hero.copy")}
@@ -36,7 +36,10 @@ export function HeroSection() {
             onClick={() => (window.location.href = "#contact")}
           >
             {t("hero.ctaPrimary")}{" "}
-            <ArrowRight className="ml-1.5 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
+            <ArrowRight
+              className="ml-1.5 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+              aria-hidden="true"
+            />
           </Button>
           <Button
             variant="outline"
@@ -45,7 +48,10 @@ export function HeroSection() {
             onClick={() => (window.location.href = "#services")}
           >
             {t("hero.ctaSecondary")}{" "}
-            <ArrowRight className="ml-1.5 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
+            <ArrowRight
+              className="ml-1.5 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+              aria-hidden="true"
+            />
           </Button>
         </div>
       </motion.div>

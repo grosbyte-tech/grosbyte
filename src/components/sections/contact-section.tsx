@@ -10,7 +10,7 @@ import {
   RealLinkedinIcon,
 } from "@/components/ui/brand-icons";
 import { Reveal } from "@/components/motion/reveal";
-import { RollingText } from "@/components/motion/rolling-text";
+import { FoldingText } from "@/components/ui/folding-text";
 import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
 import { socialLinks } from "@/lib/site-data";
 import {
@@ -154,7 +154,7 @@ export function ContactSection() {
       <div className="container">
         <Reveal className="section-heading section-heading-centered contact-heading">
           <p className="eyebrow">{t("contact.eyebrow")}</p>
-          <RollingText as="h2" text={t("contact.title")} />
+          <FoldingText as="h2" text={t("contact.title")} />
           <AnimatedParagraph text={t("contact.description")} delay={0.25} />
         </Reveal>
         <div className="contact-layout">
@@ -256,7 +256,10 @@ export function ContactSection() {
 
               {/* Quick Contact Details for Mobile (Reference: Screenshot 2) */}
               <div className="contact-quick-details">
-                <a href="mailto:contact@grosbyte.com" className="quick-detail-item">
+                <a
+                  href="mailto:contact@grosbyte.com"
+                  className="quick-detail-item"
+                >
                   <Mail className="quick-detail-icon" aria-hidden="true" />
                   <span>contact@grosbyte.com</span>
                 </a>
@@ -397,7 +400,10 @@ export function ContactSection() {
                 {isSubmitting
                   ? t("contact.form.submitting")
                   : t("contact.form.submit")}{" "}
-                <Send className="ml-1.5 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
+                <Send
+                  className="ml-1.5 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
               </Button>
               {status.type !== "idle" && (
                 <p

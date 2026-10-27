@@ -28,7 +28,7 @@ import {
 
 import { processSteps, technologies, type Technology } from "@/lib/site-data";
 import { useTranslation } from "@/contexts/language-context";
-import { RollingText } from "@/components/motion/rolling-text";
+import { FoldingText } from "@/components/ui/folding-text";
 import { ScrollRevealText } from "@/components/motion/scroll-reveal-text";
 import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
 
@@ -267,7 +267,7 @@ function TeamProcessSection({ marketing = false }: { marketing?: boolean }) {
             ease: [0.22, 1, 0.36, 1],
           }}
         >
-          <RollingText
+          <FoldingText
             as="h3"
             id={`${translationKey}-title`}
             text={t(`${translationKey}.title`)}
@@ -362,7 +362,7 @@ export function ProcessSection() {
       <div className="container">
         <div className="section-heading section-heading-centered">
           <p className="eyebrow">{t("process.eyebrow")}</p>
-          <RollingText
+          <FoldingText
             as="h2"
             id="how-we-work-title"
             text={t("process.overview.title")}
