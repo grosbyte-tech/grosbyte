@@ -1,3 +1,4 @@
+import { serviceOptions } from "./service-options";
 export type ServiceCategory = {
   id: string;
   title: string;
@@ -42,7 +43,7 @@ export const serviceDetails: ServiceDetail[] = [
   {
     slug: "custom-software-development",
     category: "development-technology",
-    title: "Custom Software Development",
+    title: serviceOptions[0],
     headline: "Software shaped around the way you work.",
     summary:
       "Purpose-built business software for workflows, reporting, and internal operations that off-the-shelf tools do not adequately support.",
@@ -110,7 +111,7 @@ export const serviceDetails: ServiceDetail[] = [
   {
     slug: "website-ecommerce-development",
     category: "development-technology",
-    title: "Website & E-commerce Development",
+    title: serviceOptions[1],
     headline: "A clear, useful home for your business online.",
     summary:
       "Business websites and online stores that help visitors understand your offer, browse products, and take the next step.",
@@ -178,7 +179,7 @@ export const serviceDetails: ServiceDetail[] = [
   {
     slug: "web-mobile-applications",
     category: "development-technology",
-    title: "Web & Mobile Applications",
+    title: serviceOptions[2],
     headline: "Applications people can use to get things done.",
     summary:
       "Web platforms and cross-platform mobile applications for customer services, team workflows, and digital products.",
@@ -246,7 +247,7 @@ export const serviceDetails: ServiceDetail[] = [
   {
     slug: "crm-erp-solutions",
     category: "business-solutions",
-    title: "CRM/ERP Solutions",
+    title: serviceOptions[3],
     headline: "Bring customer and operational information together.",
     summary:
       "CRM and ERP solutions scoped around customer relationships, internal processes, reporting, and the information your teams share.",
@@ -314,7 +315,7 @@ export const serviceDetails: ServiceDetail[] = [
   {
     slug: "business-automation",
     category: "business-solutions",
-    title: "Business Automation",
+    title: serviceOptions[4],
     headline: "Reduce repetitive work without losing oversight.",
     summary:
       "Workflow automation that connects routine tasks, information, and business tools while keeping exceptions visible.",
@@ -382,7 +383,7 @@ export const serviceDetails: ServiceDetail[] = [
   {
     slug: "ai-automation-integrations",
     category: "business-solutions",
-    title: "AI Automation & Integrations",
+    title: serviceOptions[5],
     headline: "Use AI where it has a practical role.",
     summary:
       "AI assistants, knowledge search, document processing, and system integrations designed around a defined business use case.",
@@ -450,7 +451,7 @@ export const serviceDetails: ServiceDetail[] = [
   {
     slug: "digital-marketing",
     category: "digital-marketing-branding",
-    title: "Digital Marketing",
+    title: serviceOptions[6],
     headline: "A marketing plan connected to your business goals.",
     summary:
       "Coordinated digital marketing across content, search, social media, paid campaigns, and follow-ups, selected for your audience and resources.",
@@ -518,7 +519,7 @@ export const serviceDetails: ServiceDetail[] = [
   {
     slug: "seo",
     category: "digital-marketing-branding",
-    title: "SEO",
+    title: serviceOptions[7],
     headline: "Help people find and understand your website.",
     summary:
       "Search engine optimisation covering technical foundations, on-page content, and search insights relevant to your business.",
@@ -586,7 +587,7 @@ export const serviceDetails: ServiceDetail[] = [
   {
     slug: "social-media-marketing",
     category: "digital-marketing-branding",
-    title: "Social Media Marketing",
+    title: serviceOptions[8],
     headline: "A clear and consistent presence on social channels.",
     summary:
       "Social content, campaign planning, and performance review for the platforms your audience uses.",
@@ -654,7 +655,7 @@ export const serviceDetails: ServiceDetail[] = [
   {
     slug: "branding-design",
     category: "digital-marketing-branding",
-    title: "Branding & Design",
+    title: serviceOptions[9],
     headline: "Make your business easier to recognise and understand.",
     summary:
       "Brand identity, visual communication, and interface design that bring consistency to your digital presence.",

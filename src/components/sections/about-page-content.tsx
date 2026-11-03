@@ -28,7 +28,7 @@ export function AboutPageContent() {
           <h1 id="about-title">{copy("title")}</h1>
           <p className="page-lead">{copy("intro")}</p>
           <div className="page-actions">
-            <Button href="/#contact" size="lg">
+            <Button href="/contact" size="lg">
               {t("nav.cta")}
             </Button>
           </div>
@@ -110,7 +110,7 @@ export function AboutPageContent() {
             <h2 id="cta-title">{copy("ctaTitle")}</h2>
             <p>{copy("ctaCopy")}</p>
           </div>
-          <Button href="/#contact" size="lg">
+          <Button href="/contact" size="lg">
             {t("nav.cta")}
           </Button>
         </div>

@@ -28,7 +28,7 @@ export default function ServicesPage() {
             what you need to do next.
           </p>
           <div className="service-actions">
-            <Button href="/#contact" size="lg">
+            <Button href="/contact" size="lg">
               Start a Project
             </Button>
             <a className="service-text-link" href="#service-categories">

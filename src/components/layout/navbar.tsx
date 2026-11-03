@@ -3,7 +3,15 @@
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Home, Info, Blocks, Workflow, Mail, ChevronUp } from "lucide-react";
+import {
+  Home,
+  Info,
+  Blocks,
+  Workflow,
+  BookOpen,
+  Mail,
+  ChevronUp,
+} from "lucide-react";
 import { navigation } from "@/lib/site-data";
 import { useTranslation } from "@/contexts/language-context";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
@@ -16,7 +24,8 @@ const icons = {
   "/about": Info,
   "/services": Blocks,
   "#how-we-work": Workflow,
-  "#contact": Mail,
+  "/contact": Mail,
+  "/blogs": BookOpen,
 } as const;
 
 const navKeys: Record<string, string> = {
@@ -24,7 +33,8 @@ const navKeys: Record<string, string> = {
   "/about": "nav.about",
   "/services": "nav.services",
   "#how-we-work": "nav.process",
-  "#contact": "nav.contact",
+  "/contact": "nav.contact",
+  "/blogs": "nav.blogs",
 };
 
 export function Navbar() {
@@ -69,7 +79,11 @@ export function Navbar() {
       ? "about"
       : pathname === "/services" || pathname.startsWith("/services/")
         ? "services"
-        : active;
+        : pathname === "/contact"
+          ? "contact"
+          : pathname.startsWith("/blogs")
+            ? "blogs"
+            : active;
 
   return (
     <>
@@ -117,7 +131,7 @@ export function Navbar() {
             <LanguageSwitcher />
             <div className="hidden md:inline-flex">
               <Button
-                href={resolveHref("#contact")}
+                href={resolveHref("/contact")}
                 variant="glowing"
                 size="sm"
                 className="nav-cta"
@@ -154,7 +168,7 @@ export function Navbar() {
                     : "location"
                   : undefined
               }
-              className={`flex flex-col items-center justify-center gap-1 transition-all duration-200 ${
+              className={`flex min-h-[44px] min-w-[44px] flex-col items-center justify-center gap-1 transition-all duration-200 ${
                 isActive
                   ? "text-[var(--brand-blue-hover)] scale-110 font-bold"
                   : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"

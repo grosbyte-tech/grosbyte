@@ -33,7 +33,7 @@ export function HeroSection() {
             variant="glowing"
             size="lg"
             className="h-12 text-sm font-bold"
-            onClick={() => (window.location.href = "#contact")}
+            href="/contact"
           >
             {t("hero.ctaPrimary")}{" "}
             <ArrowRight

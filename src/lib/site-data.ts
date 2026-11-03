@@ -11,7 +11,7 @@ import {
 
 export type NavigationItem = {
   label: string;
-  href: `#${string}` | "/about" | "/services";
+  href: `#${string}` | "/about" | "/services" | "/blogs" | "/contact";
 };
 export type Service = {
   title: string;
@@ -35,7 +35,8 @@ export const navigation = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "How We Work", href: "#how-we-work" },
-  { label: "Contact", href: "#contact" },
+  { label: "Blogs", href: "/blogs" },
+  { label: "Contact", href: "/contact" },
 ] as const satisfies readonly NavigationItem[];
 
 export const services = [

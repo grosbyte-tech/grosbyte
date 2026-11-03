@@ -80,7 +80,7 @@ export function ServiceCTA({
           <h2 id="service-cta-title">{title}</h2>
           <p>{description}</p>
         </div>
-        <Button href="/#contact" size="lg">
+        <Button href="/contact" size="lg">
           Start a Project
         </Button>
       </div>

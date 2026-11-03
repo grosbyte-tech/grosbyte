@@ -11,7 +11,8 @@ const navKeys: Record<string, string> = {
   "/about": "nav.about",
   "/services": "nav.services",
   "#how-we-work": "nav.process",
-  "#contact": "nav.contact",
+  "/contact": "nav.contact",
+  "/blogs": "nav.blogs",
 };
 
 export function Footer() {

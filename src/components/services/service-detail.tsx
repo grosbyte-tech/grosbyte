@@ -27,7 +27,7 @@ export function ServiceDetailPage({
           <p className="service-tagline">{service.headline}</p>
           <p className="service-lead">{service.summary}</p>
           <div className="service-actions">
-            <Button href="/#contact" size="lg">
+            <Button href="/contact" size="lg">
               Discuss your project
             </Button>
             <a href="#deliverables" className="service-text-link">

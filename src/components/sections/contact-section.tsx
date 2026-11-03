@@ -12,6 +12,8 @@ import {
 import { Reveal } from "@/components/motion/reveal";
 import { FoldingText } from "@/components/ui/folding-text";
 import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
+import { emptyContact, validateContactFields } from "@/lib/contact";
+import { serviceOptions } from "@/lib/service-options";
 import { socialLinks } from "@/lib/site-data";
 import {
   Select,
@@ -43,23 +45,7 @@ const initialValues: ContactFormValues = {
   message: "",
 };
 
-const serviceKeys: Record<string, string> = {
-  "Custom Software Development": "customSoftware",
-  "Web Platforms and E-commerce": "webPlatforms",
-  "Mobile Application Development": "mobileApp",
-  "AI Automation and Data Analysis": "aiAutomation",
-  "UI/UX and Product Design": "uiuxDesign",
-  "Digital Marketing and Brand Growth": "digitalMarketing",
-};
-
-const selectOptions = [
-  "Custom Software Development",
-  "Web Platforms and E-commerce",
-  "Mobile Application Development",
-  "AI Automation and Data Analysis",
-  "UI/UX and Product Design",
-  "Digital Marketing and Brand Growth",
-];
+const selectOptions = serviceOptions;
 
 export function ContactSection() {
   const { t } = useTranslation();
@@ -86,19 +72,7 @@ export function ContactSection() {
     event.preventDefault();
     if (submissionLock.current) return;
 
-    const nextErrors: ContactFormErrors = {};
-    if (values.name.trim().length < 2) {
-      nextErrors.name = t("contact.validation.name");
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
-      nextErrors.email = t("contact.validation.email");
-    }
-    if (!values.service) {
-      nextErrors.service = t("contact.validation.service");
-    }
-    if (values.message.trim().length < 10) {
-      nextErrors.message = t("contact.validation.message");
-    }
+    const nextErrors = validateContactFields({ ...emptyContact, ...values });
     setErrors(nextErrors);
     setStatus({ type: "idle", message: "" });
 
@@ -114,6 +88,7 @@ export function ContactSection() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...values,
+          website: new FormData(event.currentTarget).get("website"),
           submissionId: submissionId.current,
         }),
       });
@@ -249,6 +224,15 @@ export function ContactSection() {
           </Reveal>
           <Reveal delay={0.08} className="contact-form-reveal">
             <form className="contact-form" noValidate onSubmit={handleSubmit}>
+              <div hidden aria-hidden="true">
+                <label htmlFor="home-website">Leave this field empty</label>
+                <input
+                  id="home-website"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </div>
               <div className="form-heading">
                 <h3>{t("contact.form.title")}</h3>
                 <p>{t("contact.form.description")}</p>
@@ -357,7 +341,7 @@ export function ContactSection() {
                     <SelectContent>
                       {selectOptions.map((opt) => (
                         <SelectItem key={opt} value={opt}>
-                          {t(`services.list.${serviceKeys[opt]}.title`)}
+                          {opt}
                         </SelectItem>
                       ))}
                     </SelectContent>
