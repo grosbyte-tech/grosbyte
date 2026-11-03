@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { Reveal } from "@/components/motion/reveal";
 import { FoldingText } from "@/components/ui/folding-text";
@@ -17,6 +18,15 @@ const serviceKeys: Record<string, string> = {
   "AI Automation and Data Analysis": "aiAutomation",
   "UI/UX and Product Design": "uiuxDesign",
   "Digital Marketing and Brand Growth": "digitalMarketing",
+};
+
+const serviceRoutes: Record<string, string> = {
+  "Custom Software Development": "/services/custom-software-development",
+  "Web Platforms and E-commerce": "/services/website-ecommerce-development",
+  "Mobile Application Development": "/services/web-mobile-applications",
+  "AI Automation and Data Analysis": "/services/ai-automation-integrations",
+  "UI/UX and Product Design": "/services/branding-design",
+  "Digital Marketing and Brand Growth": "/services/digital-marketing",
 };
 
 function subscribeToMobile(callback: () => void) {
@@ -61,6 +71,12 @@ export function AboutSection() {
           <Reveal className="about-copy" delay={0.06}>
             <p>{t("about.p1")}</p>
             <p>{t("about.p2")}</p>
+            <Link
+              href="/about"
+              className="inline-flex min-h-11 items-center font-semibold text-[var(--brand-blue-hover)] hover:underline underline-offset-4"
+            >
+              {t("phase1.learnAbout")} →
+            </Link>
             <Reveal className="statistics-grid" delay={0.08}>
               {statistics.map((statistic, idx) => (
                 <div className="statistic" key={statistic.label}>
@@ -180,7 +196,9 @@ function ServiceCard({
       style={!isMobile && desktopSettled ? { transform: "none" } : undefined}
     >
       <Icon aria-hidden="true" />
-      <h3>{translatedTitle}</h3>
+      <h3>
+        <Link href={serviceRoutes[service.title]}>{translatedTitle}</Link>
+      </h3>
       <p>{translatedDescription}</p>
       <div className="service-keywords">
         {translatedKeywords.map((keyword) => (

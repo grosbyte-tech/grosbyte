@@ -1,14 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { navigation, socialLinks } from "@/lib/site-data";
 import { useTranslation } from "@/contexts/language-context";
 
 const navKeys: Record<string, string> = {
   "#home": "nav.home",
-  "#about": "nav.about",
-  "#services": "nav.services",
+  "/about": "nav.about",
+  "/services": "nav.services",
   "#how-we-work": "nav.process",
   "#contact": "nav.contact",
 };
@@ -20,7 +21,7 @@ export function Footer() {
     <footer className="footer">
       <div className="container footer-main">
         <div className="footer-identity">
-          <a className="brand" href="#home">
+          <Link className="brand" href="/#home">
             <span className="brand-logo">
               <Image
                 src="/icons/logo-removebg.png"
@@ -30,12 +31,15 @@ export function Footer() {
               />
             </span>
             <span>Grosbyte Technologies</span>
-          </a>
+          </Link>
           <p>{t("footer.description")}</p>
         </div>
         <nav className="footer-nav" aria-label="Footer navigation">
           {navigation.map((item) => (
-            <a href={item.href} key={item.href}>
+            <a
+              href={item.href.startsWith("#") ? `/${item.href}` : item.href}
+              key={item.href}
+            >
               {t(navKeys[item.href])}
             </a>
           ))}

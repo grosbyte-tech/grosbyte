@@ -39,11 +39,11 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       }
       return "light";
     }
-    return "dark";
+    return "light";
   });
 
   // Keep the server render and first hydration render identical.
-  const theme = isMounted ? preferredTheme : "dark";
+  const theme = isMounted ? preferredTheme : "light";
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -64,13 +64,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  // Prevent flash of unstyled content during SSR by rendering children directly once client is loaded
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme, setTheme }}>
-      <div
-        style={{ visibility: isMounted ? "visible" : "hidden" }}
-        className="w-full min-h-screen bg-[var(--background)]"
-      >
+      <div className="w-full min-h-screen bg-[var(--background)]">
         {children}
       </div>
     </ThemeContext.Provider>

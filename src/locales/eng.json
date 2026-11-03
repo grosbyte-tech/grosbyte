@@ -232,5 +232,61 @@
       "title": "Tools that connect brands with customers",
       "description": "From content and campaigns to search insights and follow-ups, we choose the tools that fit your audience, goals, and budget."
     }
+  },
+  "phase1": {
+    "learnAbout": "Get to know Grosbyte",
+    "aboutPage": {
+      "title": "A technology partner focused on practical solutions.",
+      "intro": "Grosbyte Technologies helps businesses with software development, websites, applications, automation, and digital marketing. We connect business requirements with technology that is useful in everyday work.",
+      "whoLabel": "Who we are",
+      "whoTitle": "Business needs first. Technology with a purpose.",
+      "whoCopy": "Based in Nepal, we work with businesses that need to bring a service online, improve an internal workflow, or build a digital product for their customers. Our work brings together development, product design, automation, and digital marketing.",
+      "whoSecond": "Whether you are planning a first website or improving an existing system, we start by learning how your business operates and what the people using it need.",
+      "beliefLabel": "What we believe",
+      "beliefTitle": "Principles that shape the work.",
+      "beliefs": [
+        {
+          "title": "Practicality",
+          "description": "Technology should solve a meaningful business problem. We consider the value of a feature alongside the effort it takes to build and maintain."
+        },
+        {
+          "title": "Clarity",
+          "description": "Requirements, decisions, and project expectations should be understandable to everyone involved."
+        },
+        {
+          "title": "Quality",
+          "description": "Maintainability, reliability, and usability deserve attention throughout development, from the first design to the final checks."
+        },
+        {
+          "title": "Collaboration",
+          "description": "Good decisions depend on understanding the people who will use the solution. Your context and feedback are part of the work."
+        }
+      ],
+      "workLabel": "Working with Grosbyte",
+      "workTitle": "A shared understanding makes better work possible.",
+      "work": [
+        {
+          "title": "Your business context",
+          "description": "We begin with your goals, current processes, and practical constraints. Examples from everyday work help us understand the problem before choosing a solution."
+        },
+        {
+          "title": "A clear working relationship",
+          "description": "We discuss scope, responsibilities, and how feedback will be shared. Questions and trade-offs are part of the conversation, so decisions are understandable."
+        },
+        {
+          "title": "Attention to everyday use",
+          "description": "We consider how your team will use and maintain the work after delivery. Handover needs and the agreed support scope are part of that planning."
+        }
+      ],
+      "approachLabel": "Our approach",
+      "approachTitle": "Understand the challenge. Build with care.",
+      "approachCopy": "We begin with the business challenge, consider suitable solutions, and plan the implementation together. Design and development are followed by testing and feedback so the work can be checked against the agreed requirements.",
+      "approachSecond": "Before delivery, we discuss the launch, handover, and support scope. The approach should fit the project and the people using it.",
+      "approachLink": "See how we work",
+      "ctaTitle": "Let’s build something useful for your business.",
+      "ctaCopy": "Share the challenge you are working on. We can discuss the requirements and explore the next step.",
+      "workIntro": "We work with the people who know the business and the people who will use the solution. Their experience helps us understand what needs to change and what should stay simple.",
+      "workLink": "Explore our services"
+    }
   }
 }

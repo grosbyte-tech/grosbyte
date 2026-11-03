@@ -9,9 +9,9 @@ const urbanist = Urbanist({
   subsets: ["latin"],
   display: "swap",
 });
-const title = "Grosbyte Technologies | Software, Web & Digital Growth";
+const title = "Grosbyte Technologies | Software & Website Development Nepal";
 const description =
-  "Grosbyte Technologies builds custom software, web applications, mobile apps, modern websites, AI-integrated solutions, digital marketing strategies, and digital brands for growing businesses.";
+  "Practical software, websites, web and mobile applications, automation, and digital marketing for your business. Discuss your project with Grosbyte Technologies in Nepal.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://grosbyte.com"),
@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     shortcut: "/icons/logo-removebg.png",
   },
   openGraph: {
+    url: "/",
     title,
     description,
     type: "website",
@@ -38,8 +39,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/icons/logo-removebg.png",
-        width: 1408,
-        height: 768,
+        width: 1280,
+        height: 1280,
         alt: "Grosbyte Technologies",
       },
     ],
@@ -71,7 +72,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={urbanist.variable}>
+    <html lang="en" className={`${urbanist.variable} light`}>
       {/* Extensions may inject body attributes such as cz-shortcut-listen before hydration. */}
       <body suppressHydrationWarning>
         <LanguageProvider>
