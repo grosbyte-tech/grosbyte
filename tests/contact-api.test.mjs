@@ -16,7 +16,7 @@ function loadApi({
   const cache = new Map();
   function load(path) {
     if (cache.has(path)) return cache.get(path);
-    const module = { exports: {} };
+    const mod = { exports: {} };
     const code = ts.transpileModule(fs.readFileSync(path, "utf8"), {
       compilerOptions: {
         module: ts.ModuleKind.CommonJS,
@@ -26,8 +26,8 @@ function loadApi({
     vm.runInNewContext(
       code,
       {
-        module,
-        exports: module.exports,
+        module: mod,
+        exports: mod.exports,
         require: (name) =>
           name === "@/lib/contact"
             ? load("src/lib/contact.ts")
@@ -60,8 +60,8 @@ function loadApi({
       },
       { filename: path },
     );
-    cache.set(path, module.exports);
-    return module.exports;
+    cache.set(path, mod.exports);
+    return mod.exports;
   }
   return { POST: load("src/app/api/contact/route.ts").POST, calls };
 }
@@ -205,4 +205,29 @@ test("accepts the public host when Next uses an internal route hostname", async 
     body: JSON.stringify(valid()),
   });
   assert.equal((await POST(request)).status, 200);
+});
+
+test("health check endpoint returns healthy status", async () => {
+  const code = ts.transpileModule(
+    fs.readFileSync("src/app/api/health/route.ts", "utf8"),
+    {
+      compilerOptions: {
+        module: ts.ModuleKind.CommonJS,
+        target: ts.ScriptTarget.ES2022,
+      },
+    },
+  ).outputText;
+  const mod = { exports: {} };
+  vm.runInNewContext(code, {
+    mod,
+    exports: mod.exports,
+    Response,
+    Date,
+  });
+  const { GET } = mod.exports;
+  const response = GET();
+  assert.equal(response.status, 200);
+  const data = await response.json();
+  assert.equal(data.status, "healthy");
+  assert.ok(data.timestamp);
 });

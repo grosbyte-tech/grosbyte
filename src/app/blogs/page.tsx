@@ -1,56 +1,58 @@
-import { Breadcrumbs } from "@/components/editorial/page-shell";
+import Image from "next/image";
+import { Breadcrumbs, EditorialCTA } from "@/components/editorial/page-shell";
 import { serviceMetadata } from "@/components/services/service-ui";
 import { BlogList } from "@/components/blogs/blog-list";
-import { ArticleCard } from "@/components/blogs/article-card";
-import { Button } from "@/components/ui/button";
 import { listPosts } from "@/lib/blogs/repository";
+
 export const metadata = serviceMetadata(
   "Blogs",
   "Practical reading on websites, software, automation, and digital marketing. Explore Grosbyte’s sample article library.",
   "/blogs",
 );
+
 export default async function BlogsPage() {
   const posts = await listPosts();
+
   return (
     <div className="container editorial-container">
       <header className="editorial-hero">
         <Breadcrumbs current="Blogs" />
-        <p className="eyebrow">Ideas for your next step</p>
-        <h1>
-          Thoughtful decisions.
-          <br />
-          Better digital work.
-        </h1>
-        <p className="editorial-lead">
-          Practical reading on building useful products, improving workflows,
-          and communicating clearly online.
-        </p>
-        <p className="sample-notice">
-          Sample library — these articles and publication dates are
-          demonstration content.
-        </p>
+        <div className="editorial-hero-grid">
+          <div className="editorial-hero-content">
+            <p className="eyebrow">Ideas for your next step</p>
+            <h1>
+              Thoughtful decisions.
+              <br />
+              Better digital work.
+            </h1>
+            <p className="editorial-lead">
+              Practical reading on building useful products, improving
+              workflows, and communicating clearly online.
+            </p>
+          </div>
+          <div className="editorial-hero-media">
+            <div className="editorial-hero-image-wrap">
+              <Image
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+                alt="Modern developer workspace with laptop, code, notebook, and coffee representing thoughtful digital decisions"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                className="editorial-hero-image"
+              />
+            </div>
+          </div>
+        </div>
       </header>
-      <section className="featured-articles" aria-labelledby="featured-title">
-        <p className="eyebrow">A place to start</p>
-        <h2 id="featured-title">Featured reading</h2>
-        <div className="featured-grid">
-          {posts
-            .filter((post) => post.featured)
-            .map((post) => (
-              <ArticleCard key={post.slug} post={post} />
-            ))}
-        </div>
-      </section>
+
       <BlogList posts={posts} />
-      <section className="editorial-cta">
-        <div>
-          <h2>Turn a question into a plan.</h2>
-          <p>Tell us what you’re working on and where you need support.</p>
-        </div>
-        <Button href="/contact" size="lg">
-          Discuss your project
-        </Button>
-      </section>
+
+      <EditorialCTA
+        title="Turn a question into a plan."
+        description="Tell us what you’re working on and where you need support."
+        buttonText="Discuss your project"
+        buttonHref="/contact"
+      />
     </div>
   );
 }

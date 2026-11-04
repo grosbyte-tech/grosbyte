@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/language-context";
-import { ThemeProvider } from "@/contexts/theme-context";
+import { Navbar } from "@/components/layout/navbar";
+import { Footer } from "@/components/layout/footer";
 
 const urbanist = Urbanist({
   variable: "--font-urbanist",
@@ -64,7 +65,7 @@ const jsonLd = {
   sameAs: [
     "https://www.instagram.com/grosbyte.tech/",
     "https://www.facebook.com/profile.php?id=61591801983966",
-    "https://www.linkedin.com/search/results/all/?keywords=Grosbyte%20Technologies&origin=ENTITY_SEARCH_HOME_HISTORY&heroEntityKey=urn%3Ali%3Aorganization%3A133457329&position=0",
+    "https://www.linkedin.com/company/grosbyte-technologies",
   ],
 };
 
@@ -72,11 +73,17 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${urbanist.variable} light`}>
+    <html
+      lang="en"
+      className={`${urbanist.variable} light`}
+      suppressHydrationWarning
+    >
       {/* Extensions may inject body attributes such as cz-shortcut-listen before hydration. */}
       <body suppressHydrationWarning>
         <LanguageProvider>
-          <ThemeProvider>{children}</ThemeProvider>
+          <Navbar />
+          {children}
+          <Footer />
         </LanguageProvider>
         <script
           type="application/ld+json"

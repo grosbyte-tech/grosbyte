@@ -27,7 +27,6 @@ export type Technology = {
   name: string;
   description: string;
   icon: string | ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
-  invertOnDark?: boolean;
 };
 
 export const navigation = [
@@ -38,6 +37,15 @@ export const navigation = [
   { label: "Blogs", href: "/blogs" },
   { label: "Contact", href: "/contact" },
 ] as const satisfies readonly NavigationItem[];
+
+export const navKeys: Record<string, string> = {
+  "#home": "nav.home",
+  "/about": "nav.about",
+  "/services": "nav.services",
+  "#how-we-work": "nav.process",
+  "/contact": "nav.contact",
+  "/blogs": "nav.blogs",
+};
 
 export const services = [
   {
@@ -164,7 +172,6 @@ export const technologies: readonly Technology[] = [
     name: "Next.js",
     description: "Scalable React web products.",
     icon: "https://cdn.svgporn.com/logos/nextjs.svg",
-    invertOnDark: true,
   },
   {
     name: "React",
@@ -195,7 +202,6 @@ export const technologies: readonly Technology[] = [
     name: "Expo",
     description: "React Native app tooling.",
     icon: "https://cdn.svgporn.com/logos/expo-icon.svg",
-    invertOnDark: true,
   },
   {
     name: "Python",
@@ -251,7 +257,6 @@ export const technologies: readonly Technology[] = [
     name: "GitHub",
     description: "Code collaboration and reviews.",
     icon: "https://cdn.svgporn.com/logos/github-icon.svg",
-    invertOnDark: true,
   },
   {
     name: "Docker",
@@ -262,14 +267,12 @@ export const technologies: readonly Technology[] = [
     name: "Resend",
     description: "Application email infrastructure.",
     icon: "https://cdn.svgporn.com/logos/resend-icon.svg",
-    invertOnDark: true,
   },
 ];
 
 export const socialLinks = {
   instagram: "https://www.instagram.com/grosbyte.tech/",
   facebook: "https://www.facebook.com/profile.php?id=61591801983966",
-  linkedin:
-    "https://www.linkedin.com/search/results/all/?keywords=Grosbyte%20Technologies&origin=ENTITY_SEARCH_HOME_HISTORY&heroEntityKey=urn%3Ali%3Aorganization%3A133457329&position=0",
+  linkedin: "https://www.linkedin.com/company/grosbyte-technologies",
   github: "https://github.com/grosbyte-tech",
 } as const;

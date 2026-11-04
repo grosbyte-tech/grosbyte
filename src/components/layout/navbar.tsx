@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Home,
   Info,
@@ -11,13 +12,13 @@ import {
   BookOpen,
   Mail,
   ChevronUp,
+  ChevronDown,
 } from "lucide-react";
-import { navigation } from "@/lib/site-data";
+import { navigation, navKeys } from "@/lib/site-data";
 import { useTranslation } from "@/contexts/language-context";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Button } from "@/components/ui/button";
-import { useTheme } from "@/contexts/theme-context";
+import { ServicesMegaMenu } from "@/components/layout/mega-menu/services-mega-menu";
 
 const icons = {
   "#home": Home,
@@ -28,15 +29,6 @@ const icons = {
   "/blogs": BookOpen,
 } as const;
 
-const navKeys: Record<string, string> = {
-  "#home": "nav.home",
-  "/about": "nav.about",
-  "/services": "nav.services",
-  "#how-we-work": "nav.process",
-  "/contact": "nav.contact",
-  "/blogs": "nav.blogs",
-};
-
 export function Navbar() {
   const pathname = usePathname();
   const resolveHref = (href: string) =>
@@ -44,8 +36,58 @@ export function Navbar() {
   const [active, setActive] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  const closeTimerRef = useRef<NodeJS.Timeout | null>(null);
   const { t } = useTranslation();
-  const { theme } = useTheme();
+
+  // Reset mega menu state immediately during render if pathname changes
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setIsServicesOpen(false);
+  }
+
+  // Mega menu hover bridge handlers with grace period
+  const handleServicesEnter = () => {
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+    setIsServicesOpen(true);
+  };
+
+  const handleServicesLeave = () => {
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+    }
+    closeTimerRef.current = setTimeout(() => {
+      setIsServicesOpen(false);
+    }, 160);
+  };
+
+  const handleServicesBlur = (e: React.FocusEvent<HTMLAnchorElement>) => {
+    const nextTarget = e.relatedTarget as Node | null;
+    const navShell = e.currentTarget.closest(".nav-shell");
+    if (!navShell || !nextTarget || !navShell.contains(nextTarget)) {
+      setIsServicesOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    return () => {
+      if (closeTimerRef.current) {
+        clearTimeout(closeTimerRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (closeTimerRef.current) {
+        clearTimeout(closeTimerRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,8 +130,8 @@ export function Navbar() {
   return (
     <>
       <header className={`site-header ${isScrolled ? "is-scrolled" : ""}`}>
-        <nav className="nav-shell" aria-label="Main navigation">
-          <a
+        <nav className="nav-shell relative" aria-label="Main navigation">
+          <Link
             className="brand"
             href={resolveHref("#home")}
             aria-label="Grosbyte Technologies home"
@@ -107,27 +149,79 @@ export function Navbar() {
             <span className="font-extrabold tracking-tight">
               Grosbyte Technologies
             </span>
-          </a>
+          </Link>
+
+          {/* Desktop Navigation Links */}
           <div className="nav-links">
-            {navigation.map((item) => (
-              <a
-                key={item.href}
-                href={resolveHref(item.href)}
-                className={activeItem === item.href.slice(1) ? "active" : ""}
-                aria-current={
-                  activeItem === item.href.slice(1)
-                    ? item.href.startsWith("/")
-                      ? "page"
-                      : "location"
-                    : undefined
-                }
-              >
-                {t(navKeys[item.href])}
-              </a>
-            ))}
+            {navigation.map((item) => {
+              const isServices = item.href === "/services";
+              const isActive = activeItem === item.href.slice(1);
+
+              if (isServices) {
+                return (
+                  <div
+                    key={item.href}
+                    className="relative inline-flex items-center"
+                    onMouseEnter={handleServicesEnter}
+                    onMouseLeave={handleServicesLeave}
+                  >
+                    <Link
+                      href={resolveHref(item.href)}
+                      className={`inline-flex items-center gap-1 ${
+                        isActive ? "active" : ""
+                      } ${isServicesOpen ? "text-[var(--text-primary)]" : ""}`}
+                      aria-current={isActive ? "page" : undefined}
+                      aria-expanded={isServicesOpen}
+                      aria-controls="services-mega-menu"
+                      aria-haspopup="true"
+                      onFocus={handleServicesEnter}
+                      onBlur={handleServicesBlur}
+                      onClick={() => setIsServicesOpen(false)}
+                    >
+                      <span>{t(navKeys[item.href])}</span>
+                      <ChevronDown
+                        className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                          isServicesOpen ? "rotate-180" : ""
+                        }`}
+                        aria-hidden="true"
+                      />
+                    </Link>
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={item.href}
+                  href={resolveHref(item.href)}
+                  className={isActive ? "active" : ""}
+                  onMouseEnter={() => {
+                    // Instantly close services mega menu when user moves to another nav item
+                    if (isServicesOpen) setIsServicesOpen(false);
+                  }}
+                  aria-current={
+                    isActive
+                      ? item.href.startsWith("/")
+                        ? "page"
+                        : "location"
+                      : undefined
+                  }
+                >
+                  {t(navKeys[item.href])}
+                </Link>
+              );
+            })}
           </div>
+
+          {/* Mega Menu Dropdown */}
+          <ServicesMegaMenu
+            isOpen={isServicesOpen}
+            onClose={() => setIsServicesOpen(false)}
+            onMouseEnter={handleServicesEnter}
+            onMouseLeave={handleServicesLeave}
+          />
+
           <div className="flex items-center gap-2 sm:gap-2.5 ml-auto md:ml-0">
-            <ThemeToggle />
             <LanguageSwitcher />
             <div className="hidden md:inline-flex">
               <Button
@@ -145,11 +239,7 @@ export function Navbar() {
 
       {/* Floating Glassmorphism Sticky Bottom Navigation for Mobile */}
       <div
-        className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2.5rem)] max-w-[450px] h-[62px] rounded-full shadow-[0_8px_32px_0_rgba(0,0,0,0.18)] flex justify-around items-center px-5 md:hidden border transition-all duration-250 backdrop-blur-[24px] saturate-[180%] ${
-          theme === "light"
-            ? "bg-white/60 border-slate-900/10"
-            : "bg-[#08080a]/80 border-white/10"
-        }`}
+        className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2.5rem)] max-w-[450px] h-[62px] rounded-full shadow-[0_8px_32px_0_rgba(0,0,0,0.18)] flex justify-around items-center px-5 md:hidden border transition-all duration-250 backdrop-blur-[24px] saturate-[180%] bg-white/60 border-slate-900/10"
         style={{
           WebkitBackdropFilter: "blur(24px) saturate(180%)",
         }}
@@ -158,7 +248,7 @@ export function Navbar() {
           const Icon = icons[item.href];
           const isActive = activeItem === item.href.slice(1);
           return (
-            <a
+            <Link
               key={item.href}
               href={resolveHref(item.href)}
               aria-current={
@@ -180,7 +270,7 @@ export function Navbar() {
                   ? t("nav.processMobile")
                   : t(navKeys[item.href])}
               </span>
-            </a>
+            </Link>
           );
         })}
       </div>

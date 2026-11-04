@@ -86,16 +86,22 @@ export function ContactSection() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        signal: AbortSignal.timeout(25000),
         body: JSON.stringify({
           ...values,
           website: new FormData(event.currentTarget).get("website"),
           submissionId: submissionId.current,
         }),
       });
-      const result = (await response.json()) as {
-        message?: string;
-        errors?: ContactFormErrors;
-      };
+      let result: { message?: string; errors?: ContactFormErrors };
+      try {
+        result = await response.json();
+      } catch {
+        result = {
+          message:
+            "We could not send your enquiry. Please try again or email us directly.",
+        };
+      }
 
       if (!response.ok) {
         setErrors(result.errors ?? {});

@@ -23,7 +23,7 @@ export async function POST(request: Request) {
   const origin = request.headers.get("origin");
   // Next.js may use an internal hostname behind a reverse proxy. Compare the
   // browser origin with the public Host header without trusting forwarded hosts.
-  let validOrigin = !origin;
+  let validOrigin = false;
   if (origin) {
     try {
       const source = new URL(origin);

@@ -41,7 +41,10 @@ export function AnimatedCounter({
     const timeoutId = setTimeout(() => {
       const step = (timestamp: number) => {
         if (!startTime) startTime = timestamp;
-        const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
+        const progress = Math.min(
+          (timestamp - startTime) / (duration * 1000),
+          1,
+        );
 
         // Ease out cubic / expo: 1 - Math.pow(1 - progress, 3)
         const easeProgress = 1 - Math.pow(1 - progress, 3);

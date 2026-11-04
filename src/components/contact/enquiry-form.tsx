@@ -105,7 +105,15 @@ export function EnquiryForm() {
         }),
         signal: AbortSignal.timeout(25000),
       });
-      const result = await response.json();
+      let result: { message?: string; errors?: ContactErrors };
+      try {
+        result = await response.json();
+      } catch {
+        result = {
+          message:
+            "We could not send your enquiry. Please try again or email us directly.",
+        };
+      }
       if (!response.ok) {
         setErrors(result.errors ?? {});
         focusError(result.errors ?? {});
@@ -118,7 +126,7 @@ export function EnquiryForm() {
       } else {
         setValues(emptyContact);
         setSubmissionId(null);
-        setStatus({ error: false, message: result.message });
+        setStatus({ error: false, message: result.message ?? "Sent!" });
       }
     } catch {
       setStatus({

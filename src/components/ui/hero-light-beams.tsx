@@ -2,7 +2,6 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { useMemo } from "react";
-import { useTheme } from "@/contexts/theme-context";
 
 // Generate deterministic particles for ambient stardust effect (like in reference image)
 function useStardustParticles(count = 28) {
@@ -36,32 +35,21 @@ function useStardustParticles(count = 28) {
 
 export function HeroLightBeams() {
   const reduceMotion = useReducedMotion();
-  const { theme } = useTheme();
-  const isLight = theme === "light";
   const particles = useStardustParticles(32);
 
-  // In dark mode: pure ethereal glowing white beams with "screen" blend mode
-  // In light mode: elegant cool slate gray beams with "multiply" blend mode
-  const coreColor = isLight ? "#475569" : "#ffffff";
-  const diffuseColor = isLight ? "#64748b" : "#ffffff";
-  const flareColor = isLight ? "#334155" : "#ffffff";
-  const blendMode = isLight ? ("multiply" as const) : ("screen" as const);
+  // Elegant cool slate gray beams with "multiply" blend mode for light theme
+  const coreColor = "#475569";
+  const diffuseColor = "#64748b";
+  const flareColor = "#334155";
+  const blendMode = "multiply" as const;
 
-  const opacities = isLight
-    ? {
-        diffuse: ["0.36", "0.22", "0.09", "0.02", "0"],
-        core1: ["0.52", "0.30", "0.10", "0"],
-        core2: ["0.44", "0.24", "0.07", "0"],
-        flare: ["0.55", "0.28", "0.08", "0"],
-        cluster: [0.8, 1.0, 0.8],
-      }
-    : {
-        diffuse: ["0.55", "0.32", "0.10", "0.02", "0"],
-        core1: ["0.75", "0.45", "0.12", "0"],
-        core2: ["0.65", "0.35", "0.08", "0"],
-        flare: ["0.85", "0.40", "0.12", "0"],
-        cluster: [0.72, 0.95, 0.72],
-      };
+  const opacities = {
+    diffuse: ["0.36", "0.22", "0.09", "0.02", "0"],
+    core1: ["0.52", "0.30", "0.10", "0"],
+    core2: ["0.44", "0.24", "0.07", "0"],
+    flare: ["0.55", "0.28", "0.08", "0"],
+    cluster: [0.8, 1.0, 0.8],
+  };
 
   return (
     <div
@@ -134,7 +122,13 @@ export function HeroLightBeams() {
             </linearGradient>
 
             {/* Sharp core ray 1 */}
-            <linearGradient id="beamLeftCore1" x1="5%" y1="0%" x2="90%" y2="75%">
+            <linearGradient
+              id="beamLeftCore1"
+              x1="5%"
+              y1="0%"
+              x2="90%"
+              y2="75%"
+            >
               <stop
                 offset="0%"
                 stopColor={coreColor}
@@ -261,7 +255,7 @@ export function HeroLightBeams() {
           <polygon
             points="70,30 880,560 810,610 80,50"
             fill="url(#beamLeftCore1)"
-            opacity={isLight ? 0.45 : 0.6}
+            opacity={0.45}
             filter="url(#blurCore)"
           />
 
@@ -460,7 +454,7 @@ export function HeroLightBeams() {
           <polygon
             points="830,30 20,560 90,610 820,50"
             fill="url(#beamRightCore1)"
-            opacity={isLight ? 0.45 : 0.6}
+            opacity={0.45}
             filter="url(#blurCore)"
           />
 
@@ -485,11 +479,7 @@ export function HeroLightBeams() {
         {particles.map((p) => (
           <motion.div
             key={p.id}
-            className={`absolute rounded-full transition-colors duration-500 ${
-              isLight
-                ? "bg-slate-500 shadow-[0_0_6px_rgba(71,85,105,0.45)]"
-                : "bg-white shadow-[0_0_8px_rgba(255,255,255,0.95)]"
-            }`}
+            className="absolute rounded-full transition-colors duration-500 bg-slate-500 shadow-[0_0_6px_rgba(71,85,105,0.45)]"
             style={{
               left: p.left,
               top: p.top,
@@ -499,13 +489,9 @@ export function HeroLightBeams() {
             initial={{ opacity: 0.1 }}
             animate={
               reduceMotion
-                ? { opacity: isLight ? p.maxOpacity * 0.75 : p.maxOpacity }
+                ? { opacity: p.maxOpacity * 0.75 }
                 : {
-                    opacity: [
-                      0.15,
-                      isLight ? p.maxOpacity * 0.75 : p.maxOpacity,
-                      0.15,
-                    ],
+                    opacity: [0.15, p.maxOpacity * 0.75, 0.15],
                     y: [-8, 8, -8],
                     x: [-3, 3, -3],
                   }
