@@ -155,11 +155,7 @@ function TeamToolkit({ marketing }: { marketing: boolean }) {
                                 width={30}
                                 height={30}
                                 unoptimized
-                                className={
-                                  tool.invertOnDark
-                                    ? "tech-icon-img invert-white"
-                                    : "tech-icon-img"
-                                }
+                                className="tech-icon-img"
                               />
                             ) : (
                               <Icon aria-hidden={true} />

@@ -3,17 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { navigation, socialLinks } from "@/lib/site-data";
+import { navigation, navKeys, socialLinks } from "@/lib/site-data";
 import { useTranslation } from "@/contexts/language-context";
-
-const navKeys: Record<string, string> = {
-  "#home": "nav.home",
-  "/about": "nav.about",
-  "/services": "nav.services",
-  "#how-we-work": "nav.process",
-  "/contact": "nav.contact",
-  "/blogs": "nav.blogs",
-};
 
 export function Footer() {
   const { t } = useTranslation();
@@ -37,12 +28,12 @@ export function Footer() {
         </div>
         <nav className="footer-nav" aria-label="Footer navigation">
           {navigation.map((item) => (
-            <a
+            <Link
               href={item.href.startsWith("#") ? `/${item.href}` : item.href}
               key={item.href}
             >
               {t(navKeys[item.href])}
-            </a>
+            </Link>
           ))}
         </nav>
         <div className="footer-contact">

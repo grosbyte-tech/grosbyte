@@ -4,6 +4,9 @@ import React, {
   createContext,
   useContext,
   useState,
+  useCallback,
+  useEffect,
+  useRef,
   useSyncExternalStore,
   ReactNode,
 } from "react";
@@ -25,6 +28,13 @@ const translations: Record<Language, Record<string, unknown>> = {
   nep,
   ger,
   spa,
+};
+
+const isoLangMap: Record<Language, string> = {
+  eng: "en",
+  nep: "ne",
+  ger: "de",
+  spa: "es",
 };
 
 const emptySubscribe = () => () => {};
@@ -57,12 +67,24 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   // Saved preferences apply only after the server HTML has hydrated.
   const language = isMounted ? preferredLanguage : "eng";
 
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = isoLangMap[language] || "en";
+    }
+  }, [language]);
+
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
     if (typeof window !== "undefined") {
       localStorage.setItem("grosbyte-lang", lang);
     }
   };
+
+  const cache = useRef(new Map<string, unknown>());
+
+  useEffect(() => {
+    cache.current.clear();
+  }, [language]);
 
   const getNestedValue = (obj: unknown, path: string): unknown => {
     return path.split(".").reduce((acc: unknown, part: string) => {
@@ -77,17 +99,25 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }, obj);
   };
 
-  const t = <T = string,>(key: string): T => {
-    const currentTranslation = translations[language];
-    let value = getNestedValue(currentTranslation, key);
+  const t = useCallback(
+    <T = string,>(key: string): T => {
+      if (cache.current.has(key)) {
+        return cache.current.get(key) as T;
+      }
+      const currentTranslation = translations[language];
+      let value = getNestedValue(currentTranslation, key);
 
-    // Fallback to English if translation is missing
-    if (value === null && language !== "eng") {
-      value = getNestedValue(translations["eng"], key);
-    }
+      // Fallback to English if translation is missing
+      if (value === null && language !== "eng") {
+        value = getNestedValue(translations["eng"], key);
+      }
 
-    return (value !== null ? value : key) as T;
-  };
+      const result = (value !== null ? value : key) as T;
+      cache.current.set(key, result);
+      return result;
+    },
+    [language],
+  );
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>

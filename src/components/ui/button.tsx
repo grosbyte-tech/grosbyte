@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { Button as ButtonPrimitive } from "@base-ui/react/button";
 import { cva, type VariantProps } from "class-variance-authority";
 
@@ -39,14 +40,18 @@ const buttonVariants = cva(
 );
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   href?: string;
   target?: string;
   rel?: string;
 }
 
-const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
+const Button = React.forwardRef<
+  HTMLButtonElement | HTMLAnchorElement,
+  ButtonProps
+>(
   (
     {
       className,
@@ -61,6 +66,26 @@ const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPro
     ref,
   ) => {
     if (href) {
+      const isInternal = href.startsWith("/") || href.startsWith("#");
+      const linkClassName = cn(buttonVariants({ variant, size, className }));
+
+      if (isInternal) {
+        return (
+          <Link
+            ref={ref as React.Ref<HTMLAnchorElement>}
+            href={href}
+            target={target}
+            rel={rel}
+            data-slot="button"
+            data-size={size}
+            className={linkClassName}
+            {...(props as unknown as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
+          >
+            {children}
+          </Link>
+        );
+      }
+
       return (
         <a
           ref={ref as React.Ref<HTMLAnchorElement>}
@@ -69,7 +94,7 @@ const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPro
           rel={rel}
           data-slot="button"
           data-size={size}
-          className={cn(buttonVariants({ variant, size, className }))}
+          className={linkClassName}
           {...(props as unknown as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
         >
           {children}

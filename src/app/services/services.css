@@ -3,13 +3,8 @@
   --brand-blue: #2a68e1;
   --brand-navy: #06142e;
   --service-link: #2a68e1;
-  color: var(--text-primary);
-}
-html.light .services-page {
   --text-primary: #06142e;
-}
-html.dark .services-page {
-  --service-link: #94b9ff;
+  color: var(--text-primary);
 }
 .services-page :is(a, button, summary):focus-visible {
   outline: 3px solid var(--service-link);

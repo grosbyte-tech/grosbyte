@@ -14,6 +14,8 @@ export type BlogPost = {
   publishedAt: string;
   serviceSlug: string;
   featured: boolean;
+  coverImage?: string;
+  coverImageAlt?: string;
   sections: { heading: string; paragraphs: string[] }[];
 };
 export type BlogSummary = Omit<BlogPost, "sections"> & {

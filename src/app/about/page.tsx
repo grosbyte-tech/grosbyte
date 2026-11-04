@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
 import { AboutPageContent } from "@/components/sections/about-page-content";
 import "./about.css";
 
@@ -30,12 +28,8 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <>
-      <Navbar />
-      <main className="about-page" id="main-content" tabIndex={-1}>
-        <AboutPageContent />
-      </main>
-      <Footer />
-    </>
+    <main className="about-page" id="main-content" tabIndex={-1}>
+      <AboutPageContent />
+    </main>
   );
 }

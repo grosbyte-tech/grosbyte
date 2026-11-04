@@ -119,3 +119,8 @@ export function RealGithubIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export const InstagramIcon = RealInstagramIcon;
+export const FacebookIcon = RealFacebookIcon;
+export const LinkedinIcon = RealLinkedinIcon;
+export const GithubIcon = RealGithubIcon;

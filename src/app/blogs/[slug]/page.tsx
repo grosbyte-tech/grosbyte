@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { Breadcrumbs } from "@/components/editorial/page-shell";
+import { Breadcrumbs, EditorialCTA } from "@/components/editorial/page-shell";
 import { ArticleCard, ArticleMeta } from "@/components/blogs/article-card";
-import { Button } from "@/components/ui/button";
 import { serviceMetadata } from "@/components/services/service-ui";
 import {
   findPost,
@@ -96,17 +95,12 @@ export default async function BlogPostPage({
           ))}
         </div>
       </section>
-      <section className="editorial-cta">
-        <div>
-          <h2>Have a related challenge?</h2>
-          <p>
-            Share your context and explore a practical next step with Grosbyte.
-          </p>
-        </div>
-        <Button href="/contact" size="lg">
-          Start a conversation
-        </Button>
-      </section>
+      <EditorialCTA
+        title="Have a related challenge?"
+        description="Share your context and explore a practical next step with Grosbyte."
+        buttonText="Start a conversation"
+        buttonHref="/contact"
+      />
     </div>
   );
 }

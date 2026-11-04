@@ -10,6 +10,10 @@ export const samplePosts: BlogPost[] = [
     publishedAt: "2026-10-20",
     serviceSlug: "website-ecommerce-development",
     featured: true,
+    coverImage:
+      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
+    coverImageAlt:
+      "Laptop displaying modern responsive website layout on a desk",
     sections: [
       {
         heading: "Start with the visitor’s task",
@@ -46,6 +50,10 @@ export const samplePosts: BlogPost[] = [
     publishedAt: "2026-10-21",
     serviceSlug: "custom-software-development",
     featured: true,
+    coverImage:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+    coverImageAlt:
+      "Code displayed on a monitor for software development decision",
     sections: [
       {
         heading: "Describe the constraint first",
@@ -82,6 +90,9 @@ export const samplePosts: BlogPost[] = [
     publishedAt: "2026-10-22",
     serviceSlug: "business-automation",
     featured: false,
+    coverImage:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    coverImageAlt: "Digital analytics dashboard showing streamlined data flows",
     sections: [
       {
         heading: "Look for predictable repetition",
@@ -118,6 +129,9 @@ export const samplePosts: BlogPost[] = [
     publishedAt: "2026-10-23",
     serviceSlug: "seo",
     featured: false,
+    coverImage:
+      "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80",
+    coverImageAlt: "Search engine analytics and performance charts on a screen",
     sections: [
       {
         heading: "Match pages to useful questions",
@@ -154,6 +168,9 @@ export const samplePosts: BlogPost[] = [
     publishedAt: "2026-10-24",
     serviceSlug: "ai-automation-integrations",
     featured: false,
+    coverImage:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80",
+    coverImageAlt: "Abstract visual representation of AI and neural networks",
     sections: [
       {
         heading: "Choose a task with reviewable output",
@@ -190,6 +207,10 @@ export const samplePosts: BlogPost[] = [
     publishedAt: "2026-10-25",
     serviceSlug: "social-media-marketing",
     featured: false,
+    coverImage:
+      "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80",
+    coverImageAlt:
+      "Planning editorial content strategy with a notebook and pen",
     sections: [
       {
         heading: "Use questions you already hear",
