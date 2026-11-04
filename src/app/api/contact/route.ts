@@ -1,57 +1,118 @@
 import { createHash } from "node:crypto";
 
-type ContactPayload = {
-  name?: unknown;
-  email?: unknown;
-  phone?: unknown;
-  service?: unknown;
-  message?: unknown;
-  submissionId?: unknown;
-};
+import {
+  emptyContact,
+  validateContactFields,
+  type ContactValues,
+} from "@/lib/contact";
 
-type ContactField = "name" | "email" | "phone" | "service" | "message";
-
-const services = new Set([
-  "Custom Software Development",
-  "Web Platforms and E-commerce",
-  "Mobile Application Development",
-  "AI and Automation Solutions",
-  "UI/UX and Product Design",
-  "Digital Marketing and Brand Growth",
-]);
-
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const submissionIdPattern = /^[0-9a-f-]{36}$/i;
+// Best-effort per-instance protection; deployment-level limits should complement this.
+const attempts = new Map<string, { count: number; expires: number }>();
+function rateLimited(key: string) {
+  const now = Date.now();
+  for (const [key, value] of attempts)
+    if (value.expires <= now) attempts.delete(key);
+  const entry = attempts.get(key) ?? { count: 0, expires: now + 600_000 };
+  entry.count++;
+  if (attempts.size >= 5000 && !attempts.has(key)) return true;
+  attempts.set(key, entry);
+  return entry.count > 5;
+}
 
 export async function POST(request: Request) {
   const origin = request.headers.get("origin");
-  if (origin && origin !== new URL(request.url).origin) {
+  // Next.js may use an internal hostname behind a reverse proxy. Compare the
+  // browser origin with the public Host header without trusting forwarded hosts.
+  let validOrigin = !origin;
+  if (origin) {
+    try {
+      const source = new URL(origin);
+      validOrigin =
+        ["http:", "https:"].includes(source.protocol) &&
+        source.host ===
+          (request.headers.get("host") ?? new URL(request.url).host);
+    } catch {
+      validOrigin = false;
+    }
+  }
+  if (!validOrigin) {
     return Response.json(
       { message: "Invalid request origin." },
       { status: 403 },
     );
   }
 
-  let payload: ContactPayload;
+  if (!request.headers.get("content-type")?.includes("application/json")) {
+    return Response.json({ message: "Expected JSON." }, { status: 415 });
+  }
+  if (Number(request.headers.get("content-length")) > 24000) {
+    return Response.json({ message: "Enquiry is too large." }, { status: 413 });
+  }
+  let payload: Record<string, unknown>;
   try {
-    payload = (await request.json()) as ContactPayload;
+    // Bound streamed bodies as well as requests with Content-Length.
+    const reader = request.body?.getReader();
+    if (!reader) throw new Error("Missing body");
+    const chunks: Uint8Array[] = [];
+    let size = 0;
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      size += value.byteLength;
+      if (size > 24000) {
+        await reader.cancel();
+        return Response.json(
+          { message: "Enquiry is too large." },
+          { status: 413 },
+        );
+      }
+      chunks.push(value);
+    }
+    const parsed: unknown = JSON.parse(Buffer.concat(chunks).toString("utf8"));
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed))
+      throw new Error("Invalid body");
+    payload = parsed as Record<string, unknown>;
   } catch {
     return Response.json(
       { message: "Please check the form and try again." },
       { status: 400 },
     );
   }
-
-  const result = validateContact(payload);
-  if (!result.success) {
+  if (payload.website)
+    return Response.json(
+      { message: "Unable to accept this enquiry." },
+      { status: 400 },
+    );
+  const values = Object.fromEntries(
+    Object.keys(emptyContact).map((key) => [key, stringValue(payload[key])]),
+  ) as ContactValues;
+  const errors = validateContactFields(values);
+  const submissionId = stringValue(payload.submissionId);
+  if (
+    Object.keys(errors).length ||
+    !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(
+      submissionId,
+    )
+  ) {
     return Response.json(
       {
-        message: "Please correct the highlighted fields.",
-        errors: result.errors,
+        message: "Please correct the highlighted fields and try again.",
+        errors,
       },
       { status: 400 },
     );
   }
+  const emailKey = createHash("sha256")
+    .update(values.email.toLowerCase())
+    .digest("hex");
+  if (rateLimited(emailKey))
+    return Response.json(
+      {
+        message:
+          "Too many enquiries. Please wait ten minutes before trying again.",
+      },
+      { status: 429, headers: { "Retry-After": "600" } },
+    );
 
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.EMAIL_FROM;
@@ -68,7 +129,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const { name, email, phone, service, message, submissionId } = result.data;
+  const { name, email, phone, company, service, message, budget } = values;
   const idempotencyKey = createHash("sha256")
     .update(`grosbyte-contact:${submissionId}`)
     .digest("hex");
@@ -87,13 +148,23 @@ export async function POST(request: Request) {
           to: [contactEmail],
           reply_to: email,
           subject: `New website enquiry from ${name}`,
-          html: businessEmail({ name, email, phone, service, message }),
+          html: businessEmail({
+            name,
+            email,
+            phone,
+            company,
+            service,
+            message,
+            budget,
+          }),
           text: [
             "New website enquiry",
             "",
             `Name: ${name}`,
             `Email: ${email}`,
             `Phone: ${phone || "Not provided"}`,
+            `Company: ${company || "Not provided"}`,
+            `Budget: ${budget || "Not provided"}`,
             `Service: ${service}`,
             "",
             "Message:",
@@ -117,13 +188,12 @@ export async function POST(request: Request) {
         },
       ]),
       cache: "no-store",
+      signal: AbortSignal.timeout(15000),
     });
 
     if (!resendResponse.ok) {
-      const resendError = await resendResponse.text();
       console.error("Resend rejected the contact email batch.", {
         status: resendResponse.status,
-        response: resendError.slice(0, 500),
       });
       return Response.json(
         {
@@ -138,8 +208,8 @@ export async function POST(request: Request) {
       message:
         "Thank you! Your enquiry has been sent. We’ll get back to you soon.",
     });
-  } catch (error) {
-    console.error("Contact email request failed.", error);
+  } catch {
+    console.error("Contact email request failed.");
     return Response.json(
       {
         message:
@@ -148,56 +218,6 @@ export async function POST(request: Request) {
       { status: 502 },
     );
   }
-}
-
-function validateContact(payload: ContactPayload):
-  | {
-      success: true;
-      data: {
-        name: string;
-        email: string;
-        phone: string;
-        service: string;
-        message: string;
-        submissionId: string;
-      };
-    }
-  | { success: false; errors: Partial<Record<ContactField, string>> } {
-  const name = stringValue(payload.name);
-  const email = stringValue(payload.email).toLowerCase();
-  const phone = stringValue(payload.phone);
-  const service = stringValue(payload.service);
-  const message = stringValue(payload.message);
-  const submissionId = stringValue(payload.submissionId);
-  const errors: Partial<Record<ContactField, string>> = {};
-
-  if (name.length < 2 || name.length > 100) {
-    errors.name = "Please enter your name (2–100 characters).";
-  }
-  if (!emailPattern.test(email) || email.length > 254) {
-    errors.email = "Please enter a valid email address.";
-  }
-  if (phone.length > 30) {
-    errors.phone = "Please enter a valid phone number.";
-  }
-  if (!services.has(service)) {
-    errors.service = "Please select a valid service.";
-  }
-  if (message.length < 10 || message.length > 5000) {
-    errors.message = "Please enter a message between 10 and 5,000 characters.";
-  }
-
-  if (
-    Object.keys(errors).length > 0 ||
-    !submissionIdPattern.test(submissionId)
-  ) {
-    return { success: false, errors };
-  }
-
-  return {
-    success: true,
-    data: { name, email, phone, service, message, submissionId },
-  };
 }
 
 function stringValue(value: unknown) {
@@ -259,12 +279,16 @@ function businessEmail({
   name,
   email,
   phone,
+  company,
+  budget,
   service,
   message,
 }: {
   name: string;
   email: string;
   phone: string;
+  company: string;
+  budget: string;
   service: string;
   message: string;
 }) {
@@ -272,6 +296,8 @@ function businessEmail({
     ["Name", name],
     ["Email", email],
     ["Phone", phone || "Not provided"],
+    ["Company", company || "Not provided"],
+    ["Budget", budget || "Not provided"],
     ["Selected service", service],
   ]
     .map(

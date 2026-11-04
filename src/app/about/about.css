@@ -1,0 +1,119 @@
+/* About-only layouts: the original homepage styles remain unchanged. */
+.about-page .page-hero {
+  padding: clamp(8rem, 13vw, 11rem) 0 clamp(4rem, 7vw, 6rem);
+  border-bottom: 1px solid var(--border);
+}
+.about-page .page-hero h1 {
+  max-width: 1000px;
+  margin: 0;
+  font-size: clamp(2.6rem, 5.5vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+.about-page .page-lead {
+  max-width: 700px;
+  margin-top: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+.about-page .page-actions {
+  margin-top: 2rem;
+}
+.about-page .editorial-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 5rem);
+}
+.about-page .editorial-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+.about-page .editorial-copy {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+.about-page .editorial-copy p {
+  margin: 0 0 1.15rem;
+}
+.about-page .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--brand-blue-hover);
+}
+.about-page .text-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.about-page .belief-section,
+.about-page .approach-section,
+.about-page .closing-cta {
+  background: var(--background-deep);
+}
+.about-page .principle-list article {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+}
+.about-page .principle-list article:first-child {
+  padding-top: 0;
+}
+.about-page .principle-list h3 {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+.about-page .principle-list p {
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0;
+}
+.about-page .cta-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.about-page .cta-layout .editorial-heading {
+  max-width: 750px;
+}
+.about-page .cta-layout p {
+  max-width: 620px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-top: 1.25rem;
+}
+.about-page :is(a, button):focus-visible {
+  outline: 3px solid var(--brand-blue-hover);
+  outline-offset: 4px;
+}
+@media (max-width: 820px) {
+  .about-page .editorial-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-page .cta-layout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 560px) {
+  .about-page .page-hero {
+    padding: 7rem 0 3rem;
+  }
+  .about-page .section {
+    padding: 3rem 0;
+  }
+  .about-page .page-lead {
+    font-size: 1.05rem;
+  }
+}

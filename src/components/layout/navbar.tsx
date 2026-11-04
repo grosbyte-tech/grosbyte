@@ -1,8 +1,17 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Home, Info, Blocks, Workflow, Mail, ChevronUp } from "lucide-react";
+import {
+  Home,
+  Info,
+  Blocks,
+  Workflow,
+  BookOpen,
+  Mail,
+  ChevronUp,
+} from "lucide-react";
 import { navigation } from "@/lib/site-data";
 import { useTranslation } from "@/contexts/language-context";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
@@ -12,21 +21,26 @@ import { useTheme } from "@/contexts/theme-context";
 
 const icons = {
   "#home": Home,
-  "#about": Info,
-  "#services": Blocks,
+  "/about": Info,
+  "/services": Blocks,
   "#how-we-work": Workflow,
-  "#contact": Mail,
+  "/contact": Mail,
+  "/blogs": BookOpen,
 } as const;
 
 const navKeys: Record<string, string> = {
   "#home": "nav.home",
-  "#about": "nav.about",
-  "#services": "nav.services",
+  "/about": "nav.about",
+  "/services": "nav.services",
   "#how-we-work": "nav.process",
-  "#contact": "nav.contact",
+  "/contact": "nav.contact",
+  "/blogs": "nav.blogs",
 };
 
 export function Navbar() {
+  const pathname = usePathname();
+  const resolveHref = (href: string) =>
+    href.startsWith("#") && pathname !== "/" ? `/${href}` : href;
   const [active, setActive] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -44,7 +58,9 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
+    if (pathname !== "/") return;
     const sections = navigation
+      .filter(({ href }) => href.startsWith("#"))
       .map(({ href }) => document.querySelector(href))
       .filter(Boolean) as Element[];
     const observer = new IntersectionObserver(
@@ -56,7 +72,18 @@ export function Navbar() {
     );
     sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
+
+  const activeItem =
+    pathname === "/about"
+      ? "about"
+      : pathname === "/services" || pathname.startsWith("/services/")
+        ? "services"
+        : pathname === "/contact"
+          ? "contact"
+          : pathname.startsWith("/blogs")
+            ? "blogs"
+            : active;
 
   return (
     <>
@@ -64,7 +91,7 @@ export function Navbar() {
         <nav className="nav-shell" aria-label="Main navigation">
           <a
             className="brand"
-            href="#home"
+            href={resolveHref("#home")}
             aria-label="Grosbyte Technologies home"
           >
             <span className="navbar-logo">
@@ -85,8 +112,15 @@ export function Navbar() {
             {navigation.map((item) => (
               <a
                 key={item.href}
-                href={item.href}
-                className={active === item.href.slice(1) ? "active" : ""}
+                href={resolveHref(item.href)}
+                className={activeItem === item.href.slice(1) ? "active" : ""}
+                aria-current={
+                  activeItem === item.href.slice(1)
+                    ? item.href.startsWith("/")
+                      ? "page"
+                      : "location"
+                    : undefined
+                }
               >
                 {t(navKeys[item.href])}
               </a>
@@ -96,7 +130,12 @@ export function Navbar() {
             <ThemeToggle />
             <LanguageSwitcher />
             <div className="hidden md:inline-flex">
-              <Button href="#contact" variant="glowing" size="sm" className="nav-cta">
+              <Button
+                href={resolveHref("/contact")}
+                variant="glowing"
+                size="sm"
+                className="nav-cta"
+              >
                 {t("nav.cta")}
               </Button>
             </div>
@@ -117,12 +156,19 @@ export function Navbar() {
       >
         {navigation.map((item) => {
           const Icon = icons[item.href];
-          const isActive = active === item.href.slice(1);
+          const isActive = activeItem === item.href.slice(1);
           return (
             <a
               key={item.href}
-              href={item.href}
-              className={`flex flex-col items-center justify-center gap-1 transition-all duration-200 ${
+              href={resolveHref(item.href)}
+              aria-current={
+                isActive
+                  ? item.href.startsWith("/")
+                    ? "page"
+                    : "location"
+                  : undefined
+              }
+              className={`flex min-h-[44px] min-w-[44px] flex-col items-center justify-center gap-1 transition-all duration-200 ${
                 isActive
                   ? "text-[var(--brand-blue-hover)] scale-110 font-bold"
                   : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"

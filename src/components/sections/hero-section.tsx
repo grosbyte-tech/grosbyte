@@ -33,7 +33,7 @@ export function HeroSection() {
             variant="glowing"
             size="lg"
             className="h-12 text-sm font-bold"
-            onClick={() => (window.location.href = "#contact")}
+            href="/contact"
           >
             {t("hero.ctaPrimary")}{" "}
             <ArrowRight
@@ -45,7 +45,7 @@ export function HeroSection() {
             variant="outline"
             size="lg"
             className="h-12 text-sm font-bold"
-            onClick={() => (window.location.href = "#services")}
+            href="/services"
           >
             {t("hero.ctaSecondary")}{" "}
             <ArrowRight

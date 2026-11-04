@@ -1,6 +1,7 @@
-import type { SVGProps } from "react";
+import { useId, type SVGProps } from "react";
 
 export function RealInstagramIcon(props: SVGProps<SVGSVGElement>) {
+  const gradientId = useId();
   return (
     <svg
       viewBox="0 0 24 24"
@@ -12,7 +13,7 @@ export function RealInstagramIcon(props: SVGProps<SVGSVGElement>) {
       {...props}
     >
       <defs>
-        <radialGradient id="ig-contact-grad" cx="20%" cy="110%" r="140%">
+        <radialGradient id={gradientId} cx="20%" cy="110%" r="140%">
           <stop offset="0%" stopColor="#fdf497" />
           <stop offset="10%" stopColor="#fdf497" />
           <stop offset="50%" stopColor="#fd5949" />
@@ -20,7 +21,7 @@ export function RealInstagramIcon(props: SVGProps<SVGSVGElement>) {
           <stop offset="100%" stopColor="#285aeb" />
         </radialGradient>
       </defs>
-      <rect width="24" height="24" rx="6" fill="url(#ig-contact-grad)" />
+      <rect width="24" height="24" rx="6" fill={`url(#${gradientId})`} />
       <rect
         x="4.8"
         y="4.8"
@@ -31,7 +32,14 @@ export function RealInstagramIcon(props: SVGProps<SVGSVGElement>) {
         strokeWidth="1.6"
         fill="none"
       />
-      <circle cx="12" cy="12" r="3.5" stroke="#ffffff" strokeWidth="1.6" fill="none" />
+      <circle
+        cx="12"
+        cy="12"
+        r="3.5"
+        stroke="#ffffff"
+        strokeWidth="1.6"
+        fill="none"
+      />
       <circle cx="16" cy="8" r="1" fill="#ffffff" />
     </svg>
   );
