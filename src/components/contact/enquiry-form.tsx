@@ -16,6 +16,7 @@ const fields = [
     label: "Full name",
     type: "text",
     autoComplete: "name",
+    placeholder: "Your full name",
     max: 100,
   },
   {
@@ -23,6 +24,7 @@ const fields = [
     label: "Email",
     type: "email",
     autoComplete: "email",
+    placeholder: "name@company.com",
     max: 254,
   },
   {
@@ -30,6 +32,7 @@ const fields = [
     label: "Phone (optional)",
     type: "tel",
     autoComplete: "tel",
+    placeholder: "e.g. +977 9800000000",
     max: 30,
   },
   {
@@ -37,6 +40,7 @@ const fields = [
     label: "Company (optional)",
     type: "text",
     autoComplete: "organization",
+    placeholder: "e.g. Acme Corporation",
     max: 150,
   },
 ] as const;
@@ -159,6 +163,7 @@ export function EnquiryForm() {
                 {...inputProps(field.name)}
                 type={field.type}
                 autoComplete={field.autoComplete}
+                placeholder={field.placeholder}
                 maxLength={field.max}
                 required={field.name === "name" || field.name === "email"}
               />
@@ -182,7 +187,7 @@ export function EnquiryForm() {
               rows={6}
               maxLength={5000}
               required
-              placeholder="What would you like to build or improve? Include any timing or requirements you already know."
+              placeholder="Tell us about what you want to build or improve, key goals, and any timeline or tech preferences..."
             />
             {error("message")}
           </div>
@@ -191,7 +196,7 @@ export function EnquiryForm() {
             <input
               {...inputProps("budget")}
               maxLength={100}
-              placeholder="Approximate range and currency, if known"
+              placeholder="e.g. $5,000 – $10,000, NPR 500k – 1M, or flexible"
             />
             {error("budget")}
           </div>
