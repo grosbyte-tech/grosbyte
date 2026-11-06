@@ -21,7 +21,7 @@ const serviceKeys: Record<string, string> = {
 };
 
 const serviceRoutes: Record<string, string> = {
-  "Custom Software Development": "/services/custom-software-development",
+  "Custom Software Development": "/custom-software-development",
   "Web Platforms and E-commerce": "/services/website-ecommerce-development",
   "Mobile Application Development": "/services/web-mobile-applications",
   "AI Automation and Data Analysis": "/services/ai-automation-integrations",

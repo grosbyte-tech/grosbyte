@@ -36,7 +36,7 @@ export function LanguageSwitcher() {
     <div className="relative inline-block text-left" ref={containerRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text-primary)] hover:bg-[var(--surface-hover)] text-xs font-semibold tracking-wider transition-all duration-200 focus:outline-none active:scale-95 cursor-pointer"
+        className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text-primary)] hover:bg-[var(--surface-hover)] text-[0.82rem] font-semibold tracking-wider transition-all duration-200 focus:outline-none active:scale-95 cursor-pointer"
         aria-haspopup="true"
         aria-expanded={isOpen}
       >

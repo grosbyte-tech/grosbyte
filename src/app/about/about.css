@@ -1,119 +1,790 @@
-/* About-only layouts: the original homepage styles remain unchanged. */
-.about-page .page-hero {
-  padding: clamp(8rem, 13vw, 11rem) 0 clamp(4rem, 7vw, 6rem);
-  border-bottom: 1px solid var(--border);
+/* ========================================================
+   ABOUT US PAGE STYLES (Grosbyte Design System)
+   Scoped to .about-page to preserve all other pages.
+   ======================================================== */
+
+.about-page {
+  --brand-blue: #0966fa;
+  --brand-blue-hover: #2476ff;
+  --brand-navy: #06142e;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border: rgba(15, 23, 42, 0.08);
+  --border-strong: rgba(15, 23, 42, 0.14);
+  color: var(--text-primary);
+  width: 100%;
 }
-.about-page .page-hero h1 {
-  max-width: 1000px;
-  margin: 0;
-  font-size: clamp(2.6rem, 5.5vw, 5rem);
+
+.about-page .about-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Accessible focus ring */
+.about-page :is(a, button, summary):focus-visible {
+  outline: 3px solid var(--brand-blue);
+  outline-offset: 4px;
+}
+
+/* Common Eyebrow Pill */
+.about-page .about-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(9, 102, 250, 0.08);
+  border: 1px solid rgba(9, 102, 250, 0.18);
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1.1;
+  color: var(--brand-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+.about-page .about-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--brand-blue);
+  box-shadow: 0 0 8px rgba(9, 102, 250, 0.6);
+}
+
+/* Common Section Header */
+.about-page .about-section {
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.about-page .about-who-section {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.about-page .about-section-header {
+  max-width: 760px;
+  margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.about-page .about-section-title {
+  font-size: clamp(2rem, 3.4vw, 2.85rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.about-page .about-section-subtitle {
+  font-size: clamp(1.05rem, 1.4vw, 1.18rem);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 1rem 0 0;
+}
+
+.about-page .about-section-lead {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin: 1.25rem 0 1.75rem;
+}
+
+/* ARAP007 Nepali Calligraphy Font */
+@font-face {
+  font-family: "ARAP007";
+  src: url("/ARAP007/ARAP007.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ========================================================
+   1. HERO SECTION (Namaste Nepali Forming Motion + Editorial Narrative)
+   ======================================================== */
+
+.about-page .about-hero-section {
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(120px, 14vw, 155px);
+  padding-bottom: clamp(4rem, 7vw, 6.5rem);
+  border-top: none !important;
+  border-bottom: none !important;
+  background: var(--background);
+}
+
+.about-page .about-hero-mesh {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(
+      ellipse 65% 55% at 15% 25%,
+      rgba(9, 102, 250, 0.08) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 55% 45% at 85% 75%,
+      rgba(0, 210, 255, 0.06) 0%,
+      transparent 65%
+    );
+  z-index: 0;
+}
+
+html:not(.light) .about-page .about-hero-mesh {
+  background-image:
+    radial-gradient(
+      ellipse 65% 55% at 15% 25%,
+      rgba(9, 102, 250, 0.16) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 55% 45% at 85% 75%,
+      rgba(0, 210, 255, 0.12) 0%,
+      transparent 65%
+    );
+}
+
+.about-page .about-hero-container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-page .about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .about-page .about-hero-grid {
+    grid-template-columns: 1fr 1.05fr;
+    align-items: flex-start;
+  }
+}
+
+/* --------------------------------------------------------
+   NAMASTE HERO VISUAL (Left Column - Clean, No Card)
+   -------------------------------------------------------- */
+
+.about-page .namaste-hero-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+html:not(.light) .about-page .namaste-hero-visual {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Big Display Calligraphy SVG Container - Anchored to Top */
+.about-page .namaste-svg-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: -12px;
+}
+
+.about-page .namaste-svg {
+  width: 100%;
+  height: auto;
+  max-width: 660px;
+  filter: drop-shadow(0 14px 32px rgba(9, 102, 250, 0.28));
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-page .namaste-svg-wrapper:hover .namaste-svg {
+  transform: scale(1.02);
+}
+
+/* Tagline at the bottom of Namaste */
+.about-page .namaste-brand-tagline {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-page .namaste-brand-line {
+  font-size: clamp(1.6rem, 2.4vw, 2.25rem);
+  line-height: 1.2;
+  font-weight: 850;
+  letter-spacing: -0.035em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.about-page .namaste-brand-desc {
+  font-size: clamp(0.95rem, 1.2vw, 1.08rem);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0.45rem 0 0;
+  max-width: 480px;
+}
+
+/* Forming animation: stroke draws in via dashoffset, simultaneous un-blur and fill materialization */
+@keyframes namasteForming {
+  0% {
+    stroke-dashoffset: 2200;
+    fill-opacity: 0;
+    filter: blur(12px);
+    transform: translateY(14px) scale(0.95);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+    fill-opacity: 0.15;
+    filter: blur(5px);
+  }
+  75% {
+    stroke-dashoffset: 180;
+    fill-opacity: 0.85;
+    filter: blur(1px);
+    transform: translateY(0) scale(1.01);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.about-page .namaste-forming-path {
+  stroke-dasharray: 2200;
+  stroke-dashoffset: 2200;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill-opacity: 0;
+  opacity: 0;
+  animation: namasteForming 1.4s cubic-bezier(0.25, 1, 0.35, 1) forwards;
+  transform-origin: center;
+}
+
+/* Post-formation subtle ambient light breathing */
+@keyframes namasteAmbientShimmer {
+  0%,
+  100% {
+    filter: drop-shadow(0 14px 32px rgba(9, 102, 250, 0.28));
+  }
+  50% {
+    filter: drop-shadow(0 18px 40px rgba(0, 210, 255, 0.42));
+  }
+}
+
+.about-page .namaste-svg-wrapper.is-formed .namaste-svg {
+  animation: namasteAmbientShimmer 4s ease-in-out infinite;
+}
+
+/* --------------------------------------------------------
+   RIGHT COLUMN (Editorial Narrative)
+   -------------------------------------------------------- */
+
+.about-page .about-hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.about-page .about-hero-headline {
+  font-size: clamp(2.2rem, 3.8vw, 3.3rem);
+  line-height: 1.15;
+  font-weight: 850;
+  letter-spacing: -0.035em;
+  color: var(--text-primary);
+  margin: 0;
   text-wrap: balance;
 }
-.about-page .page-lead {
-  max-width: 700px;
-  margin-top: 1.5rem;
-  color: var(--text-secondary);
-  font-size: 1.15rem;
-  line-height: 1.8;
+
+.about-page .highlight-blue {
+  background: linear-gradient(135deg, #0966fa 0%, #00a8ff 55%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline;
 }
-.about-page .page-actions {
+
+.about-page .about-hero-lead {
+  font-size: clamp(1.05rem, 1.3vw, 1.18rem);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 1.25rem 0 0;
+  text-wrap: pretty;
+}
+
+.about-page .about-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 20px;
   margin-top: 2rem;
 }
-.about-page .editorial-layout {
+
+.about-page .about-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  background: var(--brand-blue) !important;
+  color: #fff !important;
+  font-weight: 650;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  box-shadow: 0 8px 24px rgba(9, 102, 250, 0.28) !important;
+  transition: all 0.25s ease;
+}
+
+.about-page .about-primary-btn:hover {
+  background: var(--brand-blue-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(9, 102, 250, 0.36) !important;
+}
+
+.about-page .about-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 22px;
+  font-weight: 650;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  border-radius: 9999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.about-page .about-secondary-btn:hover {
+  background: #ffffff;
+  border-color: rgba(15, 23, 42, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+html:not(.light) .about-page .about-secondary-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #f1f5f9;
+}
+
+html:not(.light) .about-page .about-secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ========================================================
+   2. TWO-COLUMN SECTIONS (Who We Are, Work With Us)
+   ======================================================== */
+
+.about-page .about-two-col-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(2rem, 6vw, 5rem);
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  align-items: center;
 }
-.about-page .editorial-heading h2 {
-  margin: 0;
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  line-height: 1.15;
-  font-weight: 700;
-  letter-spacing: -0.035em;
-  text-wrap: balance;
+
+@media (min-width: 960px) {
+  .about-page .about-two-col-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
 }
-.about-page .editorial-copy {
-  color: var(--text-secondary);
+
+.about-page .about-body-text {
   font-size: 1.1rem;
-  line-height: 1.8;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-top: 1.25rem;
 }
-.about-page .editorial-copy p {
-  margin: 0 0 1.15rem;
+
+.about-page .about-body-text p {
+  margin: 0 0 1.25rem;
 }
-.about-page .text-link {
+
+/* Stat strip in Who We Are */
+.about-page .about-stat-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 16px;
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.about-page .about-stat-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-page .about-stat-num {
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--brand-blue);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.about-page .about-stat-label {
+  font-size: 0.82rem;
+  font-weight: 650;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* Reusable Image Cards */
+.about-page .about-image-card,
+.about-page .about-inline-image-card {
+  position: relative;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.about-page .about-image-card:hover,
+.about-page .about-inline-image-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(9, 102, 250, 0.3);
+  box-shadow: 0 16px 36px rgba(9, 102, 250, 0.1);
+}
+
+.about-page .about-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.about-page .about-image-wrap.aspect-16-10 {
+  aspect-ratio: 16 / 10;
+}
+
+.about-page .about-section-image {
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-page .about-image-card:hover .about-section-image,
+.about-page .about-inline-image-card:hover .about-section-image {
+  transform: scale(1.05);
+}
+
+.about-page .about-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 65%,
+    rgba(1, 22, 56, 0.2) 100%
+  );
+  pointer-events: none;
+}
+
+.about-page .about-text-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   min-height: 44px;
   font-weight: 700;
-  color: var(--brand-blue-hover);
+  font-size: 0.96rem;
+  color: var(--brand-blue);
+  margin-top: 1.25rem;
+  transition:
+    color 0.2s ease,
+    gap 0.2s ease;
 }
-.about-page .text-link:hover {
+
+.about-page .about-text-link:hover {
+  color: var(--brand-blue-hover);
   text-decoration: underline;
   text-underline-offset: 4px;
+  gap: 11px;
 }
-.about-page .belief-section,
-.about-page .approach-section,
-.about-page .closing-cta {
+
+/* ========================================================
+   3. CORE BELIEFS (What We Believe)
+   ======================================================== */
+
+.about-page .about-beliefs-section {
   background: var(--background-deep);
 }
-.about-page .principle-list article {
-  padding: 24px 0;
-  border-bottom: 1px solid var(--border);
+
+.about-page .about-beliefs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
 }
-.about-page .principle-list article:first-child {
-  padding-top: 0;
+
+.about-page .about-belief-card {
+  padding: 30px;
+  background: #ffffff;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.about-page .principle-list h3 {
-  margin: 0 0 10px;
-  font-size: 1.35rem;
-  font-weight: 700;
+
+.about-page .about-belief-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
 }
-.about-page .principle-list p {
-  color: var(--text-secondary);
-  line-height: 1.75;
-  margin: 0;
-}
-.about-page .cta-layout {
+
+.about-page .about-belief-card-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  justify-content: flex-start;
+  margin-bottom: 18px;
 }
-.about-page .cta-layout .editorial-heading {
-  max-width: 750px;
+
+.about-page .about-belief-icon-box {
+  width: auto;
+  height: auto;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
-.about-page .cta-layout p {
-  max-width: 620px;
+
+.about-page .about-belief-index {
+  font-family: var(--font-urbanist), monospace;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--brand-blue);
+  background: rgba(9, 102, 250, 0.08);
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(9, 102, 250, 0.16);
+}
+
+.about-page .about-belief-card-title {
+  font-size: 1.28rem;
+  font-weight: 750;
+  color: var(--text-primary);
+  margin: 0 0 10px;
+}
+
+.about-page .about-belief-card-desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
   color: var(--text-secondary);
-  line-height: 1.75;
-  margin-top: 1.25rem;
+  margin: 0;
 }
-.about-page :is(a, button):focus-visible {
-  outline: 3px solid var(--brand-blue-hover);
-  outline-offset: 4px;
+
+/* ========================================================
+   4. WORKING WITH GROSBYTE (Partnership Pillars)
+   ======================================================== */
+
+.about-page .about-work-section {
+  background: #ffffff;
 }
-@media (max-width: 820px) {
-  .about-page .editorial-layout {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+
+.about-page .about-pillars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-page .about-pillar-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 26px;
+  background: var(--background-deep);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  transition: all 0.25s ease;
+}
+
+.about-page .about-pillar-card:hover {
+  background: #ffffff;
+  border-color: rgba(9, 102, 250, 0.3);
+  box-shadow: 0 8px 24px rgba(9, 102, 250, 0.07);
+  transform: translateX(4px);
+}
+
+.about-page .about-pillar-num {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--brand-blue);
+  background: transparent;
+  padding: 0;
+  border: none;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.about-page .about-pillar-content {
+  flex-grow: 1;
+}
+
+.about-page .about-pillar-title {
+  font-size: 1.2rem;
+  font-weight: 750;
+  color: var(--text-primary);
+  margin: 0 0 8px;
+}
+
+.about-page .about-pillar-desc {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ========================================================
+   5. CLOSING CONVERSION CTA
+   ======================================================== */
+
+.about-page .about-closing-cta-section {
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0 clamp(4.5rem, 8vw, 6.5rem);
+}
+
+.about-page .about-cta-card {
+  background: linear-gradient(135deg, #011638 0%, #03215c 50%, #062f7a 100%);
+  border-radius: 28px;
+  padding: clamp(36px, 6vw, 64px);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(1, 23, 60, 0.35);
+}
+
+.about-page .about-cta-card::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 168, 255, 0.25) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.about-page .about-cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
+.about-page .about-cta-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #00d2ff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+.about-page .about-cta-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0;
+}
+
+.about-page .about-cta-desc {
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 1.25rem 0 2rem;
+}
+
+.about-page .about-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+}
+
+.about-page .about-cta-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff !important;
+  color: #011638 !important;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
+  transition: all 0.25s ease;
+}
+
+.about-page .about-cta-btn-primary:hover {
+  background: #f0f7ff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35) !important;
+}
+
+.about-page .about-cta-link-secondary {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+
+.about-page .about-cta-link-secondary:hover {
+  color: #00d2ff;
+}
+
+/* ========================================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================================== */
+
+@media (max-width: 768px) {
+  .about-page .about-hero-floating-badge {
+    position: static;
+    margin-top: 12px;
+    box-shadow: none;
+    border-radius: 12px;
   }
-  .about-page .cta-layout {
+
+  .about-page .about-stat-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-page .about-pillar-card {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 12px;
   }
 }
-@media (max-width: 560px) {
-  .about-page .page-hero {
-    padding: 7rem 0 3rem;
-  }
-  .about-page .section {
-    padding: 3rem 0;
-  }
-  .about-page .page-lead {
-    font-size: 1.05rem;
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page *,
+  .about-page *::before,
+  .about-page *::after {
+    transition: none !important;
+    animation: none !important;
   }
 }

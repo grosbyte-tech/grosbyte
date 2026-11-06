@@ -140,8 +140,8 @@ export function Navbar() {
               <Image
                 src="/logo.png"
                 alt="Grosbyte Technologies Logo"
-                width={38}
-                height={38}
+                width={42}
+                height={42}
                 preload
                 className="w-full h-full object-contain"
               />

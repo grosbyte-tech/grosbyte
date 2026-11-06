@@ -1,6 +1,7 @@
 "use client";
 
-import { useRef, useState, type FormEvent } from "react";
+import { Suspense, useRef, useState, type FormEvent } from "react";
+import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
   emptyContact,
@@ -9,6 +10,31 @@ import {
   type ContactErrors,
 } from "@/lib/contact";
 import { serviceOptions } from "@/lib/service-options";
+
+const slugToOption: Record<string, string> = {
+  "custom-software-development": "Custom Software Development",
+  "website-ecommerce-development": "Website & E-commerce Development",
+  "web-mobile-applications": "Web & Mobile Applications",
+  "crm-erp-solutions": "CRM/ERP Solutions",
+  "business-automation": "Business Automation",
+  "ai-automation-integrations": "AI Automation & Integrations",
+  "digital-marketing": "Digital Marketing",
+  seo: "SEO",
+  "social-media-marketing": "Social Media Marketing",
+  "branding-design": "Branding & Design",
+};
+
+function getInitialContactValues(serviceParam: string | null): ContactValues {
+  if (!serviceParam) return emptyContact;
+  const matched =
+    slugToOption[serviceParam] ||
+    serviceOptions.find(
+      (opt) =>
+        opt.toLowerCase() === serviceParam.toLowerCase() ||
+        opt === serviceParam,
+    );
+  return matched ? { ...emptyContact, service: matched } : emptyContact;
+}
 
 const fields = [
   {
@@ -45,8 +71,11 @@ const fields = [
   },
 ] as const;
 
-export function EnquiryForm() {
-  const [values, setValues] = useState(emptyContact);
+function EnquiryFormFields() {
+  const searchParams = useSearchParams();
+  const [values, setValues] = useState<ContactValues>(() =>
+    getInitialContactValues(searchParams.get("service")),
+  );
   const [errors, setErrors] = useState<ContactErrors>({});
   const [pending, setPending] = useState(false);
   const [status, setStatus] = useState({ error: false, message: "" });
@@ -225,5 +254,19 @@ export function EnquiryForm() {
         {status.message}
       </p>
     </form>
+  );
+}
+
+export function EnquiryForm() {
+  return (
+    <Suspense
+      fallback={
+        <div className="enquiry-form" aria-busy="true">
+          <p>Loading enquiry form…</p>
+        </div>
+      }
+    >
+      <EnquiryFormFields />
+    </Suspense>
   );
 }
