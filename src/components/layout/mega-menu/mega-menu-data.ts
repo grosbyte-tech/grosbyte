@@ -38,7 +38,7 @@ export const featuredServices: MegaMenuServiceItem[] = [
     title: "Custom Software Development",
     description:
       "Purpose-built business systems, internal tools, and dashboards designed around your exact workflows.",
-    href: "/services/custom-software-development",
+    href: "/custom-software-development",
     icon: Code2,
   },
   {

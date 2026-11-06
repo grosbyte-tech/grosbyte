@@ -10,6 +10,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/services/custom-software-development",
+        destination: "/custom-software-development",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
