@@ -4,6 +4,7 @@ import { AboutHero } from "@/components/about/about-hero";
 import { AboutWho } from "@/components/about/about-who";
 import { AboutBeliefs } from "@/components/about/about-beliefs";
 import { AboutWork } from "@/components/about/about-work";
+import { AboutTechStack } from "@/components/about/about-tech-stack";
 import { AboutCta } from "@/components/about/about-cta";
 
 export function AboutPageContent() {
@@ -21,8 +22,11 @@ export function AboutPageContent() {
       {/* 4. Working With Grosbyte: Partnership Pillars + Sprint Alignment Image */}
       <AboutWork />
 
-      {/* 5. Closing Conversion Banner */}
+      {/* 5. Closing Conversion Banner: (Let’s build something useful for your business.) */}
       <AboutCta />
+
+      {/* 6. Tools & Technologies: Full-bleed Black Section right above Footer */}
+      <AboutTechStack />
     </div>
   );
 }
