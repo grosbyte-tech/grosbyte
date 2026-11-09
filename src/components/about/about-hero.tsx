@@ -1,6 +1,5 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
 import { useTranslation } from "@/contexts/language-context";
 import { Button } from "@/components/ui/button";
 import { NamasteAnimation } from "./namaste-animation";
@@ -33,13 +32,9 @@ export function AboutHero() {
             <div className="about-hero-actions">
               <Button href="/contact" size="lg" className="about-primary-btn">
                 <span>{t("nav.cta")}</span>
-                <ArrowUpRight className="w-4 h-4 ml-2" aria-hidden="true" />
               </Button>
               <a href="#who-we-are" className="about-secondary-btn">
                 <span>Our Story</span>
-                <span className="ml-1" aria-hidden="true">
-                  ↓
-                </span>
               </a>
             </div>
           </div>
