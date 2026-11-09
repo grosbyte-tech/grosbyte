@@ -23,8 +23,8 @@ export function AboutHero() {
           {/* Right Column: Editorial Tech Narrative & Value Actions */}
           <div className="about-hero-right">
             <h1 id="about-hero-title" className="about-hero-headline">
-              A technology partner focused on{" "}
-              <span className="highlight-blue">practical solutions</span>.
+              {copy("heroTitleLead")}{" "}
+              <span className="highlight-blue">{copy("heroTitleHighlight")}</span>
             </h1>
 
             <p className="about-hero-lead">{copy("intro")}</p>
@@ -34,7 +34,7 @@ export function AboutHero() {
                 <span>{t("nav.cta")}</span>
               </Button>
               <a href="#who-we-are" className="about-secondary-btn">
-                <span>Our Story</span>
+                <span>{copy("storyBtn") || "Our Story"}</span>
               </a>
             </div>
           </div>

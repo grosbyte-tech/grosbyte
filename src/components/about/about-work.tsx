@@ -8,9 +8,10 @@ import { useTranslation } from "@/contexts/language-context";
 export function AboutWork() {
   const { t } = useTranslation();
   const copy = (key: string) => t(`phase1.aboutPage.${key}`);
-  const work = t<{ title: string; description: string }[]>(
-    "phase1.aboutPage.work",
-  );
+  const rawWork = t<unknown>("phase1.aboutPage.work");
+  const work = Array.isArray(rawWork)
+    ? (rawWork as { title: string; description: string }[])
+    : [];
 
   return (
     <section

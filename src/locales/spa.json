@@ -232,5 +232,75 @@
       "title": "Herramientas que conectan marcas y clientes",
       "description": "Desde contenidos y campañas hasta análisis de búsquedas y seguimiento, elegimos herramientas que se adaptan a tu público, objetivos y presupuesto."
     }
+  },
+  "phase1": {
+    "learnAbout": "Conoce más sobre Grosbyte",
+    "aboutPage": {
+      "title": "Un socio tecnológico enfocado en soluciones prácticas.",
+      "heroTitleLead": "Un socio tecnológico enfocado en",
+      "heroTitleHighlight": "soluciones prácticas.",
+      "intro": "Grosbyte Technologies ayuda a las empresas con desarrollo de software, sitios web, aplicaciones, automatización y marketing digital. Conectamos requerimientos de negocio con tecnología útil para el día a día.",
+      "storyBtn": "Nuestra Historia",
+      "weAre": "Somos",
+      "namasteTagline": "Ingeniería de soluciones digitales modernas desde Nepal para el mundo.",
+      "whoLabel": "Quiénes somos",
+      "whoTitle": "Primero el negocio. Tecnología con propósito.",
+      "whoCopy": "Con sede en Nepal, trabajamos con empresas que necesitan digitalizar un servicio, mejorar flujos internos o crear un producto digital para sus clientes. Unimos desarrollo, diseño de producto, automatización y marketing digital.",
+      "whoSecond": "Ya sea que planees tu primer sitio web o modernices un sistema existente, empezamos por entender cómo opera tu negocio y qué necesitan tus usuarios.",
+      "statsCapabilities": "Capacidades Clave",
+      "statsOwnership": "100% Propiedad del Código",
+      "statsSprints": "Sprints Ágiles",
+      "beliefLabel": "Nuestros principios",
+      "beliefTitle": "Principios que guían nuestro trabajo.",
+      "beliefSubtitle": "Estos estándares fundamentales orientan cómo desarrollamos software, tomamos decisiones de arquitectura y nos comunicamos día a día con nuestros socios.",
+      "beliefs": [
+        {
+          "title": "Practicidad",
+          "description": "La tecnología debe resolver un problema de negocio real. Evaluamos el valor de cada funcionalidad frente al esfuerzo que requiere construirla y mantenerla."
+        },
+        {
+          "title": "Claridad",
+          "description": "Los requerimientos, decisiones y expectativas del proyecto deben ser comprensibles para todas las partes involucradas."
+        },
+        {
+          "title": "Calidad",
+          "description": "La mantenibilidad, confiabilidad y usabilidad reciben máxima atención durante todo el desarrollo, desde el primer diseño hasta las pruebas finales."
+        },
+        {
+          "title": "Colaboración",
+          "description": "Las buenas decisiones dependen de entender a quienes usarán la solución. Tu contexto y retroalimentación son parte esencial del proceso."
+        }
+      ],
+      "workLabel": "Trabajar con Grosbyte",
+      "workTitle": "El entendimiento mutuo hace posible un mejor trabajo.",
+      "work": [
+        {
+          "title": "El contexto de tu negocio",
+          "description": "Partimos de tus objetivos, procesos actuales y restricciones prácticas. Ejemplos cotidianos nos ayudan a comprender el problema antes de elegir la solución."
+        },
+        {
+          "title": "Relación de trabajo transparente",
+          "description": "Definimos alcance, responsabilidades y dinámicas de feedback. Las preguntas y alternativas se conversan abiertamente para que cada decisión sea clara."
+        },
+        {
+          "title": "Atención al uso diario",
+          "description": "Consideramos cómo tu equipo usará y mantendrá el software tras la entrega, acordando los requerimientos de traspaso y soporte."
+        }
+      ],
+      "approachLabel": "Nuestro enfoque",
+      "approachTitle": "Entender el desafío. Construir con cuidado.",
+      "approachCopy": "Comenzamos con el desafío empresarial, consideramos soluciones adecuadas y planificamos la implementación en conjunto. El diseño y desarrollo van acompañados de pruebas y feedback continuo.",
+      "approachSecond": "Antes del lanzamiento, definimos el despliegue, la transferencia y el soporte. El enfoque se ajusta al proyecto y a quienes lo utilizan.",
+      "approachLink": "Ver cómo trabajamos",
+      "ctaEyebrow": "Construyamos Algo Significativo",
+      "ctaTitle": "Construyamos algo verdaderamente útil para tu negocio.",
+      "ctaCopy": "Cuéntanos el reto en el que estás trabajando. Analizaremos tus requerimientos y definiremos el siguiente paso.",
+      "ctaSecondary": "Explorar todos los servicios",
+      "workIntro": "Trabajamos junto a quienes conocen el negocio y quienes usarán la solución. Su experiencia nos ayuda a identificar qué debe cambiar y qué debe mantenerse simple.",
+      "workLink": "Explorar nuestros servicios",
+      "techTitleLead": "Herramientas",
+      "techTitleHighlight": "y Tecnologías",
+      "techEditorial": "Empleamos frameworks web full-stack modernos, sistemas backend empresariales, bases de datos escalables, infraestructura cloud y automatización inteligente, incluyendo Next.js, React, TypeScript, Python, Node.js, Spring Boot, n8n, AWS y PostgreSQL."
+    }
   }
 }

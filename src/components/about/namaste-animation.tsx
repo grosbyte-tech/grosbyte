@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslation } from "@/contexts/language-context";
 import { GradientText } from "@/components/ui/gradient-text";
 
 /**
@@ -47,6 +48,8 @@ const GLYPHS = [
 ];
 
 export function NamasteAnimation() {
+  const { t } = useTranslation();
+  const copy = (key: string) => t(`phase1.aboutPage.${key}`);
   const [isFormed, setIsFormed] = useState(false);
 
   useEffect(() => {
@@ -112,11 +115,12 @@ export function NamasteAnimation() {
       {/* Brand tagline placed cleanly at bottom */}
       <div className="namaste-brand-tagline">
         <p className="namaste-brand-line">
-          <span className="namaste-brand-intro">We are</span>{" "}
+          <span className="namaste-brand-intro">{copy("weAre") || "We are"}</span>{" "}
           <GradientText className="namaste-brand-name">Grosbyte</GradientText>
         </p>
         <p className="namaste-brand-desc">
-          Engineering modern digital solutions from Nepal to the world.
+          {copy("namasteTagline") ||
+            "Engineering modern digital solutions from Nepal to the world."}
         </p>
       </div>
     </div>
