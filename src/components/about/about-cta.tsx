@@ -21,7 +21,9 @@ export function AboutCta() {
             {/* Left Column: Narrative Content */}
             <div className="about-cta-content">
               <div className="about-cta-eyebrow">
-                <GradientText>Let’s Build Something Meaningful</GradientText>
+                <GradientText>
+                  {copy("ctaEyebrow") || "Let’s Build Something Meaningful"}
+                </GradientText>
               </div>
               <h2 id="about-cta-title" className="about-cta-title">
                 {copy("ctaTitle")}
@@ -36,7 +38,7 @@ export function AboutCta() {
                   <span>{t("nav.cta")}</span>
                 </Button>
                 <Link href="/services" className="about-cta-link-secondary">
-                  Explore all services
+                  {copy("ctaSecondary") || "Explore all services"}
                 </Link>
               </div>
             </div>

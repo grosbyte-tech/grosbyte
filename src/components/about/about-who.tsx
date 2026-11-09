@@ -30,15 +30,21 @@ export function AboutWho() {
             <div className="about-stat-strip">
               <div className="about-stat-box">
                 <GradientText className="about-stat-num">10+</GradientText>
-                <span className="about-stat-label">Core Capabilities</span>
+                <span className="about-stat-label">
+                  {copy("statsCapabilities") || "Core Capabilities"}
+                </span>
               </div>
               <div className="about-stat-box">
                 <GradientText className="about-stat-num">100%</GradientText>
-                <span className="about-stat-label">Client Code Ownership</span>
+                <span className="about-stat-label">
+                  {copy("statsOwnership") || "Client Code Ownership"}
+                </span>
               </div>
               <div className="about-stat-box">
                 <GradientText className="about-stat-num">2-Week</GradientText>
-                <span className="about-stat-label">Agile Sprints</span>
+                <span className="about-stat-label">
+                  {copy("statsSprints") || "Agile Sprints"}
+                </span>
               </div>
             </div>
           </div>

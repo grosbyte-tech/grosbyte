@@ -8,9 +8,10 @@ const beliefIcons = [Target, Compass, ShieldCheck, Users2];
 export function AboutBeliefs() {
   const { t } = useTranslation();
   const copy = (key: string) => t(`phase1.aboutPage.${key}`);
-  const beliefs = t<{ title: string; description: string }[]>(
-    "phase1.aboutPage.beliefs",
-  );
+  const rawBeliefs = t<unknown>("phase1.aboutPage.beliefs");
+  const beliefs = Array.isArray(rawBeliefs)
+    ? (rawBeliefs as { title: string; description: string }[])
+    : [];
 
   return (
     <section
@@ -24,8 +25,8 @@ export function AboutBeliefs() {
             {copy("beliefTitle")}
           </h2>
           <p className="about-section-subtitle">
-            These foundational standards guide how we engineer software, make
-            architectural decisions, and communicate with partners every day.
+            {copy("beliefSubtitle") ||
+              "These foundational standards guide how we engineer software, make architectural decisions, and communicate with partners every day."}
           </p>
         </div>
 

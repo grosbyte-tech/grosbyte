@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
+import { useTranslation } from "@/contexts/language-context";
 
 interface TechItem {
   id: string;
@@ -308,6 +309,8 @@ function FacetedMeshBackground() {
 }
 
 export function AboutTechStack() {
+  const { t } = useTranslation();
+  const copy = (key: string) => t(`phase1.aboutPage.${key}`);
   const [hoveredTechId, setHoveredTechId] = useState<string | null>(null);
 
   // Active spotlight item: either explicitly hovered or default flagship
@@ -369,15 +372,21 @@ export function AboutTechStack() {
           })}
         </div>
 
-        {/* Lower Stage: Center Green Title & Narrative */}
+        {/* Lower Stage: Center Title & Narrative */}
         <div className="about-tech-editorial-panel">
           <div className="about-tech-editorial-copy">
             <h2 id="about-tech-heading" className="about-tech-title">
-              <span className="about-tech-title-blue">Tools</span>{" "}
-              <span className="about-tech-title-white">&amp; technologies</span>
+              <span className="about-tech-title-blue">
+                {copy("techTitleLead") || "Tools"}
+              </span>{" "}
+              <span className="about-tech-title-white">
+                {copy("techTitleHighlight") || "& technologies"}
+              </span>
             </h2>
             <p className="about-tech-desc">
-              {hoveredTechId ? activeSpotlight.tagline : DEFAULT_EDITORIAL}
+              {hoveredTechId
+                ? activeSpotlight.tagline
+                : copy("techEditorial") || DEFAULT_EDITORIAL}
             </p>
           </div>
         </div>

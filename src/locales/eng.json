@@ -238,13 +238,22 @@
     "learnAbout": "Get to know Grosbyte",
     "aboutPage": {
       "title": "A technology partner focused on practical solutions.",
+      "heroTitleLead": "A technology partner focused on",
+      "heroTitleHighlight": "practical solutions.",
       "intro": "Grosbyte Technologies helps businesses with software development, websites, applications, automation, and digital marketing. We connect business requirements with technology that is useful in everyday work.",
+      "storyBtn": "Our Story",
+      "weAre": "We are",
+      "namasteTagline": "Engineering modern digital solutions from Nepal to the world.",
       "whoLabel": "Who we are",
       "whoTitle": "Business needs first. Technology with a purpose.",
       "whoCopy": "Based in Nepal, we work with businesses that need to bring a service online, improve an internal workflow, or build a digital product for their customers. Our work brings together development, product design, automation, and digital marketing.",
       "whoSecond": "Whether you are planning a first website or improving an existing system, we start by learning how your business operates and what the people using it need.",
+      "statsCapabilities": "Core Capabilities",
+      "statsOwnership": "Client Code Ownership",
+      "statsSprints": "Agile Sprints",
       "beliefLabel": "What we believe",
       "beliefTitle": "Principles that shape the work.",
+      "beliefSubtitle": "These foundational standards guide how we engineer software, make architectural decisions, and communicate with partners every day.",
       "beliefs": [
         {
           "title": "Practicality",
@@ -284,10 +293,15 @@
       "approachCopy": "We begin with the business challenge, consider suitable solutions, and plan the implementation together. Design and development are followed by testing and feedback so the work can be checked against the agreed requirements.",
       "approachSecond": "Before delivery, we discuss the launch, handover, and support scope. The approach should fit the project and the people using it.",
       "approachLink": "See how we work",
+      "ctaEyebrow": "Let’s Build Something Meaningful",
       "ctaTitle": "Let’s build something useful for your business.",
       "ctaCopy": "Share the challenge you are working on. We can discuss the requirements and explore the next step.",
+      "ctaSecondary": "Explore all services",
       "workIntro": "We work with the people who know the business and the people who will use the solution. Their experience helps us understand what needs to change and what should stay simple.",
-      "workLink": "Explore our services"
+      "workLink": "Explore our services",
+      "techTitleLead": "Tools",
+      "techTitleHighlight": "& technologies",
+      "techEditorial": "We employ modern full-stack web frameworks, enterprise backend systems, scalable databases, cloud infrastructure, and intelligent automation—including Next.js, React, TypeScript, Python, Node.js, Spring Boot, n8n, AWS, and PostgreSQL—to help you build and scale resilient applications."
     }
   }
 }

@@ -232,5 +232,75 @@
       "title": "Tools, die Marken und Kunden verbinden",
       "description": "Von Inhalten und Kampagnen bis zu Suchanalysen und Kundenkontakt: Wir wählen passende Tools für Ihre Zielgruppe, Ziele und Ihr Budget."
     }
+  },
+  "phase1": {
+    "learnAbout": "Lernen Sie Grosbyte kennen",
+    "aboutPage": {
+      "title": "Ein Technologiepartner, der sich auf praktische Lösungen konzentriert.",
+      "heroTitleLead": "Ein Technologiepartner fokussiert auf",
+      "heroTitleHighlight": "praktische Lösungen.",
+      "intro": "Grosbyte Technologies unterstützt Unternehmen bei Softwareentwicklung, Websites, Anwendungen, Automatisierung und digitalem Marketing. Wir verbinden geschäftliche Anforderungen mit praxistauglicher Technologie.",
+      "storyBtn": "Unsere Geschichte",
+      "weAre": "Wir sind",
+      "namasteTagline": "Moderne digitale Lösungen aus Nepal für die ganze Welt.",
+      "whoLabel": "Wer wir sind",
+      "whoTitle": "Geschäftsbedürfnisse zuerst. Technologie mit Sinn.",
+      "whoCopy": "Mit Sitz in Nepal arbeiten wir mit Unternehmen zusammen, die Services online bringen, interne Workflows verbessern oder digitale Produkte für Kunden entwickeln möchten. Unsere Arbeit vereint Entwicklung, Produktdesign, Automatisierung und digitales Marketing.",
+      "whoSecond": "Ob Sie Ihre erste Website planen oder ein bestehendes System modernisieren: Wir beginnen stets damit zu verstehen, wie Ihr Unternehmen funktioniert und was die Nutzer wirklich brauchen.",
+      "statsCapabilities": "Kernkompetenzen",
+      "statsOwnership": "100% Code-Eigentum",
+      "statsSprints": "Agile Sprints",
+      "beliefLabel": "Woran wir glauben",
+      "beliefTitle": "Prinzipien, die unsere Arbeit prägen.",
+      "beliefSubtitle": "Diese grundlegenden Standards leiten unsere Softwareentwicklung, architektonische Entscheidungen und den täglichen Austausch mit Partnern.",
+      "beliefs": [
+        {
+          "title": "Praxisnähe",
+          "description": "Technologie muss reale geschäftliche Probleme lösen. Wir wägen den Nutzen eines Features stets gegen den Aufwand für Entwicklung und Wartung ab."
+        },
+        {
+          "title": "Klarheit",
+          "description": "Anforderungen, Entscheidungen und Projekterwartungen müssen für alle Beteiligten transparent und verständlich sein."
+        },
+        {
+          "title": "Qualität",
+          "description": "Wartbarkeit, Zuverlässigkeit und Usability verdienen volle Aufmerksamkeit während des gesamten Prozesses – vom ersten Entwurf bis zur Abnahme."
+        },
+        {
+          "title": "Zusammenarbeit",
+          "description": "Gute Entscheidungen basieren auf dem Verständnis für die Menschen, die das System nutzen. Ihr Kontext und Ihr Feedback sind integraler Teil der Arbeit."
+        }
+      ],
+      "workLabel": "Zusammenarbeit mit Grosbyte",
+      "workTitle": "Gemeinsames Verständnis ermöglicht erstklassige Ergebnisse.",
+      "work": [
+        {
+          "title": "Ihr geschäftlicher Kontext",
+          "description": "Wir starten mit Ihren Zielen, Prozessen und Rahmenbedingungen. Konkrete Alltagsbeispiele helfen uns, das Problem vor der Lösungswahl zu durchdringen."
+        },
+        {
+          "title": "Klare Arbeitsbeziehung",
+          "description": "Wir definieren Umfang, Verantwortlichkeiten und Feedbackzyklen. Fragen und Trade-offs werden offen besprochen, damit jede Entscheidung nachvollziehbar ist."
+        },
+        {
+          "title": "Fokus auf Alltagstauglichkeit",
+          "description": "Wir planen von Anfang an, wie Ihr Team die Software nach der Übergabe nutzen und pflegen wird – inklusive abgestimmtem Support."
+        }
+      ],
+      "approachLabel": "Unser Ansatz",
+      "approachTitle": "Herausforderung verstehen. Sorgfältig bauen.",
+      "approachCopy": "Wir beginnen mit der geschäftlichen Herausforderung, wählen geeignete Lösungen und planen die Umsetzung gemeinsam. Nach Konzeption und Entwicklung folgen Tests und Feedback zur Qualitätssicherung.",
+      "approachSecond": "Vor der Bereitstellung klären wir Einführung, Übergabe und Support. Der Ansatz passt sich dem Projekt und den Menschen an.",
+      "approachLink": "Unsere Arbeitsweise ansehen",
+      "ctaEyebrow": "Bedeutende Werte Schaffen",
+      "ctaTitle": "Lassen Sie uns etwas Nützliches für Ihr Unternehmen bauen.",
+      "ctaCopy": "Teilen Sie uns Ihre aktuelle Herausforderung mit. Wir besprechen Ihre Anforderungen und definieren gemeinsam die nächsten Schritte.",
+      "ctaSecondary": "Alle Dienstleistungen ansehen",
+      "workIntro": "Wir arbeiten eng mit den Experten Ihres Unternehmens und den zukünftigen Nutzern der Lösung zusammen. Ihre Praxiserfahrung zeigt uns, was verbessert werden muss und was schlank bleiben sollte.",
+      "workLink": "Unsere Dienstleistungen erkunden",
+      "techTitleLead": "Tools",
+      "techTitleHighlight": "& Technologien",
+      "techEditorial": "Wir setzen moderne Full-Stack-Webframeworks, Enterprise-Backend-Systeme, skalierbare Datenbanken, Cloud-Infrastruktur und intelligente Automatisierung ein – darunter Next.js, React, TypeScript, Python, Node.js, Spring Boot, n8n, AWS und PostgreSQL."
+    }
   }
 }
