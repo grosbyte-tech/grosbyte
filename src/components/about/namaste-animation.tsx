@@ -48,8 +48,12 @@ const GLYPHS = [
 ];
 
 export function NamasteAnimation() {
-  const { t } = useTranslation();
+  const { language, t } = useTranslation();
   const copy = (key: string) => t(`phase1.aboutPage.${key}`);
+  const isDevanagari = language === "eng" || language === "nep";
+  const greetingText =
+    copy("heroGreeting") ||
+    (isDevanagari ? "नमस्ते" : language === "ger" ? "Hallo" : "Hola");
   const [isFormed, setIsFormed] = useState(false);
 
   useEffect(() => {
@@ -57,59 +61,110 @@ export function NamasteAnimation() {
       setIsFormed(true);
     }, 1800);
     return () => clearTimeout(timer);
-  }, []);
+  }, [language]);
 
   return (
-    <div className="namaste-hero-visual" aria-label="नमस्ते">
-      {/* Top Large Display Calligraphy Vector */}
+    <div className="namaste-hero-visual" aria-label={greetingText}>
+      {/* Top Large Display Calligraphy / Greeting Vector */}
       <div className={`namaste-svg-wrapper ${isFormed ? "is-formed" : ""}`}>
-        <svg
-          viewBox="-40 120 1870 770"
-          className="namaste-svg"
-          aria-hidden="true"
-          preserveAspectRatio="xMidYMid meet"
-        >
-          <defs>
-            {/* Grosbyte Brand Gradient */}
-            <linearGradient
-              id="grosbyte-blue-gradient"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="100%"
-            >
-              <stop offset="0%" stopColor="#0966fa" />
-              <stop offset="50%" stopColor="#0084ff" />
-              <stop offset="100%" stopColor="#00d2ff" />
-            </linearGradient>
+        {isDevanagari ? (
+          <svg
+            viewBox="-40 120 1870 770"
+            className="namaste-svg"
+            aria-hidden="true"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <defs>
+              {/* Grosbyte Brand Gradient */}
+              <linearGradient
+                id="grosbyte-blue-gradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stopColor="#0966fa" />
+                <stop offset="50%" stopColor="#0084ff" />
+                <stop offset="100%" stopColor="#00d2ff" />
+              </linearGradient>
 
-            {/* Glowing Accent Filter */}
-            <filter
-              id="grosbyte-glow"
-              x="-20%"
-              y="-20%"
-              width="140%"
-              height="140%"
-            >
-              <feGaussianBlur stdDeviation="8" result="blur" />
-              <feComposite in="SourceGraphic" in2="blur" operator="over" />
-            </filter>
-          </defs>
+              {/* Glowing Accent Filter */}
+              <filter
+                id="grosbyte-glow"
+                x="-20%"
+                y="-20%"
+                width="140%"
+                height="140%"
+              >
+                <feGaussianBlur stdDeviation="8" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+            </defs>
 
-          {GLYPHS.map((glyph) => (
-            <path
-              key={glyph.id}
-              d={glyph.path}
-              className="namaste-forming-path"
-              style={{ animationDelay: `${glyph.delay}s` }}
+            {GLYPHS.map((glyph) => (
+              <path
+                key={glyph.id}
+                d={glyph.path}
+                className="namaste-forming-path"
+                style={{ animationDelay: `${glyph.delay}s` }}
+                fill="url(#grosbyte-blue-gradient)"
+                stroke="url(#grosbyte-blue-gradient)"
+              />
+            ))}
+          </svg>
+        ) : (
+          <svg
+            viewBox="0 50 1600 600"
+            className="namaste-svg"
+            aria-hidden="true"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <defs>
+              {/* Grosbyte Brand Gradient */}
+              <linearGradient
+                id="grosbyte-blue-gradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stopColor="#0966fa" />
+                <stop offset="50%" stopColor="#0084ff" />
+                <stop offset="100%" stopColor="#00d2ff" />
+              </linearGradient>
+
+              {/* Glowing Accent Filter */}
+              <filter
+                id="grosbyte-glow"
+                x="-20%"
+                y="-20%"
+                width="140%"
+                height="140%"
+              >
+                <feGaussianBlur stdDeviation="8" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+            </defs>
+
+            <text
+              x="20"
+              y="480"
+              fontSize="450"
+              fontWeight="900"
+              letterSpacing="-0.04em"
+              fontFamily="var(--font-urbanist), Urbanist, system-ui, -apple-system, sans-serif"
               fill="url(#grosbyte-blue-gradient)"
               stroke="url(#grosbyte-blue-gradient)"
-            />
-          ))}
-        </svg>
+              strokeWidth="4"
+              className="namaste-forming-path"
+            >
+              {greetingText}
+            </text>
+          </svg>
+        )}
 
         {/* Accessible screen-reader text */}
-        <span className="sr-only">नमस्ते</span>
+        <span className="sr-only">{greetingText}</span>
       </div>
 
       {/* Brand tagline placed cleanly at bottom */}
