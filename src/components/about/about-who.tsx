@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useTranslation } from "@/contexts/language-context";
+import { GradientText } from "@/components/ui/gradient-text";
 
 export function AboutWho() {
   const { t } = useTranslation();
@@ -28,15 +29,15 @@ export function AboutWho() {
 
             <div className="about-stat-strip">
               <div className="about-stat-box">
-                <span className="about-stat-num">10+</span>
+                <GradientText className="about-stat-num">10+</GradientText>
                 <span className="about-stat-label">Core Capabilities</span>
               </div>
               <div className="about-stat-box">
-                <span className="about-stat-num">100%</span>
+                <GradientText className="about-stat-num">100%</GradientText>
                 <span className="about-stat-label">Client Code Ownership</span>
               </div>
               <div className="about-stat-box">
-                <span className="about-stat-num">2-Week</span>
+                <GradientText className="about-stat-num">2-Week</GradientText>
                 <span className="about-stat-label">Agile Sprints</span>
               </div>
             </div>

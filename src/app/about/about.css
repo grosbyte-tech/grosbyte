@@ -433,9 +433,15 @@ html:not(.light) .about-page .about-secondary-btn:hover {
 .about-page .about-stat-num {
   font-size: clamp(1.8rem, 2.5vw, 2.2rem);
   font-weight: 800;
-  color: var(--brand-blue);
   line-height: 1.1;
   letter-spacing: -0.03em;
+  background-image: linear-gradient(135deg, #0966fa 0%, #00a8ff 55%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+  width: fit-content;
 }
 
 .about-page .about-stat-label {

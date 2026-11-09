@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { GradientText } from "@/components/ui/gradient-text";
 
 /**
  * Exact vector paths parsed directly from ARAP007.TTF
@@ -112,7 +113,7 @@ export function NamasteAnimation() {
       <div className="namaste-brand-tagline">
         <p className="namaste-brand-line">
           <span className="namaste-brand-intro">We are</span>{" "}
-          <span className="highlight-blue namaste-brand-name">Grosbyte</span>
+          <GradientText className="namaste-brand-name">Grosbyte</GradientText>
         </p>
         <p className="namaste-brand-desc">
           Engineering modern digital solutions from Nepal to the world.
