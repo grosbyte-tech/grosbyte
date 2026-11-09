@@ -692,26 +692,45 @@ html:not(.light) .about-page .about-secondary-btn:hover {
   pointer-events: none;
 }
 
+.about-page .about-cta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 1024px) {
+  .about-page .about-cta-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
+  }
+}
+
 .about-page .about-cta-content {
   position: relative;
-  z-index: 1;
-  max-width: 760px;
+  z-index: 2;
+  max-width: 660px;
 }
 
 .about-page .about-cta-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #38bdf8;
-  margin-bottom: 16px;
-  letter-spacing: 0.04em;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  background-image: linear-gradient(135deg, #0966fa 0%, #00a8ff 55%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .about-page .about-cta-title {
-  font-size: clamp(2.2rem, 4.2vw, 3.2rem);
+  font-size: clamp(2rem, 3.8vw, 3rem);
   font-weight: 850;
   letter-spacing: -0.03em;
   line-height: 1.15;
@@ -720,11 +739,11 @@ html:not(.light) .about-page .about-secondary-btn:hover {
 }
 
 .about-page .about-cta-desc {
-  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  font-size: clamp(1rem, 1.3vw, 1.12rem);
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.82);
   margin: 0 0 32px;
-  max-width: 620px;
+  max-width: 580px;
 }
 
 .about-page .about-cta-actions {
@@ -757,6 +776,257 @@ html:not(.light) .about-page .about-secondary-btn:hover {
 .about-page .about-cta-link-secondary:hover {
   opacity: 1;
   text-decoration: underline;
+}
+
+/* ========================================================
+   MINIMALIST ARCHITECTURE TERMINAL (RIGHT SIDE)
+   ======================================================== */
+
+.about-page .about-cta-media {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-page .cta-terminal-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  user-select: none;
+}
+
+.about-page .cta-terminal-glow {
+  position: absolute;
+  inset: -20px;
+  border-radius: 28px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 168, 255, 0.22) 0%,
+    rgba(9, 102, 250, 0.12) 50%,
+    transparent 75%
+  );
+  filter: blur(28px);
+  pointer-events: none;
+  animation: cta-terminal-glow-pulse 6s ease-in-out infinite alternate;
+}
+
+.about-page .cta-terminal-window {
+  position: relative;
+  background: rgba(4, 15, 38, 0.9);
+  border: 1px solid rgba(0, 210, 255, 0.2);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow:
+    0 24px 50px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-page .cta-terminal-window:hover {
+  border-color: rgba(0, 210, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Title Bar */
+.about-page .cta-terminal-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: rgba(2, 8, 23, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-page .cta-terminal-dots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.about-page .cta-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.about-page .cta-dot-red {
+  background: #ff5f56;
+  box-shadow: 0 0 6px rgba(255, 95, 86, 0.4);
+}
+
+.about-page .cta-dot-yellow {
+  background: #ffbd2e;
+  box-shadow: 0 0 6px rgba(255, 189, 46, 0.4);
+}
+
+.about-page .cta-dot-green {
+  background: #27c93f;
+  box-shadow: 0 0 6px rgba(39, 201, 63, 0.4);
+}
+
+.about-page .cta-terminal-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.76rem;
+  color: #e2e8f0;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.about-page .cta-tab-icon {
+  font-size: 0.75rem;
+}
+
+.about-page .cta-terminal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 2px 8px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.about-page .cta-terminal-status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+}
+
+/* Code Area */
+.about-page .cta-terminal-code {
+  padding: 18px 20px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  background: rgba(3, 11, 28, 0.6);
+}
+
+.about-page .cta-code-line {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.about-page .cta-code-indent {
+  padding-left: 16px;
+}
+
+.about-page .cta-code-num {
+  font-size: 0.68rem;
+  color: rgba(148, 163, 184, 0.45);
+  user-select: none;
+  min-width: 18px;
+  text-align: right;
+}
+
+.about-page .cta-code-keyword {
+  color: #a78bfa;
+  font-weight: 600;
+}
+
+.about-page .cta-code-fn {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.about-page .cta-code-var {
+  color: #e2e8f0;
+}
+
+.about-page .cta-code-prop {
+  color: #93c5fd;
+}
+
+.about-page .cta-code-str {
+  color: #38bdf8;
+}
+
+.about-page .cta-code-highlight {
+  color: #00d2ff;
+  font-weight: 700;
+  text-shadow: 0 0 12px rgba(0, 210, 255, 0.4);
+}
+
+/* Cursor Animation */
+.about-page .cta-code-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background: #00d2ff;
+  margin-left: 4px;
+  vertical-align: middle;
+  animation: cta-cursor-blink 1.05s infinite;
+  box-shadow: 0 0 8px #00d2ff;
+}
+
+/* Footer Status Bar */
+.about-page .cta-terminal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: rgba(2, 8, 23, 0.85);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.68rem;
+  color: rgba(226, 232, 240, 0.6);
+}
+
+.about-page .cta-footer-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.about-page .cta-footer-sep {
+  opacity: 0.4;
+}
+
+.about-page .cta-footer-right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #34d399;
+  font-weight: 600;
+}
+
+.about-page .cta-footer-check {
+  font-size: 0.75rem;
+}
+
+@keyframes cta-terminal-glow-pulse {
+  0% { transform: scale(0.95); opacity: 0.65; }
+  100% { transform: scale(1.05); opacity: 0.95; }
+}
+
+@keyframes cta-cursor-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@media (max-width: 640px) {
+  .about-page .cta-terminal-code {
+    font-size: 0.72rem;
+    padding: 14px;
+    overflow-x: auto;
+  }
 }
 
 /* ========================================================
@@ -1002,77 +1272,6 @@ html:not(.light) .about-page .about-secondary-btn:hover {
   }
 }
 
-.about-page .about-cta-content {
-  position: relative;
-  z-index: 1;
-  max-width: 760px;
-}
-
-.about-page .about-cta-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #00d2ff;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 1.25rem;
-}
-
-.about-page .about-cta-title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-  color: #ffffff;
-  margin: 0;
-}
-
-.about-page .about-cta-desc {
-  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.82);
-  margin: 1.25rem 0 2rem;
-}
-
-.about-page .about-cta-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 16px 24px;
-}
-
-.about-page .about-cta-btn-primary {
-  display: inline-flex;
-  align-items: center;
-  background: #ffffff !important;
-  color: #011638 !important;
-  font-weight: 700;
-  padding: 14px 32px;
-  border-radius: 9999px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
-  transition: all 0.25s ease;
-}
-
-.about-page .about-cta-btn-primary:hover {
-  background: #f0f7ff !important;
-  transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35) !important;
-}
-
-.about-page .about-cta-link-secondary {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.95rem;
-  font-weight: 650;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  transition: color 0.2s ease;
-}
-
-.about-page .about-cta-link-secondary:hover {
-  color: #00d2ff;
-}
 
 /* ========================================================
    RESPONSIVE ADJUSTMENTS
