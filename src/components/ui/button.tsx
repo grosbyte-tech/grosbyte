@@ -17,6 +17,10 @@ const buttonVariants = cva(
         outline: "capsule-btn capsule-btn-secondary text-white",
         "glowing-secondary": "capsule-btn capsule-btn-secondary text-white",
         secondary: "capsule-btn capsule-btn-secondary text-white",
+        primary:
+          "bg-[var(--brand-blue)] hover:bg-[var(--brand-blue-hover)] text-white shadow-sm border border-transparent !rounded-xl transition-colors duration-200",
+        minimal:
+          "bg-[var(--surface)] hover:bg-[var(--surface-hover)] text-[var(--text-primary)] border border-[var(--border)] shadow-sm !rounded-xl transition-colors duration-200",
         ghost:
           "hover:bg-white/10 text-white rounded-full transition-colors duration-200 px-4 py-2",
         link: "text-[var(--brand-blue-hover)] underline-offset-4 hover:underline",
