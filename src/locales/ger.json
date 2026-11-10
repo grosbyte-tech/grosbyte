@@ -9,11 +9,20 @@
     "cta": "Projekt starten"
   },
   "hero": {
-    "eyebrow": "Ideen innovieren. Unternehmen stärken.",
-    "title": "Digitale Lösungen, die auf Ihr Unternehmen zugeschnitten sind.",
-    "copy": "Grosbyte Technologies entwickelt moderne Software, Web- und mobile Anwendungen, intelligente Automatisierung, digitale Produkte und Wachstumsstrategien, die Unternehmen voranbringen.",
-    "ctaPrimary": "Projekt starten",
-    "ctaSecondary": "Dienstleistungen erkunden"
+    "eyebrow": "Software-Engineering & digitale Produkte",
+    "title": "Wir entwickeln Software, die Unternehmen voranbringt.",
+    "titlePrefix": "Wir entwickeln Software, die Unternehmen ",
+    "titleHighlight": "voranbringt",
+    "titleSuffix": ".",
+    "copy": "Von Web- und mobilen Apps bis hin zu Cloud-Infrastruktur und Automatisierung: Wir verwandeln komplexe Herausforderungen in verlässliche digitale Produkte.",
+    "ctaPrimary": "Projekt besprechen",
+    "ctaSecondary": "Unsere Arbeit erkunden",
+    "highlightWeb": "Web- & Mobile-Produkte",
+    "highlightCloud": "Cloud & Integrationen",
+    "highlightReliability": "Auf Zuverlässigkeit ausgelegt",
+    "badgeProduct": "PRODUCT",
+    "badgeCloud": "CLOUD",
+    "badgeSystems": "SYSTEMS"
   },
   "about": {
     "eyebrow": "Über uns",

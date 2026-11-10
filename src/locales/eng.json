@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About",
+    "about": "About Us",
     "services": "Services",
     "process": "How We Work",
     "processMobile": "Process",
@@ -10,11 +10,20 @@
     "cta": "Start a Project"
   },
   "hero": {
-    "eyebrow": "Innovating Ideas. Empowering Businesses.",
-    "title": "Digital solutions built around your business.",
-    "copy": "Grosbyte Technologies creates modern software, web and mobile applications, intelligent automation, digital products, and growth strategies that help businesses move forward.",
-    "ctaPrimary": "Start a Project",
-    "ctaSecondary": "Explore Services"
+    "eyebrow": "Software Engineering & Digital Products",
+    "title": "We build software that moves businesses forward.",
+    "titlePrefix": "We build software that moves businesses ",
+    "titleHighlight": "forward",
+    "titleSuffix": ".",
+    "copy": "From web platforms and mobile applications to cloud infrastructure and automation, we turn complex problems into dependable digital products.",
+    "ctaPrimary": "Discuss a project",
+    "ctaSecondary": "Explore our work",
+    "highlightWeb": "Web & mobile products",
+    "highlightCloud": "Cloud & integrations",
+    "highlightReliability": "Built for reliability",
+    "badgeProduct": "PRODUCT",
+    "badgeCloud": "CLOUD",
+    "badgeSystems": "SYSTEMS"
   },
   "about": {
     "eyebrow": "About Us",

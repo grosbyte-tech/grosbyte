@@ -33,7 +33,6 @@ export const navigation = [
   { label: "Home", href: "#home" },
   { label: "About Us", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "How We Work", href: "#how-we-work" },
   { label: "Blogs", href: "/blogs" },
   { label: "Contact", href: "/contact" },
 ] as const satisfies readonly NavigationItem[];
@@ -276,3 +275,4 @@ export const socialLinks = {
   linkedin: "https://www.linkedin.com/company/grosbyte-technologies",
   github: "https://github.com/grosbyte-tech",
 } as const;
+ 

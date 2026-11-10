@@ -9,11 +9,20 @@
     "cta": "Iniciar Proyecto"
   },
   "hero": {
-    "eyebrow": "Innovando Ideas. Impulsando Negocios.",
-    "title": "Soluciones digitales diseñadas para tu negocio.",
-    "copy": "Grosbyte Technologies crea software moderno, aplicaciones web y móviles, automatización inteligente, productos digitales y estrategias de crecimiento que ayudan a las empresas a avanzar.",
-    "ctaPrimary": "Iniciar Proyecto",
-    "ctaSecondary": "Explorar Servicios"
+    "eyebrow": "Ingeniería de software y productos digitales",
+    "title": "Desarrollamos software que impulsa los negocios hacia adelante.",
+    "titlePrefix": "Desarrollamos software que impulsa los negocios ",
+    "titleHighlight": "hacia adelante",
+    "titleSuffix": ".",
+    "copy": "Desde plataformas web y aplicaciones móviles hasta infraestructura en la nube y automatización, convertimos problemas complejos en productos digitales confiables.",
+    "ctaPrimary": "Discutir un proyecto",
+    "ctaSecondary": "Explorar nuestro trabajo",
+    "highlightWeb": "Productos web y móviles",
+    "highlightCloud": "Nube e integraciones",
+    "highlightReliability": "Diseñado para la fiabilidad",
+    "badgeProduct": "PRODUCT",
+    "badgeCloud": "CLOUD",
+    "badgeSystems": "SYSTEMS"
   },
   "about": {
     "eyebrow": "Nosotros",

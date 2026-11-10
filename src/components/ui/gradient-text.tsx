@@ -26,7 +26,7 @@ export const GradientText = forwardRef(function GradientText(
     children,
     ...props
   }: GradientTextProps<ElementType>,
-  ref: React.Ref<any>
+  ref: React.Ref<HTMLElement>
 ) {
   const Component = as || "span";
   const gradientStyle = gradientVariants[variant] || gradientVariants.brand;
@@ -50,7 +50,7 @@ export const GradientText = forwardRef(function GradientText(
     </Component>
   );
 }) as <T extends ElementType = "span">(
-  props: GradientTextProps<T> & { ref?: React.Ref<any> }
+  props: GradientTextProps<T> & { ref?: React.Ref<HTMLElement> }
 ) => React.ReactElement | null;
 
 export default GradientText;
