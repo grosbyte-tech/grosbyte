@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import {
   motion,
   useReducedMotion,
@@ -26,7 +25,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-import { processSteps, technologies, type Technology } from "@/lib/site-data";
+import { processSteps } from "@/lib/site-data";
 import { useTranslation } from "@/contexts/language-context";
 import { FoldingText } from "@/components/ui/folding-text";
 import { ScrollRevealText } from "@/components/motion/scroll-reveal-text";
@@ -61,120 +60,6 @@ const marketingSteps = [
   { key: "measure", icon: BarChart3 },
   { key: "grow", icon: TrendingUp },
 ];
-
-const marketingTools: readonly Technology[] = [
-  {
-    name: "Meta",
-    description: "Social and campaign platform.",
-    icon: "https://api.iconify.design/logos/meta-icon.svg",
-  },
-  {
-    name: "Instagram",
-    description: "Visual storytelling and reach.",
-    icon: "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Instagram.svg",
-  },
-  {
-    name: "Meta Ads Manager",
-    description: "Targeted ad campaigns and management.",
-    icon: "https://api.iconify.design/logos/facebook.svg",
-  },
-  {
-    name: "Canva",
-    description: "Brand asset design and creative media.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
-  },
-  {
-    name: "Google Ads",
-    description: "High-intent search advertising.",
-    icon: "https://api.iconify.design/logos/google-ads.svg",
-  },
-  {
-    name: "Google Analytics",
-    description: "Traffic, conversion, and user data.",
-    icon: "https://api.iconify.design/logos/google-analytics.svg",
-  },
-  {
-    name: "Google Search Console",
-    description: "Organic search visibility and indexing.",
-    icon: "https://cdn.svgporn.com/logos/google-search-console.svg",
-  },
-  {
-    name: "Semrush",
-    description: "SEO audits, rankings, and competitor data.",
-    icon: "https://api.iconify.design/simple-icons/semrush.svg?color=%23FF642D",
-  },
-  {
-    name: "Mailchimp",
-    description: "Email marketing, flows, and audience data.",
-    icon: "https://api.iconify.design/logos/mailchimp-freddie.svg",
-  },
-];
-
-function TeamToolkit({ marketing }: { marketing: boolean }) {
-  const { t } = useTranslation();
-  const items = marketing ? marketingTools : technologies;
-  const columns = Array.from({ length: marketing ? 3 : 4 }, (_, column) =>
-    items.filter((_, index) => index % (marketing ? 3 : 4) === column),
-  );
-  const key = marketing ? "marketingProcess.techStack" : "process.techStack";
-  const Emblem = marketing ? TrendingUp : Code2;
-
-  return (
-    <aside className="team-toolkit" aria-label={t(`${key}.title`)}>
-      <div className="team-toolkit-intro">
-        <span className="toolkit-emblem">
-          <Emblem aria-hidden="true" />
-        </span>
-        <p className="eyebrow">{t(`${key}.eyebrow`)}</p>
-        <h4>{t(`${key}.title`)}</h4>
-        <p>{t(`${key}.description`)}</p>
-      </div>
-      <div className="toolkit-marquee-area">
-        <div className="tech-marquee-container toolkit-marquee">
-          {columns.map((column, columnIndex) => (
-            <div
-              className={`tech-marquee-column tech-col-${columnIndex + 1}`}
-              key={columnIndex}
-            >
-              <div className="tech-marquee-track">
-                {[0, 1, 2].map((copy) => (
-                  <ul
-                    className="toolkit-marquee-group"
-                    key={copy}
-                    aria-hidden={copy > 0 ? true : undefined}
-                  >
-                    {column.map((tool) => {
-                      const Icon = tool.icon;
-                      return (
-                        <li className="toolkit-card" key={tool.name}>
-                          <span className="toolkit-icon">
-                            {typeof Icon === "string" ? (
-                              <Image
-                                src={Icon}
-                                alt=""
-                                width={30}
-                                height={30}
-                                unoptimized
-                                className="tech-icon-img"
-                              />
-                            ) : (
-                              <Icon aria-hidden={true} />
-                            )}
-                          </span>
-                          <span>{tool.name}</span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </aside>
-  );
-}
 
 interface ProcessIconTileProps {
   icon: LucideIcon;
@@ -341,7 +226,6 @@ function TeamProcessSection({ marketing = false }: { marketing?: boolean }) {
             );
           })}
         </div>
-        <TeamToolkit marketing={marketing} />
       </div>
     </section>
   );

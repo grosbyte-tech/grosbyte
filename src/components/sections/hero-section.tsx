@@ -24,8 +24,8 @@ export function HeroSection() {
   ];
 
   return (
-    <section className="hero relative overflow-hidden bg-white" id="home">
-      <div className="container relative z-10 py-4 sm:py-6 lg:py-8">
+    <section className="hero relative overflow-hidden bg-[#F1F5F9]" id="home">
+      <div className="container relative z-10 pt-4 sm:pt-6 lg:pt-8 pb-0">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 items-center">
           {/* ========================================================
               LEFT COLUMN: Editorial Content & Value Proposition

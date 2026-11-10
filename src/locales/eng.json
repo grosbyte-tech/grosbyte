@@ -28,6 +28,7 @@
   "about": {
     "eyebrow": "About Us",
     "title": "A technology partner focused on practical business outcomes.",
+    "highlightWords": ["technology", "partner", "outcomes"],
     "imageAlt": "Two professionals reviewing a digital product plan",
     "p1": "Grosbyte Technologies helps businesses plan, design, build, and improve their digital presence. We combine software engineering, product design, intelligent automation, and digital growth strategies to create solutions that support real business goals.",
     "p2": "From a company's first digital product to custom software supporting daily operations, we focus on usability, maintainability, clear communication, and long-term value.",
@@ -155,6 +156,12 @@
       "description": "We turn your business goals into reliable digital products and high-impact growth campaigns through agile execution, close collaboration, and measurable results."
     },
     "teamLabel": "Software Development"
+  },
+  "blogsSection": {
+    "eyebrow": "Ideas & Insights",
+    "title": "Our Latest Blogs",
+    "subtitle": "Practical perspectives on software engineering, digital products, automation, and tech workflows.",
+    "viewAll": "Explore all articles"
   },
   "contact": {
     "eyebrow": "Contact Us",

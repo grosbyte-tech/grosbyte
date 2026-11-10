@@ -4,10 +4,12 @@ import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { FoldingText } from "@/components/ui/folding-text";
 import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
 import { AnimatedCounter } from "@/components/motion/counter";
+import { Button } from "@/components/ui/button";
 import { services } from "@/lib/site-data";
 import { useTranslation } from "@/contexts/language-context";
 
@@ -51,32 +53,49 @@ export function AboutSection() {
     { value: "18+", label: t("about.stats.technologies") },
   ];
 
+  const highlightWords =
+    (t("about.highlightWords") as unknown as string[]) || [
+      "technology",
+      "partner",
+      "outcomes",
+    ];
+
   return (
     <section className="section about-section" id="about">
       <div className="container">
         <Reveal className="section-heading section-heading-centered">
           <p className="eyebrow">{t("about.eyebrow")}</p>
-          <FoldingText as="h2" text={t("about.title")} />
+          <FoldingText
+            as="h2"
+            text={t("about.title")}
+            highlightWords={highlightWords}
+          />
         </Reveal>
         <div className="about-layout">
           <Reveal className="about-image">
+            <div className="about-image-glow" aria-hidden="true" />
             <Image
-              src="/about.png"
+              src="/career-tech.png"
               alt={t("about.imageAlt")}
-              width={1254}
-              height={1254}
-              sizes="(max-width: 820px) calc(100vw - 48px), 430px"
+              width={720}
+              height={463}
+              sizes="(max-width: 820px) calc(100vw - 48px), 500px"
             />
           </Reveal>
           <Reveal className="about-copy" delay={0.06}>
             <p>{t("about.p1")}</p>
             <p>{t("about.p2")}</p>
-            <Link
-              href="/about"
-              className="inline-flex min-h-11 items-center font-semibold text-[var(--brand-blue-hover)] hover:underline underline-offset-4"
-            >
-              {t("phase1.learnAbout")} →
-            </Link>
+            <div className="about-cta-row">
+              <Button
+                href="/about"
+                variant="outline"
+                size="default"
+                className="rounded-full px-6 py-2.5 inline-flex items-center gap-2 group font-semibold text-sm border-slate-300 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all shadow-sm"
+              >
+                <span>{t("phase1.learnAbout") || "Get to know Grosbyte"}</span>
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </div>
             <Reveal className="statistics-grid" delay={0.08}>
               {statistics.map((statistic, idx) => (
                 <div className="statistic" key={statistic.label}>
