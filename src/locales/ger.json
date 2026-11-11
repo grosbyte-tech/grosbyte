@@ -40,7 +40,9 @@
   "services": {
     "eyebrow": "Dienstleistungen",
     "title": "Praktische Expertise für Ihr digitales Unternehmen.",
-    "description": "Fokussierte Dienstleistungen, die Produktentwicklung, intelligente Automatisierung, Benutzererfahrung und digitales Wachstum in einem praktischen Ansatz vereinen. Wir helfen dabei, Ideen und geschäftliche Herausforderungen in zuverlässige, benutzerfreundliche Lösungen zu verwandeln, die einfacher zu starten, zu verwalten und zu skalieren sind – ohne unnötige Komplexität hinzuzufügen.",
+    "highlightWords": ["Expertise", "digitales", "Unternehmen"],
+    "description": "Wir verwandeln geschäftliche Herausforderungen in zuverlässige digitale Produkte, intelligente Automatisierung und skalierbare Softwarelösungen.",
+    "explore": "Service erkunden",
     "list": {
       "customSoftware": {
         "title": "Maßgeschneiderte Softwareentwicklung",
@@ -51,6 +53,17 @@
           "Dashboards",
           "API-Integration",
           "Business-Tools"
+        ]
+      },
+      "webMobileApp": {
+        "title": "Web, Mobile Application Development",
+        "description": "Leistungsstarke Webplattformen und plattformübergreifende mobile Anwendungen, entwickelt für Zuverlässigkeit, Benutzerbindung und Skalierbarkeit.",
+        "keywords": [
+          "Webplattformen",
+          "React Native",
+          "Expo",
+          "Mobile Commerce",
+          "API-Integration"
         ]
       },
       "webPlatforms": {
@@ -113,8 +126,9 @@
   },
   "process": {
     "eyebrow": "Arbeitsweise",
-    "title": "So arbeitet unser Softwareentwicklungsteam",
-    "description": "Von der ersten Idee bis zum Start arbeiten wir mit Ihrem Team in kurzen agilen Zyklen: Wir priorisieren wichtige Funktionen, zeigen lauffähige Software und passen uns Ihrem Feedback an.",
+    "title": "Wie wir arbeiten",
+    "highlightWords": ["wir", "arbeiten"],
+    "description": "Erfahren Sie, wie wir geschäftliche Herausforderungen in zuverlässige Software, leistungsstarke Web- und mobile Plattformen und messbares digitales Wachstum verwandeln.",
     "steps": {
       "discover": {
         "title": "Entdecken",

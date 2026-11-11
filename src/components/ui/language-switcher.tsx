@@ -36,7 +36,7 @@ export function LanguageSwitcher() {
     <div className="relative inline-block text-left" ref={containerRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text-primary)] hover:bg-[var(--surface-hover)] text-[0.82rem] font-semibold tracking-wider transition-all duration-200 focus:outline-none active:scale-95 cursor-pointer"
+        className="lang-switcher-trigger flex items-center gap-1.5 px-4 py-2 rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text-primary)] hover:bg-[var(--surface-hover)] text-[0.82rem] font-semibold tracking-wider transition-all duration-200 focus:outline-none active:scale-95 cursor-pointer"
         aria-haspopup="true"
         aria-expanded={isOpen}
       >
@@ -48,26 +48,29 @@ export function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-36 rounded-xl border border-[var(--border)] bg-[var(--surface)] shadow-[0_8px_32px_0_rgba(0,0,0,0.15)] py-1 z-[100] animate-in fade-in slide-in-from-top-2 duration-150">
-          {languages.map((lang) => (
-            <button
-              key={lang.code}
-              onClick={() => {
-                setLanguage(lang.code);
-                setIsOpen(false);
-              }}
-              className={`w-full flex items-center justify-between px-3.5 py-2 text-left text-xs transition-colors duration-150 first:rounded-t-lg last:rounded-b-lg cursor-pointer ${
-                language === lang.code
-                  ? "bg-[var(--surface-hover)] text-[var(--text-primary)] font-semibold"
-                  : "text-[var(--text-secondary)] hover:bg-[var(--surface-hover)] hover:text-[var(--text-primary)]"
-              }`}
-            >
-              <span>{lang.label}</span>
-              <span className="text-[10px] opacity-40 uppercase font-mono">
-                {lang.short}
-              </span>
-            </button>
-          ))}
+        <div className="lang-switcher-dropdown absolute right-0 mt-2 w-36 rounded-xl border border-[var(--border)] bg-[var(--surface)] shadow-[0_8px_32px_0_rgba(0,0,0,0.15)] py-1 z-[100] animate-in fade-in slide-in-from-top-2 duration-150">
+          {languages.map((lang) => {
+            const isActive = language === lang.code;
+            return (
+              <button
+                key={lang.code}
+                onClick={() => {
+                  setLanguage(lang.code);
+                  setIsOpen(false);
+                }}
+                className={`lang-switcher-item ${isActive ? "lang-switcher-active" : ""} w-full flex items-center justify-between px-3.5 py-2 text-left text-xs transition-colors duration-150 first:rounded-t-lg last:rounded-b-lg cursor-pointer ${
+                  isActive
+                    ? "bg-[var(--surface-hover)] text-[var(--text-primary)] font-semibold"
+                    : "text-[var(--text-secondary)] hover:bg-[var(--surface-hover)] hover:text-[var(--text-primary)]"
+                }`}
+              >
+                <span>{lang.label}</span>
+                <span className="text-[10px] opacity-40 uppercase font-mono">
+                  {lang.short}
+                </span>
+              </button>
+            );
+          })}
         </div>
       )}
     </div>

@@ -41,7 +41,9 @@
   "services": {
     "eyebrow": "Services",
     "title": "Practical expertise for your digital business.",
-    "description": "Focused services that bring product development, intelligent automation, user experience, and digital growth into one practical approach. We help turn ideas and business challenges into reliable, user-friendly solutions that are easier to launch, manage, and scale—without adding unnecessary complexity.",
+    "highlightWords": ["expertise", "digital", "business"],
+    "description": "We turn business challenges into reliable digital products, intelligent automation, and scalable software solutions.",
+    "explore": "Explore service",
     "list": {
       "customSoftware": {
         "title": "Custom Software Development",
@@ -52,6 +54,17 @@
           "Dashboards",
           "API Integration",
           "Business Tools"
+        ]
+      },
+      "webMobileApp": {
+        "title": "Web, Mobile Application Development",
+        "description": "High-performance web platforms and cross-platform mobile applications engineered for reliability, user engagement, and scale.",
+        "keywords": [
+          "Web Platforms",
+          "React Native",
+          "Expo",
+          "Mobile Commerce",
+          "API Integration"
         ]
       },
       "webPlatforms": {
@@ -114,8 +127,9 @@
   },
   "process": {
     "eyebrow": "How We Work",
-    "title": "How Our Software Development Team Works",
-    "description": "From discovery to launch, we work with your team in short Agile cycles: prioritising useful features, sharing working software, and adapting to feedback as your business grows.",
+    "title": "How we work",
+    "highlightWords": ["we", "work"],
+    "description": "Discover how we turn complex business challenges into reliable software, high-performance web and mobile platforms, and measurable digital growth.",
     "steps": {
       "discover": {
         "title": "Discover",

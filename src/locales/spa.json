@@ -40,7 +40,9 @@
   "services": {
     "eyebrow": "Servicios",
     "title": "Experiencia práctica para tu negocio digital.",
-    "description": "Servicios enfocados que integran el desarrollo de productos, la automatización inteligente, la experiencia del usuario y el crecimiento digital en un enfoque práctico. Ayudamos a transformar ideas y desafíos comerciales en soluciones confiables y fáciles de usar que son más fáciles de lanzar, gestionar y escalar, sin añadir complejidad innecesaria.",
+    "highlightWords": ["Experiencia", "negocio", "digital"],
+    "description": "Transformamos desafíos comerciales en productos digitales confiables, automatización inteligente y soluciones de software escalables.",
+    "explore": "Explorar servicio",
     "list": {
       "customSoftware": {
         "title": "Desarrollo de Software a Medida",
@@ -51,6 +53,17 @@
           "Paneles de Control",
           "Integración de APIs",
           "Herramientas de Negocio"
+        ]
+      },
+      "webMobileApp": {
+        "title": "Web, Mobile Application Development",
+        "description": "Plataformas web de alto rendimiento y aplicaciones móviles multiplataforma diseñadas para la confiabilidad, interacción del usuario y escalabilidad.",
+        "keywords": [
+          "Plataformas Web",
+          "React Native",
+          "Expo",
+          "Comercio Móvil",
+          "Integración de APIs"
         ]
       },
       "webPlatforms": {
@@ -113,8 +126,9 @@
   },
   "process": {
     "eyebrow": "Cómo trabajamos",
-    "title": "Cómo trabaja nuestro equipo de desarrollo de software",
-    "description": "Desde la idea hasta el lanzamiento, colaboramos en ciclos ágiles cortos: priorizamos funciones útiles, mostramos software en funcionamiento y nos adaptamos a tus comentarios.",
+    "title": "Cómo trabajamos",
+    "highlightWords": ["trabajamos"],
+    "description": "Descubre cómo transformamos desafíos empresariales en software confiable, plataformas web y móviles de alto rendimiento y crecimiento digital medible.",
     "steps": {
       "discover": {
         "title": "Descubrir",

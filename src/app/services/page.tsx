@@ -20,8 +20,11 @@ export default function ServicesPage() {
       <section className="service-hero">
         <div className="container">
           <ServiceBreadcrumbs current="Services" />
-          <p className="eyebrow">What we do</p>
-          <h1>Practical services for your next business challenge.</h1>
+          <p className="eyebrow">Services</p>
+          <h1>
+            Practical <span className="text-brand-gradient">services</span> for your next{" "}
+            <span className="text-brand-gradient">business challenge.</span>
+          </h1>
           <p className="service-lead">
             Build a digital product, improve the way your team works, or
             strengthen your online presence. Explore the expertise that fits

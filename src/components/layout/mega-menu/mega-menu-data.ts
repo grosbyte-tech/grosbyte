@@ -28,7 +28,7 @@ export interface MegaMenuConfig {
 }
 
 /**
- * 6 Core Featured Services matching the 3-column x 2-row mega menu layout.
+ * 3 Core Featured Services matching the refined 3-column mega menu layout.
  * Content derived directly from src/lib/services.ts and src/lib/site-data.ts.
  */
 export const featuredServices: MegaMenuServiceItem[] = [
@@ -44,12 +44,28 @@ export const featuredServices: MegaMenuServiceItem[] = [
   {
     id: "web-mobile-apps",
     slug: "web-mobile-applications",
-    title: "Web & Mobile Applications",
+    title: "Web, Mobile Application Development",
     description:
       "High-performance cross-platform mobile apps and responsive web applications engineered for scale.",
     href: "/services/web-mobile-applications",
     icon: Smartphone,
   },
+  {
+    id: "digital-marketing",
+    slug: "digital-marketing",
+    title: "Digital Marketing and Brand Growth",
+    description:
+      "Connected marketing and brand strategies that improve visibility, consistency, audience engagement, and long-term digital growth.",
+    href: "/services/digital-marketing",
+    icon: Megaphone,
+  },
+];
+
+/**
+ * Full catalog of Grosbyte services for easy extension and reference.
+ */
+export const allServicesCatalog: MegaMenuServiceItem[] = [
+  ...featuredServices,
   {
     id: "ai-automation",
     slug: "ai-automation-integrations",
@@ -85,22 +101,6 @@ export const featuredServices: MegaMenuServiceItem[] = [
       "End-to-end pipeline automation connecting disparate operational tools, APIs, and team handoffs.",
     href: "/services/business-automation",
     icon: Workflow,
-  },
-];
-
-/**
- * Full catalog of Grosbyte services for easy extension and reference.
- */
-export const allServicesCatalog: MegaMenuServiceItem[] = [
-  ...featuredServices,
-  {
-    id: "digital-marketing",
-    slug: "digital-marketing",
-    title: "Digital Marketing",
-    description:
-      "Outcome-driven growth marketing, audience acquisition, and targeted campaign management.",
-    href: "/services/digital-marketing",
-    icon: Megaphone,
   },
   {
     id: "seo",
