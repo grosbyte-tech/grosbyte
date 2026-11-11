@@ -49,7 +49,7 @@ export function ServicesMegaMenu({
           : "opacity-0 -translate-y-2 invisible pointer-events-none"
       }`}
     >
-      <div className="bg-white rounded-2xl border border-slate-200/90 shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden">
+      <div className="mega-menu-panel bg-white rounded-2xl border border-slate-200/90 shadow-[0_20px_50px_rgba(0,0,0,0.12)]">
         {/* Services Grid (3 Columns) */}
         <div className="p-4 sm:p-5 lg:p-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">

@@ -124,6 +124,50 @@
       }
     }
   },
+  "projectsSection": {
+    "eyebrow": "हाम्रा परियोजनाहरू",
+    "title": "व्यावसायिक वृद्धिका लागि निर्माण गरिएका वास्तविक उत्पादनहरू।",
+    "highlightWords": ["वास्तविक", "उत्पादनहरू"],
+    "subtitle": "उच्च गुणस्तर, सफा कोड र स्केलेबल आर्किटेक्चरसहित निर्माण गरिएका प्रत्यक्ष वेब प्लेटफर्महरू, बजारहरू र सास उपकरणहरू हेर्नुहोस्।",
+    "viewProject": "प्रत्यक्ष प्लेटफर्म",
+    "items": {
+      "tailr": {
+        "title": "Tailr",
+        "category": "एआई करिअर प्लेटफर्म",
+        "domain": "tailr.shubhamrajpandey.com.np",
+        "tagline": "अनुकूलित बायोडाटा, आवेदन ट्र्याकिङ र एआई-सञ्चालित करिअर कार्यप्रवाहको लागि एकीकृत कार्यक्षेत्र।",
+        "tech": ["Next.js", "AI Integration", "TypeScript", "Tailwind CSS"]
+      },
+      "booksansar": {
+        "title": "BookSansar",
+        "category": "ई-कमर्स मार्केटप्लेस",
+        "domain": "booksansar.com",
+        "tagline": "पाठक, लेखक र स्वतन्त्र बिक्रेताहरूलाई जोड्ने नेपालको प्रमुख अनलाइन पुस्तक बजार।",
+        "tech": ["React", "Marketplace Engine", "Secure Checkout", "Search API"]
+      },
+      "dhune": {
+        "title": "Dhune.np",
+        "category": "अन-डिमान्ड सेवाहरू",
+        "domain": "dhune.np",
+        "tagline": "ग्राहकहरूलाई प्रमाणित लन्ड्री विक्रेताहरूसँग जोड्ने र अर्डर ट्र्याक गर्ने स्मार्ट लन्ड्री बजार।",
+        "tech": ["Web & Mobile App", "Real-Time Tracking", "Vendor Portal", "API Gateway"]
+      },
+      "sopdraft": {
+        "title": "SOPdrafts Nepal",
+        "category": "एडटेक र कागजात सेवा",
+        "domain": "sopdraftsnepal.com",
+        "tagline": "२,५०० भन्दा बढी सफल आवेदकहरूद्वारा विश्वास गरिएको एसओपी र शैक्षिक कागजात मञ्च।",
+        "tech": ["Web Platform", "Consultation Workflow", "Lead Funnel", "SEO Engine"]
+      },
+      "setu": {
+        "title": "Setu",
+        "category": "क्राउडफन्डिङ र सामाजिक प्रभाव",
+        "domain": "setu.org.np",
+        "tagline": "दाताहरूलाई आपतकालीन, चिकित्सा र सामुदायिक अभियानहरूसँग जोड्ने नेपालको पहिलो एकीकृत सहयोग मञ्च।",
+        "tech": ["Next.js", "Payment Gateway", "Campaign Management", "Cloud Architecture"]
+      }
+    }
+  },
   "process": {
     "eyebrow": "हाम्रो कार्यविधि",
     "title": "हामी कसरी काम गर्छौं",
@@ -173,6 +217,7 @@
   "blogsSection": {
     "eyebrow": "विचार र अन्तरदृष्टि",
     "title": "हाम्रा पछिल्ला ब्लगहरू",
+    "highlightWords": ["ब्लगहरू"],
     "subtitle": "सफ्टवेयर इन्जिनियरिङ, डिजिटल उत्पादन र प्रविधि कार्यप्रणाली सम्बन्धी व्यावहारिक लेखहरू।",
     "viewAll": "सबै लेखहरू हेर्नुहोस्"
   },

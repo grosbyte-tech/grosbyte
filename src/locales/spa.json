@@ -124,6 +124,50 @@
       }
     }
   },
+  "projectsSection": {
+    "eyebrow": "Proyectos Destacados",
+    "title": "Productos reales diseñados para el crecimiento empresarial.",
+    "highlightWords": ["Productos", "diseñados"],
+    "subtitle": "Explora plataformas web, marketplaces y herramientas SaaS creadas con precisión, código limpio y arquitectura escalable.",
+    "viewProject": "Plataforma en Vivo",
+    "items": {
+      "tailr": {
+        "title": "Tailr",
+        "category": "Plataforma de Carrera con IA",
+        "domain": "tailr.shubhamrajpandey.com.np",
+        "tagline": "Espacio de trabajo todo en uno para currículums personalizados, seguimiento de candidaturas y flujos con IA.",
+        "tech": ["Next.js", "Integración IA", "TypeScript", "Tailwind CSS"]
+      },
+      "booksansar": {
+        "title": "BookSansar",
+        "category": "Marketplace de Comercio Electrónico",
+        "domain": "booksansar.com",
+        "tagline": "El principal mercado de libros en línea de Nepal que conecta a lectores, autores y vendedores.",
+        "tech": ["React", "Motor Marketplace", "Pago Seguro", "API de Búsqueda"]
+      },
+      "dhune": {
+        "title": "Dhune.np",
+        "category": "Servicios Bajo Demanda",
+        "domain": "dhune.np",
+        "tagline": "Marketplace inteligente de lavandería que conecta clientes con proveedores verificados y seguimiento de pedidos.",
+        "tech": ["App Web y Móvil", "Seguimiento en Vivo", "Portal de Proveedores", "API Gateway"]
+      },
+      "sopdraft": {
+        "title": "SOPdrafts Nepal",
+        "category": "EdTech y Documentación",
+        "domain": "sopdraftsnepal.com",
+        "tagline": "Plataforma de redacción de declaraciones de propósito y documentación académica con más de 2,500 postulantes exitosos.",
+        "tech": ["Plataforma Web", "Flujo de Consulta", "Embudo de Clientes", "Motor SEO"]
+      },
+      "setu": {
+        "title": "Setu",
+        "category": "Crowdfunding e Impacto Social",
+        "domain": "setu.org.np",
+        "tagline": "La primera plataforma unificada de donaciones de Nepal que conecta donantes con campañas médicas y comunitarias.",
+        "tech": ["Next.js", "Pasarela de Pagos", "Gestión de Campañas", "Arquitectura Cloud"]
+      }
+    }
+  },
   "process": {
     "eyebrow": "Cómo trabajamos",
     "title": "Cómo trabajamos",
@@ -173,6 +217,7 @@
   "blogsSection": {
     "eyebrow": "Ideas y Perspectivas",
     "title": "Nuestros últimos blogs",
+    "highlightWords": ["últimos", "blogs"],
     "subtitle": "Perspectivas prácticas sobre ingeniería de software, productos digitales, automatización y flujos de trabajo.",
     "viewAll": "Explorar todos los artículos"
   },

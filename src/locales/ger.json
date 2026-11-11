@@ -124,6 +124,50 @@
       }
     }
   },
+  "projectsSection": {
+    "eyebrow": "Ausgewählte Arbeiten",
+    "title": "Echte Produkte für geschäftliches Wachstum entwickelt.",
+    "highlightWords": ["Produkte", "entwickelt"],
+    "subtitle": "Entdecken Sie moderne Webplattformen, Marktplätze und SaaS-Tools, die mit Präzision und sauberer Architektur entwickelt wurden.",
+    "viewProject": "Live-Plattform",
+    "items": {
+      "tailr": {
+        "title": "Tailr",
+        "category": "KI-Karriereplattform",
+        "domain": "tailr.shubhamrajpandey.com.np",
+        "tagline": "All-in-One-Arbeitsbereich für maßgeschneiderte Lebensläufe, Bewerbungs-Tracking und KI-Workflows.",
+        "tech": ["Next.js", "KI-Integration", "TypeScript", "Tailwind CSS"]
+      },
+      "booksansar": {
+        "title": "BookSansar",
+        "category": "E-Commerce-Marktplatz",
+        "domain": "booksansar.com",
+        "tagline": "Nepals führender Online-Buchmarktplatz, der Leser, Autoren und unabhängige Verkäufer verbindet.",
+        "tech": ["React", "Marktplatz-Engine", "Sichere Kasse", "Such-API"]
+      },
+      "dhune": {
+        "title": "Dhune.np",
+        "category": "On-Demand-Dienste",
+        "domain": "dhune.np",
+        "tagline": "Intelligenter Wäsche-Marktplatz, der Kunden mit geprüften Anbietern und Auftragsverfolgung verbindet.",
+        "tech": ["Web & Mobile App", "Echtzeit-Tracking", "Anbieterportal", "API-Gateway"]
+      },
+      "sopdraft": {
+        "title": "SOPdrafts Nepal",
+        "category": "EdTech & Dokumentation",
+        "domain": "sopdraftsnepal.com",
+        "tagline": "Plattform für akademische Bewerbungsunterlagen und Motivationsschreiben, der über 2.500 Bewerber vertrauen.",
+        "tech": ["Webplattform", "Beratungsworkflow", "Lead-Funnel", "SEO-Engine"]
+      },
+      "setu": {
+        "title": "Setu",
+        "category": "Crowdfunding & Soziale Wirkung",
+        "domain": "setu.org.np",
+        "tagline": "Nepals erste einheitliche Spendenplattform, die Spender mit Notfall-, medizinischen und Community-Kampagnen verbindet.",
+        "tech": ["Next.js", "Zahlungsgateway", "Kampagnenverwaltung", "Cloud-Architektur"]
+      }
+    }
+  },
   "process": {
     "eyebrow": "Arbeitsweise",
     "title": "Wie wir arbeiten",
@@ -173,6 +217,7 @@
   "blogsSection": {
     "eyebrow": "Ideen & Einblicke",
     "title": "Unsere neuesten Blogs",
+    "highlightWords": ["neuesten", "Blogs"],
     "subtitle": "Praxisnahe Perspektiven zu Software-Engineering, digitalen Produkten, Automatisierung und Workflows.",
     "viewAll": "Alle Artikel ansehen"
   },

@@ -125,6 +125,50 @@
       }
     }
   },
+  "projectsSection": {
+    "eyebrow": "Selected Work",
+    "title": "Real products engineered for business growth.",
+    "highlightWords": ["products", "engineered"],
+    "subtitle": "Explore live web platforms, marketplaces, and SaaS tools crafted with precision, clean code, and scalable architecture.",
+    "viewProject": "Live Platform",
+    "items": {
+      "tailr": {
+        "title": "Tailr",
+        "category": "AI Career Platform",
+        "domain": "tailr.shubhamrajpandey.com.np",
+        "tagline": "All-in-one workspace for tailored resumes, application tracking, and AI-driven career workflows.",
+        "tech": ["Next.js", "AI Integration", "TypeScript", "Tailwind CSS"]
+      },
+      "booksansar": {
+        "title": "BookSansar",
+        "category": "E-Commerce Marketplace",
+        "domain": "booksansar.com",
+        "tagline": "Nepal's premier online book marketplace connecting readers, authors, and independent sellers.",
+        "tech": ["React", "Marketplace Engine", "Secure Checkout", "Search API"]
+      },
+      "dhune": {
+        "title": "Dhune.np",
+        "category": "On-Demand Services",
+        "domain": "dhune.np",
+        "tagline": "Smart laundry marketplace connecting customers with verified vendors, order tracking, and vendor portals.",
+        "tech": ["Web & Mobile App", "Real-Time Tracking", "Vendor Portal", "API Gateway"]
+      },
+      "sopdraft": {
+        "title": "SOPdrafts Nepal",
+        "category": "EdTech & Documentation",
+        "domain": "sopdraftsnepal.com",
+        "tagline": "High-conversion statement of purpose and academic documentation platform trusted by 2,500+ applicants.",
+        "tech": ["Web Platform", "Consultation Workflow", "Lead Funnel", "SEO Engine"]
+      },
+      "setu": {
+        "title": "Setu",
+        "category": "Crowdfunding & Social Impact",
+        "domain": "setu.org.np",
+        "tagline": "Nepal's first unified donation platform connecting donors with emergency, medical, and community campaigns.",
+        "tech": ["Next.js", "Payment Gateway", "Campaign Management", "Cloud Architecture"]
+      }
+    }
+  },
   "process": {
     "eyebrow": "How We Work",
     "title": "How we work",
@@ -174,6 +218,7 @@
   "blogsSection": {
     "eyebrow": "Ideas & Insights",
     "title": "Our Latest Blogs",
+    "highlightWords": ["Latest", "Blogs"],
     "subtitle": "Practical perspectives on software engineering, digital products, automation, and tech workflows.",
     "viewAll": "Explore all articles"
   },

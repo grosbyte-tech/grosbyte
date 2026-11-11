@@ -3,6 +3,7 @@ import {
   AboutSection,
   ServicesSection,
 } from "@/components/sections/content-sections";
+import { ProjectsSection } from "@/components/sections/projects-section";
 import { BlogSection } from "@/components/sections/blog-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { ProcessSection } from "@/components/sections/process-section";
@@ -18,6 +19,7 @@ export default async function Home() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
+      <ProjectsSection />
       <ProcessSection />
       <BlogSection posts={posts} />
     </main>

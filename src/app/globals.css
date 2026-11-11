@@ -381,6 +381,216 @@ a {
   color: #38bdf8 !important;
 }
 
+/* ========================================================
+   Services Mega Menu Styles (Light, Dark & How-We-Work)
+   ======================================================== */
+
+.mega-menu-panel {
+  transition: all 0.25s ease;
+}
+
+.mega-menu-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.03);
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.mega-menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+  border-color: rgba(9, 102, 250, 0.28);
+  background: #ffffff;
+}
+
+.mega-menu-card .mega-menu-icon-box {
+  background: rgba(9, 102, 250, 0.08);
+  border: 1px solid rgba(9, 102, 250, 0.16);
+  color: #0966fa;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.mega-menu-card:hover .mega-menu-icon-box {
+  background: rgba(9, 102, 250, 0.12);
+  border-color: rgba(9, 102, 250, 0.3);
+  color: #0966fa;
+  transform: scale(1.06);
+}
+
+.mega-menu-card .mega-menu-icon-box svg {
+  transition: transform 0.25s ease;
+}
+
+.mega-menu-card:hover .mega-menu-icon-box svg {
+  transform: scale(1.06);
+}
+
+.mega-menu-card .mega-menu-arrow-box {
+  background: rgba(241, 245, 249, 0.85);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  color: #94a3b8;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.mega-menu-card:hover .mega-menu-arrow-box {
+  background: rgba(9, 102, 250, 0.08);
+  border-color: rgba(9, 102, 250, 0.24);
+  color: #0966fa;
+  transform: translate(2px, -2px);
+}
+
+.mega-menu-card .mega-menu-item-title {
+  color: #0f172a;
+  transition: color 0.2s ease;
+}
+
+.mega-menu-card:hover .mega-menu-item-title {
+  color: #0966fa;
+}
+
+.mega-menu-card .mega-menu-item-desc {
+  color: #64748b;
+  transition: color 0.2s ease;
+}
+
+/* Services Mega Menu in How We Work Dark Theme */
+.site-header.in-how-we-work .mega-menu-panel {
+  background: rgba(6, 10, 20, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  box-shadow:
+    0 24px 60px -15px rgba(0, 0, 0, 0.9),
+    0 0 32px -4px rgba(9, 102, 250, 0.28) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+}
+
+.site-header.in-how-we-work .mega-menu-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.site-header.in-how-we-work .mega-menu-card:hover {
+  background: rgba(9, 102, 250, 0.1) !important;
+  border-color: rgba(9, 102, 250, 0.4) !important;
+  box-shadow:
+    0 16px 36px -8px rgba(0, 0, 0, 0.8),
+    0 0 24px -4px rgba(9, 102, 250, 0.3) !important;
+  transform: translateY(-4px) !important;
+}
+
+.site-header.in-how-we-work .mega-menu-item-title {
+  color: #ffffff !important;
+}
+
+.site-header.in-how-we-work .mega-menu-card:hover .mega-menu-item-title {
+  color: #38bdf8 !important;
+}
+
+.site-header.in-how-we-work .mega-menu-item-desc {
+  color: #94a3b8 !important;
+}
+
+.site-header.in-how-we-work .mega-menu-icon-box {
+  background: rgba(9, 102, 250, 0.18) !important;
+  border-color: rgba(9, 102, 250, 0.35) !important;
+  color: #38bdf8 !important;
+}
+
+.site-header.in-how-we-work .mega-menu-card:hover .mega-menu-icon-box {
+  background: rgba(9, 102, 250, 0.3) !important;
+  border-color: rgba(9, 102, 250, 0.55) !important;
+  color: #38bdf8 !important;
+  box-shadow: 0 0 16px rgba(9, 102, 250, 0.35) !important;
+  transform: scale(1.06) !important;
+}
+
+.site-header.in-how-we-work .mega-menu-arrow-box {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #94a3b8 !important;
+}
+
+.site-header.in-how-we-work .mega-menu-card:hover .mega-menu-arrow-box {
+  background: rgba(9, 102, 250, 0.25) !important;
+  border-color: rgba(9, 102, 250, 0.45) !important;
+  color: #38bdf8 !important;
+  transform: translate(2px, -2px) !important;
+}
+
+/* Services Mega Menu in General Dark Mode */
+html:not(.light) .mega-menu-panel {
+  background: #0b1120;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+html:not(.light) .mega-menu-card {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+html:not(.light) .mega-menu-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(9, 102, 250, 0.35);
+  box-shadow:
+    0 16px 36px -8px rgba(0, 0, 0, 0.7),
+    0 0 24px -4px rgba(9, 102, 250, 0.2);
+}
+
+html:not(.light) .mega-menu-item-title {
+  color: #ffffff;
+}
+
+html:not(.light) .mega-menu-card:hover .mega-menu-item-title {
+  color: #38bdf8;
+}
+
+html:not(.light) .mega-menu-item-desc {
+  color: #94a3b8;
+}
+
+html:not(.light) .mega-menu-icon-box {
+  background: rgba(9, 102, 250, 0.16);
+  border-color: rgba(9, 102, 250, 0.3);
+  color: #38bdf8;
+}
+
+html:not(.light) .mega-menu-card:hover .mega-menu-icon-box {
+  background: rgba(9, 102, 250, 0.28);
+  border-color: rgba(9, 102, 250, 0.5);
+  color: #38bdf8;
+  transform: scale(1.06);
+}
+
+html:not(.light) .mega-menu-arrow-box {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+}
+
+html:not(.light) .mega-menu-card:hover .mega-menu-arrow-box {
+  background: rgba(9, 102, 250, 0.22);
+  border-color: rgba(9, 102, 250, 0.45);
+  color: #38bdf8;
+  transform: translate(2px, -2px);
+}
+
 @media (max-width: 768px) {
   .site-header {
     top: 0;
@@ -758,11 +968,19 @@ html.light .nav-links a.active {
   padding-top: clamp(1.5rem, 2.5vw, 2.25rem);
 }
 
-.about-section .section-heading {
+.about-section .section-heading,
+.services-section .section-heading,
+.projects-section .section-heading,
+.blog-section .section-heading,
+.contact-section .section-heading {
   max-width: 650px;
 }
 
-.about-section .section-heading h2 {
+.about-section .section-heading h2,
+.services-section .section-heading h2,
+.projects-section .section-heading h2,
+.blog-section .section-heading h2,
+.contact-section .section-heading h2 {
   max-width: 620px;
   font-size: clamp(1.9rem, 3.4vw, 2.75rem);
 }
@@ -906,15 +1124,6 @@ html:not(.light) .about-image:hover img {
   background: var(--background-deep);
 }
 
-.services-section .section-heading {
-  max-width: 650px;
-}
-
-.services-section .section-heading h2 {
-  max-width: 620px;
-  font-size: clamp(1.9rem, 3.4vw, 2.75rem);
-}
-
 .services-grid-wrapper {
   position: relative;
   margin-top: var(--section-gap-content);
@@ -935,13 +1144,49 @@ html:not(.light) .about-image:hover img {
   border: 1px solid var(--border);
   border-radius: 0;
   background: var(--surface);
-  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.03);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease;
 }
 
 html.light .service-card {
   background: #ffffff;
   border-color: rgba(226, 232, 240, 0.95);
-  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.03);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+}
+
+html.light .service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+  border-color: rgba(203, 213, 225, 0.95);
+}
+
+html:not(.light) .service-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+html:not(.light) .service-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 16px 36px -8px rgba(0, 0, 0, 0.7),
+    0 0 24px -4px rgba(9, 102, 250, 0.25);
+  border-color: rgba(9, 102, 250, 0.4);
+}
+
+.service-card:hover .service-card-title-link {
+  color: var(--brand-blue);
+}
+
+.service-card:hover .service-card-cta {
+  color: var(--brand-blue-hover);
+  gap: 0.75rem;
 }
 
 .service-card-header {
@@ -970,6 +1215,11 @@ html.light .service-card {
 .service-card-icon svg {
   width: 22px;
   height: 22px;
+  transition: transform 0.25s ease;
+}
+
+.service-card:hover .service-card-icon svg {
+  transform: scale(1.08);
 }
 
 .service-card-title {
@@ -1093,6 +1343,139 @@ html.light .service-card {
     transform: none !important;
     animation: none !important;
     pointer-events: auto !important;
+  }
+}
+
+/* ========================================================
+   Projects Vertical Animated Flow (Marquee)
+   ======================================================== */
+
+.projects-section {
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-flow-container {
+  position: relative;
+  margin-top: var(--section-gap-content);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  height: clamp(520px, 66vh, 680px);
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+}
+
+.projects-flow-col {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+}
+
+.projects-flow-track {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  will-change: transform;
+}
+
+.projects-col-1 .projects-flow-track {
+  animation: scrollUp 40s linear infinite;
+}
+
+.projects-col-2 .projects-flow-track {
+  animation: scrollDown 46s linear infinite;
+}
+
+.projects-col-3 .projects-flow-track {
+  animation: scrollUp 36s linear infinite;
+}
+
+.projects-flow-container:hover .projects-flow-track {
+  animation-play-state: paused;
+}
+
+.project-flow-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease;
+}
+
+.project-flow-card:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.09);
+  border-color: rgba(9, 102, 250, 0.32);
+}
+
+html:not(.light) .project-flow-card {
+  background: #0b1120;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+html:not(.light) .project-flow-card:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow:
+    0 16px 36px -8px rgba(0, 0, 0, 0.7),
+    0 0 24px -4px rgba(9, 102, 250, 0.25);
+  border-color: rgba(9, 102, 250, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .projects-flow-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    height: 560px;
+  }
+  .projects-flow-col:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-flow-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    height: 500px;
+  }
+  .projects-flow-col:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projects-flow-track {
+    animation: none !important;
+  }
+  .projects-flow-container {
+    overflow-y: auto;
+    mask-image: none;
+    -webkit-mask-image: none;
   }
 }
 
