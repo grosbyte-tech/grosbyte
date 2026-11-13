@@ -43,16 +43,16 @@ export function ServicesMegaMenu({
       aria-label="Services navigation menu"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={`absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[min(1040px,calc(100vw-2rem))] z-50 transition-all duration-200 origin-top pointer-events-auto ${
+      className={`absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[min(980px,calc(100vw-2rem))] z-50 transition-all duration-200 origin-top pointer-events-auto ${
         isOpen
           ? "opacity-100 translate-y-0 visible"
           : "opacity-0 -translate-y-2 invisible pointer-events-none"
       }`}
     >
-      <div className="bg-white rounded-2xl border border-slate-200/90 shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden">
-        {/* Services Grid (3 Columns x 2 Rows) */}
-        <div className="p-4 sm:p-6 lg:p-7">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3.5">
+      <div className="mega-menu-panel bg-white rounded-2xl border border-slate-200/90 shadow-[0_20px_50px_rgba(0,0,0,0.12)]">
+        {/* Services Grid (3 Columns) */}
+        <div className="p-4 sm:p-5 lg:p-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
             {items.map((service) => (
               <MegaMenuItem key={service.id} item={service} onClick={onClose} />
             ))}

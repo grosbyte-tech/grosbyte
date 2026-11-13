@@ -1,11 +1,8 @@
 import type { ComponentType } from "react";
 import {
   Blocks,
-  Bot,
   Megaphone,
-  PanelsTopLeft,
   Smartphone,
-  SwatchBook,
   type LucideIcon,
 } from "lucide-react";
 
@@ -61,57 +58,17 @@ export const services = [
     icon: Blocks,
   },
   {
-    title: "Web Platforms and E-commerce",
+    title: "Web, Mobile Application Development",
     description:
-      "Secure, scalable, and responsive web platforms designed around customers, teams, transactions, and business requirements.",
+      "High-performance web platforms and cross-platform mobile applications engineered for reliability, user engagement, and scale.",
     keywords: [
-      "E-commerce",
-      "SaaS Platforms",
-      "Customer Portals",
-      "Booking Systems",
-      "Admin Dashboards",
-    ],
-    icon: PanelsTopLeft,
-  },
-  {
-    title: "Mobile Application Development",
-    description:
-      "Cross-platform mobile applications built for customers, teams, services, and business-critical workflows.",
-    keywords: [
+      "Web Platforms",
       "React Native",
       "Expo",
       "Mobile Commerce",
-      "Push Notifications",
       "API Integration",
     ],
     icon: Smartphone,
-  },
-  {
-    title: "AI Automation and Data Analysis",
-    description:
-      "Practical AI integrations and automation systems that reduce repetitive work, improve access to information, and support better decisions.",
-    keywords: [
-      "AI Assistants",
-      "RAG Systems",
-      "Process Automation",
-      "Data Preprocessing",
-      "Model Training",
-      "Document Processing",
-    ],
-    icon: Bot,
-  },
-  {
-    title: "UI/UX and Product Design",
-    description:
-      "Clear, accessible, and user-focused interfaces designed around business goals, real users, and meaningful digital experiences.",
-    keywords: [
-      "UX Research",
-      "Interface Design",
-      "Wireframing",
-      "Prototyping",
-      "Design Systems",
-    ],
-    icon: SwatchBook,
   },
   {
     title: "Digital Marketing and Brand Growth",

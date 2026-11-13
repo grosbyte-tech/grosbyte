@@ -27,6 +27,7 @@
   "about": {
     "eyebrow": "Über uns",
     "title": "Ein Technologiepartner, der sich auf praktische Geschäftsergebnisse konzentriert.",
+    "highlightWords": ["Technologiepartner", "Geschäftsergebnisse"],
     "imageAlt": "Zwei Fachleute überprüfen einen digitalen Produktplan",
     "p1": "Grosbyte Technologies hilft Unternehmen bei der Planung, dem Entwurf, dem Aufbau und der Verbesserung ihrer digitalen Präsenz. Wir kombinieren Softwareentwicklung, Produktdesign, intelligente Automatisierung und digitale Wachstumsstrategien, um Lösungen zu schaffen, die echte Geschäftsziele unterstützen.",
     "p2": "Vom ersten digitalen Produkt eines Unternehmens bis hin zu maßgeschneiderter Software für den täglichen Betrieb konzentrieren wir uns auf Benutzerfreundlichkeit, Wartbarkeit, klare Kommunikation und langfristigen Wert.",
@@ -39,7 +40,9 @@
   "services": {
     "eyebrow": "Dienstleistungen",
     "title": "Praktische Expertise für Ihr digitales Unternehmen.",
-    "description": "Fokussierte Dienstleistungen, die Produktentwicklung, intelligente Automatisierung, Benutzererfahrung und digitales Wachstum in einem praktischen Ansatz vereinen. Wir helfen dabei, Ideen und geschäftliche Herausforderungen in zuverlässige, benutzerfreundliche Lösungen zu verwandeln, die einfacher zu starten, zu verwalten und zu skalieren sind – ohne unnötige Komplexität hinzuzufügen.",
+    "highlightWords": ["Expertise", "digitales", "Unternehmen"],
+    "description": "Wir verwandeln geschäftliche Herausforderungen in zuverlässige digitale Produkte, intelligente Automatisierung und skalierbare Softwarelösungen.",
+    "explore": "Service erkunden",
     "list": {
       "customSoftware": {
         "title": "Maßgeschneiderte Softwareentwicklung",
@@ -50,6 +53,17 @@
           "Dashboards",
           "API-Integration",
           "Business-Tools"
+        ]
+      },
+      "webMobileApp": {
+        "title": "Web, Mobile Application Development",
+        "description": "Leistungsstarke Webplattformen und plattformübergreifende mobile Anwendungen, entwickelt für Zuverlässigkeit, Benutzerbindung und Skalierbarkeit.",
+        "keywords": [
+          "Webplattformen",
+          "React Native",
+          "Expo",
+          "Mobile Commerce",
+          "API-Integration"
         ]
       },
       "webPlatforms": {
@@ -110,10 +124,55 @@
       }
     }
   },
+  "projectsSection": {
+    "eyebrow": "Ausgewählte Arbeiten",
+    "title": "Echte Produkte für geschäftliches Wachstum entwickelt.",
+    "highlightWords": ["Produkte", "entwickelt"],
+    "subtitle": "Entdecken Sie moderne Webplattformen, Marktplätze und SaaS-Tools, die mit Präzision und sauberer Architektur entwickelt wurden.",
+    "viewProject": "Live-Plattform",
+    "items": {
+      "tailr": {
+        "title": "Tailr",
+        "category": "KI-Karriereplattform",
+        "domain": "tailr.shubhamrajpandey.com.np",
+        "tagline": "All-in-One-Arbeitsbereich für maßgeschneiderte Lebensläufe, Bewerbungs-Tracking und KI-Workflows.",
+        "tech": ["Next.js", "KI-Integration", "TypeScript", "Tailwind CSS"]
+      },
+      "booksansar": {
+        "title": "BookSansar",
+        "category": "E-Commerce-Marktplatz",
+        "domain": "booksansar.com",
+        "tagline": "Nepals führender Online-Buchmarktplatz, der Leser, Autoren und unabhängige Verkäufer verbindet.",
+        "tech": ["React", "Marktplatz-Engine", "Sichere Kasse", "Such-API"]
+      },
+      "dhune": {
+        "title": "Dhune.np",
+        "category": "On-Demand-Dienste",
+        "domain": "dhune.np",
+        "tagline": "Intelligenter Wäsche-Marktplatz, der Kunden mit geprüften Anbietern und Auftragsverfolgung verbindet.",
+        "tech": ["Web & Mobile App", "Echtzeit-Tracking", "Anbieterportal", "API-Gateway"]
+      },
+      "sopdraft": {
+        "title": "SOPdrafts Nepal",
+        "category": "EdTech & Dokumentation",
+        "domain": "sopdraftsnepal.com",
+        "tagline": "Plattform für akademische Bewerbungsunterlagen und Motivationsschreiben, der über 2.500 Bewerber vertrauen.",
+        "tech": ["Webplattform", "Beratungsworkflow", "Lead-Funnel", "SEO-Engine"]
+      },
+      "setu": {
+        "title": "Setu",
+        "category": "Crowdfunding & Soziale Wirkung",
+        "domain": "setu.org.np",
+        "tagline": "Nepals erste einheitliche Spendenplattform, die Spender mit Notfall-, medizinischen und Community-Kampagnen verbindet.",
+        "tech": ["Next.js", "Zahlungsgateway", "Kampagnenverwaltung", "Cloud-Architektur"]
+      }
+    }
+  },
   "process": {
     "eyebrow": "Arbeitsweise",
-    "title": "So arbeitet unser Softwareentwicklungsteam",
-    "description": "Von der ersten Idee bis zum Start arbeiten wir mit Ihrem Team in kurzen agilen Zyklen: Wir priorisieren wichtige Funktionen, zeigen lauffähige Software und passen uns Ihrem Feedback an.",
+    "title": "Wie wir arbeiten",
+    "highlightWords": ["wir", "arbeiten"],
+    "description": "Erfahren Sie, wie wir geschäftliche Herausforderungen in zuverlässige Software, leistungsstarke Web- und mobile Plattformen und messbares digitales Wachstum verwandeln.",
     "steps": {
       "discover": {
         "title": "Entdecken",
@@ -154,6 +213,13 @@
       "description": "Wir verwandeln Ihre Unternehmensziele durch agile Umsetzung, enge Zusammenarbeit und messbare Ergebnisse in zuverlässige digitale Produkte und wirkungsvolle Wachstumskampagnen."
     },
     "teamLabel": "Softwareentwicklung"
+  },
+  "blogsSection": {
+    "eyebrow": "Ideen & Einblicke",
+    "title": "Unsere neuesten Blogs",
+    "highlightWords": ["neuesten", "Blogs"],
+    "subtitle": "Praxisnahe Perspektiven zu Software-Engineering, digitalen Produkten, Automatisierung und Workflows.",
+    "viewAll": "Alle Artikel ansehen"
   },
   "contact": {
     "eyebrow": "Kontakt",

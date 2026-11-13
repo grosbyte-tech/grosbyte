@@ -4,28 +4,24 @@ import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { FoldingText } from "@/components/ui/folding-text";
 import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
 import { AnimatedCounter } from "@/components/motion/counter";
+import { Button } from "@/components/ui/button";
 import { services } from "@/lib/site-data";
 import { useTranslation } from "@/contexts/language-context";
 
 const serviceKeys: Record<string, string> = {
   "Custom Software Development": "customSoftware",
-  "Web Platforms and E-commerce": "webPlatforms",
-  "Mobile Application Development": "mobileApp",
-  "AI Automation and Data Analysis": "aiAutomation",
-  "UI/UX and Product Design": "uiuxDesign",
+  "Web, Mobile Application Development": "webMobileApp",
   "Digital Marketing and Brand Growth": "digitalMarketing",
 };
 
 const serviceRoutes: Record<string, string> = {
   "Custom Software Development": "/custom-software-development",
-  "Web Platforms and E-commerce": "/services/website-ecommerce-development",
-  "Mobile Application Development": "/services/web-mobile-applications",
-  "AI Automation and Data Analysis": "/services/ai-automation-integrations",
-  "UI/UX and Product Design": "/services/branding-design",
+  "Web, Mobile Application Development": "/services/web-mobile-applications",
   "Digital Marketing and Brand Growth": "/services/digital-marketing",
 };
 
@@ -46,37 +42,54 @@ function getMobileServerSnapshot() {
 export function AboutSection() {
   const { t } = useTranslation();
   const statistics = [
-    { value: "6", label: t("about.stats.services") },
+    { value: "3", label: t("about.stats.services") },
     { value: "7", label: t("about.stats.stages") },
     { value: "18+", label: t("about.stats.technologies") },
   ];
+
+  const highlightWords =
+    (t("about.highlightWords") as unknown as string[]) || [
+      "technology",
+      "partner",
+      "outcomes",
+    ];
 
   return (
     <section className="section about-section" id="about">
       <div className="container">
         <Reveal className="section-heading section-heading-centered">
           <p className="eyebrow">{t("about.eyebrow")}</p>
-          <FoldingText as="h2" text={t("about.title")} />
+          <FoldingText
+            as="h2"
+            text={t("about.title")}
+            highlightWords={highlightWords}
+          />
         </Reveal>
         <div className="about-layout">
           <Reveal className="about-image">
+            <div className="about-image-glow" aria-hidden="true" />
             <Image
-              src="/about.png"
+              src="/career-tech.png"
               alt={t("about.imageAlt")}
-              width={1254}
-              height={1254}
-              sizes="(max-width: 820px) calc(100vw - 48px), 430px"
+              width={720}
+              height={463}
+              sizes="(max-width: 820px) calc(100vw - 48px), 500px"
             />
           </Reveal>
           <Reveal className="about-copy" delay={0.06}>
             <p>{t("about.p1")}</p>
             <p>{t("about.p2")}</p>
-            <Link
-              href="/about"
-              className="inline-flex min-h-11 items-center font-semibold text-[var(--brand-blue-hover)] hover:underline underline-offset-4"
-            >
-              {t("phase1.learnAbout")} →
-            </Link>
+            <div className="about-cta-row">
+              <Button
+                href="/about"
+                variant="outline"
+                size="default"
+                className="rounded-full px-6 py-2.5 inline-flex items-center gap-2 group font-semibold text-sm border-slate-300 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all shadow-sm"
+              >
+                <span>{t("phase1.learnAbout") || "Get to know Grosbyte"}</span>
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </div>
             <Reveal className="statistics-grid" delay={0.08}>
               {statistics.map((statistic, idx) => (
                 <div className="statistic" key={statistic.label}>
@@ -102,14 +115,13 @@ function ServiceCard({
   index,
   translatedTitle,
   translatedDescription,
-  translatedKeywords,
 }: {
   service: (typeof services)[number];
   index: number;
   translatedTitle: string;
   translatedDescription: string;
-  translatedKeywords: string[];
 }) {
+  const { t } = useTranslation();
   const isMobile = useSyncExternalStore(
     subscribeToMobile,
     getMobileSnapshot,
@@ -195,15 +207,37 @@ function ServiceCard({
       }}
       style={!isMobile && desktopSettled ? { transform: "none" } : undefined}
     >
-      <Icon aria-hidden="true" />
-      <h3>
-        <Link href={serviceRoutes[service.title]}>{translatedTitle}</Link>
+      <div className="service-card-header">
+        <span className="service-card-num" aria-hidden="true">
+          0{index + 1}
+        </span>
+        <div className="service-card-icon" aria-hidden="true">
+          <Icon />
+        </div>
+      </div>
+
+      <h3 className="service-card-title">
+        <Link
+          href={serviceRoutes[service.title]}
+          className="service-card-title-link"
+        >
+          {translatedTitle}
+        </Link>
       </h3>
-      <p>{translatedDescription}</p>
-      <div className="service-keywords">
-        {translatedKeywords.map((keyword) => (
-          <span key={keyword}>{keyword}</span>
-        ))}
+      <p className="service-card-desc">{translatedDescription}</p>
+
+      <div className="service-card-footer">
+        <Link
+          href={serviceRoutes[service.title]}
+          className="service-card-cta"
+        >
+          <span>
+            {t("services.explore") !== "services.explore"
+              ? t("services.explore")
+              : "Explore service"}
+          </span>
+          <ArrowRight className="w-4 h-4" aria-hidden="true" />
+        </Link>
       </div>
     </motion.div>
   );
@@ -212,12 +246,23 @@ function ServiceCard({
 export function ServicesSection() {
   const { t } = useTranslation();
 
+  const highlightWords =
+    (t("services.highlightWords") as unknown as string[]) || [
+      "expertise",
+      "digital",
+      "business",
+    ];
+
   return (
     <section className="section services-section" id="services">
       <div className="container">
         <Reveal className="section-heading section-heading-centered">
           <p className="eyebrow">{t("services.eyebrow")}</p>
-          <FoldingText as="h2" text={t("services.title")} />
+          <FoldingText
+            as="h2"
+            text={t("services.title")}
+            highlightWords={highlightWords}
+          />
           <AnimatedParagraph text={t("services.description")} delay={0.25} />
         </Reveal>
         <div className="services-grid-wrapper">
@@ -228,9 +273,6 @@ export function ServicesSection() {
               const translatedDescription = t(
                 `services.list.${key}.description`,
               );
-              const translatedKeywords = t(
-                `services.list.${key}.keywords`,
-              ) as string[];
 
               return (
                 <ServiceCard
@@ -239,7 +281,6 @@ export function ServicesSection() {
                   index={index}
                   translatedTitle={translatedTitle}
                   translatedDescription={translatedDescription}
-                  translatedKeywords={translatedKeywords}
                 />
               );
             })}

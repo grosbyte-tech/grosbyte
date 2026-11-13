@@ -240,7 +240,7 @@
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: rgba(9, 102, 250, 0.08);
+  background: transparent;
   color: var(--brand-blue, #0966fa);
   display: flex;
   align-items: center;
@@ -249,8 +249,9 @@
   transition: all 0.2s ease;
 }
 .contact-method-card:not(.contact-method-static):hover .contact-method-icon {
-  background: var(--brand-blue, #0966fa);
-  color: #ffffff;
+  background: transparent;
+  color: var(--brand-blue, #0966fa);
+  transform: scale(1.08);
 }
 .contact-method-info {
   display: flex;
@@ -373,9 +374,19 @@
   color: var(--text-secondary, #475569);
 }
 .enquiry-form {
-  border-top: 2px solid var(--editorial-link);
+  position: relative;
   padding-top: 26px;
   min-width: 0;
+}
+.enquiry-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #0966fa 0%, #00a8ff 55%, #00d2ff 100%);
+  border-radius: 9999px;
 }
 .enquiry-form > p {
   margin: 14px 0 24px;

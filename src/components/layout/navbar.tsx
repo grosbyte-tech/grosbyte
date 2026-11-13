@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import {
   Home,
   Info,
@@ -27,6 +27,27 @@ const icons = {
   "/blogs": BookOpen,
 } as const;
 
+function subscribeToHowWeWork(callback: () => void) {
+  window.addEventListener("scroll", callback, { passive: true });
+  window.addEventListener("resize", callback, { passive: true });
+  return () => {
+    window.removeEventListener("scroll", callback);
+    window.removeEventListener("resize", callback);
+  };
+}
+
+function getHowWeWorkSnapshot() {
+  if (typeof window === "undefined") return false;
+  const section = document.getElementById("how-we-work");
+  if (!section) return false;
+  const rect = section.getBoundingClientRect();
+  return rect.top <= 80 && rect.bottom >= 80;
+}
+
+function getHowWeWorkServerSnapshot() {
+  return false;
+}
+
 export function Navbar() {
   const pathname = usePathname();
   const resolveHref = (href: string) =>
@@ -35,6 +56,12 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const isHowWeWorkVisible = useSyncExternalStore(
+    subscribeToHowWeWork,
+    getHowWeWorkSnapshot,
+    getHowWeWorkServerSnapshot,
+  );
+  const isInHowWeWork = pathname === "/" && isHowWeWorkVisible;
   const [prevPathname, setPrevPathname] = useState(pathname);
   const closeTimerRef = useRef<NodeJS.Timeout | null>(null);
   const { t } = useTranslation();
@@ -127,7 +154,11 @@ export function Navbar() {
 
   return (
     <>
-      <header className={`site-header ${isScrolled ? "is-scrolled" : ""}`}>
+      <header
+        className={`site-header ${isScrolled ? "is-scrolled" : ""} ${
+          isInHowWeWork ? "in-how-we-work" : ""
+        }`}
+      >
         <nav className="nav-shell relative" aria-label="Main navigation">
           <Link
             className="brand"

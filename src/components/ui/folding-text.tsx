@@ -184,9 +184,22 @@ export function FoldingText({
         style={style}
         {...restProps}
       >
-        {computedLines.map((line, idx) => (
-          <span key={`reduced-${idx}`} className={alignClass}>
-            {line}
+        {processedLines.map((lineWords, lineIdx) => (
+          <span
+            key={`reduced-${lineIdx}`}
+            className={cn(
+              "inline-flex flex-wrap items-center gap-x-[0.3em]",
+              alignClass,
+            )}
+          >
+            {lineWords.map((wordData, wordIdx) => (
+              <span
+                key={`reduced-${lineIdx}-${wordIdx}`}
+                className={cn(wordData.isHighlighted && highlightClassName)}
+              >
+                {wordData.word}
+              </span>
+            ))}
           </span>
         ))}
       </Tag>
@@ -408,34 +421,38 @@ export function FoldingText({
                       wordData.isHighlighted && highlightClassName,
                     )}
                   >
-                    {/* Dynamic 3D Paper Crease Shadow Overlay: Fades as it unfolds flat */}
-                    <motion.span
-                      aria-hidden="true"
-                      initial={{ opacity: 0.65 }}
-                      animate={isInView ? { opacity: 0 } : { opacity: 0.65 }}
-                      transition={{
-                        duration: 0.45,
-                        delay: itemDelay + 0.06,
-                        ease: "easeOut",
-                      }}
-                      className={cn(
-                        "pointer-events-none absolute inset-0 rounded-xs",
-                        direction === "down"
-                          ? "bg-gradient-to-b from-black/45 via-black/15 to-transparent"
-                          : "bg-gradient-to-t from-black/45 via-black/15 to-transparent",
-                      )}
-                    />
+                    {!wordData.isHighlighted && (
+                      <>
+                        {/* Dynamic 3D Paper Crease Shadow Overlay: Fades as it unfolds flat */}
+                        <motion.span
+                          aria-hidden="true"
+                          initial={{ opacity: 0.65 }}
+                          animate={isInView ? { opacity: 0 } : { opacity: 0.65 }}
+                          transition={{
+                            duration: 0.45,
+                            delay: itemDelay + 0.06,
+                            ease: "easeOut",
+                          }}
+                          className={cn(
+                            "pointer-events-none absolute inset-0 rounded-xs",
+                            direction === "down"
+                              ? "bg-gradient-to-b from-black/45 via-black/15 to-transparent"
+                              : "bg-gradient-to-t from-black/45 via-black/15 to-transparent",
+                          )}
+                        />
 
-                    {/* Subtle Origami Crease Hinge Line */}
-                    <span
-                      aria-hidden="true"
-                      className={cn(
-                        "pointer-events-none absolute left-0 right-0 h-[1.5px] opacity-0 group-hover/fold:opacity-60 transition-opacity duration-300",
-                        direction === "down"
-                          ? "top-0 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"
-                          : "bottom-0 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent",
-                      )}
-                    />
+                        {/* Subtle Origami Crease Hinge Line */}
+                        <span
+                          aria-hidden="true"
+                          className={cn(
+                            "pointer-events-none absolute left-0 right-0 h-[1.5px] opacity-0 group-hover/fold:opacity-60 transition-opacity duration-300",
+                            direction === "down"
+                              ? "top-0 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"
+                              : "bottom-0 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent",
+                          )}
+                        />
+                      </>
+                    )}
 
                     {wordData.word}
                   </motion.span>

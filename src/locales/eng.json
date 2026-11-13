@@ -28,6 +28,7 @@
   "about": {
     "eyebrow": "About Us",
     "title": "A technology partner focused on practical business outcomes.",
+    "highlightWords": ["technology", "partner", "outcomes"],
     "imageAlt": "Two professionals reviewing a digital product plan",
     "p1": "Grosbyte Technologies helps businesses plan, design, build, and improve their digital presence. We combine software engineering, product design, intelligent automation, and digital growth strategies to create solutions that support real business goals.",
     "p2": "From a company's first digital product to custom software supporting daily operations, we focus on usability, maintainability, clear communication, and long-term value.",
@@ -40,7 +41,9 @@
   "services": {
     "eyebrow": "Services",
     "title": "Practical expertise for your digital business.",
-    "description": "Focused services that bring product development, intelligent automation, user experience, and digital growth into one practical approach. We help turn ideas and business challenges into reliable, user-friendly solutions that are easier to launch, manage, and scale—without adding unnecessary complexity.",
+    "highlightWords": ["expertise", "digital", "business"],
+    "description": "We turn business challenges into reliable digital products, intelligent automation, and scalable software solutions.",
+    "explore": "Explore service",
     "list": {
       "customSoftware": {
         "title": "Custom Software Development",
@@ -51,6 +54,17 @@
           "Dashboards",
           "API Integration",
           "Business Tools"
+        ]
+      },
+      "webMobileApp": {
+        "title": "Web, Mobile Application Development",
+        "description": "High-performance web platforms and cross-platform mobile applications engineered for reliability, user engagement, and scale.",
+        "keywords": [
+          "Web Platforms",
+          "React Native",
+          "Expo",
+          "Mobile Commerce",
+          "API Integration"
         ]
       },
       "webPlatforms": {
@@ -111,10 +125,55 @@
       }
     }
   },
+  "projectsSection": {
+    "eyebrow": "Selected Work",
+    "title": "Real products engineered for business growth.",
+    "highlightWords": ["products", "engineered"],
+    "subtitle": "Explore live web platforms, marketplaces, and SaaS tools crafted with precision, clean code, and scalable architecture.",
+    "viewProject": "Live Platform",
+    "items": {
+      "tailr": {
+        "title": "Tailr",
+        "category": "AI Career Platform",
+        "domain": "tailr.shubhamrajpandey.com.np",
+        "tagline": "All-in-one workspace for tailored resumes, application tracking, and AI-driven career workflows.",
+        "tech": ["Next.js", "AI Integration", "TypeScript", "Tailwind CSS"]
+      },
+      "booksansar": {
+        "title": "BookSansar",
+        "category": "E-Commerce Marketplace",
+        "domain": "booksansar.com",
+        "tagline": "Nepal's premier online book marketplace connecting readers, authors, and independent sellers.",
+        "tech": ["React", "Marketplace Engine", "Secure Checkout", "Search API"]
+      },
+      "dhune": {
+        "title": "Dhune.np",
+        "category": "On-Demand Services",
+        "domain": "dhune.np",
+        "tagline": "Smart laundry marketplace connecting customers with verified vendors, order tracking, and vendor portals.",
+        "tech": ["Web & Mobile App", "Real-Time Tracking", "Vendor Portal", "API Gateway"]
+      },
+      "sopdraft": {
+        "title": "SOPdrafts Nepal",
+        "category": "EdTech & Documentation",
+        "domain": "sopdraftsnepal.com",
+        "tagline": "High-conversion statement of purpose and academic documentation platform trusted by 2,500+ applicants.",
+        "tech": ["Web Platform", "Consultation Workflow", "Lead Funnel", "SEO Engine"]
+      },
+      "setu": {
+        "title": "Setu",
+        "category": "Crowdfunding & Social Impact",
+        "domain": "setu.org.np",
+        "tagline": "Nepal's first unified donation platform connecting donors with emergency, medical, and community campaigns.",
+        "tech": ["Next.js", "Payment Gateway", "Campaign Management", "Cloud Architecture"]
+      }
+    }
+  },
   "process": {
     "eyebrow": "How We Work",
-    "title": "How Our Software Development Team Works",
-    "description": "From discovery to launch, we work with your team in short Agile cycles: prioritising useful features, sharing working software, and adapting to feedback as your business grows.",
+    "title": "How we work",
+    "highlightWords": ["we", "work"],
+    "description": "Discover how we turn complex business challenges into reliable software, high-performance web and mobile platforms, and measurable digital growth.",
     "steps": {
       "discover": {
         "title": "Discover",
@@ -155,6 +214,13 @@
       "description": "We turn your business goals into reliable digital products and high-impact growth campaigns through agile execution, close collaboration, and measurable results."
     },
     "teamLabel": "Software Development"
+  },
+  "blogsSection": {
+    "eyebrow": "Ideas & Insights",
+    "title": "Our Latest Blogs",
+    "highlightWords": ["Latest", "Blogs"],
+    "subtitle": "Practical perspectives on software engineering, digital products, automation, and tech workflows.",
+    "viewAll": "Explore all articles"
   },
   "contact": {
     "eyebrow": "Contact Us",

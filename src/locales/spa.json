@@ -27,6 +27,7 @@
   "about": {
     "eyebrow": "Nosotros",
     "title": "Un socio tecnológico enfocado en resultados comerciales prácticos.",
+    "highlightWords": ["socio", "tecnológico", "resultados"],
     "imageAlt": "Dos profesionales revisando un plan de producto digital",
     "p1": "Grosbyte Technologies ayuda a las empresas a planificar, diseñar, crear y mejorar su presencia digital. Combinamos ingeniería de software, diseño de productos, automatización inteligente y estrategias de crecimiento digital para crear soluciones que respalden objetivos comerciales reales.",
     "p2": "Desde el primer producto digital de una empresa hasta el software personalizado que respalda las operaciones diarias, nos enfocamos en la usabilidad, la mantenibilidad, la comunicación clara y el valor a largo plazo.",
@@ -39,7 +40,9 @@
   "services": {
     "eyebrow": "Servicios",
     "title": "Experiencia práctica para tu negocio digital.",
-    "description": "Servicios enfocados que integran el desarrollo de productos, la automatización inteligente, la experiencia del usuario y el crecimiento digital en un enfoque práctico. Ayudamos a transformar ideas y desafíos comerciales en soluciones confiables y fáciles de usar que son más fáciles de lanzar, gestionar y escalar, sin añadir complejidad innecesaria.",
+    "highlightWords": ["Experiencia", "negocio", "digital"],
+    "description": "Transformamos desafíos comerciales en productos digitales confiables, automatización inteligente y soluciones de software escalables.",
+    "explore": "Explorar servicio",
     "list": {
       "customSoftware": {
         "title": "Desarrollo de Software a Medida",
@@ -50,6 +53,17 @@
           "Paneles de Control",
           "Integración de APIs",
           "Herramientas de Negocio"
+        ]
+      },
+      "webMobileApp": {
+        "title": "Web, Mobile Application Development",
+        "description": "Plataformas web de alto rendimiento y aplicaciones móviles multiplataforma diseñadas para la confiabilidad, interacción del usuario y escalabilidad.",
+        "keywords": [
+          "Plataformas Web",
+          "React Native",
+          "Expo",
+          "Comercio Móvil",
+          "Integración de APIs"
         ]
       },
       "webPlatforms": {
@@ -110,10 +124,55 @@
       }
     }
   },
+  "projectsSection": {
+    "eyebrow": "Proyectos Destacados",
+    "title": "Productos reales diseñados para el crecimiento empresarial.",
+    "highlightWords": ["Productos", "diseñados"],
+    "subtitle": "Explora plataformas web, marketplaces y herramientas SaaS creadas con precisión, código limpio y arquitectura escalable.",
+    "viewProject": "Plataforma en Vivo",
+    "items": {
+      "tailr": {
+        "title": "Tailr",
+        "category": "Plataforma de Carrera con IA",
+        "domain": "tailr.shubhamrajpandey.com.np",
+        "tagline": "Espacio de trabajo todo en uno para currículums personalizados, seguimiento de candidaturas y flujos con IA.",
+        "tech": ["Next.js", "Integración IA", "TypeScript", "Tailwind CSS"]
+      },
+      "booksansar": {
+        "title": "BookSansar",
+        "category": "Marketplace de Comercio Electrónico",
+        "domain": "booksansar.com",
+        "tagline": "El principal mercado de libros en línea de Nepal que conecta a lectores, autores y vendedores.",
+        "tech": ["React", "Motor Marketplace", "Pago Seguro", "API de Búsqueda"]
+      },
+      "dhune": {
+        "title": "Dhune.np",
+        "category": "Servicios Bajo Demanda",
+        "domain": "dhune.np",
+        "tagline": "Marketplace inteligente de lavandería que conecta clientes con proveedores verificados y seguimiento de pedidos.",
+        "tech": ["App Web y Móvil", "Seguimiento en Vivo", "Portal de Proveedores", "API Gateway"]
+      },
+      "sopdraft": {
+        "title": "SOPdrafts Nepal",
+        "category": "EdTech y Documentación",
+        "domain": "sopdraftsnepal.com",
+        "tagline": "Plataforma de redacción de declaraciones de propósito y documentación académica con más de 2,500 postulantes exitosos.",
+        "tech": ["Plataforma Web", "Flujo de Consulta", "Embudo de Clientes", "Motor SEO"]
+      },
+      "setu": {
+        "title": "Setu",
+        "category": "Crowdfunding e Impacto Social",
+        "domain": "setu.org.np",
+        "tagline": "La primera plataforma unificada de donaciones de Nepal que conecta donantes con campañas médicas y comunitarias.",
+        "tech": ["Next.js", "Pasarela de Pagos", "Gestión de Campañas", "Arquitectura Cloud"]
+      }
+    }
+  },
   "process": {
     "eyebrow": "Cómo trabajamos",
-    "title": "Cómo trabaja nuestro equipo de desarrollo de software",
-    "description": "Desde la idea hasta el lanzamiento, colaboramos en ciclos ágiles cortos: priorizamos funciones útiles, mostramos software en funcionamiento y nos adaptamos a tus comentarios.",
+    "title": "Cómo trabajamos",
+    "highlightWords": ["trabajamos"],
+    "description": "Descubre cómo transformamos desafíos empresariales en software confiable, plataformas web y móviles de alto rendimiento y crecimiento digital medible.",
     "steps": {
       "discover": {
         "title": "Descubrir",
@@ -154,6 +213,13 @@
       "description": "Convertimos los objetivos de su empresa en productos digitales fiables y campañas de crecimiento eficaces mediante ejecución ágil, colaboración cercana y resultados medibles."
     },
     "teamLabel": "Desarrollo de software"
+  },
+  "blogsSection": {
+    "eyebrow": "Ideas y Perspectivas",
+    "title": "Nuestros últimos blogs",
+    "highlightWords": ["últimos", "blogs"],
+    "subtitle": "Perspectivas prácticas sobre ingeniería de software, productos digitales, automatización y flujos de trabajo.",
+    "viewAll": "Explorar todos los artículos"
   },
   "contact": {
     "eyebrow": "Contacto",
