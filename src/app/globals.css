@@ -1416,25 +1416,23 @@ html:not(.light) .service-card:hover {
   position: relative;
   display: flex;
   flex-direction: column;
-  background: #ffffff;
-  border: 1px solid rgba(226, 232, 240, 0.95);
+  background: var(--surface);
+  border: none;
   border-radius: 18px;
   box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
   transition:
     transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 0.3s ease;
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .project-flow-card:hover {
   transform: translateY(-4px) scale(1.015);
   box-shadow: 0 16px 36px rgba(15, 23, 42, 0.09);
-  border-color: rgba(9, 102, 250, 0.32);
 }
 
 html:not(.light) .project-flow-card {
   background: #0b1120;
-  border-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
@@ -1443,7 +1441,6 @@ html:not(.light) .project-flow-card:hover {
   box-shadow:
     0 16px 36px -8px rgba(0, 0, 0, 0.7),
     0 0 24px -4px rgba(9, 102, 250, 0.25);
-  border-color: rgba(9, 102, 250, 0.4);
 }
 
 @media (max-width: 1024px) {
