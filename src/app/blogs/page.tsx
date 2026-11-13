@@ -23,7 +23,7 @@ export default async function BlogsPage() {
             <h1>
               Thoughtful decisions.
               <br />
-              Better digital work.
+              <span className="highlight-blue">Better digital work.</span>
             </h1>
             <p className="editorial-lead">
               Practical reading on building useful products, improving
