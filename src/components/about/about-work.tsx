@@ -42,7 +42,7 @@ export function AboutWork() {
               </div>
             </div>
 
-            <Link href="/services" className="about-text-link">
+            <Link href="/custom-software-development" className="about-text-link">
               <span>{copy("workLink")}</span>
               <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
             </Link>

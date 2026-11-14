@@ -1,0 +1,839 @@
+/* Digital Marketing and Brand Growth Page Styles */
+.cs-page {
+  width: 100%;
+  overflow-x: hidden;
+  background: var(--background, #f8fafc);
+  color: var(--text-primary, #0f172a);
+}
+
+.cs-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* Eyebrows with Blue Bar */
+.cs-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--brand-blue, #0966fa);
+  margin-bottom: 14px;
+}
+
+.cs-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 3px;
+  background: var(--brand-blue, #0966fa);
+  border-radius: 9999px;
+}
+
+.cs-gradient-text {
+  background: linear-gradient(135deg, #0966fa 0%, #00a8ff 55%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #0966fa;
+}
+
+/* ========================================================
+   1. HERO SECTION
+   ======================================================== */
+.cs-hero-section {
+  padding-top: clamp(100px, 11vw, 130px);
+  padding-bottom: clamp(60px, 8vw, 100px);
+  position: relative;
+  overflow: hidden;
+  background: #F1F5F9;
+}
+
+.cs-hero-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+}
+
+.cs-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--brand-blue, #0966fa);
+  margin-bottom: 20px;
+}
+
+.cs-hero-pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: var(--brand-blue, #0966fa);
+  box-shadow: 0 0 6px rgba(9, 102, 250, 0.4);
+}
+
+.cs-hero-title {
+  font-size: clamp(2.5rem, 5vw, 3.85rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text-primary, #0f172a);
+  margin-bottom: 20px;
+}
+
+.cs-hero-subtitle {
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--text-secondary, #475569);
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+
+.cs-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cs-secondary-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: var(--text-primary, #0f172a);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(15, 23, 42, 0.3);
+  transition: all 0.2s ease;
+}
+
+.cs-secondary-link:hover {
+  color: var(--brand-blue, #0966fa);
+  text-decoration-color: var(--brand-blue, #0966fa);
+}
+
+/* Hero Media Visual */
+.cs-hero-media-wrap,
+.cs-hero-visual-col {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.cs-hero-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(340px, 45vw, 580px);
+  height: clamp(340px, 45vw, 580px);
+  background: radial-gradient(
+    circle,
+    rgba(9, 102, 250, 0.2) 0%,
+    rgba(0, 210, 255, 0.08) 45%,
+    transparent 70%
+  );
+  border-radius: 9999px;
+  filter: blur(52px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cs-hero-img-box {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 720px;
+  height: clamp(280px, 34vw, 440px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 20px 32px rgba(15, 23, 42, 0.14));
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .cs-hero-img {
+    transform: scale(1.08);
+    transform-origin: right center;
+  }
+}
+
+/* ========================================================
+   2. WHAT WE DO SECTION
+   ======================================================== */
+.cs-build-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: #F1F5F9;
+}
+
+.cs-build-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.35fr;
+  gap: clamp(32px, 6vw, 72px);
+  align-items: flex-start;
+}
+
+.cs-section-heading {
+  font-size: clamp(2rem, 3.6vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--text-primary, #0f172a);
+  margin-bottom: 16px;
+}
+
+.cs-section-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-secondary, #475569);
+  max-width: 420px;
+}
+
+.cs-capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px 24px;
+}
+
+.cs-capability-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s ease;
+}
+
+.cs-capability-card:hover {
+  transform: translateY(-2px);
+}
+
+.cs-capability-icon {
+  background: transparent;
+  border: none;
+  color: var(--brand-blue, #0966fa);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+}
+
+.cs-capability-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text-primary, #0f172a);
+}
+
+.cs-capability-desc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--text-secondary, #64748b);
+}
+
+/* ========================================================
+   3. WHY CHOOSE US SECTION
+   ======================================================== */
+.cs-why-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: #ffffff;
+}
+
+.cs-why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(32px, 6vw, 72px);
+  align-items: center;
+}
+
+.cs-rocket-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.cs-checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary, #0f172a);
+}
+
+.cs-check-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  background: var(--brand-blue, #0966fa);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ========================================================
+   4. OUR PROCESS (WORKFLOW)
+   ======================================================== */
+.cs-workflow-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: #ffffff;
+}
+
+.cs-workflow-header {
+  margin-bottom: 48px;
+}
+
+.cs-workflow-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+.cs-workflow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.cs-step-badge-wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.cs-step-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  background: var(--brand-blue, #0966fa);
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 750;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(9, 102, 250, 0.35);
+  flex-shrink: 0;
+}
+
+.cs-step-line {
+  flex: 1;
+  height: 2px;
+  background: rgba(15, 23, 42, 0.12);
+  margin-left: 14px;
+  margin-right: 14px;
+  position: relative;
+}
+
+.cs-step-line::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(15, 23, 42, 0.25);
+  border-right: 2px solid rgba(15, 23, 42, 0.25);
+  transform: rotate(45deg);
+}
+
+.cs-step-title {
+  font-size: 1.2rem;
+  font-weight: 750;
+  color: var(--text-primary, #0f172a);
+  margin-bottom: 6px;
+}
+
+.cs-step-desc {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text-secondary, #64748b);
+  max-width: 240px;
+}
+
+/* ========================================================
+   5. CASE STUDIES SECTION
+   ======================================================== */
+.cs-case-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: #ffffff;
+}
+
+.cs-case-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.35fr;
+  gap: clamp(32px, 6vw, 72px);
+  align-items: center;
+}
+
+.cs-case-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.cs-stat-card {
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.cs-stat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(9, 102, 250, 0.3);
+  box-shadow: 0 12px 28px -6px rgba(9, 102, 250, 0.12);
+  background: #ffffff;
+}
+
+.cs-stat-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(9, 102, 250, 0.08);
+  color: var(--brand-blue, #0966fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.cs-stat-number {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-primary, #0f172a);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.cs-stat-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--brand-blue, #0966fa);
+}
+
+.cs-stat-sub {
+  font-size: 0.82rem;
+  color: var(--text-secondary, #64748b);
+  margin-top: 2px;
+}
+
+.cs-case-view-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--brand-blue, #0966fa);
+  margin-top: 16px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.cs-case-view-more:hover {
+  transform: translateX(4px);
+}
+
+/* ========================================================
+   6. WHAT OUR CLIENTS SAY (TESTIMONIALS)
+   ======================================================== */
+.cs-testimonial-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: #F1F5F9;
+}
+
+.cs-testimonial-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.35fr;
+  gap: clamp(32px, 6vw, 72px);
+  align-items: center;
+}
+
+.cs-testimonial-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 20px;
+  padding: 32px 36px;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+  position: relative;
+}
+
+.cs-quote-symbol {
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--brand-blue, #0966fa);
+  font-family: serif;
+  margin-bottom: 8px;
+  opacity: 0.85;
+}
+
+.cs-testimonial-quote {
+  font-size: 1.08rem;
+  line-height: 1.65;
+  color: var(--text-primary, #0f172a);
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.cs-testimonial-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  padding-top: 20px;
+}
+
+.cs-author-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cs-author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #0966fa 0%, #00d2ff 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.cs-author-name {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-primary, #0f172a);
+}
+
+.cs-author-role {
+  font-size: 0.84rem;
+  color: var(--text-secondary, #64748b);
+}
+
+.cs-testimonial-arrows {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cs-arrow-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #ffffff;
+  color: var(--text-primary, #0f172a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cs-arrow-btn:hover {
+  background: var(--brand-blue, #0966fa);
+  color: #ffffff;
+  border-color: var(--brand-blue, #0966fa);
+}
+
+/* ========================================================
+   7. FAQ SECTION
+   ======================================================== */
+.cs-faq-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: #F1F5F9;
+}
+
+.cs-faq-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.35fr;
+  gap: clamp(32px, 6vw, 72px);
+  align-items: flex-start;
+}
+
+.cs-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cs-faq-card {
+  border-radius: 14px;
+  background: var(--surface, #ffffff);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cs-faq-card[open] {
+  border-color: rgba(9, 102, 250, 0.3);
+  box-shadow: 0 8px 24px -6px rgba(9, 102, 250, 0.08);
+}
+
+.cs-faq-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--text-primary, #0f172a);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.cs-faq-summary::-webkit-details-marker {
+  display: none;
+}
+
+.cs-faq-toggle {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--brand-blue, #0966fa);
+  transition: transform 0.2s ease;
+  line-height: 1;
+}
+
+.cs-faq-card[open] .cs-faq-toggle {
+  transform: rotate(45deg);
+}
+
+.cs-faq-body {
+  padding: 0 22px 18px;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--text-secondary, #475569);
+}
+
+/* ========================================================
+   8. CLOSING CTA BANNER
+   ======================================================== */
+.cs-cta-section {
+  padding: 40px 0 clamp(60px, 8vw, 100px);
+  background: #F1F5F9;
+}
+
+.cs-cta-banner {
+  border-radius: 24px;
+  background: linear-gradient(135deg, #0966fa 0%, #00a8ff 60%, #00d2ff 100%);
+  padding: clamp(36px, 6vw, 54px) clamp(28px, 6vw, 56px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  box-shadow: 0 16px 40px -8px rgba(9, 102, 250, 0.4);
+}
+
+.cs-cta-title {
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.cs-cta-sub {
+  font-size: 1.02rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 540px;
+}
+
+.cs-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 30px;
+  border-radius: 9999px;
+  background: #ffffff;
+  color: var(--brand-blue, #0966fa);
+  font-size: 0.98rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.22s ease;
+}
+
+.cs-cta-btn:hover {
+  background: #f8fafc;
+  color: var(--brand-blue, #0966fa);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* ========================================================
+   RESPONSIVE DESIGN
+   ======================================================== */
+@media (max-width: 1024px) {
+  .cs-hero-grid,
+  .cs-build-grid,
+  .cs-why-grid,
+  .cs-case-grid,
+  .cs-testimonial-grid,
+  .cs-faq-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cs-capabilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cs-workflow-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 20px;
+  }
+
+  .cs-step-line {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .cs-capabilities-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cs-workflow-steps {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .cs-case-cards-row {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ========================================================
+   DARK MODE ADAPTATIONS
+   ======================================================== */
+html:not(.light) .cs-page,
+html:not(.light) .cs-hero-section,
+html:not(.light) .cs-build-section,
+html:not(.light) .cs-testimonial-section,
+html:not(.light) .cs-faq-section,
+html:not(.light) .cs-cta-section {
+  background: #0b1120;
+  color: #ffffff;
+}
+
+html:not(.light) .cs-hero-title,
+html:not(.light) .cs-section-heading,
+html:not(.light) .cs-capability-title,
+html:not(.light) .cs-checklist-item,
+html:not(.light) .cs-step-title,
+html:not(.light) .cs-stat-number,
+html:not(.light) .cs-faq-summary,
+html:not(.light) .cs-secondary-link {
+  color: #ffffff;
+}
+
+html:not(.light) .cs-faq-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+html:not(.light) .cs-faq-card[open] {
+  border-color: rgba(9, 102, 250, 0.5);
+}
+
+html:not(.light) .cs-step-line {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+html:not(.light) .cs-step-line::after {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+html:not(.light) .cs-why-section,
+html:not(.light) .cs-workflow-section,
+html:not(.light) .cs-case-section {
+  background: #0d1527;
+}
+
+html:not(.light) .cs-stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+html:not(.light) .cs-stat-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(9, 102, 250, 0.4);
+}
+
+html:not(.light) .cs-testimonial-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+html:not(.light) .cs-testimonial-quote {
+  color: #f1f5f9;
+}
+
+html:not(.light) .cs-author-name {
+  color: #ffffff;
+}
+
+html:not(.light) .cs-testimonial-footer {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+html:not(.light) .cs-arrow-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}

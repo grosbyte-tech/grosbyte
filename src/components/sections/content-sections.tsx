@@ -21,8 +21,8 @@ const serviceKeys: Record<string, string> = {
 
 const serviceRoutes: Record<string, string> = {
   "Custom Software Development": "/custom-software-development",
-  "Web, Mobile Application Development": "/services/web-mobile-applications",
-  "Digital Marketing and Brand Growth": "/services/digital-marketing",
+  "Web, Mobile Application Development": "/web-mobile-applications",
+  "Digital Marketing and Brand Growth": "/digital-marketing",
 };
 
 function subscribeToMobile(callback: () => void) {

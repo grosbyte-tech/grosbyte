@@ -83,86 +83,50 @@ export const serviceDetails: ServiceDetail[] = [
     slug: "custom-software-development",
     category: "development-technology",
     title: serviceOptions[0],
-    headline: "Engineered for scale. Built around your unique operations.",
+    headline: "Software built around how your business actually runs.",
     summary:
-      "Purpose-built business software, modern web platforms, and automated internal systems that off-the-shelf tools cannot support. From architecture to deployment, we deliver high-performance, maintainable software with 100% code ownership.",
+      "We design and build reliable web applications, internal tools, and APIs tailored to your team’s workflow—with clean code and complete ownership from day one.",
     overview:
-      "Every growing business reaches a point where off-the-shelf software creates friction, limits flexibility, and locks data behind high subscription costs. Custom software turns your distinctive operational workflows and competitive advantages into software your team loves using every day. At Grosbyte, we combine modern full-stack engineering, enterprise-grade cloud architecture, and agile sprints to deliver secure, scalable software products on time and within budget.",
-    metrics: [
-      {
-        value: "100%",
-        label: "Code Ownership",
-        description: "Full IP, repository & cloud access from day one",
-      },
-      {
-        value: "2-Week",
-        label: "Agile Sprints",
-        description: "Predictable milestones with live sprint demos",
-      },
-      {
-        value: "99.9%",
-        label: "Uptime SLA",
-        description: "Resilient cloud architecture & auto-scaling",
-      },
-      {
-        value: "Senior-Led",
-        label: "Engineering Squad",
-        description: "Vetted full-stack talent dedicated to your build",
-      },
-    ],
+      "When off-the-shelf software is too rigid or spreadsheets start breaking down, custom software fills the gap. We build systems that match your specific operations, give your team ownership of your data, and adapt as your business grows.",
     audience: [
-      "Startups and scale-ups building custom SaaS products or MVPs for investor and user traction",
-      "Enterprises outgrowing off-the-shelf software, spreadsheets, and fragmented manual workflows",
-      "Organizations modernizing legacy architectures into secure, cloud-native web systems",
-      "Operations teams requiring bespoke internal portals, ERP integrations, and automated pipelines",
+      "Growing teams whose operations have outgrown spreadsheets and generic SaaS tools.",
+      "Businesses that need bespoke client portals, internal dashboards, or system integrations.",
+      "Founders building web-based products who need a dependable engineering partner.",
     ],
     deliverables: [
       {
-        title: "Full-Stack Web Applications & Portals",
+        title: "Web Applications & Portals",
         description:
-          "High-performance client portals, customer-facing web apps, and management platforms engineered with Next.js, React, and TypeScript.",
-        tags: ["Next.js", "React", "TypeScript", "Responsive UI"],
+          "Fast, responsive client portals, customer accounts, and web platforms built with Next.js and React.",
+        tags: ["Next.js", "React", "TypeScript"],
       },
       {
-        title: "Microservices & Cloud Backend Architecture",
+        title: "Internal Tools & Dashboards",
         description:
-          "Scalable distributed backends, RESTful and GraphQL APIs, event-driven pipelines, and high-throughput background processing.",
-        tags: ["Node.js", "Python / FastAPI", "Go", "Docker"],
+          "Operations portals, inventory tracking, and workflow management systems that keep teams coordinated.",
+        tags: ["Admin Dashboards", "Role-Based Access", "Reporting"],
       },
       {
-        title: "Database Modeling & High-Volume Data Systems",
+        title: "APIs & System Integrations",
         description:
-          "Optimized relational and NoSQL database schemas, indexing strategies, zero-downtime migrations, and secure transactional integrity.",
-        tags: ["PostgreSQL", "Redis", "Supabase", "MongoDB"],
+          "Custom REST and GraphQL APIs that connect payment gateways, CRMs, ERPs, and third-party services.",
+        tags: ["REST APIs", "GraphQL", "Webhooks", "Payment Gateways"],
       },
       {
-        title: "Third-Party & Enterprise API Integrations",
+        title: "Database Architecture & Migrations",
         description:
-          "Seamless bi-directional integrations with payment gateways (Stripe, eSewa, Khalti), CRMs, ERPs, accounting systems, and external APIs.",
-        tags: ["REST / GraphQL", "Webhooks", "Stripe", "ERP Sync"],
-      },
-      {
-        title: "Automated QA, Security & Compliance",
-        description:
-          "Unit, integration, and end-to-end test suites with automated CI/CD pipelines, role-based access control (RBAC), and OWASP security auditing.",
-        tags: ["Jest / Playwright", "GitHub Actions", "RBAC", "OWASP"],
-      },
-      {
-        title: "Cloud Infrastructure, DevOps & Monitoring",
-        description:
-          "Containerized deployments on AWS or GCP with Infrastructure as Code, structured telemetry, APM monitoring, and automated backups.",
-        tags: ["AWS", "Docker", "Terraform", "Monitoring"],
+          "Relational and document database design, schema optimization, and secure data migrations built to last.",
+        tags: ["PostgreSQL", "Redis", "Supabase"],
       },
     ],
     techStack: [
       {
-        category: "Frontend & UI",
+        category: "Frontend",
         technologies: [
           { name: "Next.js", tag: "App Router" },
-          { name: "React", tag: "Modern Hooks" },
-          { name: "TypeScript", tag: "Type-Safe" },
+          { name: "React", tag: "Component UI" },
+          { name: "TypeScript", tag: "Type Safety" },
           { name: "Tailwind CSS", tag: "Styling" },
-          { name: "Zustand / Redux", tag: "State" },
         ],
       },
       {
@@ -170,27 +134,25 @@ export const serviceDetails: ServiceDetail[] = [
         technologies: [
           { name: "Node.js", tag: "Runtime" },
           { name: "Python", tag: "FastAPI / Django" },
-          { name: "Go", tag: "Microservices" },
-          { name: "GraphQL", tag: "Schema" },
           { name: "REST APIs", tag: "Architecture" },
+          { name: "GraphQL", tag: "Flexible Queries" },
         ],
       },
       {
         category: "Databases & Cache",
         technologies: [
           { name: "PostgreSQL", tag: "Relational" },
-          { name: "Redis", tag: "In-Memory / Queue" },
+          { name: "Redis", tag: "Caching / Queues" },
           { name: "MongoDB", tag: "Document" },
-          { name: "Supabase", tag: "BaaS" },
+          { name: "Supabase", tag: "Backend Suite" },
         ],
       },
       {
         category: "Cloud & DevOps",
         technologies: [
-          { name: "AWS", tag: "EC2 / S3 / RDS" },
+          { name: "AWS", tag: "Cloud Infrastructure" },
           { name: "Docker", tag: "Containers" },
-          { name: "Kubernetes", tag: "Orchestration" },
-          { name: "GitHub Actions", tag: "CI/CD" },
+          { name: "GitHub Actions", tag: "CI / CD" },
           { name: "Vercel", tag: "Edge Hosting" },
         ],
       },
@@ -198,151 +160,92 @@ export const serviceDetails: ServiceDetail[] = [
     processSteps: [
       {
         step: "01",
-        phase: "Discovery & Technical Blueprint",
+        phase: "Discovery & Blueprint",
         duration: "Weeks 1–2",
         description:
-          "We audit your operational workflows, define system architecture, map data models, and outline an agile milestone roadmap before writing code.",
+          "We review your current workflow, define data structures, and establish a clear milestone plan before writing code.",
         activities: [
-          "Stakeholder interviews & workflow mapping",
-          "Technical architecture & API specification",
-          "Database schema design & ERD modeling",
-          "Milestone backlog & sprint planning",
+          "Workflow analysis and requirements review",
+          "Database schema and system architecture",
+          "Sprint milestones and delivery schedule",
         ],
       },
       {
         step: "02",
-        phase: "UX Architecture & Clickable Prototype",
+        phase: "UI/UX & Clickable Prototype",
         duration: "Weeks 2–3",
         description:
-          "Our designers create interactive Figma prototypes and design systems to test real user flows and validate assumptions prior to full build.",
+          "We design intuitive layouts and interactive Figma prototypes so your team can test and approve user flows.",
         activities: [
-          "Wireframing & user journey flows",
-          "Design system & component library",
-          "Interactive clickable prototype",
-          "Client design review & feedback signoff",
+          "Wireframes and user journey maps",
+          "Component design system",
+          "Clickable prototype review and signoff",
         ],
       },
       {
         step: "03",
-        phase: "Agile Development & Continuous QA",
-        duration: "Weeks 3–10+",
+        phase: "Sprint Engineering & Testing",
+        duration: "Weeks 3–8+",
         description:
-          "We build features in 2-week agile sprints with automated testing, CI/CD pipelines, and bi-weekly sprint demos for continuous alignment.",
+          "We build in focused two-week sprints, backing every feature with automated tests and sharing live staging links.",
         activities: [
-          "Bi-weekly sprint demos & review meetings",
-          "Test-Driven Development (Unit & E2E QA)",
-          "Staging preview environments for testing",
-          "Real-time progress via Linear/Slack",
+          "Bi-weekly sprint demos and review calls",
+          "Automated unit and integration testing",
+          "Live staging previews for team testing",
         ],
       },
       {
         step: "04",
-        phase: "Cloud Deployment, Handover & Growth",
-        duration: "Launch & Beyond",
+        phase: "Deployment & Handover",
+        duration: "Launch & Ongoing",
         description:
-          "Zero-downtime production deployment, complete code repository handover, staff training sessions, and continuous SLA support.",
+          "We deploy to your cloud infrastructure, transfer all source code and documentation, and support your team after launch.",
         activities: [
-          "Production launch on AWS/GCP with monitoring",
-          "100% repository & documentation transfer",
-          "Team onboarding & admin walkthroughs",
-          "Ongoing SLA maintenance & feature evolution",
-        ],
-      },
-    ],
-    engagementModels: [
-      {
-        title: "Dedicated Engineering Squad",
-        tagline: "Your scalable, full-stack product team",
-        description:
-          "A dedicated cross-functional engineering squad (Tech Lead, Senior Developers, QA Engineer, and Project Manager) working exclusively on your product roadmap.",
-        bestFor:
-          "Startups, scale-ups, and companies needing continuous product iteration and long-term momentum.",
-        features: [
-          "Direct Slack & Daily Standups access",
-          "Flexible sprint priority management",
-          "Full-cycle development from frontend to cloud",
-          "Seamless capacity scaling as you grow",
-        ],
-      },
-      {
-        title: "End-to-End Product Build",
-        tagline: "Fixed scope, clear timeline, predictable outcome",
-        description:
-          "Turn an idea or operational requirement into a market-ready software platform with defined milestones, transparent deliverables, and agreed budget.",
-        bestFor:
-          "Organizations with clear requirements seeking a turnkey, production-ready solution without micromanagement.",
-        features: [
-          "Guaranteed milestone deliveries",
-          "Defined timeline and budget certainty",
-          "End-to-end architecture, QA, and deployment",
-          "Post-launch warranty & handover training",
-        ],
-      },
-      {
-        title: "Staff & Team Augmentation",
-        tagline: "Embed senior technical firepower into your team",
-        description:
-          "Supplement your internal tech team with senior Grosbyte software engineers to accelerate velocity, tackle complex architecture, or fill tech stack gaps.",
-        bestFor:
-          "Internal tech leads and engineering teams needing specialized senior skills or immediate sprint capacity.",
-        features: [
-          "Fast onboarding (plug into your GitHub/Jira)",
-          "Match your working hours and timezone",
-          "Strict code review and peer programming",
-          "No long-term hiring overhead or risk",
+          "Production launch and monitoring setup",
+          "Complete code repository and documentation handover",
+          "Post-launch warranty and maintenance support",
         ],
       },
     ],
     benefits: [
       {
-        title: "100% IP & Source Code Ownership",
+        title: "Full Code & IP Ownership",
         description:
-          "You own every repository, architecture document, and line of code from day one. Zero vendor lock-in or licensing strings attached.",
+          "You own all repositories, architecture documents, and source code. No licensing fees or vendor lock-in.",
       },
       {
-        title: "Tailored to Your Exact Business Workflow",
+        title: "Built Around Your Workflow",
         description:
-          "No forcing your operations into rigid third-party software constraints. The system adapts to how your business actually creates value.",
+          "Instead of forcing your team into someone else’s mold, we build around how you actually operate.",
       },
       {
-        title: "High Performance & Scalability",
+        title: "Direct Developer Collaboration",
         description:
-          "Built on modern TypeScript, modular microservices, and auto-scaling cloud infrastructure engineered to handle 10x traffic effortlessly.",
-      },
-      {
-        title: "Transparent Agile Delivery",
-        description:
-          "No surprises. You get live staging environments, bi-weekly demos, direct Slack communication, and complete visibility across every sprint.",
+          "You communicate directly with the engineers building your software, with regular demos and staging links.",
       },
     ],
     preparation:
-      "Bring an outline of your current workflow, key business objectives, any software or APIs currently in use, and your ideal timeline.",
+      "Bring a brief summary of your current workflow, the problems you are trying to solve, and any tools or APIs you currently use.",
     faq: [
       {
-        question:
-          "Do we need a full technical specification before reaching out?",
+        question: "Who owns the code and intellectual property?",
         answer:
-          "No. Many of our clients start with a high-level business challenge, workflow bottleneck, or concept. During our Discovery phase, we collaborate with you to define user stories, technical architecture, and a phased MVP roadmap.",
+          "You own 100% of the code, Git repositories, designs, and documentation from day one. There are no licensing fees, subscriptions, or proprietary ties.",
       },
       {
-        question: "Who owns the intellectual property and source code?",
+        question: "Do we need a full technical specification before reaching out?",
         answer:
-          "You do—completely. All source code, Git repositories, database schemas, and documentation are transferred to your organization with full, unencumbered ownership from day one.",
+          "No. A high-level description of your business workflow, pain points, or project goals is enough. We help you define technical requirements during the initial discovery phase.",
       },
       {
-        question: "Can you modernize or take over an existing codebase?",
+        question: "Can you take over or upgrade an existing codebase?",
         answer:
-          "Yes. We start by conducting a comprehensive technical audit of your existing application, assessing code health, security vulnerabilities, database performance, and dependencies, before proposing an incremental modernization or refactoring strategy.",
+          "Yes. We begin with a code audit to assess architecture, test coverage, and dependencies, then provide an honest recommendation on refactoring versus incremental modernization.",
       },
       {
-        question: "How do we collaborate and communicate during the build?",
+        question: "How do we communicate and track progress during development?",
         answer:
-          "We integrate directly into your workflow. We organize work in 2-week sprints with transparent tracking on Linear or Jira, hold regular demo sessions, and maintain continuous communication via dedicated Slack or Discord channels.",
-      },
-      {
-        question: "What happens after the software launches?",
-        answer:
-          "We provide warranty support after deployment, conduct thorough knowledge transfer sessions with your staff, and offer flexible ongoing SLA maintenance and iterative feature expansion agreements.",
+          "We run regular sprint reviews with live staging links so you always see working software. You have direct access to our team through Slack or email without intermediaries.",
       },
     ],
   },

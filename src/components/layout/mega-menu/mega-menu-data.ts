@@ -47,7 +47,7 @@ export const featuredServices: MegaMenuServiceItem[] = [
     title: "Web, Mobile Application Development",
     description:
       "High-performance cross-platform mobile apps and responsive web applications engineered for scale.",
-    href: "/services/web-mobile-applications",
+    href: "/web-mobile-applications",
     icon: Smartphone,
   },
   {
@@ -56,7 +56,7 @@ export const featuredServices: MegaMenuServiceItem[] = [
     title: "Digital Marketing and Brand Growth",
     description:
       "Connected marketing and brand strategies that improve visibility, consistency, audience engagement, and long-term digital growth.",
-    href: "/services/digital-marketing",
+    href: "/digital-marketing",
     icon: Megaphone,
   },
 ];
