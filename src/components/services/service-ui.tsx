@@ -1,37 +1,41 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/seo/json-ld";
+import { getBreadcrumbListSchema } from "@/lib/schema";
 
 export function serviceMetadata(
   title: string,
   description: string,
   path: string,
+  image?: string,
 ): Metadata {
-  const pageTitle = `${title} | Grosbyte Technologies`;
+  const ogTitle = `${title} | Grosbyte Technologies`;
   return {
-    title: pageTitle,
+    title,
     description,
     alternates: { canonical: path },
     openGraph: {
-      title: pageTitle,
+      title: ogTitle,
       description,
       url: path,
       type: "website",
       siteName: "Grosbyte Technologies",
       images: [
         {
-          url: "/icons/logo-removebg.png",
-          width: 1280,
-          height: 1280,
-          alt: "Grosbyte Technologies",
+          url: image || "/images/og-default.png",
+          width: 1200,
+          height: 630,
+          alt: ogTitle,
+          type: "image/png",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: pageTitle,
+      title: ogTitle,
       description,
-      images: ["/icons/logo-removebg.png"],
+      images: [image || "/images/og-default.png"],
     },
   };
 }
@@ -43,25 +47,39 @@ export function ServiceBreadcrumbs({
   current: string;
   category?: { id: string; title: string };
 }) {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    ...(category
+      ? [
+          { name: "Services", url: "/custom-software-development" },
+          { name: category.title },
+        ]
+      : []),
+    { name: current },
+  ];
+
   return (
-    <nav className="service-breadcrumbs" aria-label="Breadcrumb">
-      <ol>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        {category && (
-          <>
-            <li>
-              <Link href="/services">Services</Link>
-            </li>
-            <li>
-              <Link href={`/services#${category.id}`}>{category.title}</Link>
-            </li>
-          </>
-        )}
-        <li aria-current="page">{current}</li>
-      </ol>
-    </nav>
+    <>
+      <JsonLd data={getBreadcrumbListSchema(breadcrumbItems)} />
+      <nav className="service-breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          {category && (
+            <>
+              <li>
+                <Link href="/custom-software-development">Services</Link>
+              </li>
+              <li>
+                <span>{category.title}</span>
+              </li>
+            </>
+          )}
+          <li aria-current="page">{current}</li>
+        </ol>
+      </nav>
+    </>
   );
 }
 

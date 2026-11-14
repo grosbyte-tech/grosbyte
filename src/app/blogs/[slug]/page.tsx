@@ -8,6 +8,8 @@ import { ArticleCard, ArticleMeta } from "@/components/blogs/article-card";
 import { ShareArticle } from "@/components/blogs/share-article";
 import { TableOfContents } from "@/components/blogs/table-of-contents";
 import { serviceMetadata } from "@/components/services/service-ui";
+import { JsonLd } from "@/components/seo/json-ld";
+import { getBlogPostingSchema } from "@/lib/schema";
 import {
   findPost,
   listPosts,
@@ -79,6 +81,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <div className="container editorial-container">
+      <JsonLd data={getBlogPostingSchema(post)} />
       <article className="blog-article">
         {/* Article Header & Metadata */}
         <header className="article-hero">
@@ -148,11 +151,11 @@ export default async function BlogPostPage({ params }: Props) {
                 aria-label="Related service"
               >
                 <div className="article-service-badge">Relevant Capability</div>
-                <h3 className="article-service-title">
+                <div className="article-service-title font-semibold text-lg">
                   <Link href={`/services/${service.slug}`}>
                     {service.title}
                   </Link>
-                </h3>
+                </div>
                 <p className="article-service-summary">{service.summary}</p>
                 <Link
                   className="article-service-cta group"

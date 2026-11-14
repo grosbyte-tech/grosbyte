@@ -13,6 +13,8 @@ import {
 } from "lucide-react";
 import { getService } from "@/lib/services";
 import { serviceMetadata } from "@/components/services/service-ui";
+import { JsonLd } from "@/components/seo/json-ld";
+import { getServiceSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import "./custom-software.css";
 
@@ -23,7 +25,7 @@ export async function generateMetadata() {
   if (!service) notFound();
 
   return serviceMetadata(
-    "Custom Software Development | Grosbyte",
+    "Custom Software Development",
     "Turn your ideas into powerful software. We build fast, scalable, and user-friendly applications that help you grow, automate, and stand out.",
     "/custom-software-development",
   );
@@ -108,6 +110,7 @@ export default function CustomSoftwareDevelopmentPage() {
 
   return (
     <main className="cs-page" id="main-content">
+      <JsonLd data={getServiceSchema(service)} />
       {/* 1. Hero Section */}
       <section className="cs-hero-section bg-[#F1F5F9] dark:bg-[#0b1120]">
         <div className="cs-container">

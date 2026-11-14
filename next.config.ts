@@ -2,7 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  poweredByHeader: false,
   images: {
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
         protocol: "https",
@@ -15,7 +17,7 @@ const nextConfig: NextConfig = {
       {
         source: "/services",
         destination: "/custom-software-development",
-        permanent: false,
+        permanent: true,
       },
       {
         source: "/services/custom-software-development",
@@ -45,6 +47,10 @@ const nextConfig: NextConfig = {
           {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=()",
+          },
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains",
           },
         ],
       },

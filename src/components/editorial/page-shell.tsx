@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import "./editorial.css";
+import { JsonLd } from "@/components/seo/json-ld";
+import { getBreadcrumbListSchema } from "@/lib/schema";
 
 export function PageShell({ children }: { children: React.ReactNode }) {
   return (
@@ -17,20 +19,29 @@ export function Breadcrumbs({
   current: string;
   blog?: boolean;
 }) {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    ...(blog ? [{ name: "Blogs", url: "/blogs" }] : []),
+    { name: current },
+  ];
+
   return (
-    <nav aria-label="Breadcrumb" className="editorial-breadcrumbs">
-      <ol>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        {blog && (
+    <>
+      <JsonLd data={getBreadcrumbListSchema(breadcrumbItems)} />
+      <nav aria-label="Breadcrumb" className="editorial-breadcrumbs">
+        <ol>
           <li>
-            <Link href="/blogs">Blogs</Link>
+            <Link href="/">Home</Link>
           </li>
-        )}
-        <li aria-current="page">{current}</li>
-      </ol>
-    </nav>
+          {blog && (
+            <li>
+              <Link href="/blogs">Blogs</Link>
+            </li>
+          )}
+          <li aria-current="page">{current}</li>
+        </ol>
+      </nav>
+    </>
   );
 }
 

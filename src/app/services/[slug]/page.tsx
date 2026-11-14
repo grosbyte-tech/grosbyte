@@ -2,6 +2,8 @@ import { notFound, redirect } from "next/navigation";
 import { getService, serviceCategories, serviceDetails } from "@/lib/services";
 import { ServiceDetailPage } from "@/components/services/service-detail";
 import { serviceMetadata } from "@/components/services/service-ui";
+import { JsonLd } from "@/components/seo/json-ld";
+import { getServiceSchema } from "@/lib/schema";
 
 type Props = { params: Promise<{ slug: string }> };
 export const dynamicParams = false;
@@ -51,5 +53,10 @@ export default async function ServicePage({ params }: Props) {
     (item) => item.id === service.category,
   );
   if (!category) notFound();
-  return <ServiceDetailPage service={service} category={category} />;
+  return (
+    <>
+      <JsonLd data={getServiceSchema(service)} />
+      <ServiceDetailPage service={service} category={category} />
+    </>
+  );
 }
