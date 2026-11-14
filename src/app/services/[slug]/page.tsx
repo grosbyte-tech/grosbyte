@@ -7,13 +7,24 @@ type Props = { params: Promise<{ slug: string }> };
 export const dynamicParams = false;
 export function generateStaticParams() {
   return serviceDetails
-    .filter((service) => service.slug !== "custom-software-development")
+    .filter(
+      (service) =>
+        service.slug !== "custom-software-development" &&
+        service.slug !== "web-mobile-applications" &&
+        service.slug !== "digital-marketing",
+    )
     .map((service) => ({ slug: service.slug }));
 }
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   if (slug === "custom-software-development") {
     redirect("/custom-software-development");
+  }
+  if (slug === "web-mobile-applications") {
+    redirect("/web-mobile-applications");
+  }
+  if (slug === "digital-marketing") {
+    redirect("/digital-marketing");
   }
   const service = getService(slug);
   if (!service) notFound();
@@ -27,6 +38,12 @@ export default async function ServicePage({ params }: Props) {
   const { slug } = await params;
   if (slug === "custom-software-development") {
     redirect("/custom-software-development");
+  }
+  if (slug === "web-mobile-applications") {
+    redirect("/web-mobile-applications");
+  }
+  if (slug === "digital-marketing") {
+    redirect("/digital-marketing");
   }
   const service = getService(slug);
   if (!service) notFound();

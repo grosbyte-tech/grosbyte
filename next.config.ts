@@ -13,8 +13,23 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/services",
+        destination: "/custom-software-development",
+        permanent: false,
+      },
+      {
         source: "/services/custom-software-development",
         destination: "/custom-software-development",
+        permanent: true,
+      },
+      {
+        source: "/services/web-mobile-applications",
+        destination: "/web-mobile-applications",
+        permanent: true,
+      },
+      {
+        source: "/services/digital-marketing",
+        destination: "/digital-marketing",
         permanent: true,
       },
     ];

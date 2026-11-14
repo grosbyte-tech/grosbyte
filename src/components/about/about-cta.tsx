@@ -37,7 +37,7 @@ export function AboutCta() {
                 >
                   <span>{t("nav.cta")}</span>
                 </Button>
-                <Link href="/services" className="about-cta-link-secondary">
+                <Link href="/custom-software-development" className="about-cta-link-secondary">
                   {copy("ctaSecondary") || "Explore all services"}
                 </Link>
               </div>
