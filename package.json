@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "test:contact": "node tests/contact-api.test.mjs",
+    "test:seo": "node tests/seo-metadata.test.mjs",
     "format": "prettier --write src package.json tsconfig.json next.config.ts eslint.config.mjs postcss.config.mjs",
     "format:check": "prettier --check src package.json tsconfig.json next.config.ts eslint.config.mjs postcss.config.mjs"
   },

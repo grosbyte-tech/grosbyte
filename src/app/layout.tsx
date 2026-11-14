@@ -4,20 +4,28 @@ import "./globals.css";
 import { LanguageProvider } from "@/contexts/language-context";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { JsonLd } from "@/components/seo/json-ld";
+import { getOrganizationSchema, getWebSiteSchema } from "@/lib/schema";
 
 const urbanist = Urbanist({
   variable: "--font-urbanist",
   subsets: ["latin"],
   display: "swap",
 });
-const title = "Grosbyte Technologies | Software & Website Development Nepal";
+
+const defaultTitle =
+  "Grosbyte Technologies | Software & Website Development Nepal";
 const description =
   "Practical software, websites, web and mobile applications, automation, and digital marketing for your business. Discuss your project with Grosbyte Technologies in Nepal.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://grosbyte.com"),
-  title,
+  title: {
+    default: defaultTitle,
+    template: "%s | Grosbyte Technologies",
+  },
   description,
+  applicationName: "Grosbyte Technologies",
   keywords: [
     "custom software Nepal",
     "web platforms and ecommerce",
@@ -29,45 +37,34 @@ export const metadata: Metadata = {
   icons: {
     icon: "/icons/logo-removebg.png",
     shortcut: "/icons/logo-removebg.png",
+    apple: "/icons/logo-removebg.png",
   },
   openGraph: {
-    url: "/",
-    title,
+    url: "https://grosbyte.com",
+    title: defaultTitle,
     description,
     type: "website",
     locale: "en_US",
     siteName: "Grosbyte Technologies",
     images: [
       {
-        url: "/icons/logo-removebg.png",
-        width: 1280,
-        height: 1280,
-        alt: "Grosbyte Technologies",
+        url: "/images/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "Grosbyte Technologies - Software & Website Development Nepal",
+        type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title,
+    title: defaultTitle,
     description,
-    images: ["/icons/logo-removebg.png"],
+    images: ["/images/og-default.png"],
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Grosbyte Technologies",
-  url: "https://grosbyte.com",
-  logo: "https://grosbyte.com/logo.png",
-  email: "contact@grosbyte.com",
-  telephone: "+9779869793130",
-  sameAs: [
-    "https://www.instagram.com/grosbyte.tech/",
-    "https://www.facebook.com/profile.php?id=61591801983966",
-    "https://www.linkedin.com/company/grosbyte-technologies",
-  ],
-};
+const jsonLd = [getOrganizationSchema(), getWebSiteSchema()];
 
 export default function RootLayout({
   children,
@@ -85,12 +82,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </LanguageProvider>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
-          }}
-        />
+        <JsonLd data={jsonLd} />
       </body>
     </html>
   );

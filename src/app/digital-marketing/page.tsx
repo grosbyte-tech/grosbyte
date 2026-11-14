@@ -18,6 +18,8 @@ import {
 } from "lucide-react";
 import { getService } from "@/lib/services";
 import { serviceMetadata } from "@/components/services/service-ui";
+import { JsonLd } from "@/components/seo/json-ld";
+import { getServiceSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import "./digital-marketing.css";
 
@@ -28,7 +30,7 @@ export async function generateMetadata() {
   if (!service) notFound();
 
   return serviceMetadata(
-    "Digital Marketing and Brand Growth | Grosbyte",
+    "Digital Marketing and Brand Growth",
     "Grow your brand, reach the right audience, and turn clicks into loyal customers.",
     "/digital-marketing",
   );
@@ -124,7 +126,8 @@ export default async function DigitalMarketingPage() {
   if (!service) notFound();
 
   return (
-    <main className="cs-page">
+    <main className="cs-page" id="main-content">
+      <JsonLd data={getServiceSchema(service)} />
       {/* 1. Hero Section */}
       <section className="cs-hero-section">
         <div className="cs-container">

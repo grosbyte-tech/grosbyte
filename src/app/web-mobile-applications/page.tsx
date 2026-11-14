@@ -13,6 +13,8 @@ import {
 } from "lucide-react";
 import { getService } from "@/lib/services";
 import { serviceMetadata } from "@/components/services/service-ui";
+import { JsonLd } from "@/components/seo/json-ld";
+import { getServiceSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import "./web-mobile.css";
 
@@ -23,7 +25,7 @@ export async function generateMetadata() {
   if (!service) notFound();
 
   return serviceMetadata(
-    "Web & Mobile Application Development | Grosbyte",
+    "Web & Mobile Application Development",
     "From idea to launch, we build fast, reliable and user-friendly apps for web and mobile.",
     "/web-mobile-applications",
   );
@@ -109,7 +111,8 @@ export default async function WebAndMobileDevelopmentPage() {
   if (!service) notFound();
 
   return (
-    <main className="cs-page">
+    <main className="cs-page" id="main-content">
+      <JsonLd data={getServiceSchema(service)} />
       {/* 1. Hero Section */}
       <section className="cs-hero-section">
         <div className="cs-container">
