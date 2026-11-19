@@ -1,16 +1,31 @@
+"use client";
+
 import type { ProcessStep } from "@/lib/services";
 import { Check, GitFork } from "lucide-react";
+import { useTranslation } from "@/contexts/language-context";
 
 export function ServiceProcess({
   processSteps,
-  title = "Our Phased Engineering Lifecycle",
-  subtitle = "From architecture mapping to production cloud rollout, our iterative sprint methodology ensures total transparency, rapid feedback, and zero guesswork.",
+  title,
+  subtitle,
 }: {
   processSteps?: ProcessStep[];
   title?: string;
   subtitle?: string;
 }) {
+  const { t } = useTranslation();
+
   if (!processSteps || processSteps.length === 0) return null;
+
+  const displayTitle =
+    title ||
+    t("servicesDetail.processTitle") ||
+    "Our Phased Engineering Lifecycle";
+
+  const displaySubtitle =
+    subtitle ||
+    t("servicesDetail.processSub") ||
+    "From architecture mapping to production cloud rollout, our iterative sprint methodology ensures total transparency, rapid feedback, and zero guesswork.";
 
   return (
     <section
@@ -25,9 +40,9 @@ export function ServiceProcess({
             <span>Process & Delivery</span>
           </div>
           <h2 id="process-title" className="service-section-title">
-            {title}
+            {displayTitle}
           </h2>
-          <p className="service-section-subtitle">{subtitle}</p>
+          <p className="service-section-subtitle">{displaySubtitle}</p>
         </div>
 
         <div className="service-process-grid">
@@ -48,7 +63,7 @@ export function ServiceProcess({
                   {step.activities.map((act) => (
                     <li key={act}>
                       <Check
-                        className="w-4 h-4 text-[var(--brand-blue)] shrink-0"
+                        className="w-3.5 h-3.5 text-[var(--brand-blue)] mr-1.5 shrink-0"
                         aria-hidden="true"
                       />
                       <span>{act}</span>

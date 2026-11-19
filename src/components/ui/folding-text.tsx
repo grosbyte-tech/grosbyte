@@ -427,7 +427,9 @@ export function FoldingText({
                         <motion.span
                           aria-hidden="true"
                           initial={{ opacity: 0.65 }}
-                          animate={isInView ? { opacity: 0 } : { opacity: 0.65 }}
+                          animate={
+                            isInView ? { opacity: 0 } : { opacity: 0.65 }
+                          }
                           transition={{
                             duration: 0.45,
                             delay: itemDelay + 0.06,

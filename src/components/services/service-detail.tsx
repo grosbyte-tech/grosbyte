@@ -1,3 +1,5 @@
+"use client";
+
 import {
   type ServiceDetail,
   type ServiceCategory,
@@ -5,6 +7,7 @@ import {
 } from "@/lib/services";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useTranslation } from "@/contexts/language-context";
 import { ServiceHero } from "./service-hero";
 import { ServiceCapabilities } from "./service-capabilities";
 import { ServiceTechStack } from "./service-tech-stack";
@@ -24,9 +27,13 @@ export function ServiceDetailPage({
   category: ServiceCategory;
   heroImages?: HeroImageItem[];
 }) {
+  const { t } = useTranslation();
   const related = serviceDetails.filter(
     (item) => item.category === service.category && item.slug !== service.slug,
   );
+
+  const categoryTitle =
+    t<string>(`servicesDetail.categories.${category.id}`) || category.title;
 
   return (
     <div className="service-detail-wrapper">
@@ -66,7 +73,7 @@ export function ServiceDetailPage({
         >
           <div className="container">
             <h2 id="related-title" className="service-related-title">
-              Other Services in {category.title}
+              {t("servicesDetail.otherServices") || "Other Services in"} {categoryTitle}
             </h2>
             <div className="service-related-grid">
               {related.map((item) => {

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   ArrowDown,
   ArrowUpRight,
@@ -6,6 +8,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { ServiceCategory, ServiceDetail } from "@/lib/services";
+import { useTranslation } from "@/contexts/language-context";
 import { HeroImageGrid, type HeroImageItem } from "./hero-image-grid";
 
 export function ServiceHero({
@@ -16,6 +19,7 @@ export function ServiceHero({
   category?: ServiceCategory;
   images?: HeroImageItem[];
 }) {
+  const { t } = useTranslation();
   const contactUrl = `/contact?service=${service.slug}`;
   const hasImages = Boolean(images && images.length > 0);
 
@@ -44,11 +48,15 @@ export function ServiceHero({
                 size="lg"
                 className="service-primary-btn"
               >
-                <span>Discuss Your Project</span>
+                <span>
+                  {t("servicesDetail.discussProject") || "Discuss Your Project"}
+                </span>
                 <ArrowUpRight className="w-4 h-4 ml-2" aria-hidden="true" />
               </Button>
               <a href="#capabilities" className="service-secondary-btn">
-                <span>Explore Capabilities</span>
+                <span>
+                  {t("servicesDetail.exploreCapabilities") || "Explore Capabilities"}
+                </span>
                 <ArrowDown
                   className="w-4 h-4 ml-1 text-[var(--brand-blue)]"
                   aria-hidden="true"
@@ -62,14 +70,18 @@ export function ServiceHero({
                   className="w-4 h-4 text-[var(--brand-blue)]"
                   aria-hidden="true"
                 />
-                <span>100% IP & Code Ownership</span>
+                <span>
+                  {t("servicesDetail.verifiedEngineering") || "100% IP & Code Ownership"}
+                </span>
               </div>
               <div className="trust-badge-item">
                 <CheckCircle2
                   className="w-4 h-4 text-[var(--brand-blue)]"
                   aria-hidden="true"
                 />
-                <span>Agile 2-Week Sprints</span>
+                <span>
+                  {t("servicesDetail.productionSecurity") || "Agile 2-Week Sprints"}
+                </span>
               </div>
             </div>
           </div>

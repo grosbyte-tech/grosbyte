@@ -73,7 +73,13 @@ export function HeroIllustration() {
             <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
           </radialGradient>
           <mask id="gridMask">
-            <rect x="0" y="0" width="100%" height="100%" fill="url(#gridMaskGradient)" />
+            <rect
+              x="0"
+              y="0"
+              width="100%"
+              height="100%"
+              fill="url(#gridMaskGradient)"
+            />
           </mask>
 
           {/* Gradients for platforms and components */}
@@ -103,12 +109,24 @@ export function HeroIllustration() {
             <stop offset="100%" stopColor="#f8fafc" />
           </linearGradient>
 
-          <linearGradient id="pedestalSideLeft" x1="0%" y1="0%" x2="0%" y2="100%">
+          <linearGradient
+            id="pedestalSideLeft"
+            x1="0%"
+            y1="0%"
+            x2="0%"
+            y2="100%"
+          >
             <stop offset="0%" stopColor="#e2e8f0" />
             <stop offset="100%" stopColor="#cbd5e1" />
           </linearGradient>
 
-          <linearGradient id="pedestalSideRight" x1="0%" y1="0%" x2="0%" y2="100%">
+          <linearGradient
+            id="pedestalSideRight"
+            x1="0%"
+            y1="0%"
+            x2="0%"
+            y2="100%"
+          >
             <stop offset="0%" stopColor="#cbd5e1" />
             <stop offset="100%" stopColor="#94a3b8" />
           </linearGradient>
@@ -153,7 +171,11 @@ export function HeroIllustration() {
               strokeWidth="1.1"
               initial={
                 reduceMotion
-                  ? { pathLength: 1, opacity: 0.85, fillOpacity: box.isAccent ? 0.035 : 0 }
+                  ? {
+                      pathLength: 1,
+                      opacity: 0.85,
+                      fillOpacity: box.isAccent ? 0.035 : 0,
+                    }
                   : { pathLength: 0, opacity: 0, fillOpacity: 0 }
               }
               animate={{
@@ -182,7 +204,11 @@ export function HeroIllustration() {
             strokeLinecap="round"
             strokeLinejoin="round"
             fill="none"
-            initial={reduceMotion ? { pathLength: 1, opacity: 1 } : { pathLength: 0, opacity: 0 }}
+            initial={
+              reduceMotion
+                ? { pathLength: 1, opacity: 1 }
+                : { pathLength: 0, opacity: 0 }
+            }
             animate={{ pathLength: 1, opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
           />
@@ -195,7 +221,11 @@ export function HeroIllustration() {
             strokeLinecap="round"
             strokeLinejoin="round"
             fill="none"
-            initial={reduceMotion ? { pathLength: 1, opacity: 1 } : { pathLength: 0, opacity: 0 }}
+            initial={
+              reduceMotion
+                ? { pathLength: 1, opacity: 1 }
+                : { pathLength: 0, opacity: 0 }
+            }
             animate={{ pathLength: 1, opacity: 1 }}
             transition={{ duration: 1.1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
           />
@@ -208,7 +238,11 @@ export function HeroIllustration() {
             strokeLinecap="round"
             strokeLinejoin="round"
             fill="none"
-            initial={reduceMotion ? { pathLength: 1, opacity: 1 } : { pathLength: 0, opacity: 0 }}
+            initial={
+              reduceMotion
+                ? { pathLength: 1, opacity: 1 }
+                : { pathLength: 0, opacity: 0 }
+            }
             animate={{ pathLength: 1, opacity: 1 }}
             transition={{ duration: 1.1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           />
@@ -222,7 +256,11 @@ export function HeroIllustration() {
           ].map((dot, idx) => (
             <motion.g
               key={`node-${idx}`}
-              initial={reduceMotion ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
+              initial={
+                reduceMotion
+                  ? { scale: 1, opacity: 1 }
+                  : { scale: 0, opacity: 0 }
+              }
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.35, delay: dot.delay, ease: "backOut" }}
               style={{ transformOrigin: `${dot.cx}px ${dot.cy}px` }}
@@ -248,15 +286,9 @@ export function HeroIllustration() {
           {/* Floating Window Unit */}
           <g>
             {/* Window Left Depth Face */}
-            <polygon
-              points="105,170 115,164 115,248 105,254"
-              fill="#cbd5e1"
-            />
+            <polygon points="105,170 115,164 115,248 105,254" fill="#cbd5e1" />
             {/* Window Bottom Depth Face */}
-            <polygon
-              points="105,254 115,248 205,300 195,306"
-              fill="#94a3b8"
-            />
+            <polygon points="105,254 115,248 205,300 195,306" fill="#94a3b8" />
 
             {/* Window Front Main Isometric Face */}
             <polygon
@@ -495,14 +527,8 @@ export function HeroIllustration() {
             stroke="#cbd5e1"
             strokeWidth="1"
           />
-          <polygon
-            points="245,313 320,356 320,364 245,321"
-            fill="#cbd5e1"
-          />
-          <polygon
-            points="320,356 395,313 395,321 320,364"
-            fill="#94a3b8"
-          />
+          <polygon points="245,313 320,356 320,364 245,321" fill="#cbd5e1" />
+          <polygon points="320,356 395,313 395,321 320,364" fill="#94a3b8" />
 
           {/* SERVER RACK UNIT 1 (Bottom Chassis) */}
           <polygon
@@ -535,10 +561,7 @@ export function HeroIllustration() {
           <circle cx="312" cy="318" r="1.5" fill="#10b981" />
 
           {/* Divider between server units */}
-          <polygon
-            points="255,270 320,307 385,270 320,233"
-            fill="#0f172a"
-          />
+          <polygon points="255,270 320,307 385,270 320,233" fill="#0f172a" />
 
           {/* SERVER RACK UNIT 2 (Top Chassis) */}
           <polygon
@@ -576,14 +599,8 @@ export function HeroIllustration() {
             stroke="#e2e8f0"
             strokeWidth="1.25"
           />
-          <polygon
-            points="255,242 320,279 320,283 255,246"
-            fill="#e2e8f0"
-          />
-          <polygon
-            points="320,279 385,242 385,246 320,283"
-            fill="#cbd5e1"
-          />
+          <polygon points="255,242 320,279 320,283 255,246" fill="#e2e8f0" />
+          <polygon points="320,279 385,242 385,246 320,283" fill="#cbd5e1" />
 
           {/* Grosbyte Logo Emblem - Isometrically Projected on Top Face */}
           <g transform="matrix(0.866025, 0.5, -0.866025, 0.5, 320, 242)">

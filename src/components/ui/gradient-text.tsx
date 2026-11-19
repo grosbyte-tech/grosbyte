@@ -1,4 +1,8 @@
-import React, { ElementType, ComponentPropsWithoutRef, forwardRef } from "react";
+import React, {
+  ElementType,
+  ComponentPropsWithoutRef,
+  forwardRef,
+} from "react";
 import { cn } from "@/lib/utils";
 
 export type GradientVariant = "brand" | "brand-subtle" | "brand-light";
@@ -26,7 +30,7 @@ export const GradientText = forwardRef(function GradientText(
     children,
     ...props
   }: GradientTextProps<ElementType>,
-  ref: React.Ref<HTMLElement>
+  ref: React.Ref<HTMLElement>,
 ) {
   const Component = as || "span";
   const gradientStyle = gradientVariants[variant] || gradientVariants.brand;
@@ -50,7 +54,7 @@ export const GradientText = forwardRef(function GradientText(
     </Component>
   );
 }) as <T extends ElementType = "span">(
-  props: GradientTextProps<T> & { ref?: React.Ref<HTMLElement> }
+  props: GradientTextProps<T> & { ref?: React.Ref<HTMLElement> },
 ) => React.ReactElement | null;
 
 export default GradientText;

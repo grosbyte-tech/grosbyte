@@ -170,7 +170,9 @@ export function NamasteAnimation() {
       {/* Brand tagline placed cleanly at bottom */}
       <div className="namaste-brand-tagline">
         <p className="namaste-brand-line">
-          <span className="namaste-brand-intro">{copy("weAre") || "We are"}</span>{" "}
+          <span className="namaste-brand-intro">
+            {copy("weAre") || "We are"}
+          </span>{" "}
           <GradientText className="namaste-brand-name">Grosbyte</GradientText>
         </p>
         <p className="namaste-brand-desc">

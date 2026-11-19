@@ -1,15 +1,26 @@
+"use client";
+
 import { HelpCircle } from "lucide-react";
+import { useTranslation } from "@/contexts/language-context";
 
 export function ServiceFAQ({
   faq,
-  title = "Frequently Asked Questions",
-  subtitle = "Have questions about our process, code ownership, or technology standards? Here are direct answers.",
+  title,
+  subtitle,
 }: {
   faq: { question: string; answer: string }[];
   title?: string;
   subtitle?: string;
 }) {
+  const { t } = useTranslation();
+
   if (!faq || faq.length === 0) return null;
+
+  const displayTitle = title || t("servicesDetail.faq") || "Frequently Asked Questions";
+  const displaySubtitle =
+    subtitle ||
+    t("servicesDetail.faqSub") ||
+    "Have questions about our process, code ownership, or technology standards? Here are direct answers.";
 
   return (
     <section
@@ -24,9 +35,9 @@ export function ServiceFAQ({
             <span>Clarity & Transparency</span>
           </div>
           <h2 id="faq-title" className="service-section-title">
-            {title}
+            {displayTitle}
           </h2>
-          <p className="service-section-subtitle">{subtitle}</p>
+          <p className="service-section-subtitle">{displaySubtitle}</p>
         </div>
 
         <div className="service-faq-container">

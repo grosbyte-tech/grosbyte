@@ -89,11 +89,9 @@ function ProjectFlowCard({
 export function ProjectsSection() {
   const { t } = useTranslation();
 
-  const highlightWords =
-    (t("projectsSection.highlightWords") as unknown as string[]) || [
-      "products",
-      "engineered",
-    ];
+  const highlightWords = (t(
+    "projectsSection.highlightWords",
+  ) as unknown as string[]) || ["products", "engineered"];
 
   // Repeat items 3 times for a continuous seamless vertical loop
   const col1Items = [...column1Keys, ...column1Keys, ...column1Keys];
@@ -104,7 +102,9 @@ export function ProjectsSection() {
     <section className="section projects-section" id="work">
       <div className="container">
         <Reveal className="section-heading section-heading-centered">
-          <p className="eyebrow">{t("projectsSection.eyebrow") || "Selected Work"}</p>
+          <p className="eyebrow">
+            {t("projectsSection.eyebrow") || "Selected Work"}
+          </p>
           <FoldingText
             as="h2"
             text={

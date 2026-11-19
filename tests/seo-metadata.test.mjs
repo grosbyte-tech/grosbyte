@@ -190,7 +190,7 @@ test("Custom 404 page contains noindex directive and branded recovery UI", () =>
   assert.ok(html.includes("Page"), "Must render Page Not Found heading");
   assert.ok(html.includes("Not Found"), "Must render Not Found text");
   assert.ok(html.includes('href="/"'), "Must have link to return home");
-  assert.ok(html.includes('href="/custom-software-development"'), "Must link to main services");
+  assert.ok(html.includes('href="/contact"'), "Must have link to contact");
 });
 
 console.log("==========================================");

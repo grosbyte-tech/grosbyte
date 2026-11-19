@@ -27,7 +27,10 @@
   "about": {
     "eyebrow": "Über uns",
     "title": "Ein Technologiepartner, der sich auf praktische Geschäftsergebnisse konzentriert.",
-    "highlightWords": ["Technologiepartner", "Geschäftsergebnisse"],
+    "highlightWords": [
+      "Technologiepartner",
+      "Geschäftsergebnisse"
+    ],
     "imageAlt": "Zwei Fachleute überprüfen einen digitalen Produktplan",
     "p1": "Grosbyte Technologies hilft Unternehmen bei der Planung, dem Entwurf, dem Aufbau und der Verbesserung ihrer digitalen Präsenz. Wir kombinieren Softwareentwicklung, Produktdesign, intelligente Automatisierung und digitale Wachstumsstrategien, um Lösungen zu schaffen, die echte Geschäftsziele unterstützen.",
     "p2": "Vom ersten digitalen Produkt eines Unternehmens bis hin zu maßgeschneiderter Software für den täglichen Betrieb konzentrieren wir uns auf Benutzerfreundlichkeit, Wartbarkeit, klare Kommunikation und langfristigen Wert.",
@@ -40,7 +43,11 @@
   "services": {
     "eyebrow": "Dienstleistungen",
     "title": "Praktische Expertise für Ihr digitales Unternehmen.",
-    "highlightWords": ["Expertise", "digitales", "Unternehmen"],
+    "highlightWords": [
+      "Expertise",
+      "digitales",
+      "Unternehmen"
+    ],
     "description": "Wir verwandeln geschäftliche Herausforderungen in zuverlässige digitale Produkte, intelligente Automatisierung und skalierbare Softwarelösungen.",
     "explore": "Service erkunden",
     "list": {
@@ -127,7 +134,10 @@
   "projectsSection": {
     "eyebrow": "Ausgewählte Arbeiten",
     "title": "Echte Produkte für geschäftliches Wachstum entwickelt.",
-    "highlightWords": ["Produkte", "entwickelt"],
+    "highlightWords": [
+      "Produkte",
+      "entwickelt"
+    ],
     "subtitle": "Entdecken Sie moderne Webplattformen, Marktplätze und SaaS-Tools, die mit Präzision und sauberer Architektur entwickelt wurden.",
     "viewProject": "Live-Plattform",
     "items": {
@@ -136,42 +146,70 @@
         "category": "KI-Karriereplattform",
         "domain": "tailr.shubhamrajpandey.com.np",
         "tagline": "All-in-One-Arbeitsbereich für maßgeschneiderte Lebensläufe, Bewerbungs-Tracking und KI-Workflows.",
-        "tech": ["Next.js", "KI-Integration", "TypeScript", "Tailwind CSS"]
+        "tech": [
+          "Next.js",
+          "KI-Integration",
+          "TypeScript",
+          "Tailwind CSS"
+        ]
       },
       "booksansar": {
         "title": "BookSansar",
         "category": "E-Commerce-Marktplatz",
         "domain": "booksansar.com",
         "tagline": "Nepals führender Online-Buchmarktplatz, der Leser, Autoren und unabhängige Verkäufer verbindet.",
-        "tech": ["React", "Marktplatz-Engine", "Sichere Kasse", "Such-API"]
+        "tech": [
+          "React",
+          "Marktplatz-Engine",
+          "Sichere Kasse",
+          "Such-API"
+        ]
       },
       "dhune": {
         "title": "Dhune.np",
         "category": "On-Demand-Dienste",
         "domain": "dhune.np",
         "tagline": "Intelligenter Wäsche-Marktplatz, der Kunden mit geprüften Anbietern und Auftragsverfolgung verbindet.",
-        "tech": ["Web & Mobile App", "Echtzeit-Tracking", "Anbieterportal", "API-Gateway"]
+        "tech": [
+          "Web & Mobile App",
+          "Echtzeit-Tracking",
+          "Anbieterportal",
+          "API-Gateway"
+        ]
       },
       "sopdraft": {
         "title": "SOPdrafts Nepal",
         "category": "EdTech & Dokumentation",
         "domain": "sopdraftsnepal.com",
         "tagline": "Plattform für akademische Bewerbungsunterlagen und Motivationsschreiben, der über 2.500 Bewerber vertrauen.",
-        "tech": ["Webplattform", "Beratungsworkflow", "Lead-Funnel", "SEO-Engine"]
+        "tech": [
+          "Webplattform",
+          "Beratungsworkflow",
+          "Lead-Funnel",
+          "SEO-Engine"
+        ]
       },
       "setu": {
         "title": "Setu",
         "category": "Crowdfunding & Soziale Wirkung",
         "domain": "setu.org.np",
         "tagline": "Nepals erste einheitliche Spendenplattform, die Spender mit Notfall-, medizinischen und Community-Kampagnen verbindet.",
-        "tech": ["Next.js", "Zahlungsgateway", "Kampagnenverwaltung", "Cloud-Architektur"]
+        "tech": [
+          "Next.js",
+          "Zahlungsgateway",
+          "Kampagnenverwaltung",
+          "Cloud-Architektur"
+        ]
       }
     }
   },
   "process": {
     "eyebrow": "Arbeitsweise",
     "title": "Wie wir arbeiten",
-    "highlightWords": ["wir", "arbeiten"],
+    "highlightWords": [
+      "wir",
+      "arbeiten"
+    ],
     "description": "Erfahren Sie, wie wir geschäftliche Herausforderungen in zuverlässige Software, leistungsstarke Web- und mobile Plattformen und messbares digitales Wachstum verwandeln.",
     "steps": {
       "discover": {
@@ -217,9 +255,111 @@
   "blogsSection": {
     "eyebrow": "Ideen & Einblicke",
     "title": "Unsere neuesten Blogs",
-    "highlightWords": ["neuesten", "Blogs"],
+    "highlightWords": [
+      "neuesten",
+      "Blogs"
+    ],
     "subtitle": "Praxisnahe Perspektiven zu Software-Engineering, digitalen Produkten, Automatisierung und Workflows.",
     "viewAll": "Alle Artikel ansehen"
+  },
+  "blogsPage": {
+    "breadcrumb": "Blogs",
+    "eyebrow": "Ideen für Ihren nächsten Schritt",
+    "title": "Durchdachte Entscheidungen.",
+    "titleHighlight": "Bessere digitale Arbeit.",
+    "lead": "Praktische Lektüre über den Aufbau nützlicher Produkte, die Verbesserung von Workflows und klare Online-Kommunikation.",
+    "imageAlt": "Moderner Entwickler-Arbeitsplatz mit Laptop, Code und Notizbuch",
+    "exploreTitle": "Artikel erkunden",
+    "filterAll": "Alle Artikel",
+    "articleCountSingular": "Artikel",
+    "articleCountPlural": "Artikel",
+    "inCategory": "in",
+    "noArticles": "In dieser Kategorie gibt es noch keine Artikel. Versuchen Sie eine andere Kategorie.",
+    "readArticle": "Artikel lesen",
+    "minRead": "Min. Lesezeit",
+    "ctaTitle": "Verwandeln Sie eine Frage in einen Plan.",
+    "ctaDescription": "Erzählen Sie uns, woran Sie arbeiten und wo Sie Unterstützung benötigen.",
+    "ctaButton": "Projekt besprechen",
+    "categories": {
+      "Web Development": "Webentwicklung",
+      "Software Development": "Softwareentwicklung",
+      "Business Automation": "Geschäftsautomatisierung",
+      "Digital Marketing": "Digitales Marketing",
+      "Technology & Business": "Technologie & Wirtschaft"
+    },
+    "posts": {
+      "planning-a-business-website": {
+        "title": "Planung einer Unternehmenswebsite rund um Kundenentscheidungen",
+        "category": "Webentwicklung",
+        "excerpt": "Eine nützliche Website beginnt mit den Fragen, die Kunden beantwortet brauchen, bevor ein Layout oder eine Plattform gewählt wird."
+      },
+      "custom-software-or-existing-tools": {
+        "title": "Individuelle Software oder ein bestehendes Tool? Ein praktischer Entscheidungsleitfaden",
+        "category": "Softwareentwicklung",
+        "excerpt": "Vergleichen Sie Workflow-Passung, Eigentümerschaft und laufenden Aufwand, bevor Sie sich für eine individuelle Entwicklung entscheiden."
+      },
+      "choosing-your-first-automation": {
+        "title": "Auswahl des ersten zu automatisierenden Workflows",
+        "category": "Geschäftsautomatisierung",
+        "excerpt": "Finden Sie wiederholbare Aufgaben, definieren Sie Ausnahmen und halten Sie einen klaren Weg zurück zu einer Person offen."
+      },
+      "seo-before-a-website-launch": {
+        "title": "SEO-Prüfungen vor dem Launch einer Website",
+        "category": "Digitales Marketing",
+        "excerpt": "Machen Sie Seiten verständlich und auffindbar, ohne Sichtbarkeit in Suchmaschinen als garantiertes Ergebnis zu betrachten."
+      },
+      "ai-assistance-with-human-review": {
+        "title": "Wo KI-Unterstützung in einen geschäftlichen Workflow passt",
+        "category": "Technologie & Wirtschaft",
+        "excerpt": "Trennen Sie nützliche Vorschläge von Aktionen, die Überprüfung, Genehmigung und klare Verantwortlichkeiten erfordern."
+      },
+      "building-a-content-plan": {
+        "title": "Erstellung eines Content-Plans, den Ihr Team pflegen kann",
+        "category": "Digitales Marketing",
+        "excerpt": "Verwandeln Sie wiederkehrende Kundenfragen in eine handhabbare Veröffentlichungsroutine mit klarer Verantwortlichkeit."
+      }
+    }
+  },
+  "contactPage": {
+    "breadcrumb": "Kontakt",
+    "eyebrow": "Grosbyte kontaktieren",
+    "title": "Was möchten Sie",
+    "titlePrefix": "voran",
+    "titleHighlight": "bringen",
+    "titleSuffix": "?",
+    "lead": "Ein neues Produkt, ein besserer Workflow oder eine klarere digitale Präsenz. Sagen Sie uns, wo Sie stehen und was Sie verbessern möchten.",
+    "imageAlt": "Mitarbeiter von Grosbyte Technology arbeiten im Büro mit Tablet und Stift zusammen",
+    "startTitle": "Beginnen Sie ein Gespräch.",
+    "startText": "Sie benötigen keine vollständige Spezifikation. Eine Beschreibung des Problems und der betroffenen Personen ist ein guter Ausgangspunkt.",
+    "emailLabel": "Direkt eine E-Mail senden",
+    "callLabel": "Unser Team anrufen",
+    "locationLabel": "Standort",
+    "locationValue": "Kathmandu, Nepal",
+    "socialLabel": "Verbinden Sie sich mit uns",
+    "nextCardTitle": "Was passiert als Nächstes?",
+    "nextCardText": "Wir prüfen Ihre Anfrage, stellen offene Fragen zum Umfang und besprechen mit Ihnen einen praktischen nächsten Schritt.",
+    "formTitle": "Erzählen Sie uns von Ihrem Projekt.",
+    "formSubtitle": "Teilen Sie ein wenig Kontext. Als optional markierte Felder können leer bleiben.",
+    "nameLabel": "Vollständiger Name",
+    "namePlaceholder": "Ihr vollständiger Name",
+    "emailLabelForm": "E-Mail",
+    "emailPlaceholder": "name@firma.de",
+    "phoneLabel": "Telefon (optional)",
+    "phonePlaceholder": "z.B. +977 9800000000",
+    "companyLabel": "Unternehmen (optional)",
+    "companyPlaceholder": "z.B. Mustermann GmbH",
+    "serviceLabel": "Interessanter Service",
+    "serviceSelect": "Service auswählen",
+    "messageLabel": "Projektbeschreibung",
+    "messagePlaceholder": "Beschreiben Sie, was Sie aufbauen oder verbessern möchten, wichtigste Ziele, Zeitplan oder Technologie-Präferenzen...",
+    "budgetLabel": "Budget (optional)",
+    "budgetPlaceholder": "z.B. 5.000 € – 10.000 € oder flexibel",
+    "note": "Wir verwenden diese Angaben, um auf Ihre Anfrage zu antworten. Bitte geben Sie keine sensiblen Informationen an.",
+    "submit": "Anfrage senden",
+    "submitting": "Wird gesendet…",
+    "statusSuccess": "Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt.",
+    "statusError": "Wir konnten Ihre Anfrage nicht senden. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt per E-Mail.",
+    "statusConnection": "Zustellung konnte nicht bestätigt werden. Bitte versuchen Sie es erneut oder kontaktieren Sie contact@grosbyte.com."
   },
   "contact": {
     "eyebrow": "Kontakt",
@@ -378,5 +518,301 @@
       "techTitleHighlight": "& Technologien",
       "techEditorial": "Wir setzen moderne Full-Stack-Webframeworks, Enterprise-Backend-Systeme, skalierbare Datenbanken, Cloud-Infrastruktur und intelligente Automatisierung ein – darunter Next.js, React, TypeScript, Python, Node.js, Spring Boot, n8n, AWS und PostgreSQL."
     }
+  },
+  "servicesDetail": {
+    "breadcrumb": "Leistungen",
+    "discussProject": "Projekt besprechen",
+    "exploreCapabilities": "Leistungen erkunden",
+    "verifiedEngineering": "Geprüfte Software-Exzellenz",
+    "productionSecurity": "Produktionsreife Sicherheit & SLAs",
+    "coreCapabilities": "Kernkompetenzen & Leistungen",
+    "coreCapabilitiesSub": "Was wir im Rahmen unserer Zusammenarbeit liefern",
+    "techStack": "Technologie-Stack & Werkzeuge",
+    "techStackSub": "Branchenübliche Frameworks, Plattformen und Toolchains",
+    "processTitle": "4-Phasen Engineering-Lebenszyklus",
+    "processSub": "Von der Architekturanalyse bis zum zuverlässigen Produktivbetrieb",
+    "engagementModels": "Flexible Kooperationsmodelle",
+    "engagementModelsSub": "Strukturierte Liefermodelle, angepasst an Ihr Unternehmen und Ihre Anforderungen",
+    "getStarted": "Jetzt starten",
+    "bestFor": "Ideal für:",
+    "keyDeliverables": "Wichtige Ergebnisse",
+    "whyGrosbyte": "Warum Grosbyte wählen",
+    "longTermImpact": "Entwickelt für langfristigen Erfolg",
+    "whoItsFor": "Für wen dies geeignet ist",
+    "faq": "Häufig gestellte Fragen",
+    "faqSub": "Häufige Fragen zu Architektur, Umsetzung und Zusammenarbeit",
+    "otherServices": "Weitere Leistungen in",
+    "ctaTitle": "Bereit für Ihre maßgeschneiderte Lösung?",
+    "ctaSub": "Besprechen Sie Ihre technischen Anforderungen mit unserem Team. Wir zeigen Ihnen Architekturoptionen, Zeitpläne und konkrete nächste Schritte auf.",
+    "startConversation": "Gespräch beginnen",
+    "orEmail": "Oder schreiben Sie uns direkt an",
+    "categories": {
+      "development-technology": "Entwicklung & Technologie",
+      "business-solutions": "Geschäftslösungen",
+      "digital-marketing-branding": "Digitales Marketing & Branding"
+    }
+  },
+  "customSoftwarePage": {
+    "heroPill": "Individuelle Softwareentwicklung",
+    "heroTitleLead": "Verwandeln Sie Ideen",
+    "heroTitleGradient1": "in leistungsstarke",
+    "heroTitleGradient2": "Software",
+    "heroSubtitle": "Wir entwickeln schnelle, skalierbare und benutzerfreundliche Anwendungen, die Ihr Wachstum fördern und Abläufe automatisieren.",
+    "startProject": "Projekt starten",
+    "viewWork": "Unsere Arbeiten ansehen",
+    "whatWeBuildEyebrow": "Was wir entwickeln",
+    "whatWeBuildTitle": "Von einfachen Websites",
+    "whatWeBuildTitleGradient": "bis zu komplexen Plattformen.",
+    "whatWeBuildSubtitle": "Wir schaffen digitale Lösungen, die exakt zu Ihren Unternehmenszielen passen.",
+    "capabilities": {
+      "webApps": {
+        "title": "Webanwendungen",
+        "description": "Moderne, performante und skalierbare Web-Apps."
+      },
+      "mobileApps": {
+        "title": "Mobile Apps",
+        "description": "iOS- & Android-Apps mit erstklassiger UX."
+      },
+      "aiIntegrations": {
+        "title": "KI-Integrationen",
+        "description": "Nutzen Sie das Potenzial moderner KI für Ihr Produkt."
+      },
+      "businessSoftware": {
+        "title": "Unternehmenssoftware",
+        "description": "Automatisieren und optimieren Sie Ihre Arbeitsabläufe."
+      },
+      "apisBackend": {
+        "title": "APIs & Backend",
+        "description": "Robuste, sichere und hochverfügbare Backend-Systeme."
+      },
+      "enterpriseSolutions": {
+        "title": "Enterprise-Lösungen",
+        "description": "Zuverlässige Software für wachsende Unternehmen."
+      }
+    },
+    "whyChooseEyebrow": "Warum uns wählen",
+    "whyChooseTitle": "Ein Entwicklungspartner,",
+    "whyChooseTitleGradient": "auf den Sie zählen können.",
+    "whyChooseSubtitle": "Wir setzen auf Spitzenqualität, klare Kommunikation und nachhaltigen Support — für Ihren messbaren Erfolg.",
+    "checklist": [
+      "Sauberer & wartbarer Code",
+      "Pünktliche Lieferung",
+      "Transparente Kommunikation",
+      "Flexible Zusammenarbeitsmodelle",
+      "Zuverlässiger Support nach dem Launch"
+    ],
+    "techStackEyebrow": "Unser Tech-Stack",
+    "techStackTitle": "Moderne Tools.",
+    "techStackTitleGradient": "Zukunftssicher.",
+    "techStackSubtitle": "Wir nutzen modernste Technologien für schnelle, skalierbare und ausfallsichere Systeme.",
+    "techMore": "+ Mehr",
+    "faqEyebrow": "FAQ",
+    "faqTitle": "Häufig gestellte",
+    "faqTitleGradient": "Fragen",
+    "faqSubtitle": "Hier finden Sie schnelle Antworten auf die wichtigsten Fragen.",
+    "faqs": [
+      {
+        "question": "Arbeiten Sie auch mit Startups?",
+        "answer": "Ja. Wir begleiten Early-Stage- und finanzierte Startups dabei, performante MVPs schnell und ohne technische Altlasten auf den Markt zu bringen."
+      },
+      {
+        "question": "Können Sie bei bestehenden Projekten helfen?",
+        "answer": "Absolut. Wir führen Codebase- und Infrastruktur-Audits durch, refaktorisieren bestehenden Code und erweitern Plattformen sauber um neue Features."
+      },
+      {
+        "question": "Wie läuft Ihr Entwicklungsprozess ab?",
+        "answer": "Wir arbeiten in transparenten 2-Wochen-Sprints. Sie erhalten regelmäßige Demos, Zugriff auf Staging-Umgebungen und direkten Austausch mit dem Team."
+      },
+      {
+        "question": "Bieten Sie Support nach dem Launch an?",
+        "answer": "Ja. Nach einer umfassenden Übergabe bieten wir flexible Wartungspakete, Performance-Monitoring und SLAs für den reibungslosen Betrieb."
+      }
+    ],
+    "ctaTitle": "Lassen Sie uns gemeinsam Großes schaffen",
+    "ctaSubtitle": "Haben Sie ein Projekt im Kopf? Lassen Sie es uns besprechen und Ihre Vision verwirklichen.",
+    "getInTouch": "Kontakt aufnehmen"
+  },
+  "webMobilePage": {
+    "heroPill": "Web- & Mobile-Anwendungen",
+    "heroTitleLead": "Moderne",
+    "heroTitleGradient": "Web- & Mobile-",
+    "heroTitleSuffix": "Anwendungen entwickeln",
+    "heroSubtitle": "Von der Idee bis zum Launch entwickeln wir schnelle, zuverlässige und intuitive Apps für Web und Mobile.",
+    "startProject": "Projekt starten",
+    "viewWork": "Unsere Arbeiten ansehen",
+    "whatWeBuildEyebrow": "Was wir entwickeln",
+    "whatWeBuildTitle": "Hochperformante Apps,",
+    "whatWeBuildTitleGradient": "bereit für jedes Wachstum.",
+    "whatWeBuildSubtitle": "Wir schaffen reibungslose digitale Erlebnisse auf allen Endgeräten.",
+    "capabilities": {
+      "webApps": {
+        "title": "Webanwendungen",
+        "description": "Moderne, schnelle und skalierbare Web-Apps."
+      },
+      "mobileApps": {
+        "title": "Mobile Apps",
+        "description": "iOS- & Android-Apps mit erstklassiger UX."
+      },
+      "progressiveApps": {
+        "title": "Progressive Web Apps",
+        "description": "Schnell, zuverlässig und offline-fähig."
+      },
+      "saasProducts": {
+        "title": "SaaS-Produkte",
+        "description": "Bringen Sie Ihre Idee als marktreife SaaS-Lösung heraus."
+      },
+      "ecommerceApps": {
+        "title": "E-Commerce-Apps",
+        "description": "Nahtlose Einkaufserlebnisse mit hoher Conversion."
+      },
+      "crossPlatform": {
+        "title": "Enterprise-Lösungen",
+        "description": "Maßgeschneiderte Software für geschäftliche Anforderungen."
+      }
+    },
+    "whyChooseEyebrow": "Warum uns wählen",
+    "whyChooseTitle": "Entwickelt für",
+    "whyChooseTitleGradient": "außergewöhnliche Erlebnisse.",
+    "whyChooseSubtitle": "Wir setzen auf sauberen Code, reaktionsschnelle Performance und intuitive Oberflächen.",
+    "checklist": [
+      "Sauberer & wartbarer Code",
+      "Pünktliche Lieferung",
+      "Klare Kommunikation",
+      "Flexible Zusammenarbeitsmodelle",
+      "Verlässlicher Support nach dem Launch"
+    ],
+    "techStackEyebrow": "Unser Tech-Stack",
+    "techStackTitle": "Bewährte Frameworks.",
+    "techStackTitleGradient": "Höchste Performance.",
+    "techStackSubtitle": "Wir wählen praxiserprobte Werkzeuge, die genau zu Ihren Anforderungen an Skalierung und Time-to-Market passen.",
+    "techMore": "+ Mehr",
+    "faqEyebrow": "FAQ",
+    "faqTitle": "Häufig gestellte",
+    "faqTitleGradient": "Fragen",
+    "faqSubtitle": "Finden Sie schnelle Antworten auf wichtige Fragen.",
+    "faqs": [
+      {
+        "question": "Entwickeln Sie sowohl Web- als auch Mobile-Apps?",
+        "answer": "Ja! Wir bauen performante Web-Apps mit React/Next.js sowie native und plattformübergreifende Apps für iOS & Android mit Flutter und React Native."
+      },
+      {
+        "question": "Können Sie bei der App-Wartung helfen?",
+        "answer": "Ja. Wir bieten kontinuierliche Wartungs- und Supportpakete inklusive OS-Updates, Performance-Optimierung und Security-Monitoring."
+      },
+      {
+        "question": "Wie sieht Ihr Entwicklungsprozess aus?",
+        "answer": "Wir arbeiten agil und sprintbasiert mit regelmäßigen Reviews, Staging-Demos, transparenten Meilensteinen und direktem Entwicklerkontakt."
+      },
+      {
+        "question": "Bieten Sie Support nach dem Launch?",
+        "answer": "Jedes Projekt beinhaltet eine Übergabegarantie sowie maßgeschneiderte SLA-Optionen für langfristige Stabilität und Weiterentwicklung."
+      }
+    ],
+    "ctaTitle": "Bereit für Ihre nächste Anwendung?",
+    "ctaSubtitle": "Ob Webplattform, Mobile App oder beides — lassen Sie es uns gemeinsam umsetzen.",
+    "getInTouch": "Kontakt aufnehmen"
+  },
+  "digitalMarketingPage": {
+    "heroPill": "Digital Marketing Services",
+    "heroTitleLead": "Digitales Marketing &",
+    "heroTitleGradient": "Markenwachstum",
+    "heroSubtitle": "Bauen Sie Ihre Marke aus, erreichen Sie die richtige Zielgruppe und verwandeln Sie Klicks in treue Kunden.",
+    "startCampaign": "Kampagne starten",
+    "viewWork": "Unsere Arbeiten ansehen",
+    "whatWeDoEyebrow": "Was wir tun",
+    "whatWeDoTitle": "Ganzheitliche digitale",
+    "whatWeDoTitleGradient": "Marketing-Lösungen.",
+    "whatWeDoSubtitle": "Von der Strategie bis zur Performance unterstützen wir Ihr digitales Wachstum.",
+    "capabilities": {
+      "seo": {
+        "title": "SEO",
+        "description": "Bessere Rankings, mehr qualifizierter organischer Traffic."
+      },
+      "social": {
+        "title": "Social Media Marketing",
+        "description": "Präsenz aufbauen und Ihre Zielgruppe begeistern."
+      },
+      "content": {
+        "title": "Content Marketing",
+        "description": "Inhalte erstellen, die überzeugen und konvertieren."
+      },
+      "paidAds": {
+        "title": "Performance Marketing",
+        "description": "Zielgerichtete Anzeigen für maximalen ROI."
+      },
+      "branding": {
+        "title": "Markenstrategie",
+        "description": "Eine unverwechselbare und starke Markenidentität etablieren."
+      },
+      "analytics": {
+        "title": "Analytics & Reporting",
+        "description": "Performance messen und fundiert wachsen."
+      }
+    },
+    "whyChooseEyebrow": "Warum uns wählen",
+    "whyChooseTitle": "Ein wachstumsorientierter",
+    "whyChooseTitleGradient": "Marketing-Partner.",
+    "whyChooseSubtitle": "Wir machen mehr als Marketing — wir schaffen messbares Wachstum mit smarten Strategien.",
+    "checklist": [
+      "Datengetriebene Strategien",
+      "Transparente Reportings",
+      "Kreative & ergebnisorientierte Kampagnen",
+      "Engagierter persönlicher Support",
+      "Faire & flexible Modelle"
+    ],
+    "caseStudiesEyebrow": "Unsere Fallstudien",
+    "caseStudiesTitle": "Echtes Wachstum.",
+    "caseStudiesTitleGradient": "Echte Ergebnisse.",
+    "caseStudiesSubtitle": "Erfahren Sie, wie wir Unternehmen zum Erfolg geführt haben.",
+    "caseStudies": [
+      {
+        "stat": "+250%",
+        "label": "Organischer Traffic",
+        "sub": "E-Commerce-Shop"
+      },
+      {
+        "stat": "+180%",
+        "label": "Umsatzwachstum",
+        "sub": "Online-Marktplatz"
+      },
+      {
+        "stat": "+300%",
+        "label": "Engagement",
+        "sub": "Tech-Startup"
+      }
+    ],
+    "viewMore": "Mehr anzeigen",
+    "testimonialsEyebrow": "Kundenstimmen",
+    "testimonialsTitle": "Geschätzt von",
+    "testimonialsTitleGradient": "wachsenden Marken.",
+    "testimonialsSubtitle": "Echtes Feedback unserer zufriedenen Kunden.",
+    "testimonialQuote": "Grosbyte hat unsere Online-Präsenz mit cleveren Strategien und zielgerichteten Kampagnen entscheidend vorangebracht. Traffic und Verkäufe waren nie besser!",
+    "testimonialAuthor": "Aarav Sharma",
+    "testimonialRole": "Gründer, SmartCart",
+    "faqEyebrow": "FAQ",
+    "faqTitle": "Häufig gestellte",
+    "faqTitleGradient": "Fragen.",
+    "faqSubtitle": "Finden Sie schnelle Antworten auf die wichtigsten Fragen.",
+    "faqs": [
+      {
+        "question": "Helfen Sie bei SEO und Content-Marketing?",
+        "answer": "Ja! Wir bieten ganzheitliche Suchmaschinenoptimierung inklusive technischer Audits, Keyword-Strategie und hochwertiger Content-Erstellung."
+      },
+      {
+        "question": "Schalten Sie Anzeigen auf Google und Social Media?",
+        "answer": "Ja. Wir steuern performante Kampagnen auf Google Search, Meta (Facebook & Instagram), LinkedIn und YouTube mit kontinuierlicher ROI-Optimierung."
+      },
+      {
+        "question": "Erhalten wir regelmäßige Berichte?",
+        "answer": "Selbstverständlich. Sie erhalten wöchentliche und monatliche Reportings mit transparentem KPI-Tracking und konkreten Optimierungsvorschlägen."
+      },
+      {
+        "question": "Arbeiten Sie auch mit kleinen Unternehmen?",
+        "answer": "Absolut. Wir entwickeln maßgeschneiderte, kosteneffiziente Kampagnen, die perfekt zu Ihrem Budget und Ihren Wachstumszielen passen."
+      }
+    ],
+    "ctaTitle": "Bereit, Ihre Marke wachsen zu lassen?",
+    "ctaSubtitle": "Lassen Sie uns eine erfolgreiche Marketingstrategie für Ihr Unternehmen entwickeln.",
+    "getInTouch": "Kontakt aufnehmen"
   }
 }

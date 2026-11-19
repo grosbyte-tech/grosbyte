@@ -31,7 +31,10 @@ const industryLinks = [
   { label: "Healthcare", href: "/custom-software-development" },
   { label: "Fin-tech", href: "/custom-software-development" },
   { label: "Ed-tech", href: "/custom-software-development" },
-  { label: "E-commerce & Retail", href: "/services/website-ecommerce-development" },
+  {
+    label: "E-commerce & Retail",
+    href: "/services/website-ecommerce-development",
+  },
   { label: "Logistics & Supply Chain", href: "/custom-software-development" },
   { label: "Real Estate & Construction", href: "/custom-software-development" },
 ];

@@ -47,12 +47,11 @@ export function AboutSection() {
     { value: "18+", label: t("about.stats.technologies") },
   ];
 
-  const highlightWords =
-    (t("about.highlightWords") as unknown as string[]) || [
-      "technology",
-      "partner",
-      "outcomes",
-    ];
+  const highlightWords = (t("about.highlightWords") as unknown as string[]) || [
+    "technology",
+    "partner",
+    "outcomes",
+  ];
 
   return (
     <section className="section about-section" id="about">
@@ -227,10 +226,7 @@ function ServiceCard({
       <p className="service-card-desc">{translatedDescription}</p>
 
       <div className="service-card-footer">
-        <Link
-          href={serviceRoutes[service.title]}
-          className="service-card-cta"
-        >
+        <Link href={serviceRoutes[service.title]} className="service-card-cta">
           <span>
             {t("services.explore") !== "services.explore"
               ? t("services.explore")
@@ -246,12 +242,9 @@ function ServiceCard({
 export function ServicesSection() {
   const { t } = useTranslation();
 
-  const highlightWords =
-    (t("services.highlightWords") as unknown as string[]) || [
-      "expertise",
-      "digital",
-      "business",
-    ];
+  const highlightWords = (t(
+    "services.highlightWords",
+  ) as unknown as string[]) || ["expertise", "digital", "business"];
 
   return (
     <section className="section services-section" id="services">

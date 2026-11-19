@@ -3,6 +3,7 @@
 import { Suspense, useRef, useState, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "@/contexts/language-context";
 import {
   emptyContact,
   validateContactFields,
@@ -72,6 +73,7 @@ const fields = [
 ] as const;
 
 function EnquiryFormFields() {
+  const { t } = useTranslation();
   const searchParams = useSearchParams();
   const [values, setValues] = useState<ContactValues>(() =>
     getInitialContactValues(searchParams.get("service")),
@@ -82,6 +84,37 @@ function EnquiryFormFields() {
   const lock = useRef(false);
   const [submissionId, setSubmissionId] = useState<string | null>(null);
   const formRef = useRef<HTMLFormElement>(null);
+
+  const getFieldLabel = (name: string, fallback: string) => {
+    switch (name) {
+      case "name":
+        return t<string>("contactPage.nameLabel") || fallback;
+      case "email":
+        return t<string>("contactPage.emailLabelForm") || fallback;
+      case "phone":
+        return t<string>("contactPage.phoneLabel") || fallback;
+      case "company":
+        return t<string>("contactPage.companyLabel") || fallback;
+      default:
+        return fallback;
+    }
+  };
+
+  const getFieldPlaceholder = (name: string, fallback: string) => {
+    switch (name) {
+      case "name":
+        return t<string>("contactPage.namePlaceholder") || fallback;
+      case "email":
+        return t<string>("contactPage.emailPlaceholder") || fallback;
+      case "phone":
+        return t<string>("contactPage.phonePlaceholder") || fallback;
+      case "company":
+        return t<string>("contactPage.companyPlaceholder") || fallback;
+      default:
+        return fallback;
+    }
+  };
+
   function update(name: keyof ContactValues, value: string) {
     setValues((current) => ({ ...current, [name]: value }));
     setErrors((current) => ({ ...current, [name]: undefined }));
@@ -144,6 +177,7 @@ function EnquiryFormFields() {
       } catch {
         result = {
           message:
+            t<string>("contactPage.statusError") ||
             "We could not send your enquiry. Please try again or email us directly.",
         };
       }
@@ -154,17 +188,23 @@ function EnquiryFormFields() {
           error: true,
           message:
             result.message ??
+            t<string>("contactPage.statusError") ??
             "We could not send your enquiry. Please try again or email us directly.",
         });
       } else {
         setValues(emptyContact);
         setSubmissionId(null);
-        setStatus({ error: false, message: result.message ?? "Sent!" });
+        setStatus({
+          error: false,
+          message:
+            result.message ?? t<string>("contactPage.statusSuccess") ?? "Sent!",
+        });
       }
     } catch {
       setStatus({
         error: true,
         message:
+          t<string>("contactPage.statusConnection") ??
           "We could not confirm delivery. Please try again or email contact@grosbyte.com.",
       });
     } finally {
@@ -180,19 +220,26 @@ function EnquiryFormFields() {
       noValidate
       aria-busy={pending}
     >
-      <h2>Tell us about your project.</h2>
-      <p>Share a little context. Fields marked optional can be left blank.</p>
+      <h2>
+        {t<string>("contactPage.formTitle") || "Tell us about your project."}
+      </h2>
+      <p>
+        {t<string>("contactPage.formSubtitle") ||
+          "Share a little context. Fields marked optional can be left blank."}
+      </p>
       <fieldset disabled={pending}>
         <legend className="sr-only">Project enquiry</legend>
         <div className="enquiry-fields">
           {fields.map((field) => (
             <div className="enquiry-field" key={field.name}>
-              <label htmlFor={`enquiry-${field.name}`}>{field.label}</label>
+              <label htmlFor={`enquiry-${field.name}`}>
+                {getFieldLabel(field.name, field.label)}
+              </label>
               <input
                 {...inputProps(field.name)}
                 type={field.type}
                 autoComplete={field.autoComplete}
-                placeholder={field.placeholder}
+                placeholder={getFieldPlaceholder(field.name, field.placeholder)}
                 maxLength={field.max}
                 required={field.name === "name" || field.name === "email"}
               />
@@ -200,32 +247,48 @@ function EnquiryFormFields() {
             </div>
           ))}
           <div className="enquiry-field enquiry-wide">
-            <label htmlFor="enquiry-service">Service interested in</label>
+            <label htmlFor="enquiry-service">
+              {t<string>("contactPage.serviceLabel") || "Service interested in"}
+            </label>
             <select {...inputProps("service")} required>
-              <option value="">Select a service</option>
+              <option value="">
+                {t<string>("contactPage.serviceSelect") || "Select a service"}
+              </option>
               {serviceOptions.map((option) => (
-                <option key={option}>{option}</option>
+                <option key={option} value={option}>
+                  {option}
+                </option>
               ))}
             </select>
             {error("service")}
           </div>
           <div className="enquiry-field enquiry-wide">
-            <label htmlFor="enquiry-message">Project description</label>
+            <label htmlFor="enquiry-message">
+              {t<string>("contactPage.messageLabel") || "Project description"}
+            </label>
             <textarea
               {...inputProps("message")}
               rows={6}
               maxLength={5000}
               required
-              placeholder="Tell us about what you want to build or improve, key goals, and any timeline or tech preferences..."
+              placeholder={
+                t<string>("contactPage.messagePlaceholder") ||
+                "Tell us about what you want to build or improve, key goals, and any timeline or tech preferences..."
+              }
             />
             {error("message")}
           </div>
           <div className="enquiry-field enquiry-wide">
-            <label htmlFor="enquiry-budget">Budget (optional)</label>
+            <label htmlFor="enquiry-budget">
+              {t<string>("contactPage.budgetLabel") || "Budget (optional)"}
+            </label>
             <input
               {...inputProps("budget")}
               maxLength={100}
-              placeholder="e.g. $5,000 – $10,000, NPR 500k – 1M, or flexible"
+              placeholder={
+                t<string>("contactPage.budgetPlaceholder") ||
+                "e.g. $5,000 – $10,000, NPR 500k – 1M, or flexible"
+              }
             />
             {error("budget")}
           </div>
@@ -240,11 +303,13 @@ function EnquiryFormFields() {
           />
         </div>
         <p className="enquiry-note">
-          We use these details to respond to your enquiry. Please don’t include
-          passwords, payment details, or other sensitive information.
+          {t<string>("contactPage.note") ||
+            "We use these details to respond to your enquiry. Please don’t include passwords, payment details, or other sensitive information."}
         </p>
         <Button type="submit" size="lg" disabled={pending}>
-          {pending ? "Sending enquiry…" : "Send enquiry"}
+          {pending
+            ? t<string>("contactPage.submitting") || "Sending enquiry…"
+            : t<string>("contactPage.submit") || "Send enquiry"}
         </Button>
       </fieldset>
       <p

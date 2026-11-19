@@ -1,10 +1,5 @@
 import type { ComponentType } from "react";
-import {
-  Blocks,
-  Megaphone,
-  Smartphone,
-  type LucideIcon,
-} from "lucide-react";
+import { Blocks, Megaphone, Smartphone, type LucideIcon } from "lucide-react";
 
 export type NavigationItem = {
   label: string;
@@ -232,4 +227,3 @@ export const socialLinks = {
   linkedin: "https://www.linkedin.com/company/grosbyte-technologies",
   github: "https://github.com/grosbyte-tech",
 } as const;
- 
