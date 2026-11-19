@@ -28,7 +28,11 @@
   "about": {
     "eyebrow": "About Us",
     "title": "A technology partner focused on practical business outcomes.",
-    "highlightWords": ["technology", "partner", "outcomes"],
+    "highlightWords": [
+      "technology",
+      "partner",
+      "outcomes"
+    ],
     "imageAlt": "Two professionals reviewing a digital product plan",
     "p1": "Grosbyte Technologies helps businesses plan, design, build, and improve their digital presence. We combine software engineering, product design, intelligent automation, and digital growth strategies to create solutions that support real business goals.",
     "p2": "From a company's first digital product to custom software supporting daily operations, we focus on usability, maintainability, clear communication, and long-term value.",
@@ -41,7 +45,11 @@
   "services": {
     "eyebrow": "Services",
     "title": "Practical expertise for your digital business.",
-    "highlightWords": ["expertise", "digital", "business"],
+    "highlightWords": [
+      "expertise",
+      "digital",
+      "business"
+    ],
     "description": "We turn business challenges into reliable digital products, intelligent automation, and scalable software solutions.",
     "explore": "Explore service",
     "list": {
@@ -128,7 +136,10 @@
   "projectsSection": {
     "eyebrow": "Selected Work",
     "title": "Real products engineered for business growth.",
-    "highlightWords": ["products", "engineered"],
+    "highlightWords": [
+      "products",
+      "engineered"
+    ],
     "subtitle": "Explore live web platforms, marketplaces, and SaaS tools crafted with precision, clean code, and scalable architecture.",
     "viewProject": "Live Platform",
     "items": {
@@ -137,42 +148,70 @@
         "category": "AI Career Platform",
         "domain": "tailr.shubhamrajpandey.com.np",
         "tagline": "All-in-one workspace for tailored resumes, application tracking, and AI-driven career workflows.",
-        "tech": ["Next.js", "AI Integration", "TypeScript", "Tailwind CSS"]
+        "tech": [
+          "Next.js",
+          "AI Integration",
+          "TypeScript",
+          "Tailwind CSS"
+        ]
       },
       "booksansar": {
         "title": "BookSansar",
         "category": "E-Commerce Marketplace",
         "domain": "booksansar.com",
         "tagline": "Nepal's premier online book marketplace connecting readers, authors, and independent sellers.",
-        "tech": ["React", "Marketplace Engine", "Secure Checkout", "Search API"]
+        "tech": [
+          "React",
+          "Marketplace Engine",
+          "Secure Checkout",
+          "Search API"
+        ]
       },
       "dhune": {
         "title": "Dhune.np",
         "category": "On-Demand Services",
         "domain": "dhune.np",
         "tagline": "Smart laundry marketplace connecting customers with verified vendors, order tracking, and vendor portals.",
-        "tech": ["Web & Mobile App", "Real-Time Tracking", "Vendor Portal", "API Gateway"]
+        "tech": [
+          "Web & Mobile App",
+          "Real-Time Tracking",
+          "Vendor Portal",
+          "API Gateway"
+        ]
       },
       "sopdraft": {
         "title": "SOPdrafts Nepal",
         "category": "EdTech & Documentation",
         "domain": "sopdraftsnepal.com",
         "tagline": "High-conversion statement of purpose and academic documentation platform trusted by 2,500+ applicants.",
-        "tech": ["Web Platform", "Consultation Workflow", "Lead Funnel", "SEO Engine"]
+        "tech": [
+          "Web Platform",
+          "Consultation Workflow",
+          "Lead Funnel",
+          "SEO Engine"
+        ]
       },
       "setu": {
         "title": "Setu",
         "category": "Crowdfunding & Social Impact",
         "domain": "setu.org.np",
         "tagline": "Nepal's first unified donation platform connecting donors with emergency, medical, and community campaigns.",
-        "tech": ["Next.js", "Payment Gateway", "Campaign Management", "Cloud Architecture"]
+        "tech": [
+          "Next.js",
+          "Payment Gateway",
+          "Campaign Management",
+          "Cloud Architecture"
+        ]
       }
     }
   },
   "process": {
     "eyebrow": "How We Work",
     "title": "How we work",
-    "highlightWords": ["we", "work"],
+    "highlightWords": [
+      "we",
+      "work"
+    ],
     "description": "Discover how we turn complex business challenges into reliable software, high-performance web and mobile platforms, and measurable digital growth.",
     "steps": {
       "discover": {
@@ -218,9 +257,111 @@
   "blogsSection": {
     "eyebrow": "Ideas & Insights",
     "title": "Our Latest Blogs",
-    "highlightWords": ["Latest", "Blogs"],
+    "highlightWords": [
+      "Latest",
+      "Blogs"
+    ],
     "subtitle": "Practical perspectives on software engineering, digital products, automation, and tech workflows.",
     "viewAll": "Explore all articles"
+  },
+  "blogsPage": {
+    "breadcrumb": "Blogs",
+    "eyebrow": "Ideas for your next step",
+    "title": "Thoughtful decisions.",
+    "titleHighlight": "Better digital work.",
+    "lead": "Practical reading on building useful products, improving workflows, and communicating clearly online.",
+    "imageAlt": "Modern developer workspace with laptop, code, notebook, and coffee representing thoughtful digital decisions",
+    "exploreTitle": "Explore the articles",
+    "filterAll": "All articles",
+    "articleCountSingular": "article",
+    "articleCountPlural": "articles",
+    "inCategory": "in",
+    "noArticles": "No articles in this category yet. Try another category.",
+    "readArticle": "Read article",
+    "minRead": "min read",
+    "ctaTitle": "Turn a question into a plan.",
+    "ctaDescription": "Tell us what you’re working on and where you need support.",
+    "ctaButton": "Discuss your project",
+    "categories": {
+      "Web Development": "Web Development",
+      "Software Development": "Software Development",
+      "Business Automation": "Business Automation",
+      "Digital Marketing": "Digital Marketing",
+      "Technology & Business": "Technology & Business"
+    },
+    "posts": {
+      "planning-a-business-website": {
+        "title": "Planning a business website around customer decisions",
+        "category": "Web Development",
+        "excerpt": "A useful website starts with the questions customers need answered, before choosing a layout or platform."
+      },
+      "custom-software-or-existing-tools": {
+        "title": "Custom software or an existing tool? A practical decision guide",
+        "category": "Software Development",
+        "excerpt": "Compare workflow fit, ownership, and ongoing effort before committing to a custom build."
+      },
+      "choosing-your-first-automation": {
+        "title": "Choosing the first workflow to automate",
+        "category": "Business Automation",
+        "excerpt": "Find repeatable work, define exceptions, and keep a clear route back to a person."
+      },
+      "seo-before-a-website-launch": {
+        "title": "SEO checks to include before a website launch",
+        "category": "Digital Marketing",
+        "excerpt": "Make pages understandable and discoverable without treating search visibility as a guaranteed outcome."
+      },
+      "ai-assistance-with-human-review": {
+        "title": "Where AI assistance fits in a business workflow",
+        "category": "Technology & Business",
+        "excerpt": "Separate useful suggestions from actions that need verification, approval, and a clear owner."
+      },
+      "building-a-content-plan": {
+        "title": "Building a content plan your team can maintain",
+        "category": "Digital Marketing",
+        "excerpt": "Turn recurring customer questions into a manageable publishing routine with clear ownership."
+      }
+    }
+  },
+  "contactPage": {
+    "breadcrumb": "Contact",
+    "eyebrow": "Contact Grosbyte",
+    "title": "What would you like",
+    "titlePrefix": "to move ",
+    "titleHighlight": "forward",
+    "titleSuffix": "?",
+    "lead": "A new product, a better workflow, or a clearer digital presence. Tell us where you are and what you want to improve.",
+    "imageAlt": "Grosbyte Technology team members collaborating with a tablet and stylus in the office",
+    "startTitle": "Start a conversation.",
+    "startText": "You don’t need a complete specification. A description of the problem and the people it affects is a useful starting point.",
+    "emailLabel": "Email us directly",
+    "callLabel": "Call our team",
+    "locationLabel": "Office location",
+    "locationValue": "Kathmandu, Nepal",
+    "socialLabel": "Connect with us",
+    "nextCardTitle": "What happens next?",
+    "nextCardText": "We review your enquiry, ask any questions needed to understand the scope, and discuss a practical next step with you.",
+    "formTitle": "Tell us about your project.",
+    "formSubtitle": "Share a little context. Fields marked optional can be left blank.",
+    "nameLabel": "Full name",
+    "namePlaceholder": "Your full name",
+    "emailLabelForm": "Email",
+    "emailPlaceholder": "name@company.com",
+    "phoneLabel": "Phone (optional)",
+    "phonePlaceholder": "e.g. +977 9800000000",
+    "companyLabel": "Company (optional)",
+    "companyPlaceholder": "e.g. Acme Corporation",
+    "serviceLabel": "Service interested in",
+    "serviceSelect": "Select a service",
+    "messageLabel": "Project description",
+    "messagePlaceholder": "Tell us about what you want to build or improve, key goals, and any timeline or tech preferences...",
+    "budgetLabel": "Budget (optional)",
+    "budgetPlaceholder": "e.g. $5,000 – $10,000, NPR 500k – 1M, or flexible",
+    "note": "We use these details to respond to your enquiry. Please don’t include passwords, payment details, or other sensitive information.",
+    "submit": "Send enquiry",
+    "submitting": "Sending enquiry…",
+    "statusSuccess": "Thank you! Your enquiry has been sent successfully.",
+    "statusError": "We could not send your enquiry. Please try again or email us directly.",
+    "statusConnection": "We could not confirm delivery. Please try again or email contact@grosbyte.com."
   },
   "contact": {
     "eyebrow": "Contact Us",
@@ -379,5 +520,301 @@
       "techTitleHighlight": "& technologies",
       "techEditorial": "We employ modern full-stack web frameworks, enterprise backend systems, scalable databases, cloud infrastructure, and intelligent automation—including Next.js, React, TypeScript, Python, Node.js, Spring Boot, n8n, AWS, and PostgreSQL—to help you build and scale resilient applications."
     }
+  },
+  "servicesDetail": {
+    "breadcrumb": "Services",
+    "discussProject": "Discuss Your Project",
+    "exploreCapabilities": "Explore Capabilities",
+    "verifiedEngineering": "Verified Engineering Excellence",
+    "productionSecurity": "Production-Grade Security & SLAs",
+    "coreCapabilities": "Core Capabilities & Deliverables",
+    "coreCapabilitiesSub": "What we deliver as part of our engagement",
+    "techStack": "Technology Stack & Tools",
+    "techStackSub": "Industry-standard frameworks, platforms, and toolchains we employ",
+    "processTitle": "4-Phase Engineering Lifecycle",
+    "processSub": "From architectural discovery through ongoing production reliability",
+    "engagementModels": "Flexible Engagement Models",
+    "engagementModelsSub": "Structured delivery models adapted to your organization's cadence and requirements",
+    "getStarted": "Get Started",
+    "bestFor": "Best For:",
+    "keyDeliverables": "Key Deliverables",
+    "whyGrosbyte": "Why Choose Grosbyte",
+    "longTermImpact": "Built for Long-Term Impact",
+    "whoItsFor": "Who This Is For",
+    "faq": "Frequently Asked Questions",
+    "faqSub": "Common questions regarding architecture, delivery, and ongoing engagement",
+    "otherServices": "Other Services in",
+    "ctaTitle": "Ready to Build Your Solution?",
+    "ctaSub": "Discuss your technical requirements with our engineering team. We'll outline architecture options, timelines, and practical next steps.",
+    "startConversation": "Start a Conversation",
+    "orEmail": "Or email us directly at",
+    "categories": {
+      "development-technology": "Development & Technology",
+      "business-solutions": "Business Solutions",
+      "digital-marketing-branding": "Digital Marketing & Branding"
+    }
+  },
+  "customSoftwarePage": {
+    "heroPill": "Custom Software Development",
+    "heroTitleLead": "Turn Your Ideas",
+    "heroTitleGradient1": "Into Powerful",
+    "heroTitleGradient2": "Software",
+    "heroSubtitle": "We build fast, scalable and user-friendly applications that help you grow, automate and stand out.",
+    "startProject": "Start a Project",
+    "viewWork": "View Our Work",
+    "whatWeBuildEyebrow": "What We Build",
+    "whatWeBuildTitle": "From simple websites",
+    "whatWeBuildTitleGradient": "to complex platforms.",
+    "whatWeBuildSubtitle": "We create digital solutions that fit your goals.",
+    "capabilities": {
+      "webApps": {
+        "title": "Web Applications",
+        "description": "Modern, fast and scalable web apps."
+      },
+      "mobileApps": {
+        "title": "Mobile Apps",
+        "description": "iOS & Android apps with great UX."
+      },
+      "aiIntegrations": {
+        "title": "AI Integrations",
+        "description": "Bring the power of AI to your product."
+      },
+      "businessSoftware": {
+        "title": "Business Software",
+        "description": "Automate and streamline your workflow."
+      },
+      "apisBackend": {
+        "title": "APIs & Backend",
+        "description": "Robust and secure backend systems."
+      },
+      "enterpriseSolutions": {
+        "title": "Enterprise Solutions",
+        "description": "Reliable solutions for growing businesses."
+      }
+    },
+    "whyChooseEyebrow": "Why Choose Us",
+    "whyChooseTitle": "A development partner",
+    "whyChooseTitleGradient": "you can count on.",
+    "whyChooseSubtitle": "We focus on quality, clear communication and long-term support — because your success matters to us.",
+    "checklist": [
+      "Clean & Maintainable Code",
+      "On-Time Delivery",
+      "Clear Communication",
+      "Flexible Engagement Models",
+      "Post-Launch Support"
+    ],
+    "techStackEyebrow": "Our Tech Stack",
+    "techStackTitle": "Modern Tools.",
+    "techStackTitleGradient": "Future Ready.",
+    "techStackSubtitle": "We use the latest technologies to build fast, scalable and reliable solutions.",
+    "techMore": "+ More",
+    "faqEyebrow": "FAQs",
+    "faqTitle": "Frequently Asked",
+    "faqTitleGradient": "Questions",
+    "faqSubtitle": "Find quick answers to common questions.",
+    "faqs": [
+      {
+        "question": "Do you work with startups?",
+        "answer": "Yes. We collaborate with early-stage and funded startups to rapidly architect, develop, and launch high-performance MVPs without technical debt."
+      },
+      {
+        "question": "Can you help with existing projects?",
+        "answer": "Absolutely. We conduct full codebase and infrastructure audits to identify bottlenecks, refactor legacy code, and build new feature modules cleanly."
+      },
+      {
+        "question": "What's your development process?",
+        "answer": "We operate in transparent 2-week agile sprints. You receive regular video demos, access to live preview staging environments, and direct Slack communication."
+      },
+      {
+        "question": "Do you provide post-launch support?",
+        "answer": "Yes. Every build comes with a comprehensive handover warranty, followed by flexible ongoing maintenance, performance monitoring, and SLA agreements."
+      }
+    ],
+    "ctaTitle": "Let's Build Something Great Together",
+    "ctaSubtitle": "Have a project in mind? Let's discuss it and bring your idea to life.",
+    "getInTouch": "Get in Touch"
+  },
+  "webMobilePage": {
+    "heroPill": "Web & Mobile Applications",
+    "heroTitleLead": "Build Modern",
+    "heroTitleGradient": "Web & Mobile",
+    "heroTitleSuffix": "Applications",
+    "heroSubtitle": "From idea to launch, we build fast, reliable and user-friendly apps for web and mobile.",
+    "startProject": "Start a Project",
+    "viewWork": "View Our Work",
+    "whatWeBuildEyebrow": "What We Build",
+    "whatWeBuildTitle": "High-performance apps",
+    "whatWeBuildTitleGradient": "built for scale.",
+    "whatWeBuildSubtitle": "We engineer smooth digital experiences across all devices.",
+    "capabilities": {
+      "webApps": {
+        "title": "Web Applications",
+        "description": "Modern, fast and scalable web apps."
+      },
+      "mobileApps": {
+        "title": "Mobile Apps",
+        "description": "iOS & Android apps with great UX."
+      },
+      "progressiveApps": {
+        "title": "Progressive Apps",
+        "description": "Fast, reliable and offline-ready."
+      },
+      "saasProducts": {
+        "title": "SaaS Products",
+        "description": "Turn your idea into a powerful SaaS."
+      },
+      "ecommerceApps": {
+        "title": "E-commerce Apps",
+        "description": "Smooth shopping experiences."
+      },
+      "crossPlatform": {
+        "title": "Enterprise Solutions",
+        "description": "Custom apps for your business needs."
+      }
+    },
+    "whyChooseEyebrow": "Why Choose Us",
+    "whyChooseTitle": "Engineered for",
+    "whyChooseTitleGradient": "exceptional experiences.",
+    "whyChooseSubtitle": "We focus on clean code, responsive performance and intuitive interfaces.",
+    "checklist": [
+      "Clean & Maintainable Code",
+      "On-Time Delivery",
+      "Clear Communication",
+      "Flexible Engagement Models",
+      "Post-Launch Support"
+    ],
+    "techStackEyebrow": "Our Tech Stack",
+    "techStackTitle": "Proven Frameworks.",
+    "techStackTitleGradient": "Peak Performance.",
+    "techStackSubtitle": "We select battle-tested tools and frameworks suited to your performance, scale, and time-to-market requirements.",
+    "techMore": "+ More",
+    "faqEyebrow": "FAQs",
+    "faqTitle": "Frequently Asked",
+    "faqTitleGradient": "Questions",
+    "faqSubtitle": "Find quick answers to common questions.",
+    "faqs": [
+      {
+        "question": "Do you build both web and mobile apps?",
+        "answer": "Yes! We build high-performance web applications using React/Next.js as well as native and cross-platform mobile apps for iOS and Android using Flutter and React Native."
+      },
+      {
+        "question": "Can you help with app maintenance?",
+        "answer": "Yes. We offer continuous maintenance and support packages, including OS compatibility updates, performance optimization, security monitoring, and regular feature updates."
+      },
+      {
+        "question": "What's your development process?",
+        "answer": "We follow an agile, sprint-based approach. You will have regular progress reviews, live staging demos, clear milestones, and direct communication with our engineering team."
+      },
+      {
+        "question": "Do you provide post-launch support?",
+        "answer": "Every project includes post-launch warranty support to ensure your application runs smoothly in production, along with tailored SLA options for long-term growth."
+      }
+    ],
+    "ctaTitle": "Ready to Build Your Next Application?",
+    "ctaSubtitle": "Whether it's a web platform, a mobile app, or both — let's make it happen.",
+    "getInTouch": "Get in Touch"
+  },
+  "digitalMarketingPage": {
+    "heroPill": "Digital Marketing Services",
+    "heroTitleLead": "Digital Marketing",
+    "heroTitleGradient": "Brand Growth",
+    "heroSubtitle": "Grow your brand, reach the right audience, and turn clicks into loyal customers.",
+    "startCampaign": "Start a Campaign",
+    "viewWork": "View Our Work",
+    "whatWeDoEyebrow": "What We Do",
+    "whatWeDoTitle": "Complete Digital",
+    "whatWeDoTitleGradient": "Marketing Solutions.",
+    "whatWeDoSubtitle": "From strategy to performance, we help your business grow online.",
+    "capabilities": {
+      "seo": {
+        "title": "SEO",
+        "description": "Rank higher, get more organic traffic."
+      },
+      "social": {
+        "title": "Social Media Marketing",
+        "description": "Build your presence and engage your audience."
+      },
+      "content": {
+        "title": "Content Marketing",
+        "description": "Create content that converts."
+      },
+      "paidAds": {
+        "title": "Paid Advertising",
+        "description": "Run targeted ads for better ROI."
+      },
+      "branding": {
+        "title": "Brand Strategy",
+        "description": "Build a strong and memorable brand."
+      },
+      "analytics": {
+        "title": "Analytics & Reporting",
+        "description": "Track performance, measure growth."
+      }
+    },
+    "whyChooseEyebrow": "Why Choose Us",
+    "whyChooseTitle": "A Growth-Focused",
+    "whyChooseTitleGradient": "Marketing Partner.",
+    "whyChooseSubtitle": "We don't just market — we help you grow with smart strategies and real results.",
+    "checklist": [
+      "Data-Driven Strategies",
+      "Transparent Reporting",
+      "Creative & Result-Oriented Campaigns",
+      "Dedicated Support",
+      "Affordable Plans"
+    ],
+    "caseStudiesEyebrow": "Our Case Studies",
+    "caseStudiesTitle": "Real Growth.",
+    "caseStudiesTitleGradient": "Real Results.",
+    "caseStudiesSubtitle": "See how we've helped businesses achieve their goals.",
+    "caseStudies": [
+      {
+        "stat": "+250%",
+        "label": "Organic Traffic",
+        "sub": "E-Commerce Store"
+      },
+      {
+        "stat": "+180%",
+        "label": "Sales Growth",
+        "sub": "Online Marketplace"
+      },
+      {
+        "stat": "+300%",
+        "label": "Engagement",
+        "sub": "Tech Startup"
+      }
+    ],
+    "viewMore": "View More",
+    "testimonialsEyebrow": "What Our Clients Say",
+    "testimonialsTitle": "Trusted by",
+    "testimonialsTitleGradient": "Growing Brands.",
+    "testimonialsSubtitle": "Real feedback from our amazing clients.",
+    "testimonialQuote": "Grosbyte helped us grow our online presence with smart strategies and creative campaigns. Our traffic and sales have never been better!",
+    "testimonialAuthor": "Aarav Sharma",
+    "testimonialRole": "Founder, SmartCart",
+    "faqEyebrow": "FAQs",
+    "faqTitle": "Frequently Asked",
+    "faqTitleGradient": "Questions.",
+    "faqSubtitle": "Find quick answers to common questions.",
+    "faqs": [
+      {
+        "question": "Can you help with SEO and content marketing?",
+        "answer": "Yes! We deliver end-to-end SEO including on-page optimization, technical site audits, high-intent keyword strategy, and quality content creation designed to rank and convert."
+      },
+      {
+        "question": "Do you run ads on Google and social media?",
+        "answer": "Yes. We manage high-converting ad campaigns across Google Search, Meta (Facebook & Instagram), LinkedIn, and YouTube, continually optimizing for lower CPA and maximum ROI."
+      },
+      {
+        "question": "Will you provide reports?",
+        "answer": "Always. You receive clear weekly and monthly performance reports with real-time analytics dashboard access, actionable insights, and transparent KPI tracking."
+      },
+      {
+        "question": "Can you work with small businesses?",
+        "answer": "Definitely. We partner with ambitious startups and small businesses to craft cost-effective, high-impact growth campaigns tailored to your specific budget and timeline."
+      }
+    ],
+    "ctaTitle": "Ready to Grow Your Brand?",
+    "ctaSubtitle": "Let's create a winning digital marketing strategy for your business.",
+    "getInTouch": "Get in Touch"
   }
 }

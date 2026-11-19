@@ -51,7 +51,7 @@
   padding-bottom: clamp(60px, 8vw, 100px);
   position: relative;
   overflow: hidden;
-  background: #F1F5F9;
+  background: #f1f5f9;
 }
 
 .cs-hero-grid {
@@ -274,7 +274,7 @@
    ======================================================== */
 .cs-build-section {
   padding: clamp(60px, 8vw, 100px) 0;
-  background: #F1F5F9;
+  background: #f1f5f9;
 }
 
 .cs-build-grid {
@@ -465,7 +465,7 @@
    ======================================================== */
 .cs-faq-section {
   padding: clamp(60px, 8vw, 100px) 0;
-  background: #F1F5F9;
+  background: #f1f5f9;
 }
 
 .cs-faq-grid {
@@ -487,7 +487,9 @@
   border: 1px solid rgba(15, 23, 42, 0.08);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
   overflow: hidden;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .cs-faq-card[open] {
@@ -537,7 +539,7 @@
    ======================================================== */
 .cs-cta-section {
   padding: 40px 0 clamp(60px, 8vw, 100px);
-  background: #F1F5F9;
+  background: #f1f5f9;
 }
 
 .cs-cta-banner {
@@ -682,4 +684,3 @@ html:not(.light) .cs-why-section,
 html:not(.light) .cs-tech-section {
   background: #0d1527;
 }
-

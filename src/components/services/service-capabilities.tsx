@@ -1,15 +1,30 @@
+"use client";
+
 import type { DeliverableItem } from "@/lib/services";
 import { Layers } from "lucide-react";
+import { useTranslation } from "@/contexts/language-context";
 
 export function ServiceCapabilities({
   deliverables,
-  title = "Core Capabilities & Deliverables",
-  subtitle = "Every system is engineered from the ground up to match your operational requirements, performance standards, and security benchmarks.",
+  title,
+  subtitle,
 }: {
   deliverables: DeliverableItem[];
   title?: string;
   subtitle?: string;
 }) {
+  const { t } = useTranslation();
+
+  const displayTitle =
+    title ||
+    t("servicesDetail.coreCapabilities") ||
+    "Core Capabilities & Deliverables";
+
+  const displaySubtitle =
+    subtitle ||
+    t("servicesDetail.coreCapabilitiesSub") ||
+    "Every system is engineered from the ground up to match your operational requirements, performance standards, and security benchmarks.";
+
   return (
     <section
       className="service-section service-capabilities-section"
@@ -23,9 +38,9 @@ export function ServiceCapabilities({
             <span>Scope & Architecture</span>
           </div>
           <h2 id="capabilities-title" className="service-section-title">
-            {title}
+            {displayTitle}
           </h2>
-          <p className="service-section-subtitle">{subtitle}</p>
+          <p className="service-section-subtitle">{displaySubtitle}</p>
         </div>
 
         <div className="service-capabilities-grid">

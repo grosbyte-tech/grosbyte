@@ -24,7 +24,9 @@ export function AboutHero() {
           <div className="about-hero-right">
             <h1 id="about-hero-title" className="about-hero-headline">
               {copy("heroTitleLead")}{" "}
-              <span className="highlight-blue">{copy("heroTitleHighlight")}</span>
+              <span className="highlight-blue">
+                {copy("heroTitleHighlight")}
+              </span>
             </h1>
 
             <p className="about-hero-lead">{copy("intro")}</p>

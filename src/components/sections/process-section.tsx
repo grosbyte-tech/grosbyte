@@ -99,7 +99,8 @@ const stepsData: StepConfig[] = [
     key: "develop",
     number: "04",
     titleKey: "develop",
-    tagline: "Engineering maintainable, scalable, and high-performance software",
+    tagline:
+      "Engineering maintainable, scalable, and high-performance software",
   },
   {
     key: "test",
@@ -117,7 +118,8 @@ const stepsData: StepConfig[] = [
     key: "improve",
     number: "07",
     titleKey: "improve",
-    tagline: "Iterative optimisations driven by live user data & business goals",
+    tagline:
+      "Iterative optimisations driven by live user data & business goals",
   },
 ];
 
@@ -137,39 +139,89 @@ function DiscoverFigure() {
         preserveAspectRatio="xMidYMid meet"
       >
         <defs>
-          <linearGradient id="hww-grad-discover" x1="0%" y1="0%" x2="0%" y2="100%">
+          <linearGradient
+            id="hww-grad-discover"
+            x1="0%"
+            y1="0%"
+            x2="0%"
+            y2="100%"
+          >
             <stop offset="0%" stopColor="#0966fa" stopOpacity="0.3" />
             <stop offset="50%" stopColor="#00d2ff" stopOpacity="0.9" />
             <stop offset="100%" stopColor="#0966fa" stopOpacity="0.3" />
           </linearGradient>
         </defs>
-        <path d="M 68 50 C 68 85, 210 85, 210 108" stroke="url(#hww-grad-discover)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 50 L 210 108" stroke="url(#hww-grad-discover)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 352 50 C 352 85, 210 85, 210 108" stroke="url(#hww-grad-discover)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 C 210 185, 68 185, 68 220" stroke="url(#hww-grad-discover)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 L 210 220" stroke="url(#hww-grad-discover)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 C 210 185, 352 185, 352 220" stroke="url(#hww-grad-discover)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
+        <path
+          d="M 68 50 C 68 85, 210 85, 210 108"
+          stroke="url(#hww-grad-discover)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 50 L 210 108"
+          stroke="url(#hww-grad-discover)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 352 50 C 352 85, 210 85, 210 108"
+          stroke="url(#hww-grad-discover)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 C 210 185, 68 185, 68 220"
+          stroke="url(#hww-grad-discover)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 L 210 220"
+          stroke="url(#hww-grad-discover)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 C 210 185, 352 185, 352 220"
+          stroke="url(#hww-grad-discover)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
       </svg>
 
       <div className="hww-diagram-row hww-diagram-row-top">
         <div className="hww-node-item">
           <span className="hww-node-label">User Needs</span>
-          <div className="hww-node-circle"><Users className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <Users className="hww-node-icon" />
+          </div>
         </div>
         <div className="hww-node-item">
           <span className="hww-node-label">Business Goals</span>
-          <div className="hww-node-circle"><Target className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <Target className="hww-node-icon" />
+          </div>
         </div>
         <div className="hww-node-item">
           <span className="hww-node-label">Market Context</span>
-          <div className="hww-node-circle"><Globe className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <Globe className="hww-node-icon" />
+          </div>
         </div>
       </div>
 
       <div className="hww-diagram-center">
         <div className="hww-hub-card">
           <div className="hww-hub-glow" />
-          <div className="hww-hub-badge"><Search className="hww-hub-icon" /></div>
+          <div className="hww-hub-badge">
+            <Search className="hww-hub-icon" />
+          </div>
           <div className="hww-hub-info">
             <span className="hww-hub-label">Discovery Hub</span>
             <span className="hww-hub-sub">Scope &amp; Insights</span>
@@ -179,15 +231,21 @@ function DiscoverFigure() {
 
       <div className="hww-diagram-row hww-diagram-row-bottom">
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><FileText className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <FileText className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">Problem Scope</span>
         </div>
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><Layers className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <Layers className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">System Blueprint</span>
         </div>
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><CheckCircle2 className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <CheckCircle2 className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">Agreed Goals</span>
         </div>
       </div>
@@ -213,32 +271,70 @@ function PlanFigure() {
             <stop offset="100%" stopColor="#00d2ff" stopOpacity="0.3" />
           </linearGradient>
         </defs>
-        <path d="M 68 50 C 68 85, 140 108, 210 108" stroke="url(#hww-grad-plan)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 352 50 C 352 85, 280 108, 210 108" stroke="url(#hww-grad-plan)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 L 68 220" stroke="url(#hww-grad-plan)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 L 210 220" stroke="url(#hww-grad-plan)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 L 352 220" stroke="url(#hww-grad-plan)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
+        <path
+          d="M 68 50 C 68 85, 140 108, 210 108"
+          stroke="url(#hww-grad-plan)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 352 50 C 352 85, 280 108, 210 108"
+          stroke="url(#hww-grad-plan)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 L 68 220"
+          stroke="url(#hww-grad-plan)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 L 210 220"
+          stroke="url(#hww-grad-plan)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 L 352 220"
+          stroke="url(#hww-grad-plan)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
       </svg>
 
       <div className="hww-diagram-row hww-diagram-row-top">
         <div className="hww-node-item">
           <span className="hww-node-label">User Stories</span>
-          <div className="hww-node-circle"><ListOrdered className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <ListOrdered className="hww-node-icon" />
+          </div>
         </div>
         <div className="hww-node-item">
           <span className="hww-node-label">Milestones</span>
-          <div className="hww-node-circle"><Milestone className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <Milestone className="hww-node-icon" />
+          </div>
         </div>
         <div className="hww-node-item">
           <span className="hww-node-label">Tech Feasibility</span>
-          <div className="hww-node-circle"><Cpu className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <Cpu className="hww-node-icon" />
+          </div>
         </div>
       </div>
 
       <div className="hww-diagram-center">
         <div className="hww-hub-card">
           <div className="hww-hub-glow" />
-          <div className="hww-hub-badge"><Route className="hww-hub-icon" /></div>
+          <div className="hww-hub-badge">
+            <Route className="hww-hub-icon" />
+          </div>
           <div className="hww-hub-info">
             <span className="hww-hub-label">Sprint Roadmap</span>
             <span className="hww-hub-sub">Backlog &amp; Scope</span>
@@ -248,15 +344,21 @@ function PlanFigure() {
 
       <div className="hww-diagram-row hww-diagram-row-bottom">
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><GitBranch className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <GitBranch className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">Sprint Milestones</span>
         </div>
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><Clock className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <Clock className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">Sprint Velocity</span>
         </div>
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><Calendar className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <Calendar className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">Demo Cadence</span>
         </div>
       </div>
@@ -276,34 +378,76 @@ function DesignFigure() {
         preserveAspectRatio="xMidYMid meet"
       >
         <defs>
-          <linearGradient id="hww-grad-design" x1="0%" y1="0%" x2="0%" y2="100%">
+          <linearGradient
+            id="hww-grad-design"
+            x1="0%"
+            y1="0%"
+            x2="0%"
+            y2="100%"
+          >
             <stop offset="0%" stopColor="#00d2ff" stopOpacity="0.4" />
             <stop offset="50%" stopColor="#0966fa" stopOpacity="0.9" />
             <stop offset="100%" stopColor="#38bdf8" stopOpacity="0.4" />
           </linearGradient>
         </defs>
-        <path d="M 68 50 V 108 H 210" stroke="url(#hww-grad-design)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 352 50 V 108 H 210" stroke="url(#hww-grad-design)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 H 68 V 220" stroke="url(#hww-grad-design)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 V 220" stroke="url(#hww-grad-design)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 H 352 V 220" stroke="url(#hww-grad-design)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
+        <path
+          d="M 68 50 V 108 H 210"
+          stroke="url(#hww-grad-design)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 352 50 V 108 H 210"
+          stroke="url(#hww-grad-design)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 H 68 V 220"
+          stroke="url(#hww-grad-design)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 V 220"
+          stroke="url(#hww-grad-design)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 H 352 V 220"
+          stroke="url(#hww-grad-design)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
       </svg>
 
       <div className="hww-diagram-row hww-diagram-row-top justify-around px-8">
         <div className="hww-node-item">
           <span className="hww-node-label">Design Tokens</span>
-          <div className="hww-node-circle"><Palette className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <Palette className="hww-node-icon" />
+          </div>
         </div>
         <div className="hww-node-item">
           <span className="hww-node-label">Atomic Lib</span>
-          <div className="hww-node-circle"><Boxes className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <Boxes className="hww-node-icon" />
+          </div>
         </div>
       </div>
 
       <div className="hww-diagram-center">
         <div className="hww-hub-card">
           <div className="hww-hub-glow" />
-          <div className="hww-hub-badge"><Layout className="hww-hub-icon" /></div>
+          <div className="hww-hub-badge">
+            <Layout className="hww-hub-icon" />
+          </div>
           <div className="hww-hub-info">
             <span className="hww-hub-label">Design Engine</span>
             <span className="hww-hub-sub">Tokens &amp; UI Specs</span>
@@ -313,15 +457,21 @@ function DesignFigure() {
 
       <div className="hww-diagram-row hww-diagram-row-bottom">
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><Smartphone className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <Smartphone className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">Prototypes</span>
         </div>
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><Eye className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <Eye className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">WCAG AA Standard</span>
         </div>
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><Sparkles className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <Sparkles className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">Motion Polish</span>
         </div>
       </div>
@@ -347,28 +497,64 @@ function DevelopFigure() {
             <stop offset="100%" stopColor="#0966fa" stopOpacity="0.4" />
           </linearGradient>
         </defs>
-        <path d="M 105 50 C 105 85, 210 85, 210 108" stroke="url(#hww-grad-dev)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 315 50 C 315 85, 210 85, 210 108" stroke="url(#hww-grad-dev)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 C 210 185, 68 185, 68 220" stroke="url(#hww-grad-dev)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 L 210 220" stroke="url(#hww-grad-dev)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 C 210 185, 352 185, 352 220" stroke="url(#hww-grad-dev)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
+        <path
+          d="M 105 50 C 105 85, 210 85, 210 108"
+          stroke="url(#hww-grad-dev)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 315 50 C 315 85, 210 85, 210 108"
+          stroke="url(#hww-grad-dev)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 C 210 185, 68 185, 68 220"
+          stroke="url(#hww-grad-dev)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 L 210 220"
+          stroke="url(#hww-grad-dev)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 C 210 185, 352 185, 352 220"
+          stroke="url(#hww-grad-dev)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
       </svg>
 
       <div className="hww-diagram-row hww-diagram-row-top justify-around px-8">
         <div className="hww-node-item">
           <span className="hww-node-label">Clean Code</span>
-          <div className="hww-node-circle"><Code2 className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <Code2 className="hww-node-icon" />
+          </div>
         </div>
         <div className="hww-node-item">
           <span className="hww-node-label">APIs &amp; Microservices</span>
-          <div className="hww-node-circle"><Server className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <Server className="hww-node-icon" />
+          </div>
         </div>
       </div>
 
       <div className="hww-diagram-center">
         <div className="hww-hub-card">
           <div className="hww-hub-glow" />
-          <div className="hww-hub-badge"><Terminal className="hww-hub-icon" /></div>
+          <div className="hww-hub-badge">
+            <Terminal className="hww-hub-icon" />
+          </div>
           <div className="hww-hub-info">
             <span className="hww-hub-label">Agile Engine</span>
             <span className="hww-hub-sub">Modular Sprints</span>
@@ -378,15 +564,21 @@ function DevelopFigure() {
 
       <div className="hww-diagram-row hww-diagram-row-bottom">
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><GitMerge className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <GitMerge className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">CI/CD Pipeline</span>
         </div>
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><Cloud className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <Cloud className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">Working Builds</span>
         </div>
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><Database className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <Database className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">Modular Cloud</span>
         </div>
       </div>
@@ -412,25 +604,61 @@ function TestFigure() {
             <stop offset="100%" stopColor="#38bdf8" stopOpacity="0.3" />
           </linearGradient>
         </defs>
-        <path d="M 68 50 L 210 108" stroke="url(#hww-grad-test)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 50 L 210 108" stroke="url(#hww-grad-test)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 352 50 L 210 108" stroke="url(#hww-grad-test)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 L 140 220" stroke="url(#hww-grad-test)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 L 280 220" stroke="url(#hww-grad-test)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
+        <path
+          d="M 68 50 L 210 108"
+          stroke="url(#hww-grad-test)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 50 L 210 108"
+          stroke="url(#hww-grad-test)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 352 50 L 210 108"
+          stroke="url(#hww-grad-test)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 L 140 220"
+          stroke="url(#hww-grad-test)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 L 280 220"
+          stroke="url(#hww-grad-test)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
       </svg>
 
       <div className="hww-diagram-row hww-diagram-row-top">
         <div className="hww-node-item">
           <span className="hww-node-label">Edge Cases</span>
-          <div className="hww-node-circle"><Bug className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <Bug className="hww-node-icon" />
+          </div>
         </div>
         <div className="hww-node-item">
           <span className="hww-node-label">Security Audit</span>
-          <div className="hww-node-circle"><Lock className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <Lock className="hww-node-icon" />
+          </div>
         </div>
         <div className="hww-node-item">
           <span className="hww-node-label">Speed Gauges</span>
-          <div className="hww-node-circle"><Gauge className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <Gauge className="hww-node-icon" />
+          </div>
         </div>
       </div>
 
@@ -449,11 +677,15 @@ function TestFigure() {
 
       <div className="hww-diagram-row hww-diagram-row-bottom justify-around px-12">
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><Shield className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <Shield className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">Security Pass</span>
         </div>
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><Activity className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <Activity className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">99.9% Verified</span>
         </div>
       </div>
@@ -473,39 +705,89 @@ function LaunchFigure() {
         preserveAspectRatio="xMidYMid meet"
       >
         <defs>
-          <linearGradient id="hww-grad-launch" x1="0%" y1="0%" x2="0%" y2="100%">
+          <linearGradient
+            id="hww-grad-launch"
+            x1="0%"
+            y1="0%"
+            x2="0%"
+            y2="100%"
+          >
             <stop offset="0%" stopColor="#0966fa" stopOpacity="0.4" />
             <stop offset="50%" stopColor="#00d2ff" stopOpacity="0.9" />
             <stop offset="100%" stopColor="#38bdf8" stopOpacity="0.4" />
           </linearGradient>
         </defs>
-        <path d="M 68 50 C 68 85, 210 85, 210 108" stroke="url(#hww-grad-launch)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 50 L 210 108" stroke="url(#hww-grad-launch)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 352 50 C 352 85, 210 85, 210 108" stroke="url(#hww-grad-launch)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 C 210 185, 68 185, 68 220" stroke="url(#hww-grad-launch)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 L 210 220" stroke="url(#hww-grad-launch)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 C 210 185, 352 185, 352 220" stroke="url(#hww-grad-launch)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
+        <path
+          d="M 68 50 C 68 85, 210 85, 210 108"
+          stroke="url(#hww-grad-launch)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 50 L 210 108"
+          stroke="url(#hww-grad-launch)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 352 50 C 352 85, 210 85, 210 108"
+          stroke="url(#hww-grad-launch)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 C 210 185, 68 185, 68 220"
+          stroke="url(#hww-grad-launch)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 L 210 220"
+          stroke="url(#hww-grad-launch)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 C 210 185, 352 185, 352 220"
+          stroke="url(#hww-grad-launch)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
       </svg>
 
       <div className="hww-diagram-row hww-diagram-row-top">
         <div className="hww-node-item">
           <span className="hww-node-label">Prod Setup</span>
-          <div className="hww-node-circle"><Server className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <Server className="hww-node-icon" />
+          </div>
         </div>
         <div className="hww-node-item">
           <span className="hww-node-label">DNS &amp; SSL</span>
-          <div className="hww-node-circle"><Globe className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <Globe className="hww-node-icon" />
+          </div>
         </div>
         <div className="hww-node-item">
           <span className="hww-node-label">Telemetry</span>
-          <div className="hww-node-circle"><Radio className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <Radio className="hww-node-icon" />
+          </div>
         </div>
       </div>
 
       <div className="hww-diagram-center">
         <div className="hww-hub-card">
           <div className="hww-hub-glow" />
-          <div className="hww-hub-badge"><Rocket className="hww-hub-icon" /></div>
+          <div className="hww-hub-badge">
+            <Rocket className="hww-hub-icon" />
+          </div>
           <div className="hww-hub-info">
             <span className="hww-hub-label">Release Pipeline</span>
             <span className="hww-hub-sub">Production Rollout</span>
@@ -515,15 +797,21 @@ function LaunchFigure() {
 
       <div className="hww-diagram-row hww-diagram-row-bottom">
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><Zap className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <Zap className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">Live Platform</span>
         </div>
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><TrendingUp className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <TrendingUp className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">User Traffic</span>
         </div>
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><CheckCircle2 className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <CheckCircle2 className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">Smooth Rollout</span>
         </div>
       </div>
@@ -543,33 +831,66 @@ function ImproveFigure() {
         preserveAspectRatio="xMidYMid meet"
       >
         <defs>
-          <linearGradient id="hww-grad-improve" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient
+            id="hww-grad-improve"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="100%"
+          >
             <stop offset="0%" stopColor="#00d2ff" stopOpacity="0.4" />
             <stop offset="50%" stopColor="#0966fa" stopOpacity="0.9" />
             <stop offset="100%" stopColor="#38bdf8" stopOpacity="0.4" />
           </linearGradient>
         </defs>
-        <ellipse cx="210" cy="135" rx="145" ry="86" stroke="url(#hww-grad-improve)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 50 V 108" stroke="url(#hww-grad-improve)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
-        <path d="M 210 162 V 220" stroke="url(#hww-grad-improve)" strokeWidth="1.5" strokeDasharray="4 4" className="hww-flow-path" />
+        <ellipse
+          cx="210"
+          cy="135"
+          rx="145"
+          ry="86"
+          stroke="url(#hww-grad-improve)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 50 V 108"
+          stroke="url(#hww-grad-improve)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
+        <path
+          d="M 210 162 V 220"
+          stroke="url(#hww-grad-improve)"
+          strokeWidth="1.5"
+          strokeDasharray="4 4"
+          className="hww-flow-path"
+        />
       </svg>
 
       <div className="hww-diagram-row hww-diagram-row-top justify-center">
         <div className="hww-node-item">
           <span className="hww-node-label">Live Telemetry</span>
-          <div className="hww-node-circle"><BarChart3 className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <BarChart3 className="hww-node-icon" />
+          </div>
         </div>
       </div>
 
       <div className="hww-diagram-center justify-between px-6">
         <div className="hww-node-item">
-          <div className="hww-node-circle"><TrendingUp className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <TrendingUp className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">Conversions</span>
         </div>
 
         <div className="hww-hub-card mx-2">
           <div className="hww-hub-glow" />
-          <div className="hww-hub-badge"><RefreshCw className="hww-hub-icon" /></div>
+          <div className="hww-hub-badge">
+            <RefreshCw className="hww-hub-icon" />
+          </div>
           <div className="hww-hub-info">
             <span className="hww-hub-label">Growth Engine</span>
             <span className="hww-hub-sub">Data-Driven Tuning</span>
@@ -577,14 +898,18 @@ function ImproveFigure() {
         </div>
 
         <div className="hww-node-item">
-          <div className="hww-node-circle"><MessageSquare className="hww-node-icon" /></div>
+          <div className="hww-node-circle">
+            <MessageSquare className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">User Feedback</span>
         </div>
       </div>
 
       <div className="hww-diagram-row hww-diagram-row-bottom justify-center">
         <div className="hww-node-item">
-          <div className="hww-node-circle hww-node-circle-output"><Boxes className="hww-node-icon" /></div>
+          <div className="hww-node-circle hww-node-circle-output">
+            <Boxes className="hww-node-icon" />
+          </div>
           <span className="hww-node-label">Feature Backlog</span>
         </div>
       </div>
@@ -732,7 +1057,8 @@ export function ProcessSection() {
     const startY = rect.top + scrollTop;
     const totalScrollableHeight =
       containerRef.current.offsetHeight - window.innerHeight;
-    const targetY = startY + (index / (stepsData.length - 1)) * totalScrollableHeight;
+    const targetY =
+      startY + (index / (stepsData.length - 1)) * totalScrollableHeight;
 
     window.scrollTo({
       top: targetY,
@@ -741,13 +1067,15 @@ export function ProcessSection() {
   };
 
   const currentStep = stepsData[activeStep] ?? stepsData[0];
-  const translatedTitle = t(`process.steps.${currentStep.titleKey}.title`) || currentStep.key;
+  const translatedTitle =
+    t(`process.steps.${currentStep.titleKey}.title`) || currentStep.key;
   const translatedDesc =
     t(`process.steps.${currentStep.titleKey}.description`) ||
     "We work closely with your team in short, collaborative sprints to deliver reliable digital products.";
 
-  const highlightWords =
-    (t("process.highlightWords") as unknown as string[]) || ["we", "work"];
+  const highlightWords = (t(
+    "process.highlightWords",
+  ) as unknown as string[]) || ["we", "work"];
 
   return (
     <section
@@ -817,7 +1145,9 @@ export function ProcessSection() {
                     <div className="hww-tab-right" aria-hidden="true">
                       <ArrowRight
                         className={`hww-tab-arrow ${
-                          isActive ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2"
+                          isActive
+                            ? "opacity-100 translate-x-0"
+                            : "opacity-0 -translate-x-2"
                         }`}
                       />
                     </div>
@@ -845,19 +1175,13 @@ export function ProcessSection() {
                       <span className="hww-badge-title">{translatedTitle}</span>
                     </div>
 
-                    <h3 className="hww-headline">
-                      {currentStep.tagline}
-                    </h3>
+                    <h3 className="hww-headline">{currentStep.tagline}</h3>
 
                     <p className="hww-description">{translatedDesc}</p>
 
                     {/* Project Proper Button Component */}
                     <div className="hww-actions">
-                      <Button
-                        href="/contact"
-                        variant="glowing"
-                        size="default"
-                      >
+                      <Button href="/contact" variant="glowing" size="default">
                         <span>Discuss this stage</span>
                         <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover/button:translate-x-1" />
                       </Button>

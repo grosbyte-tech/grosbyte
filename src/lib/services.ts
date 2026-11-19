@@ -233,7 +233,8 @@ export const serviceDetails: ServiceDetail[] = [
           "You own 100% of the code, Git repositories, designs, and documentation from day one. There are no licensing fees, subscriptions, or proprietary ties.",
       },
       {
-        question: "Do we need a full technical specification before reaching out?",
+        question:
+          "Do we need a full technical specification before reaching out?",
         answer:
           "No. A high-level description of your business workflow, pain points, or project goals is enough. We help you define technical requirements during the initial discovery phase.",
       },
@@ -243,7 +244,8 @@ export const serviceDetails: ServiceDetail[] = [
           "Yes. We begin with a code audit to assess architecture, test coverage, and dependencies, then provide an honest recommendation on refactoring versus incremental modernization.",
       },
       {
-        question: "How do we communicate and track progress during development?",
+        question:
+          "How do we communicate and track progress during development?",
         answer:
           "We run regular sprint reviews with live staging links so you always see working software. You have direct access to our team through Slack or email without intermediaries.",
       },

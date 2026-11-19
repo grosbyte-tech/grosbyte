@@ -21,11 +21,9 @@ export function BlogSection({ posts }: BlogSectionProps) {
     return null;
   }
 
-  const highlightWords =
-    (t("blogsSection.highlightWords") as unknown as string[]) || [
-      "Latest",
-      "Blogs",
-    ];
+  const highlightWords = (t(
+    "blogsSection.highlightWords",
+  ) as unknown as string[]) || ["Latest", "Blogs"];
 
   return (
     <section className="section blog-section bg-white" id="blogs">

@@ -45,19 +45,28 @@ export function AboutCtaVisual() {
           <div className="cta-code-line cta-code-indent">
             <span className="cta-code-num">04</span>
             <span className="cta-code-prop">project:</span>{" "}
-            <span className="cta-code-str">&quot;Your Next Big Product&quot;</span>,
+            <span className="cta-code-str">
+              &quot;Your Next Big Product&quot;
+            </span>
+            ,
           </div>
 
           <div className="cta-code-line cta-code-indent">
             <span className="cta-code-num">05</span>
             <span className="cta-code-prop">cadence:</span>{" "}
-            <span className="cta-code-str">&quot;2-Week Agile Sprints&quot;</span>,
+            <span className="cta-code-str">
+              &quot;2-Week Agile Sprints&quot;
+            </span>
+            ,
           </div>
 
           <div className="cta-code-line cta-code-indent">
             <span className="cta-code-num">06</span>
             <span className="cta-code-prop">ownership:</span>{" "}
-            <span className="cta-code-str">&quot;100% Client Code &amp; IP&quot;</span>,
+            <span className="cta-code-str">
+              &quot;100% Client Code &amp; IP&quot;
+            </span>
+            ,
           </div>
 
           <div className="cta-code-line cta-code-indent">

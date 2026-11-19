@@ -1,4 +1,7 @@
+"use client";
+
 import { CheckCircle2, ShieldCheck, Sparkles, Target } from "lucide-react";
+import { useTranslation } from "@/contexts/language-context";
 
 export function ServiceValueProp({
   audience,
@@ -9,6 +12,8 @@ export function ServiceValueProp({
   benefits: { title: string; description: string }[];
   overview?: string;
 }) {
+  const { t } = useTranslation();
+
   return (
     <section
       className="service-section service-value-section"
@@ -20,10 +25,10 @@ export function ServiceValueProp({
           <div className="service-value-col-left">
             <div className="service-eyebrow-pill">
               <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
-              <span>The Grosbyte Advantage</span>
+              <span>{t("servicesDetail.whyGrosbyte") || "The Grosbyte Advantage"}</span>
             </div>
             <h2 id="value-title" className="service-section-title">
-              Why Custom Software Outperforms Off-The-Shelf
+              {t("servicesDetail.longTermImpact") || "Why Custom Software Outperforms Off-The-Shelf"}
             </h2>
             {overview && <p className="service-value-overview">{overview}</p>}
 
@@ -52,10 +57,10 @@ export function ServiceValueProp({
             <div className="service-audience-card">
               <div className="service-eyebrow-pill">
                 <Target className="w-3.5 h-3.5" aria-hidden="true" />
-                <span>Ideal Fit</span>
+                <span>{t("servicesDetail.whoItsFor") || "Ideal Fit"}</span>
               </div>
               <h3 id="audience-heading" className="service-audience-title">
-                Who this service is built for
+                {t("servicesDetail.whoItsFor") || "Who this service is built for"}
               </h3>
               <p className="service-audience-intro">
                 We partner with teams that need robust digital infrastructure

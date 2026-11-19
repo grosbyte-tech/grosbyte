@@ -385,7 +385,7 @@ export function ContactSection() {
                 type="submit"
                 size="lg"
                 disabled={isSubmitting}
-                className="mt-4 h-12 w-full max-w-[210px] text-sm font-bold uppercase tracking-wider"
+                className="mt-4 h-12 w-full md:max-w-[210px] text-sm font-bold uppercase tracking-wider"
               >
                 {isSubmitting
                   ? t("contact.form.submitting")

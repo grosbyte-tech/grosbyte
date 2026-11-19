@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "@/contexts/language-context";
 
 export function ServiceCTABanner({
   serviceTitle,
@@ -9,6 +12,7 @@ export function ServiceCTABanner({
   serviceTitle: string;
   serviceSlug: string;
 }) {
+  const { t } = useTranslation();
   const contactHref = `/contact?service=${serviceSlug}`;
 
   return (
@@ -24,12 +28,11 @@ export function ServiceCTABanner({
               <span>Let’s Build Something Remarkable</span>
             </div>
             <h2 id="cta-banner-title" className="service-cta-headline">
-              Ready to engineer your {serviceTitle.toLowerCase()}?
+              {t("servicesDetail.ctaTitle") || `Ready to engineer your ${serviceTitle.toLowerCase()}?`}
             </h2>
             <p className="service-cta-description">
-              Schedule an architecture discovery session with our senior
-              engineers. We’ll review your workflow, discuss technical
-              feasibility, and map out a practical MVP roadmap.
+              {t("servicesDetail.ctaSub") ||
+                "Schedule an architecture discovery session with our senior engineers. We’ll review your workflow, discuss technical feasibility, and map out a practical MVP roadmap."}
             </p>
             <div className="service-cta-actions">
               <Button
@@ -37,11 +40,11 @@ export function ServiceCTABanner({
                 size="lg"
                 className="service-cta-btn-primary"
               >
-                <span>Start Your Project</span>
+                <span>{t("servicesDetail.startConversation") || "Start Your Project"}</span>
                 <ArrowUpRight className="w-4 h-4 ml-2" aria-hidden="true" />
               </Button>
               <Link href="/about" className="service-cta-link-secondary">
-                Learn more about our team →
+                {t("phase1.aboutPage.storyBtn") || "Learn more about our team"} →
               </Link>
             </div>
           </div>
