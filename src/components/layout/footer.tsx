@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone } from "lucide-react";
@@ -195,6 +196,11 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Oversized Interactive Wordmark */}
+        <div className="footer-wordmark-wrapper">
+          <FooterWordmark />
+        </div>
+
         {/* Bottom Bar: Copyright & Legal Policy Links */}
         <div className="footer-bottom-bar">
           <p className="footer-copyright">
@@ -215,5 +221,45 @@ export function Footer() {
         </div>
       </div>
     </footer>
+  );
+}
+
+/**
+ * Oversized "grosbyte" wordmark at the foot of the page. The letters sit
+ * almost invisible; a pink → violet glow lights them up under the cursor and
+ * drifts across them on its own when nobody is hovering (.footer-wordmark in
+ * footer.css).
+ */
+export function FooterWordmark() {
+  const ref = useRef<HTMLDivElement>(null);
+
+  const track = (e: React.PointerEvent) => {
+    const node = ref.current;
+    if (!node) return;
+    const rect = node.getBoundingClientRect();
+    node.style.setProperty("--wm-x", `${e.clientX - rect.left}px`);
+    node.style.setProperty("--wm-y", `${e.clientY - rect.top}px`);
+    node.dataset.active = "";
+  };
+
+  const release = () => {
+    const node = ref.current;
+    if (!node) return;
+    node.style.removeProperty("--wm-x");
+    node.style.removeProperty("--wm-y");
+    delete node.dataset.active;
+  };
+
+  return (
+    <div
+      ref={ref}
+      aria-hidden="true"
+      onPointerMove={track}
+      onPointerLeave={release}
+      className="footer-wordmark relative w-full text-center leading-none font-black tracking-[-0.05em] select-none"
+    >
+      <span className="block text-white/[0.06]">Grosbyte</span>
+      <span className="footer-wordmark-lit absolute inset-0">Grosbyte</span>
+    </div>
   );
 }
