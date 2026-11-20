@@ -1489,6 +1489,14 @@ html:not(.light) .project-flow-card:hover {
   }
 }
 
+/* How We Work New Styles */
+.hww-card {
+  background-image: linear-gradient(to top, #e3effd, #6bb0e8);
+}
+.home-hero-cta {
+  background-image: linear-gradient(90deg, #1e40af, #2563eb 55%, #3b82f6);
+}
+
 /* How We Work (Modern Dark Showcase Section) */
 .how-we-work-section {
   position: relative;

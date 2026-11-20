@@ -6,7 +6,7 @@ import {
 import { ProjectsSection } from "@/components/sections/projects-section";
 import { BlogSection } from "@/components/sections/blog-section";
 import { HeroSection } from "@/components/sections/hero-section";
-import { ProcessSection } from "@/components/sections/process-section";
+import { HowWeWork } from "@/components/sections/how-we-work";
 import { listPosts } from "@/lib/blogs/repository";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
@@ -20,7 +20,7 @@ export default async function Home() {
       <AboutSection />
       <ServicesSection />
       <ProjectsSection />
-      <ProcessSection />
+      <HowWeWork />
       <BlogSection posts={posts} />
     </main>
   );
