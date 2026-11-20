@@ -143,7 +143,7 @@ export function HowWeWork() {
   return (
     <section
       id="how-we-work"
-      className="relative w-full bg-[#F1F5F9] px-4 py-12 [overflow-anchor:none] sm:px-6 lg:px-12 lg:py-16"
+      className="relative w-full overflow-hidden bg-[#F1F5F9] px-4 py-12 [overflow-anchor:none] sm:px-6 lg:px-12 lg:py-16"
     >
       <div className="mx-auto w-full max-w-7xl">
         <div className="flex flex-col gap-6 pb-8 sm:flex-row sm:items-end sm:justify-between lg:pb-12">

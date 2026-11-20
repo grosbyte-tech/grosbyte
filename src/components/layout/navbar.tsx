@@ -15,7 +15,6 @@ import {
 } from "lucide-react";
 import { navigation, navKeys } from "@/lib/site-data";
 import { useTranslation } from "@/contexts/language-context";
-import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import { Button } from "@/components/ui/button";
 import { ServicesMegaMenu } from "@/components/layout/mega-menu/services-mega-menu";
 
@@ -222,7 +221,6 @@ export function Navbar() {
           />
 
           <div className="flex items-center gap-2 sm:gap-2.5 ml-auto md:ml-0">
-            <LanguageSwitcher />
             <div className="hidden md:inline-flex">
               <Button
                 href={resolveHref("/contact")}

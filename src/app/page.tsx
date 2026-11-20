@@ -15,7 +15,7 @@ export default async function Home() {
   const posts = (await listPosts()).slice(0, 3);
 
   return (
-    <main id="main-content" tabIndex={-1}>
+    <main id="main-content" tabIndex={-1} className="w-full max-w-full overflow-x-clip">
       <HeroSection />
       <AboutSection />
       <ServicesSection />
