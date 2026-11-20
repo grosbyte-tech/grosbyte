@@ -24,7 +24,7 @@ const STEPS: Step[] = [
       "User personas and core journeys",
       "Clear scope and success metrics",
     ],
-    image: { src: "/how-we-work-steps/team-1.webp", width: 1100, height: 833 },
+    image: { src: "/how-we-work/step-1.png", width: 1452, height: 1083 },
   },
   {
     title: "Strategic Project Planning",
@@ -36,7 +36,7 @@ const STEPS: Step[] = [
       "Sprint plan with clear timelines",
       "Transparent budget and estimates",
     ],
-    image: { src: "/how-we-work-steps/team-2.webp", width: 793, height: 453 },
+    image: { src: "/how-we-work/step-2.png", width: 1568, height: 1003 },
   },
   {
     title: "Intuitive UI/UX Design",
@@ -48,7 +48,7 @@ const STEPS: Step[] = [
       "Clickable prototypes",
       "Reusable design system",
     ],
-    image: { src: "/how-we-work-steps/team-3.webp", width: 741, height: 399 },
+    image: { src: "/how-we-work/step-3.png", width: 1536, height: 1024 },
   },
   {
     title: "Agile Software Development",
@@ -60,7 +60,7 @@ const STEPS: Step[] = [
       "Web, mobile and API development",
       "Continuous integration",
     ],
-    image: { src: "/how-we-work-steps/team-4.webp", width: 803, height: 430 },
+    image: { src: "/how-we-work/step-4.png", width: 1024, height: 500 },
   },
   {
     title: "QA Testing & Deployment",
@@ -72,7 +72,7 @@ const STEPS: Step[] = [
       "CI/CD pipelines",
       "Zero-downtime deployment",
     ],
-    image: { src: "/how-we-work-steps/team-5.webp", width: 759, height: 480 },
+    image: { src: "/how-we-work/step-5.png", width: 1574, height: 999 },
   },
   {
     title: "Launch & Client Feedback",
@@ -84,7 +84,7 @@ const STEPS: Step[] = [
       "Feedback sessions with your team",
       "Quick fixes and iterations",
     ],
-    image: { src: "/how-we-work-steps/team-6.webp", width: 968, height: 569 },
+    image: { src: "/how-we-work/step-6.png", width: 1602, height: 981 },
   },
   {
     title: "Ongoing Training & Support",
@@ -96,7 +96,7 @@ const STEPS: Step[] = [
       "Regular updates and maintenance",
       "New features as you scale",
     ],
-    image: { src: "/how-we-work-steps/team-7.webp", width: 734, height: 447 },
+    image: { src: "/how-we-work/step-1.png", width: 1602, height: 682 },
   },
 ];
 
@@ -204,7 +204,7 @@ export function HowWeWork() {
                     {step.title}
                   </span>
                   <Image
-                    src="/how-we-work-steps/plus.svg"
+                    src="/how-we-work/plus.svg"
                     alt=""
                     width={26}
                     height={26}
@@ -253,7 +253,7 @@ export function HowWeWork() {
                               )}
                             >
                               <Image
-                                src="/how-we-work-steps/sparkle.svg"
+                                src="/how-we-work/sparkle.svg"
                                 alt=""
                                 width={18}
                                 height={18}
@@ -267,20 +267,22 @@ export function HowWeWork() {
                       </div>
                       <div
                         className={cn(
-                          "flex h-55 items-end justify-center transition-[opacity,transform] duration-700 ease-out motion-reduce:transition-none sm:h-85",
+                          "relative flex w-full items-center justify-center pb-4 transition-[opacity,transform] duration-700 ease-out motion-reduce:transition-none sm:pb-6 lg:pb-8",
                           isOpen
                             ? "translate-y-0 scale-100 opacity-100 delay-200"
                             : "translate-y-8 scale-95 opacity-0",
                         )}
                       >
-                        <Image
-                          src={step.image.src}
-                          alt={step.title}
-                          width={step.image.width}
-                          height={step.image.height}
-                          sizes="(max-width: 1024px) 90vw, 600px"
-                          className="h-auto max-h-full w-auto max-w-full drop-shadow-xl"
-                        />
+                        <div className="relative aspect-[16/10] w-full max-w-[620px] flex items-center justify-center">
+                          <Image
+                            src={step.image.src}
+                            alt={step.title}
+                            fill
+                            sizes="(max-width: 640px) 94vw, (max-width: 1024px) 85vw, 620px"
+                            className="object-contain drop-shadow-xl"
+                            priority={i === 0}
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
