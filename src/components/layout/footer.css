@@ -221,3 +221,60 @@
     gap: 1.25rem;
   }
 }
+
+/* Footer wordmark spotlight */
+@property --wm-x {
+  syntax: "<length-percentage>";
+  inherits: true;
+  initial-value: 15%;
+}
+@property --wm-y {
+  syntax: "<length-percentage>";
+  inherits: true;
+  initial-value: 55%;
+}
+
+.footer-wordmark-wrapper {
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.footer-wordmark {
+  font-size: clamp(4.5rem, 19vw, 15rem);
+  animation: footer-wordmark-drift 9s ease-in-out infinite alternate;
+}
+
+.footer-wordmark[data-active] {
+  animation: none;
+}
+
+.footer-wordmark-lit {
+  background-image: radial-gradient(
+    circle at var(--wm-x, 50%) var(--wm-y, 50%),
+    #2476ff 0%,
+    #0966fa 12%,
+    #01215f 24%,
+    transparent 38%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 28px rgba(9, 102, 250, 0.55));
+}
+
+@keyframes footer-wordmark-drift {
+  from {
+    --wm-x: 10%;
+  }
+  to {
+    --wm-x: 90%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-wordmark {
+    animation: none;
+  }
+}
