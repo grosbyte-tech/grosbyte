@@ -256,10 +256,10 @@ export function FooterWordmark() {
       aria-hidden="true"
       onPointerMove={track}
       onPointerLeave={release}
-      className="footer-wordmark relative w-full text-center leading-none font-black tracking-[-0.05em] select-none"
+      className="footer-wordmark relative w-full max-w-full text-center leading-none font-black tracking-[-0.05em] select-none overflow-hidden"
     >
-      <span className="block text-white/[0.06]">Grosbyte</span>
-      <span className="footer-wordmark-lit absolute inset-0">Grosbyte</span>
+      <span className="block text-white/[0.06] max-w-full truncate">Grosbyte</span>
+      <span className="footer-wordmark-lit absolute inset-0 max-w-full truncate">Grosbyte</span>
     </div>
   );
 }
