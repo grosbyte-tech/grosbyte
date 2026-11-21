@@ -33,7 +33,9 @@ function loadApi({
             ? load("src/lib/contact/contact.ts")
             : name === "./service-options" || name === "@/lib/services/service-options"
               ? load("src/lib/services/service-options.ts")
-              : require(name),
+              : name === "@/lib/env"
+                ? load("src/lib/env.ts")
+                : require(name),
         Request,
         Response,
         Buffer,
@@ -230,4 +232,27 @@ test("health check endpoint returns healthy status", async () => {
   const data = await response.json();
   assert.equal(data.status, "healthy");
   assert.ok(data.timestamp);
+});
+
+test("validateContactServerEnv raises descriptive error when configuration is missing", () => {
+  const code = ts.transpileModule(
+    fs.readFileSync("src/lib/env.ts", "utf8"),
+    {
+      compilerOptions: {
+        module: ts.ModuleKind.CommonJS,
+        target: ts.ScriptTarget.ES2022,
+      },
+    },
+  ).outputText;
+  const mod = { exports: {} };
+  vm.runInNewContext(code, {
+    module: mod,
+    exports: mod.exports,
+    process: { env: {} },
+  });
+  const { validateContactServerEnv } = mod.exports;
+  assert.throws(
+    () => validateContactServerEnv(),
+    /Missing required contact email configuration: RESEND_API_KEY, EMAIL_FROM, CONTACT_EMAIL/,
+  );
 });

@@ -10,6 +10,7 @@ import { TableOfContents } from "@/components/blogs/table-of-contents";
 import { serviceMetadata } from "@/components/services/service-ui";
 import { JsonLd } from "@/components/seo/json-ld";
 import { getBlogPostingSchema } from "@/lib/seo/schema";
+import { clientEnv } from "@/lib/env";
 import {
   findPost,
   listPosts,
@@ -72,7 +73,7 @@ export default async function BlogPostPage({ params }: Props) {
   const related = await relatedPosts(post);
   const service = getService(post.serviceSlug);
   const postSummary = summarizePost(post);
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://grosbyte.com";
+  const siteUrl = clientEnv.NEXT_PUBLIC_SITE_URL;
   const articleUrl = `${siteUrl}/blogs/${post.slug}`;
   const tocItems = post.sections.map((section, i) => ({
     id: `section-${i}`,

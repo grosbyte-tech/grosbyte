@@ -56,5 +56,3 @@ export const GradientText = forwardRef(function GradientText(
 }) as <T extends ElementType = "span">(
   props: GradientTextProps<T> & { ref?: React.Ref<HTMLElement> },
 ) => React.ReactElement | null;
-
-export default GradientText;
