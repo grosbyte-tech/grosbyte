@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     "AI integration",
   ],
   icons: {
-    icon: "/images/brand/logo-removebg.png",
-    shortcut: "/images/brand/logo-removebg.png",
-    apple: "/images/brand/logo-removebg.png",
+    icon: "/images/brand/logo-transparent.png",
+    shortcut: "/images/brand/logo-transparent.png",
+    apple: "/images/brand/logo-transparent.png",
   },
   openGraph: {
     url: "https://grosbyte.com",

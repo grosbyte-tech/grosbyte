@@ -33,7 +33,8 @@ function withCdn<T>(assets: T): T {
 const RAW_ASSETS = {
   brand: {
     logo: "/images/brand/logo.png",
-    logoRemoveBg: "/images/brand/logo-removebg.png",
+    logoTransparent: "/images/brand/logo-transparent.png",
+    logoRemoveBg: "/images/brand/logo-transparent.png",
     ogDefault: "/images/brand/og-default.png",
   },
   about: {
@@ -85,15 +86,15 @@ const RAW_ASSETS = {
     vector: "/about/Vector.webp",
     mockup2: "/bg/how-we-work-2-2.webp",
     cards: {
-      card1: "/how-we-work/card-1.webp",
-      card2: "/how-we-work/card-2.webp",
-      card3: "/how-we-work/card-3.webp",
-      card4: "/how-we-work/card-4.webp",
-      card5: "/how-we-work/card-5.webp",
-      card6: "/how-we-work/card-6.webp",
-      card7: "/how-we-work/card-7.webp",
-      card8: "/how-we-work/card-8.webp",
-      card9: "/how-we-work/card-9.webp",
+      card1: "/images/how-we-work/card-1.webp",
+      card2: "/images/how-we-work/card-2.webp",
+      card3: "/images/how-we-work/card-3.webp",
+      card4: "/images/how-we-work/card-4.webp",
+      card5: "/images/how-we-work/card-5.webp",
+      card6: "/images/how-we-work/card-6.webp",
+      card7: "/images/how-we-work/card-7.webp",
+      card8: "/images/how-we-work/card-8.webp",
+      card9: "/images/how-we-work/card-9.webp",
     },
   },
   pricingHeader: {

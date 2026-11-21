@@ -78,7 +78,7 @@ export function Footer() {
           >
             <span className="footer-brand-logo">
               <Image
-                src="/images/brand/logo-removebg.png"
+                src="/images/brand/logo-transparent.png"
                 alt="Grosbyte Technology"
                 width={32}
                 height={32}
