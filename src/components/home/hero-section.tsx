@@ -4,24 +4,18 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useTranslation } from "@/contexts/language-context";
 import { Button } from "@/components/ui/button";
 import { GradientText } from "@/components/effects/gradient-text";
+import { HERO_CTA_BUTTONS } from "@/config/hero";
 import { HeroIllustration } from "./hero-illustration";
 
 export function HeroSection() {
   const reduceMotion = useReducedMotion();
   const { t } = useTranslation();
 
-  const ctaButtons = [
-    {
-      href: "/contact",
-      variant: "glowing" as const,
-      label: t("hero.ctaPrimary"),
-    },
-    {
-      href: "/services",
-      variant: "outline" as const,
-      label: t("hero.ctaSecondary"),
-    },
-  ];
+  const ctaButtons = HERO_CTA_BUTTONS.map((btn) => ({
+    href: btn.href,
+    variant: btn.variant,
+    label: t(btn.translationKey),
+  }));
 
   return (
     <section className="hero relative overflow-hidden bg-[#F1F5F9]" id="home">

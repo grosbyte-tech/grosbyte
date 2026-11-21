@@ -94,6 +94,26 @@ async function main() {
 
         await page.emulateMedia({ reducedMotion: "reduce" });
 
+        // Freeze all CSS animations and transitions before page loads
+        await page.addInitScript(() => {
+          const style = document.createElement("style");
+          style.textContent = `
+            *, *::before, *::after {
+              animation: none !important;
+              animation-play-state: paused !important;
+              transition: none !important;
+              scroll-behavior: auto !important;
+            }
+          `;
+          if (document.head) {
+            document.head.appendChild(style);
+          } else {
+            document.addEventListener("DOMContentLoaded", () => {
+              document.head?.appendChild(style);
+            });
+          }
+        });
+
         const url = `${BASE_URL}${route.path}`;
         try {
           await page.goto(url, { waitUntil: "networkidle", timeout: 15000 });
@@ -101,14 +121,14 @@ async function main() {
           await page.goto(url, { waitUntil: "domcontentloaded", timeout: 15000 });
         }
 
-        // Disable all CSS animations and transitions for deterministic capture
+        // Also ensure style tag is present in document body/head
         await page.addStyleTag({
           content: `
             *, *::before, *::after {
-              animation-duration: 0s !important;
-              animation-delay: 0s !important;
-              transition-duration: 0s !important;
-              transition-delay: 0s !important;
+              animation: none !important;
+              animation-play-state: paused !important;
+              transition: none !important;
+              scroll-behavior: auto !important;
             }
           `,
         });

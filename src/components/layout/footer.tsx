@@ -11,34 +11,13 @@ import {
   FaGithub,
 } from "react-icons/fa6";
 import { socialLinks } from "@/config/site";
-import { featuredServices } from "@/config/mega-menu";
+import {
+  FOOTER_COMPANY_LINKS as companyLinks,
+  FOOTER_RESOURCE_LINKS as resourceLinks,
+  FOOTER_SERVICE_LINKS as serviceLinks,
+  FOOTER_INDUSTRY_LINKS as industryLinks,
+} from "@/config/footer-navigation";
 import "./footer.css";
-
-const companyLinks = [
-  { label: "About Us", href: "/about" },
-  { label: "How We Work", href: "/#how-we-work" },
-  { label: "Contact Us", href: "/contact" },
-];
-
-const resourceLinks = [{ label: "Blogs", href: "/blogs" }];
-
-// The 6 core services directly from the Mega Menu
-const serviceLinks = featuredServices.map((service) => ({
-  label: service.title,
-  href: service.href,
-}));
-
-const industryLinks = [
-  { label: "Healthcare", href: "/custom-software-development" },
-  { label: "Fin-tech", href: "/custom-software-development" },
-  { label: "Ed-tech", href: "/custom-software-development" },
-  {
-    label: "E-commerce & Retail",
-    href: "/services/website-ecommerce-development",
-  },
-  { label: "Logistics & Supply Chain", href: "/custom-software-development" },
-  { label: "Real Estate & Construction", href: "/custom-software-development" },
-];
 
 const socialMediaLinks = [
   {
