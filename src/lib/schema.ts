@@ -5,7 +5,7 @@ export function getOrganizationSchema() {
     "@id": "https://grosbyte.com/#organization",
     name: "Grosbyte Technologies",
     url: "https://grosbyte.com",
-    logo: "https://grosbyte.com/logo.png",
+    logo: "https://grosbyte.com/images/brand/logo.png",
     description:
       "Practical software, websites, web and mobile applications, automation, and digital marketing for your business.",
     email: "contact@grosbyte.com",
@@ -54,7 +54,7 @@ export function getBlogPostingSchema(post: {
     datePublished: `${post.publishedAt}T00:00:00Z`,
     dateModified: `${post.publishedAt}T00:00:00Z`,
     articleSection: post.category,
-    image: post.coverImage || "https://grosbyte.com/images/og-default.png",
+    image: post.coverImage || "https://grosbyte.com/images/brand/og-default.png",
     author: {
       "@type": "Organization",
       name: "Grosbyte Technologies",
@@ -66,7 +66,7 @@ export function getBlogPostingSchema(post: {
       url: "https://grosbyte.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://grosbyte.com/logo.png",
+        url: "https://grosbyte.com/images/brand/logo.png",
       },
     },
   };

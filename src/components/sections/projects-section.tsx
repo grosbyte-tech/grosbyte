@@ -16,23 +16,23 @@ interface ProjectMeta {
 const projectsMap: Record<ProjectKey, ProjectMeta> = {
   tailr: {
     key: "tailr",
-    image: "/Tailr.png",
+    image: "/images/projects/tailr.png",
   },
   booksansar: {
     key: "booksansar",
-    image: "/BookSansar.png",
+    image: "/images/projects/booksansar.png",
   },
   dhune: {
     key: "dhune",
-    image: "/Dhune.png",
+    image: "/images/projects/dhune.png",
   },
   sopdraft: {
     key: "sopdraft",
-    image: "/SopDraft.png",
+    image: "/images/projects/sopdraft.png",
   },
   setu: {
     key: "setu",
-    image: "/Setu.png",
+    image: "/images/projects/setu.png",
   },
 };
 

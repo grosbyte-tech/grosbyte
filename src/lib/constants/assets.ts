@@ -32,7 +32,34 @@ function withCdn<T>(assets: T): T {
  */
 const RAW_ASSETS = {
   brand: {
-    logo: "/inflancer-logo.svg",
+    logo: "/images/brand/logo.png",
+    logoRemoveBg: "/images/brand/logo-removebg.png",
+    ogDefault: "/images/brand/og-default.png",
+  },
+  about: {
+    about: "/images/about/about.png",
+    aboutImage: "/images/about/about-image.jpg",
+    aboutOffice: "/images/about/about-office.jpg",
+  },
+  services: {
+    software: "/images/services/software.png",
+    digital: "/images/services/digital.png",
+    digitalmarketing: "/images/services/digitalmarketing.png",
+    webandmobile: "/images/services/webandmobile.png",
+    glossy3d: "/images/services/glossy-3d.png",
+    glossyCloud: "/images/services/glossy-cloud.png",
+    glossyRocket: "/images/services/glossy-rocket.png",
+  },
+  projects: {
+    booksansar: "/images/projects/booksansar.png",
+    dhune: "/images/projects/dhune.png",
+    setu: "/images/projects/setu.png",
+    sopdraft: "/images/projects/sopdraft.png",
+    tailr: "/images/projects/tailr.png",
+    careerTech: "/images/projects/career-tech.png",
+  },
+  contact: {
+    contactTeam: "/images/contact/contact-team.jpg",
   },
   hero: {
     bg: "/bg/hero-bg.webp",

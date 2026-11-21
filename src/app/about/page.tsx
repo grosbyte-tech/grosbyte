@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "Grosbyte Technologies",
     images: [
       {
-        url: "/images/og-default.png",
+        url: "/images/brand/og-default.png",
         width: 1200,
         height: 630,
         alt: fullTitle,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: fullTitle,
     description,
-    images: ["/images/og-default.png"],
+    images: ["/images/brand/og-default.png"],
   },
 };
 

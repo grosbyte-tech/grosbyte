@@ -616,7 +616,7 @@ export function HeroIllustration() {
               strokeOpacity="0.3"
             />
             <image
-              href="/logo.png"
+              href="/images/brand/logo.png"
               x="-18"
               y="-18"
               width="36"

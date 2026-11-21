@@ -68,7 +68,7 @@ export function AboutSection() {
           <Reveal className="about-image">
             <div className="about-image-glow" aria-hidden="true" />
             <Image
-              src="/career-tech.png"
+              src="/images/projects/career-tech.png"
               alt={t("about.imageAlt")}
               width={720}
               height={463}

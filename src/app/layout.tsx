@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     "AI integration",
   ],
   icons: {
-    icon: "/icons/logo-removebg.png",
-    shortcut: "/icons/logo-removebg.png",
-    apple: "/icons/logo-removebg.png",
+    icon: "/images/brand/logo-removebg.png",
+    shortcut: "/images/brand/logo-removebg.png",
+    apple: "/images/brand/logo-removebg.png",
   },
   openGraph: {
     url: "https://grosbyte.com",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "Grosbyte Technologies",
     images: [
       {
-        url: "/images/og-default.png",
+        url: "/images/brand/og-default.png",
         width: 1200,
         height: 630,
         alt: "Grosbyte Technologies - Software & Website Development Nepal",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: defaultTitle,
     description,
-    images: ["/images/og-default.png"],
+    images: ["/images/brand/og-default.png"],
   },
 };
 

@@ -52,7 +52,7 @@ export function ContactPageContent() {
           <div className="editorial-hero-media">
             <div className="contact-hero-image-wrap">
               <Image
-                src="/contact-team.jpg"
+                src="/images/contact/contact-team.jpg"
                 alt={
                   t("contactPage.imageAlt") ||
                   "Grosbyte Technology team members collaborating with a tablet and stylus in the office"

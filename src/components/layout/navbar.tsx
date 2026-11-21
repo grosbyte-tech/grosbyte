@@ -137,7 +137,7 @@ export function Navbar() {
           >
             <span className="navbar-logo">
               <Image
-                src="/logo.png"
+                src="/images/brand/logo.png"
                 alt="Grosbyte Technologies Logo"
                 width={42}
                 height={42}

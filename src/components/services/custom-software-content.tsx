@@ -123,7 +123,7 @@ export function CustomSoftwareContent() {
               <div className="cs-hero-bg-glow" aria-hidden="true" />
               <div className="cs-hero-img-box">
                 <Image
-                  src="/Software.png"
+                  src="/images/services/software.png"
                   alt="Turn Your Ideas Into Powerful Software"
                   width={1658}
                   height={949}
@@ -187,7 +187,7 @@ export function CustomSoftwareContent() {
             {/* Left 3D Rocket Illustration */}
             <div className="cs-rocket-visual">
               <Image
-                src="/Glossy_Rocket.png"
+                src="/images/services/glossy-rocket.png"
                 alt="3D Rocket Launch Software Development"
                 width={1536}
                 height={1024}
