@@ -5,6 +5,7 @@ import {
   validateContactFields,
   type ContactValues,
 } from "@/lib/contact/contact";
+import { validateContactServerEnv } from "@/lib/env";
 
 // Best-effort per-instance protection; deployment-level limits should complement this.
 const attempts = new Map<string, { count: number; expires: number }>();
@@ -114,12 +115,11 @@ export async function POST(request: Request) {
       { status: 429, headers: { "Retry-After": "600" } },
     );
 
-  const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.EMAIL_FROM;
-  const contactEmail = process.env.CONTACT_EMAIL;
-
-  if (!apiKey || !from || !contactEmail) {
-    console.error("Contact email configuration is incomplete.");
+  let serverEnv: ReturnType<typeof validateContactServerEnv>;
+  try {
+    serverEnv = validateContactServerEnv();
+  } catch (err) {
+    console.error("Contact email configuration is incomplete.", err);
     return Response.json(
       {
         message:
@@ -128,6 +128,8 @@ export async function POST(request: Request) {
       { status: 503 },
     );
   }
+
+  const { apiKey, from, contactEmail } = serverEnv;
 
   const { name, email, phone, company, service, message, budget } = values;
   const idempotencyKey = createHash("sha256")

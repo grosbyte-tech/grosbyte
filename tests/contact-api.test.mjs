@@ -33,7 +33,9 @@ function loadApi({
             ? load("src/lib/contact/contact.ts")
             : name === "./service-options" || name === "@/lib/services/service-options"
               ? load("src/lib/services/service-options.ts")
-              : require(name),
+              : name === "@/lib/env"
+                ? load("src/lib/env.ts")
+                : require(name),
         Request,
         Response,
         Buffer,

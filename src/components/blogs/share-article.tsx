@@ -24,6 +24,8 @@ function XIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+import { clientEnv } from "@/lib/env";
+
 interface SharePlatform {
   name: string;
   label: string;
@@ -66,7 +68,7 @@ export function ShareArticle({
   url,
   className = "",
 }: ShareArticleProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://grosbyte.com";
+  const siteUrl = clientEnv.NEXT_PUBLIC_SITE_URL;
   const absoluteUrl = url.startsWith("http")
     ? url
     : `${siteUrl.replace(/\/$/, "")}/${url.replace(/^\//, "")}`;
