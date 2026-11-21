@@ -24,7 +24,7 @@ export default async function WebAndMobileDevelopmentPage() {
   if (!service) notFound();
 
   return (
-    <main className="cs-page" id="main-content">
+    <main className="cs-page page-web-mobile" id="main-content">
       <JsonLd data={getServiceSchema(service)} />
       <WebMobileContent />
     </main>

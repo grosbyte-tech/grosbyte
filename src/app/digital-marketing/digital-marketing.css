@@ -1,12 +1,12 @@
 /* Digital Marketing and Brand Growth Page Styles */
-.cs-page {
+.page-digital-marketing.cs-page {
   width: 100%;
   overflow-x: hidden;
   background: var(--background, #f8fafc);
   color: var(--text-primary, #0f172a);
 }
 
-.cs-container {
+.page-digital-marketing .cs-container {
   width: 100%;
   max-width: 1280px;
   margin-inline: auto;
@@ -14,7 +14,7 @@
 }
 
 /* Eyebrows with Blue Bar */
-.cs-eyebrow {
+.page-digital-marketing .cs-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -26,7 +26,7 @@
   margin-bottom: 14px;
 }
 
-.cs-eyebrow::before {
+.page-digital-marketing .cs-eyebrow::before {
   content: "";
   display: inline-block;
   width: 26px;
@@ -35,7 +35,7 @@
   border-radius: 9999px;
 }
 
-.cs-gradient-text {
+.page-digital-marketing .cs-gradient-text {
   background: linear-gradient(135deg, #0966fa 0%, #00a8ff 55%, #00d2ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -46,7 +46,7 @@
 /* ========================================================
    1. HERO SECTION
    ======================================================== */
-.cs-hero-section {
+.page-digital-marketing .cs-hero-section {
   padding-top: clamp(100px, 11vw, 130px);
   padding-bottom: clamp(60px, 8vw, 100px);
   position: relative;
@@ -54,14 +54,14 @@
   background: #f1f5f9;
 }
 
-.cs-hero-grid {
+.page-digital-marketing .cs-hero-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: clamp(24px, 4vw, 48px);
   align-items: center;
 }
 
-.cs-hero-pill {
+.page-digital-marketing .cs-hero-pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -74,7 +74,7 @@
   margin-bottom: 20px;
 }
 
-.cs-hero-pill-dot {
+.page-digital-marketing .cs-hero-pill-dot {
   width: 7px;
   height: 7px;
   border-radius: 9999px;
@@ -82,7 +82,7 @@
   box-shadow: 0 0 6px rgba(9, 102, 250, 0.4);
 }
 
-.cs-hero-title {
+.page-digital-marketing .cs-hero-title {
   font-size: clamp(2.5rem, 5vw, 3.85rem);
   font-weight: 800;
   line-height: 1.1;
@@ -91,7 +91,7 @@
   margin-bottom: 20px;
 }
 
-.cs-hero-subtitle {
+.page-digital-marketing .cs-hero-subtitle {
   font-size: clamp(1.05rem, 1.8vw, 1.2rem);
   line-height: 1.6;
   color: var(--text-secondary, #475569);
@@ -99,14 +99,14 @@
   margin-bottom: 32px;
 }
 
-.cs-hero-actions {
+.page-digital-marketing .cs-hero-actions {
   display: flex;
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.cs-secondary-link {
+.page-digital-marketing .cs-secondary-link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -119,14 +119,14 @@
   transition: all 0.2s ease;
 }
 
-.cs-secondary-link:hover {
+.page-digital-marketing .cs-secondary-link:hover {
   color: var(--brand-blue, #0966fa);
   text-decoration-color: var(--brand-blue, #0966fa);
 }
 
 /* Hero Media Visual */
-.cs-hero-media-wrap,
-.cs-hero-visual-col {
+.page-digital-marketing .cs-hero-media-wrap,
+.page-digital-marketing .cs-hero-visual-col {
   position: relative;
   display: flex;
   align-items: center;
@@ -134,7 +134,7 @@
   width: 100%;
 }
 
-.cs-hero-bg-glow {
+.page-digital-marketing .cs-hero-bg-glow {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -153,7 +153,7 @@
   z-index: 0;
 }
 
-.cs-hero-img-box {
+.page-digital-marketing .cs-hero-img-box {
   position: relative;
   z-index: 10;
   width: 100%;
@@ -164,7 +164,7 @@
   justify-content: center;
 }
 
-.cs-hero-img {
+.page-digital-marketing .cs-hero-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -175,7 +175,7 @@
 }
 
 @media (min-width: 1024px) {
-  .cs-hero-img {
+  .page-digital-marketing .cs-hero-img {
     transform: scale(1.08);
     transform-origin: right center;
   }
@@ -184,19 +184,19 @@
 /* ========================================================
    2. WHAT WE DO SECTION
    ======================================================== */
-.cs-build-section {
+.page-digital-marketing .cs-build-section {
   padding: clamp(60px, 8vw, 100px) 0;
   background: #f1f5f9;
 }
 
-.cs-build-grid {
+.page-digital-marketing .cs-build-grid {
   display: grid;
   grid-template-columns: 0.85fr 1.35fr;
   gap: clamp(32px, 6vw, 72px);
   align-items: flex-start;
 }
 
-.cs-section-heading {
+.page-digital-marketing .cs-section-heading {
   font-size: clamp(2rem, 3.6vw, 2.75rem);
   font-weight: 800;
   line-height: 1.15;
@@ -205,31 +205,31 @@
   margin-bottom: 16px;
 }
 
-.cs-section-subtitle {
+.page-digital-marketing .cs-section-subtitle {
   font-size: 1.05rem;
   line-height: 1.6;
   color: var(--text-secondary, #475569);
   max-width: 420px;
 }
 
-.cs-capabilities-grid {
+.page-digital-marketing .cs-capabilities-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px 24px;
 }
 
-.cs-capability-card {
+.page-digital-marketing .cs-capability-card {
   display: flex;
   flex-direction: column;
   gap: 8px;
   transition: transform 0.2s ease;
 }
 
-.cs-capability-card:hover {
+.page-digital-marketing .cs-capability-card:hover {
   transform: translateY(-2px);
 }
 
-.cs-capability-icon {
+.page-digital-marketing .cs-capability-icon {
   background: transparent;
   border: none;
   color: var(--brand-blue, #0966fa);
@@ -239,13 +239,13 @@
   margin-bottom: 8px;
 }
 
-.cs-capability-title {
+.page-digital-marketing .cs-capability-title {
   font-size: 1.02rem;
   font-weight: 700;
   color: var(--text-primary, #0f172a);
 }
 
-.cs-capability-desc {
+.page-digital-marketing .cs-capability-desc {
   font-size: 0.88rem;
   line-height: 1.5;
   color: var(--text-secondary, #64748b);
@@ -254,33 +254,33 @@
 /* ========================================================
    3. WHY CHOOSE US SECTION
    ======================================================== */
-.cs-why-section {
+.page-digital-marketing .cs-why-section {
   padding: clamp(60px, 8vw, 100px) 0;
   background: #ffffff;
 }
 
-.cs-why-grid {
+.page-digital-marketing .cs-why-grid {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   gap: clamp(32px, 6vw, 72px);
   align-items: center;
 }
 
-.cs-rocket-visual {
+.page-digital-marketing .cs-rocket-visual {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.cs-checklist {
+.page-digital-marketing .cs-checklist {
   display: flex;
   flex-direction: column;
   gap: 14px;
   margin-top: 28px;
 }
 
-.cs-checklist-item {
+.page-digital-marketing .cs-checklist-item {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -289,7 +289,7 @@
   color: var(--text-primary, #0f172a);
 }
 
-.cs-check-icon {
+.page-digital-marketing .cs-check-icon {
   width: 22px;
   height: 22px;
   border-radius: 9999px;
@@ -304,37 +304,37 @@
 /* ========================================================
    4. OUR PROCESS (WORKFLOW)
    ======================================================== */
-.cs-workflow-section {
+.page-digital-marketing .cs-workflow-section {
   padding: clamp(60px, 8vw, 100px) 0;
   background: #ffffff;
 }
 
-.cs-workflow-header {
+.page-digital-marketing .cs-workflow-header {
   margin-bottom: 48px;
 }
 
-.cs-workflow-steps {
+.page-digital-marketing .cs-workflow-steps {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   position: relative;
 }
 
-.cs-workflow-step {
+.page-digital-marketing .cs-workflow-step {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   position: relative;
 }
 
-.cs-step-badge-wrap {
+.page-digital-marketing .cs-step-badge-wrap {
   display: flex;
   align-items: center;
   width: 100%;
   margin-bottom: 18px;
 }
 
-.cs-step-circle {
+.page-digital-marketing .cs-step-circle {
   width: 44px;
   height: 44px;
   border-radius: 9999px;
@@ -349,7 +349,7 @@
   flex-shrink: 0;
 }
 
-.cs-step-line {
+.page-digital-marketing .cs-step-line {
   flex: 1;
   height: 2px;
   background: rgba(15, 23, 42, 0.12);
@@ -358,7 +358,7 @@
   position: relative;
 }
 
-.cs-step-line::after {
+.page-digital-marketing .cs-step-line::after {
   content: "";
   position: absolute;
   right: 0;
@@ -370,14 +370,14 @@
   transform: rotate(45deg);
 }
 
-.cs-step-title {
+.page-digital-marketing .cs-step-title {
   font-size: 1.2rem;
   font-weight: 750;
   color: var(--text-primary, #0f172a);
   margin-bottom: 6px;
 }
 
-.cs-step-desc {
+.page-digital-marketing .cs-step-desc {
   font-size: 0.92rem;
   line-height: 1.55;
   color: var(--text-secondary, #64748b);
@@ -387,25 +387,25 @@
 /* ========================================================
    5. CASE STUDIES SECTION
    ======================================================== */
-.cs-case-section {
+.page-digital-marketing .cs-case-section {
   padding: clamp(60px, 8vw, 100px) 0;
   background: #ffffff;
 }
 
-.cs-case-grid {
+.page-digital-marketing .cs-case-grid {
   display: grid;
   grid-template-columns: 0.85fr 1.35fr;
   gap: clamp(32px, 6vw, 72px);
   align-items: center;
 }
 
-.cs-case-cards-row {
+.page-digital-marketing .cs-case-cards-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
 
-.cs-stat-card {
+.page-digital-marketing .cs-stat-card {
   background: #f8fafc;
   border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 18px;
@@ -417,14 +417,14 @@
   transition: all 0.25s ease;
 }
 
-.cs-stat-card:hover {
+.page-digital-marketing .cs-stat-card:hover {
   transform: translateY(-4px);
   border-color: rgba(9, 102, 250, 0.3);
   box-shadow: 0 12px 28px -6px rgba(9, 102, 250, 0.12);
   background: #ffffff;
 }
 
-.cs-stat-icon-wrap {
+.page-digital-marketing .cs-stat-icon-wrap {
   width: 36px;
   height: 36px;
   border-radius: 10px;
@@ -436,7 +436,7 @@
   margin-bottom: 8px;
 }
 
-.cs-stat-number {
+.page-digital-marketing .cs-stat-number {
   font-size: 1.85rem;
   font-weight: 800;
   color: var(--text-primary, #0f172a);
@@ -444,19 +444,19 @@
   line-height: 1.1;
 }
 
-.cs-stat-label {
+.page-digital-marketing .cs-stat-label {
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--brand-blue, #0966fa);
 }
 
-.cs-stat-sub {
+.page-digital-marketing .cs-stat-sub {
   font-size: 0.82rem;
   color: var(--text-secondary, #64748b);
   margin-top: 2px;
 }
 
-.cs-case-view-more {
+.page-digital-marketing .cs-case-view-more {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -468,26 +468,26 @@
   transition: transform 0.2s ease;
 }
 
-.cs-case-view-more:hover {
+.page-digital-marketing .cs-case-view-more:hover {
   transform: translateX(4px);
 }
 
 /* ========================================================
    6. WHAT OUR CLIENTS SAY (TESTIMONIALS)
    ======================================================== */
-.cs-testimonial-section {
+.page-digital-marketing .cs-testimonial-section {
   padding: clamp(60px, 8vw, 100px) 0;
   background: #f1f5f9;
 }
 
-.cs-testimonial-grid {
+.page-digital-marketing .cs-testimonial-grid {
   display: grid;
   grid-template-columns: 0.85fr 1.35fr;
   gap: clamp(32px, 6vw, 72px);
   align-items: center;
 }
 
-.cs-testimonial-card {
+.page-digital-marketing .cs-testimonial-card {
   background: #ffffff;
   border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 20px;
@@ -496,7 +496,7 @@
   position: relative;
 }
 
-.cs-quote-symbol {
+.page-digital-marketing .cs-quote-symbol {
   font-size: 3rem;
   line-height: 1;
   color: var(--brand-blue, #0966fa);
@@ -505,7 +505,7 @@
   opacity: 0.85;
 }
 
-.cs-testimonial-quote {
+.page-digital-marketing .cs-testimonial-quote {
   font-size: 1.08rem;
   line-height: 1.65;
   color: var(--text-primary, #0f172a);
@@ -513,7 +513,7 @@
   margin-bottom: 24px;
 }
 
-.cs-testimonial-footer {
+.page-digital-marketing .cs-testimonial-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -522,13 +522,13 @@
   padding-top: 20px;
 }
 
-.cs-author-info {
+.page-digital-marketing .cs-author-info {
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
-.cs-author-avatar {
+.page-digital-marketing .cs-author-avatar {
   width: 44px;
   height: 44px;
   border-radius: 9999px;
@@ -541,24 +541,24 @@
   font-size: 1rem;
 }
 
-.cs-author-name {
+.page-digital-marketing .cs-author-name {
   font-size: 0.98rem;
   font-weight: 700;
   color: var(--text-primary, #0f172a);
 }
 
-.cs-author-role {
+.page-digital-marketing .cs-author-role {
   font-size: 0.84rem;
   color: var(--text-secondary, #64748b);
 }
 
-.cs-testimonial-arrows {
+.page-digital-marketing .cs-testimonial-arrows {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.cs-arrow-btn {
+.page-digital-marketing .cs-arrow-btn {
   width: 36px;
   height: 36px;
   border-radius: 9999px;
@@ -573,7 +573,7 @@
   transition: all 0.2s ease;
 }
 
-.cs-arrow-btn:hover {
+.page-digital-marketing .cs-arrow-btn:hover {
   background: var(--brand-blue, #0966fa);
   color: #ffffff;
   border-color: var(--brand-blue, #0966fa);
@@ -582,25 +582,25 @@
 /* ========================================================
    7. FAQ SECTION
    ======================================================== */
-.cs-faq-section {
+.page-digital-marketing .cs-faq-section {
   padding: clamp(60px, 8vw, 100px) 0;
   background: #f1f5f9;
 }
 
-.cs-faq-grid {
+.page-digital-marketing .cs-faq-grid {
   display: grid;
   grid-template-columns: 0.85fr 1.35fr;
   gap: clamp(32px, 6vw, 72px);
   align-items: flex-start;
 }
 
-.cs-faq-list {
+.page-digital-marketing .cs-faq-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.cs-faq-card {
+.page-digital-marketing .cs-faq-card {
   border-radius: 14px;
   background: var(--surface, #ffffff);
   border: 1px solid rgba(15, 23, 42, 0.08);
@@ -611,12 +611,12 @@
     box-shadow 0.2s ease;
 }
 
-.cs-faq-card[open] {
+.page-digital-marketing .cs-faq-card[open] {
   border-color: rgba(9, 102, 250, 0.3);
   box-shadow: 0 8px 24px -6px rgba(9, 102, 250, 0.08);
 }
 
-.cs-faq-summary {
+.page-digital-marketing .cs-faq-summary {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -630,11 +630,11 @@
   user-select: none;
 }
 
-.cs-faq-summary::-webkit-details-marker {
+.page-digital-marketing .cs-faq-summary::-webkit-details-marker {
   display: none;
 }
 
-.cs-faq-toggle {
+.page-digital-marketing .cs-faq-toggle {
   font-size: 1.3rem;
   font-weight: 400;
   color: var(--brand-blue, #0966fa);
@@ -642,11 +642,11 @@
   line-height: 1;
 }
 
-.cs-faq-card[open] .cs-faq-toggle {
+.page-digital-marketing .cs-faq-card[open] .cs-faq-toggle {
   transform: rotate(45deg);
 }
 
-.cs-faq-body {
+.page-digital-marketing .cs-faq-body {
   padding: 0 22px 18px;
   font-size: 0.94rem;
   line-height: 1.6;
@@ -656,12 +656,12 @@
 /* ========================================================
    8. CLOSING CTA BANNER
    ======================================================== */
-.cs-cta-section {
+.page-digital-marketing .cs-cta-section {
   padding: 40px 0 clamp(60px, 8vw, 100px);
   background: #f1f5f9;
 }
 
-.cs-cta-banner {
+.page-digital-marketing .cs-cta-banner {
   border-radius: 24px;
   background: linear-gradient(135deg, #0966fa 0%, #00a8ff 60%, #00d2ff 100%);
   padding: clamp(36px, 6vw, 54px) clamp(28px, 6vw, 56px);
@@ -672,7 +672,7 @@
   box-shadow: 0 16px 40px -8px rgba(9, 102, 250, 0.4);
 }
 
-.cs-cta-title {
+.page-digital-marketing .cs-cta-title {
   font-size: clamp(1.6rem, 3.2vw, 2.3rem);
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -681,13 +681,13 @@
   line-height: 1.2;
 }
 
-.cs-cta-sub {
+.page-digital-marketing .cs-cta-sub {
   font-size: 1.02rem;
   color: rgba(255, 255, 255, 0.9);
   max-width: 540px;
 }
 
-.cs-cta-btn {
+.page-digital-marketing .cs-cta-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -704,7 +704,7 @@
   transition: all 0.22s ease;
 }
 
-.cs-cta-btn:hover {
+.page-digital-marketing .cs-cta-btn:hover {
   background: #f8fafc;
   color: var(--brand-blue, #0966fa);
   transform: translateY(-2px);
@@ -715,46 +715,46 @@
    RESPONSIVE DESIGN
    ======================================================== */
 @media (max-width: 1024px) {
-  .cs-hero-grid,
-  .cs-build-grid,
-  .cs-why-grid,
-  .cs-case-grid,
-  .cs-testimonial-grid,
-  .cs-faq-grid {
+  .page-digital-marketing .cs-hero-grid,
+  .page-digital-marketing .cs-build-grid,
+  .page-digital-marketing .cs-why-grid,
+  .page-digital-marketing .cs-case-grid,
+  .page-digital-marketing .cs-testimonial-grid,
+  .page-digital-marketing .cs-faq-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .cs-capabilities-grid {
+  .page-digital-marketing .cs-capabilities-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .cs-workflow-steps {
+  .page-digital-marketing .cs-workflow-steps {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 20px;
   }
 
-  .cs-step-line {
+  .page-digital-marketing .cs-step-line {
     display: none;
   }
 }
 
 @media (max-width: 768px) {
-  .cs-capabilities-grid {
+  .page-digital-marketing .cs-capabilities-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .cs-workflow-steps {
+  .page-digital-marketing .cs-workflow-steps {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
-  .cs-case-cards-row {
+  .page-digital-marketing .cs-case-cards-row {
     grid-template-columns: 1fr;
   }
 
-  .cs-cta-banner {
+  .page-digital-marketing .cs-cta-banner {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -763,78 +763,78 @@
 /* ========================================================
    DARK MODE ADAPTATIONS
    ======================================================== */
-html:not(.light) .cs-page,
-html:not(.light) .cs-hero-section,
-html:not(.light) .cs-build-section,
-html:not(.light) .cs-testimonial-section,
-html:not(.light) .cs-faq-section,
-html:not(.light) .cs-cta-section {
+html:not(.light) .page-digital-marketing .cs-page,
+html:not(.light) .page-digital-marketing .cs-hero-section,
+html:not(.light) .page-digital-marketing .cs-build-section,
+html:not(.light) .page-digital-marketing .cs-testimonial-section,
+html:not(.light) .page-digital-marketing .cs-faq-section,
+html:not(.light) .page-digital-marketing .cs-cta-section {
   background: #0b1120;
   color: #ffffff;
 }
 
-html:not(.light) .cs-hero-title,
-html:not(.light) .cs-section-heading,
-html:not(.light) .cs-capability-title,
-html:not(.light) .cs-checklist-item,
-html:not(.light) .cs-step-title,
-html:not(.light) .cs-stat-number,
-html:not(.light) .cs-faq-summary,
-html:not(.light) .cs-secondary-link {
+html:not(.light) .page-digital-marketing .cs-hero-title,
+html:not(.light) .page-digital-marketing .cs-section-heading,
+html:not(.light) .page-digital-marketing .cs-capability-title,
+html:not(.light) .page-digital-marketing .cs-checklist-item,
+html:not(.light) .page-digital-marketing .cs-step-title,
+html:not(.light) .page-digital-marketing .cs-stat-number,
+html:not(.light) .page-digital-marketing .cs-faq-summary,
+html:not(.light) .page-digital-marketing .cs-secondary-link {
   color: #ffffff;
 }
 
-html:not(.light) .cs-faq-card {
+html:not(.light) .page-digital-marketing .cs-faq-card {
   background: rgba(255, 255, 255, 0.03);
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-html:not(.light) .cs-faq-card[open] {
+html:not(.light) .page-digital-marketing .cs-faq-card[open] {
   border-color: rgba(9, 102, 250, 0.5);
 }
 
-html:not(.light) .cs-step-line {
+html:not(.light) .page-digital-marketing .cs-step-line {
   background: rgba(255, 255, 255, 0.12);
 }
 
-html:not(.light) .cs-step-line::after {
+html:not(.light) .page-digital-marketing .cs-step-line::after {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-html:not(.light) .cs-why-section,
-html:not(.light) .cs-workflow-section,
-html:not(.light) .cs-case-section {
+html:not(.light) .page-digital-marketing .cs-why-section,
+html:not(.light) .page-digital-marketing .cs-workflow-section,
+html:not(.light) .page-digital-marketing .cs-case-section {
   background: #0d1527;
 }
 
-html:not(.light) .cs-stat-card {
+html:not(.light) .page-digital-marketing .cs-stat-card {
   background: rgba(255, 255, 255, 0.03);
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-html:not(.light) .cs-stat-card:hover {
+html:not(.light) .page-digital-marketing .cs-stat-card:hover {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(9, 102, 250, 0.4);
 }
 
-html:not(.light) .cs-testimonial-card {
+html:not(.light) .page-digital-marketing .cs-testimonial-card {
   background: rgba(255, 255, 255, 0.03);
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-html:not(.light) .cs-testimonial-quote {
+html:not(.light) .page-digital-marketing .cs-testimonial-quote {
   color: #f1f5f9;
 }
 
-html:not(.light) .cs-author-name {
+html:not(.light) .page-digital-marketing .cs-author-name {
   color: #ffffff;
 }
 
-html:not(.light) .cs-testimonial-footer {
+html:not(.light) .page-digital-marketing .cs-testimonial-footer {
   border-top-color: rgba(255, 255, 255, 0.08);
 }
 
-html:not(.light) .cs-arrow-btn {
+html:not(.light) .page-digital-marketing .cs-arrow-btn {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.12);
   color: #ffffff;
