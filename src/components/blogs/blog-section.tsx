@@ -3,7 +3,7 @@
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "@/contexts/language-context";
 import { Reveal } from "@/components/motion/reveal";
-import { FoldingText } from "@/components/ui/folding-text";
+import { FoldingText } from "@/components/effects/folding-text";
 import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
 import { ArticleCard } from "@/components/blogs/article-card";
 import { Button } from "@/components/ui/button";

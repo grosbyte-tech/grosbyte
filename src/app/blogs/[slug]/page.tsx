@@ -9,7 +9,7 @@ import { ShareArticle } from "@/components/blogs/share-article";
 import { TableOfContents } from "@/components/blogs/table-of-contents";
 import { serviceMetadata } from "@/components/services/service-ui";
 import { JsonLd } from "@/components/seo/json-ld";
-import { getBlogPostingSchema } from "@/lib/schema";
+import { getBlogPostingSchema } from "@/lib/seo/schema";
 import {
   findPost,
   listPosts,

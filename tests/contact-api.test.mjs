@@ -29,10 +29,10 @@ function loadApi({
         module: mod,
         exports: mod.exports,
         require: (name) =>
-          name === "@/lib/contact"
-            ? load("src/lib/contact.ts")
-            : name === "./service-options"
-              ? load("src/lib/service-options.ts")
+          name === "@/lib/contact" || name === "@/lib/contact/contact"
+            ? load("src/lib/contact/contact.ts")
+            : name === "./service-options" || name === "@/lib/services/service-options"
+              ? load("src/lib/services/service-options.ts")
               : require(name),
         Request,
         Response,
@@ -134,7 +134,7 @@ test("validates every required field and optional field limits", async () => {
 test("accepts all ten real offerings and omitted optional fields", async () => {
   const titles = [
     ...fs
-      .readFileSync("src/lib/service-options.ts", "utf8")
+      .readFileSync("src/lib/services/service-options.ts", "utf8")
       .matchAll(/  "([^"]+)"/g),
   ].map((match) => match[1]);
   assert.equal(titles.length, 10);

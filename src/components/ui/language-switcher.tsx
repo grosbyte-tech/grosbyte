@@ -5,10 +5,10 @@ import { useState, useRef, useEffect } from "react";
 import { Globe, ChevronDown } from "lucide-react";
 
 const languages: { code: Language; short: string; label: string }[] = [
-  { code: "eng", short: "EN", label: "English" },
-  { code: "nep", short: "NP", label: "नेपाली" },
-  { code: "ger", short: "DE", label: "Deutsch" },
-  { code: "spa", short: "ES", label: "Español" },
+  { code: "en", short: "EN", label: "English" },
+  { code: "ne", short: "NP", label: "नेपाली" },
+  { code: "de", short: "DE", label: "Deutsch" },
+  { code: "es", short: "ES", label: "Español" },
 ];
 
 export function LanguageSwitcher() {

@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import {
   AboutSection,
   ServicesSection,
-} from "@/components/sections/content-sections";
-import { ProjectsSection } from "@/components/sections/projects-section";
-import { BlogSection } from "@/components/sections/blog-section";
-import { HeroSection } from "@/components/sections/hero-section";
-import { HowWeWork } from "@/components/sections/how-we-work";
+} from "@/components/home/content-sections";
+import { ProjectsSection } from "@/components/home/projects-section";
+import { BlogSection } from "@/components/blogs/blog-section";
+import { HeroSection } from "@/components/home/hero-section";
+import { HowWeWork } from "@/components/home/how-we-work";
 import { listPosts } from "@/lib/blogs/repository";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };

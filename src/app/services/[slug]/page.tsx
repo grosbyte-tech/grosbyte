@@ -3,7 +3,7 @@ import { getService, serviceCategories, serviceDetails } from "@/lib/services";
 import { ServiceDetailPage } from "@/components/services/service-detail";
 import { serviceMetadata } from "@/components/services/service-ui";
 import { JsonLd } from "@/components/seo/json-ld";
-import { getServiceSchema } from "@/lib/schema";
+import { getServiceSchema } from "@/lib/seo/schema";
 
 type Props = { params: Promise<{ slug: string }> };
 export const dynamicParams = false;

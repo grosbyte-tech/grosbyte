@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useTranslation } from "@/contexts/language-context";
-import { GradientText } from "@/components/ui/gradient-text";
+import { GradientText } from "@/components/effects/gradient-text";
 
 export function AboutWho() {
   const { t } = useTranslation();

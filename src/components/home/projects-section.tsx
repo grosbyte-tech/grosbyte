@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useTranslation } from "@/contexts/language-context";
 import { Reveal } from "@/components/motion/reveal";
-import { FoldingText } from "@/components/ui/folding-text";
+import { FoldingText } from "@/components/effects/folding-text";
 import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
 
 type ProjectKey = "tailr" | "booksansar" | "dhune" | "sopdraft" | "setu";

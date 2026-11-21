@@ -3,7 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { useTranslation } from "@/contexts/language-context";
 import { Button } from "@/components/ui/button";
-import { GradientText } from "@/components/ui/gradient-text";
+import { GradientText } from "@/components/effects/gradient-text";
 import { HeroIllustration } from "./hero-illustration";
 
 export function HeroSection() {

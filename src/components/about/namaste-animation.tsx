@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTranslation } from "@/contexts/language-context";
-import { GradientText } from "@/components/ui/gradient-text";
+import { GradientText } from "@/components/effects/gradient-text";
 
 /**
  * Exact vector paths parsed directly from ARAP007.TTF
@@ -50,10 +50,10 @@ const GLYPHS = [
 export function NamasteAnimation() {
   const { language, t } = useTranslation();
   const copy = (key: string) => t(`phase1.aboutPage.${key}`);
-  const isDevanagari = language === "eng" || language === "nep";
+  const isDevanagari = language === "en" || language === "ne";
   const greetingText =
     copy("heroGreeting") ||
-    (isDevanagari ? "नमस्ते" : language === "ger" ? "Hallo" : "Hola");
+    (isDevanagari ? "नमस्ते" : language === "de" ? "Hallo" : "Hola");
   const [isFormed, setIsFormed] = useState(false);
 
   useEffect(() => {

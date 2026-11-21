@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useTranslation } from "@/contexts/language-context";
 import { Button } from "@/components/ui/button";
-import { GradientText } from "@/components/ui/gradient-text";
+import { GradientText } from "@/components/effects/gradient-text";
 import { AboutCtaVisual } from "./about-cta-visual";
 
 export function AboutCta() {

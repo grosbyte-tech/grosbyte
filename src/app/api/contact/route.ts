@@ -4,7 +4,7 @@ import {
   emptyContact,
   validateContactFields,
   type ContactValues,
-} from "@/lib/contact";
+} from "@/lib/contact/contact";
 
 // Best-effort per-instance protection; deployment-level limits should complement this.
 const attempts = new Map<string, { count: number; expires: number }>();

@@ -6,7 +6,7 @@ import { LanguageProvider } from "@/contexts/language-context";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { JsonLd } from "@/components/seo/json-ld";
-import { getOrganizationSchema, getWebSiteSchema } from "@/lib/schema";
+import { getOrganizationSchema, getWebSiteSchema } from "@/lib/seo/schema";
 
 const urbanist = Urbanist({
   variable: "--font-urbanist",

@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { getService } from "@/lib/services";
 import { serviceMetadata } from "@/components/services/service-ui";
 import { JsonLd } from "@/components/seo/json-ld";
-import { getServiceSchema } from "@/lib/schema";
+import { getServiceSchema } from "@/lib/seo/schema";
 import { DigitalMarketingContent } from "@/components/services/digital-marketing-content";
 import "./digital-marketing.css";
 

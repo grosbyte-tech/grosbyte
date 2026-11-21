@@ -13,7 +13,7 @@ import {
   ChevronUp,
   ChevronDown,
 } from "lucide-react";
-import { navigation, navKeys } from "@/lib/site-data";
+import { navigation, navKeys } from "@/config/site";
 import { useTranslation } from "@/contexts/language-context";
 import { Button } from "@/components/ui/button";
 import { ServicesMegaMenu } from "@/components/layout/mega-menu/services-mega-menu";

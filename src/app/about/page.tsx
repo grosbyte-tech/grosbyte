@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { AboutPageContent } from "@/components/sections/about-page-content";
+import { AboutPageContent } from "@/components/about/about-page-content";
 import "./about.css";
 
 const title = "About Us";

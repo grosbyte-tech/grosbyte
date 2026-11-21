@@ -6,11 +6,11 @@ import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
-import { FoldingText } from "@/components/ui/folding-text";
+import { FoldingText } from "@/components/effects/folding-text";
 import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
 import { AnimatedCounter } from "@/components/motion/counter";
 import { Button } from "@/components/ui/button";
-import { services } from "@/lib/site-data";
+import { services } from "@/config/site";
 import { useTranslation } from "@/contexts/language-context";
 
 const serviceKeys: Record<string, string> = {

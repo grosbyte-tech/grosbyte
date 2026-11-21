@@ -5,13 +5,13 @@ import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import { EnquiryForm } from "@/components/contact/enquiry-form";
 import { Breadcrumbs } from "@/components/editorial/page-shell";
 import { useTranslation } from "@/contexts/language-context";
-import { socialLinks } from "@/lib/site-data";
+import { socialLinks } from "@/config/site";
 import {
   RealInstagramIcon,
   RealFacebookIcon,
   RealLinkedinIcon,
   RealGithubIcon,
-} from "@/components/ui/brand-icons";
+} from "@/components/effects/brand-icons";
 
 const socialMeta: Record<
   string,
