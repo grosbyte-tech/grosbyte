@@ -127,7 +127,7 @@ export function WebMobileContent() {
               <div className="cs-hero-bg-glow" aria-hidden="true" />
               <div className="cs-hero-img-box">
                 <Image
-                  src="/webandmobile.png"
+                  src="/images/services/webandmobile.png"
                   alt="Modern Web and Mobile Applications Mockup"
                   width={1536}
                   height={1024}
@@ -191,7 +191,7 @@ export function WebMobileContent() {
             {/* Left 3D Rocket Illustration */}
             <div className="cs-rocket-visual">
               <Image
-                src="/Glossy_Rocket.png"
+                src="/images/services/glossy-rocket.png"
                 alt="3D Rocket Launch Web and Mobile"
                 width={1536}
                 height={1024}

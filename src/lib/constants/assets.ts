@@ -32,7 +32,35 @@ function withCdn<T>(assets: T): T {
  */
 const RAW_ASSETS = {
   brand: {
-    logo: "/inflancer-logo.svg",
+    logo: "/images/brand/logo.png",
+    logoTransparent: "/images/brand/logo-transparent.png",
+    logoRemoveBg: "/images/brand/logo-transparent.png",
+    ogDefault: "/images/brand/og-default.png",
+  },
+  about: {
+    about: "/images/about/about.png",
+    aboutImage: "/images/about/about-image.jpg",
+    aboutOffice: "/images/about/about-office.jpg",
+  },
+  services: {
+    software: "/images/services/software.png",
+    digital: "/images/services/digital.png",
+    digitalmarketing: "/images/services/digitalmarketing.png",
+    webandmobile: "/images/services/webandmobile.png",
+    glossy3d: "/images/services/glossy-3d.png",
+    glossyCloud: "/images/services/glossy-cloud.png",
+    glossyRocket: "/images/services/glossy-rocket.png",
+  },
+  projects: {
+    booksansar: "/images/projects/booksansar.png",
+    dhune: "/images/projects/dhune.png",
+    setu: "/images/projects/setu.png",
+    sopdraft: "/images/projects/sopdraft.png",
+    tailr: "/images/projects/tailr.png",
+    careerTech: "/images/projects/career-tech.png",
+  },
+  contact: {
+    contactTeam: "/images/contact/contact-team.jpg",
   },
   hero: {
     bg: "/bg/hero-bg.webp",
@@ -58,15 +86,15 @@ const RAW_ASSETS = {
     vector: "/about/Vector.webp",
     mockup2: "/bg/how-we-work-2-2.webp",
     cards: {
-      card1: "/how-we-work/card-1.webp",
-      card2: "/how-we-work/card-2.webp",
-      card3: "/how-we-work/card-3.webp",
-      card4: "/how-we-work/card-4.webp",
-      card5: "/how-we-work/card-5.webp",
-      card6: "/how-we-work/card-6.webp",
-      card7: "/how-we-work/card-7.webp",
-      card8: "/how-we-work/card-8.webp",
-      card9: "/how-we-work/card-9.webp",
+      card1: "/images/how-we-work/card-1.webp",
+      card2: "/images/how-we-work/card-2.webp",
+      card3: "/images/how-we-work/card-3.webp",
+      card4: "/images/how-we-work/card-4.webp",
+      card5: "/images/how-we-work/card-5.webp",
+      card6: "/images/how-we-work/card-6.webp",
+      card7: "/images/how-we-work/card-7.webp",
+      card8: "/images/how-we-work/card-8.webp",
+      card9: "/images/how-we-work/card-9.webp",
     },
   },
   pricingHeader: {

@@ -53,7 +53,7 @@ import {
 } from "lucide-react";
 
 import { useTranslation } from "@/contexts/language-context";
-import { FoldingText } from "@/components/ui/folding-text";
+import { FoldingText } from "@/components/effects/folding-text";
 
 function subscribeToDesktop(callback: () => void) {
   const mql = window.matchMedia("(min-width: 1024px)");

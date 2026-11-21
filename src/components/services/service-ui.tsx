@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/seo/json-ld";
-import { getBreadcrumbListSchema } from "@/lib/schema";
+import { getBreadcrumbListSchema } from "@/lib/seo/schema";
 
 export function serviceMetadata(
   title: string,
@@ -23,7 +23,7 @@ export function serviceMetadata(
       siteName: "Grosbyte Technologies",
       images: [
         {
-          url: image || "/images/og-default.png",
+          url: image || "/images/brand/og-default.png",
           width: 1200,
           height: 630,
           alt: ogTitle,
@@ -35,7 +35,7 @@ export function serviceMetadata(
       card: "summary_large_image",
       title: ogTitle,
       description,
-      images: [image || "/images/og-default.png"],
+      images: [image || "/images/brand/og-default.png"],
     },
   };
 }

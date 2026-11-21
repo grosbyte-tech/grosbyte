@@ -1,4 +1,4 @@
-import { serviceOptions } from "./service-options";
+import { serviceOptions } from "@/lib/services/service-options";
 
 export type ContactValues = {
   name: string;

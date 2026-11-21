@@ -24,7 +24,7 @@ const STEPS: Step[] = [
       "User personas and core journeys",
       "Clear scope and success metrics",
     ],
-    image: { src: "/how-we-work/step-1.png", width: 1452, height: 1083 },
+    image: { src: "/images/how-we-work/step-1.png", width: 1452, height: 1083 },
   },
   {
     title: "Strategic Project Planning",
@@ -36,7 +36,7 @@ const STEPS: Step[] = [
       "Sprint plan with clear timelines",
       "Transparent budget and estimates",
     ],
-    image: { src: "/how-we-work/step-2.png", width: 1568, height: 1003 },
+    image: { src: "/images/how-we-work/step-2.png", width: 1568, height: 1003 },
   },
   {
     title: "Intuitive UI/UX Design",
@@ -48,7 +48,7 @@ const STEPS: Step[] = [
       "Clickable prototypes",
       "Reusable design system",
     ],
-    image: { src: "/how-we-work/step-3.png", width: 1536, height: 1024 },
+    image: { src: "/images/how-we-work/step-3.png", width: 1536, height: 1024 },
   },
   {
     title: "Agile Software Development",
@@ -60,7 +60,7 @@ const STEPS: Step[] = [
       "Web, mobile and API development",
       "Continuous integration",
     ],
-    image: { src: "/how-we-work/step-4.png", width: 1024, height: 500 },
+    image: { src: "/images/how-we-work/step-4.png", width: 1024, height: 500 },
   },
   {
     title: "QA Testing & Deployment",
@@ -72,7 +72,7 @@ const STEPS: Step[] = [
       "CI/CD pipelines",
       "Zero-downtime deployment",
     ],
-    image: { src: "/how-we-work/step-5.png", width: 1574, height: 999 },
+    image: { src: "/images/how-we-work/step-5.png", width: 1574, height: 999 },
   },
   {
     title: "Launch & Client Feedback",
@@ -84,7 +84,7 @@ const STEPS: Step[] = [
       "Feedback sessions with your team",
       "Quick fixes and iterations",
     ],
-    image: { src: "/how-we-work/step-6.png", width: 1602, height: 981 },
+    image: { src: "/images/how-we-work/step-6.png", width: 1602, height: 981 },
   },
   {
     title: "Ongoing Training & Support",
@@ -96,7 +96,7 @@ const STEPS: Step[] = [
       "Regular updates and maintenance",
       "New features as you scale",
     ],
-    image: { src: "/how-we-work/step-1.png", width: 1602, height: 682 },
+    image: { src: "/images/how-we-work/step-1.png", width: 1602, height: 682 },
   },
 ];
 
@@ -204,7 +204,7 @@ export function HowWeWork() {
                     {step.title}
                   </span>
                   <Image
-                    src="/how-we-work/plus.svg"
+                    src="/images/how-we-work/plus.svg"
                     alt=""
                     width={26}
                     height={26}
@@ -253,7 +253,7 @@ export function HowWeWork() {
                               )}
                             >
                               <Image
-                                src="/how-we-work/sparkle.svg"
+                                src="/images/how-we-work/sparkle.svg"
                                 alt=""
                                 width={18}
                                 height={18}

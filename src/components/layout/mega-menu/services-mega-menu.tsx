@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { featuredServices, type MegaMenuServiceItem } from "./mega-menu-data";
+import { featuredServices, type MegaMenuServiceItem } from "@/config/mega-menu";
 import { MegaMenuItem } from "./mega-menu-item";
 
 export interface ServicesMegaMenuProps {

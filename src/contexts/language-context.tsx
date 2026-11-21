@@ -10,12 +10,12 @@ import React, {
   useSyncExternalStore,
   ReactNode,
 } from "react";
-import eng from "../locales/eng.json";
-import nep from "../locales/nep.json";
-import ger from "../locales/ger.json";
-import spa from "../locales/spa.json";
+import en from "../locales/en.json";
+import ne from "../locales/ne.json";
+import de from "../locales/de.json";
+import es from "../locales/es.json";
 
-export type Language = "eng" | "nep" | "ger" | "spa";
+export type Language = "en" | "ne" | "de" | "es";
 
 interface LanguageContextType {
   language: Language;
@@ -24,17 +24,28 @@ interface LanguageContextType {
 }
 
 const translations: Record<Language, Record<string, unknown>> = {
-  eng,
-  nep,
-  ger,
-  spa,
+  en,
+  ne,
+  de,
+  es,
 };
 
-const isoLangMap: Record<Language, string> = {
+const legacyLangMap: Record<string, Language> = {
   eng: "en",
   nep: "ne",
   ger: "de",
   spa: "es",
+  en: "en",
+  ne: "ne",
+  de: "de",
+  es: "es",
+};
+
+const isoLangMap: Record<Language, string> = {
+  en: "en",
+  ne: "ne",
+  de: "de",
+  es: "es",
 };
 
 const emptySubscribe = () => () => {};
@@ -52,20 +63,15 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [preferredLanguage, setLanguageState] = useState<Language>(() => {
     if (typeof window !== "undefined") {
       const saved = localStorage.getItem("grosbyte-lang");
-      if (
-        saved === "eng" ||
-        saved === "nep" ||
-        saved === "ger" ||
-        saved === "spa"
-      ) {
-        return saved;
+      if (saved && saved in legacyLangMap) {
+        return legacyLangMap[saved];
       }
     }
-    return "eng";
+    return "en";
   });
 
   // Saved preferences apply only after the server HTML has hydrated.
-  const language = isMounted ? preferredLanguage : "eng";
+  const language = isMounted ? preferredLanguage : "en";
 
   useEffect(() => {
     if (typeof document !== "undefined") {
@@ -108,8 +114,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       let value = getNestedValue(currentTranslation, key);
 
       // Fallback to English if translation is missing
-      if (value === null && language !== "eng") {
-        value = getNestedValue(translations["eng"], key);
+      if (value === null && language !== "en") {
+        value = getNestedValue(translations["en"], key);
       }
 
       const result = (value !== null ? value : key) as T;

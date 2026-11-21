@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import type { MegaMenuServiceItem } from "./mega-menu-data";
+import type { MegaMenuServiceItem } from "@/config/mega-menu";
 
 export interface MegaMenuItemProps {
   item: MegaMenuServiceItem;

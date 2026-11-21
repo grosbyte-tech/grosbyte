@@ -128,7 +128,7 @@ export function DigitalMarketingContent() {
               <div className="cs-hero-bg-glow" aria-hidden="true" />
               <div className="cs-hero-img-box">
                 <Image
-                  src="/digital.png"
+                  src="/images/services/digital.png"
                   alt="Digital Marketing and Brand Growth Dashboard"
                   width={1812}
                   height={868}
@@ -192,7 +192,7 @@ export function DigitalMarketingContent() {
             {/* Left 3D Target Graphic */}
             <div className="cs-rocket-visual">
               <Image
-                src="/Glossy_3D.png"
+                src="/images/services/glossy-3d.png"
                 alt="3D Target Bullseye Marketing Graphic"
                 width={1580}
                 height={995}

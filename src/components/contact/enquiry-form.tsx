@@ -9,8 +9,8 @@ import {
   validateContactFields,
   type ContactValues,
   type ContactErrors,
-} from "@/lib/contact";
-import { serviceOptions } from "@/lib/service-options";
+} from "@/lib/contact/contact";
+import { serviceOptions } from "@/lib/services/service-options";
 
 const slugToOption: Record<string, string> = {
   "custom-software-development": "Custom Software Development",

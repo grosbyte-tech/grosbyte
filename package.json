@@ -7,10 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test": "npm run test:contact && npm run test:seo",
     "test:contact": "node tests/contact-api.test.mjs",
     "test:seo": "node tests/seo-metadata.test.mjs",
     "format": "prettier --write src package.json tsconfig.json next.config.ts eslint.config.mjs postcss.config.mjs",
     "format:check": "prettier --check src package.json tsconfig.json next.config.ts eslint.config.mjs postcss.config.mjs"
+  },
+  "engines": {
+    "node": ">=22.0.0"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

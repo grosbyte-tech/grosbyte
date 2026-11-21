@@ -10,8 +10,8 @@ import {
   FaFacebookF,
   FaGithub,
 } from "react-icons/fa6";
-import { socialLinks } from "@/lib/site-data";
-import { featuredServices } from "@/components/layout/mega-menu/mega-menu-data";
+import { socialLinks } from "@/config/site";
+import { featuredServices } from "@/config/mega-menu";
 import "./footer.css";
 
 const companyLinks = [
@@ -78,7 +78,7 @@ export function Footer() {
           >
             <span className="footer-brand-logo">
               <Image
-                src="/icons/logo-removebg.png"
+                src="/images/brand/logo-transparent.png"
                 alt="Grosbyte Technology"
                 width={32}
                 height={32}

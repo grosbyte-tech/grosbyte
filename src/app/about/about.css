@@ -93,13 +93,10 @@
   margin: 1.25rem 0 1.75rem;
 }
 
-/* ARAP007 Nepali Calligraphy Font */
-@font-face {
-  font-family: "ARAP007";
-  src: url("/ARAP007/ARAP007.TTF") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+/* ARAP007 Nepali Calligraphy Font (loaded via next/font/local) */
+.font-arap007,
+.nepali-calligraphy {
+  font-family: var(--font-arap007), "ARAP007", sans-serif;
 }
 
 /* ========================================================

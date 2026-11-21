@@ -8,13 +8,13 @@ import {
   RealGithubIcon,
   RealInstagramIcon,
   RealLinkedinIcon,
-} from "@/components/ui/brand-icons";
+} from "@/components/effects/brand-icons";
 import { Reveal } from "@/components/motion/reveal";
-import { FoldingText } from "@/components/ui/folding-text";
+import { FoldingText } from "@/components/effects/folding-text";
 import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
-import { emptyContact, validateContactFields } from "@/lib/contact";
-import { serviceOptions } from "@/lib/service-options";
-import { socialLinks } from "@/lib/site-data";
+import { emptyContact, validateContactFields } from "@/lib/contact/contact";
+import { serviceOptions } from "@/lib/services/service-options";
+import { socialLinks } from "@/config/site";
 import {
   Select,
   SelectContent,

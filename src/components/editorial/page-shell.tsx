@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import "./editorial.css";
 import { JsonLd } from "@/components/seo/json-ld";
-import { getBreadcrumbListSchema } from "@/lib/schema";
+import { getBreadcrumbListSchema } from "@/lib/seo/schema";
 
 export function PageShell({ children }: { children: React.ReactNode }) {
   return (
