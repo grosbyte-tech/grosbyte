@@ -233,3 +233,26 @@ test("health check endpoint returns healthy status", async () => {
   assert.equal(data.status, "healthy");
   assert.ok(data.timestamp);
 });
+
+test("validateContactServerEnv raises descriptive error when configuration is missing", () => {
+  const code = ts.transpileModule(
+    fs.readFileSync("src/lib/env.ts", "utf8"),
+    {
+      compilerOptions: {
+        module: ts.ModuleKind.CommonJS,
+        target: ts.ScriptTarget.ES2022,
+      },
+    },
+  ).outputText;
+  const mod = { exports: {} };
+  vm.runInNewContext(code, {
+    module: mod,
+    exports: mod.exports,
+    process: { env: {} },
+  });
+  const { validateContactServerEnv } = mod.exports;
+  assert.throws(
+    () => validateContactServerEnv(),
+    /Missing required contact email configuration: RESEND_API_KEY, EMAIL_FROM, CONTACT_EMAIL/,
+  );
+});
