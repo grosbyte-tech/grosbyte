@@ -10,6 +10,11 @@
     "test": "npm run test:contact && npm run test:seo",
     "test:contact": "node tests/contact-api.test.mjs",
     "test:seo": "node tests/seo-metadata.test.mjs",
+    "test:seo:snapshot": "node tests/visual/seo-snapshot.mjs",
+    "test:seo:snapshot:update": "node tests/visual/seo-snapshot.mjs --update",
+    "test:visual:baseline": "node tests/visual/capture.mjs --baseline",
+    "test:visual:current": "node tests/visual/capture.mjs",
+    "test:visual:compare": "node tests/visual/compare.mjs",
     "format": "prettier --write src package.json tsconfig.json next.config.ts eslint.config.mjs postcss.config.mjs",
     "format:check": "prettier --check src package.json tsconfig.json next.config.ts eslint.config.mjs postcss.config.mjs"
   },
@@ -35,6 +40,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
+    "pixelmatch": "^8.0.0",
+    "playwright": "^1.65.1",
+    "pngjs": "^7.0.0",
     "prettier": "^3.9.6",
     "tailwindcss": "^4",
     "typescript": "^5"

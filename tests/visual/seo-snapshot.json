@@ -1,0 +1,236 @@
+{
+  "/": {
+    "title": "Grosbyte Technologies | Software &amp; Website Development Nepal",
+    "desc": "Practical software, websites, web and mobile applications, automation, and digital marketing for your business. Discuss your project with Grosbyte Technologies in Nepal.",
+    "canonical": "https://grosbyte.com",
+    "robots": "",
+    "ogTitle": "Grosbyte Technologies | Software &amp; Website Development Nepal",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]"
+    ]
+  },
+  "/about": {
+    "title": "About Us | Grosbyte Technologies",
+    "desc": "Meet Grosbyte Technologies, a Nepal-based technology company focused on practical software, websites, applications, automation, and digital marketing.",
+    "canonical": "https://grosbyte.com/about",
+    "robots": "",
+    "ogTitle": "About Us | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]"
+    ]
+  },
+  "/contact": {
+    "title": "Contact Us | Grosbyte Technologies",
+    "desc": "Talk to Grosbyte about software, websites, business automation, or digital marketing. Share your project requirements with our team in Kathmandu, Nepal.",
+    "canonical": "https://grosbyte.com/contact",
+    "robots": "",
+    "ogTitle": "Contact Us | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://grosbyte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Contact\"}]}"
+    ]
+  },
+  "/blogs": {
+    "title": "Blogs | Grosbyte Technologies",
+    "desc": "Practical reading on websites, software, automation, and digital marketing. Explore Grosbyte’s sample article library.",
+    "canonical": "https://grosbyte.com/blogs",
+    "robots": "",
+    "ogTitle": "Blogs | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://grosbyte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blogs\"}]}"
+    ]
+  },
+  "/blogs/building-a-content-plan": {
+    "title": "Building a content plan your team can maintain | Grosbyte Technologies",
+    "desc": "Turn recurring customer questions into a manageable publishing routine with clear ownership.",
+    "canonical": "https://grosbyte.com/blogs/building-a-content-plan",
+    "robots": "",
+    "ogTitle": "Building a content plan your team can maintain | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Building a content plan your team can maintain\",\"description\":\"Turn recurring customer questions into a manageable publishing routine with clear ownership.\",\"url\":\"https://grosbyte.com/blogs/building-a-content-plan\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://grosbyte.com/blogs/building-a-content-plan\"},\"datePublished\":\"2026-10-25T00:00:00Z\",\"dateModified\":\"2026-10-25T00:00:00Z\",\"articleSection\":\"Digital Marketing\",\"image\":\"https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80\",\"author\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://grosbyte.com/images/brand/logo.png\"}}}",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://grosbyte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blogs\",\"item\":\"https://grosbyte.com/blogs\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Building a content plan your team can maintain\"}]}"
+    ]
+  },
+  "/blogs/ai-assistance-with-human-review": {
+    "title": "Where AI assistance fits in a business workflow | Grosbyte Technologies",
+    "desc": "Separate useful suggestions from actions that need verification, approval, and a clear owner.",
+    "canonical": "https://grosbyte.com/blogs/ai-assistance-with-human-review",
+    "robots": "",
+    "ogTitle": "Where AI assistance fits in a business workflow | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Where AI assistance fits in a business workflow\",\"description\":\"Separate useful suggestions from actions that need verification, approval, and a clear owner.\",\"url\":\"https://grosbyte.com/blogs/ai-assistance-with-human-review\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://grosbyte.com/blogs/ai-assistance-with-human-review\"},\"datePublished\":\"2026-10-24T00:00:00Z\",\"dateModified\":\"2026-10-24T00:00:00Z\",\"articleSection\":\"Technology & Business\",\"image\":\"https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80\",\"author\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://grosbyte.com/images/brand/logo.png\"}}}",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://grosbyte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blogs\",\"item\":\"https://grosbyte.com/blogs\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Where AI assistance fits in a business workflow\"}]}"
+    ]
+  },
+  "/blogs/seo-before-a-website-launch": {
+    "title": "SEO checks to include before a website launch | Grosbyte Technologies",
+    "desc": "Make pages understandable and discoverable without treating search visibility as a guaranteed outcome.",
+    "canonical": "https://grosbyte.com/blogs/seo-before-a-website-launch",
+    "robots": "",
+    "ogTitle": "SEO checks to include before a website launch | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"SEO checks to include before a website launch\",\"description\":\"Make pages understandable and discoverable without treating search visibility as a guaranteed outcome.\",\"url\":\"https://grosbyte.com/blogs/seo-before-a-website-launch\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://grosbyte.com/blogs/seo-before-a-website-launch\"},\"datePublished\":\"2026-10-23T00:00:00Z\",\"dateModified\":\"2026-10-23T00:00:00Z\",\"articleSection\":\"Digital Marketing\",\"image\":\"https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80\",\"author\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://grosbyte.com/images/brand/logo.png\"}}}",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://grosbyte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blogs\",\"item\":\"https://grosbyte.com/blogs\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"SEO checks to include before a website launch\"}]}"
+    ]
+  },
+  "/blogs/planning-a-business-website": {
+    "title": "Planning a business website around customer decisions | Grosbyte Technologies",
+    "desc": "A useful website starts with the questions customers need answered, before choosing a layout or platform.",
+    "canonical": "https://grosbyte.com/blogs/planning-a-business-website",
+    "robots": "",
+    "ogTitle": "Planning a business website around customer decisions | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Planning a business website around customer decisions\",\"description\":\"A useful website starts with the questions customers need answered, before choosing a layout or platform.\",\"url\":\"https://grosbyte.com/blogs/planning-a-business-website\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://grosbyte.com/blogs/planning-a-business-website\"},\"datePublished\":\"2026-10-20T00:00:00Z\",\"dateModified\":\"2026-10-20T00:00:00Z\",\"articleSection\":\"Web Development\",\"image\":\"https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80\",\"author\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://grosbyte.com/images/brand/logo.png\"}}}",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://grosbyte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blogs\",\"item\":\"https://grosbyte.com/blogs\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Planning a business website around customer decisions\"}]}"
+    ]
+  },
+  "/blogs/choosing-your-first-automation": {
+    "title": "Choosing the first workflow to automate | Grosbyte Technologies",
+    "desc": "Find repeatable work, define exceptions, and keep a clear route back to a person.",
+    "canonical": "https://grosbyte.com/blogs/choosing-your-first-automation",
+    "robots": "",
+    "ogTitle": "Choosing the first workflow to automate | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Choosing the first workflow to automate\",\"description\":\"Find repeatable work, define exceptions, and keep a clear route back to a person.\",\"url\":\"https://grosbyte.com/blogs/choosing-your-first-automation\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://grosbyte.com/blogs/choosing-your-first-automation\"},\"datePublished\":\"2026-10-22T00:00:00Z\",\"dateModified\":\"2026-10-22T00:00:00Z\",\"articleSection\":\"Business Automation\",\"image\":\"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80\",\"author\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://grosbyte.com/images/brand/logo.png\"}}}",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://grosbyte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blogs\",\"item\":\"https://grosbyte.com/blogs\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Choosing the first workflow to automate\"}]}"
+    ]
+  },
+  "/blogs/custom-software-or-existing-tools": {
+    "title": "Custom software or an existing tool? A practical decision guide | Grosbyte Technologies",
+    "desc": "Compare workflow fit, ownership, and ongoing effort before committing to a custom build.",
+    "canonical": "https://grosbyte.com/blogs/custom-software-or-existing-tools",
+    "robots": "",
+    "ogTitle": "Custom software or an existing tool? A practical decision guide | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Custom software or an existing tool? A practical decision guide\",\"description\":\"Compare workflow fit, ownership, and ongoing effort before committing to a custom build.\",\"url\":\"https://grosbyte.com/blogs/custom-software-or-existing-tools\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://grosbyte.com/blogs/custom-software-or-existing-tools\"},\"datePublished\":\"2026-10-21T00:00:00Z\",\"dateModified\":\"2026-10-21T00:00:00Z\",\"articleSection\":\"Software Development\",\"image\":\"https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80\",\"author\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://grosbyte.com/images/brand/logo.png\"}}}",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://grosbyte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blogs\",\"item\":\"https://grosbyte.com/blogs\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Custom software or an existing tool? A practical decision guide\"}]}"
+    ]
+  },
+  "/custom-software-development": {
+    "title": "Custom Software Development | Grosbyte Technologies",
+    "desc": "Turn your ideas into powerful software. We build fast, scalable, and user-friendly applications that help you grow, automate, and stand out.",
+    "canonical": "https://grosbyte.com/custom-software-development",
+    "robots": "",
+    "ogTitle": "Custom Software Development | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Custom Software Development\",\"description\":\"We design and build reliable web applications, internal tools, and APIs tailored to your team’s workflow—with clean code and complete ownership from day one.\",\"url\":\"https://grosbyte.com/custom-software-development\",\"serviceType\":\"development-technology\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\"},\"areaServed\":{\"@type\":\"Country\",\"name\":\"Nepal\"}}"
+    ]
+  },
+  "/web-mobile-applications": {
+    "title": "Web &amp; Mobile Application Development | Grosbyte Technologies",
+    "desc": "From idea to launch, we build fast, reliable and user-friendly apps for web and mobile.",
+    "canonical": "https://grosbyte.com/web-mobile-applications",
+    "robots": "",
+    "ogTitle": "Web &amp; Mobile Application Development | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Web & Mobile Applications\",\"description\":\"Web platforms and cross-platform mobile applications for customer services, team workflows, and digital products.\",\"url\":\"https://grosbyte.com/web-mobile-applications\",\"serviceType\":\"development-technology\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\"},\"areaServed\":{\"@type\":\"Country\",\"name\":\"Nepal\"}}"
+    ]
+  },
+  "/digital-marketing": {
+    "title": "Digital Marketing and Brand Growth | Grosbyte Technologies",
+    "desc": "Grow your brand, reach the right audience, and turn clicks into loyal customers.",
+    "canonical": "https://grosbyte.com/digital-marketing",
+    "robots": "",
+    "ogTitle": "Digital Marketing and Brand Growth | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Digital Marketing\",\"description\":\"Coordinated digital marketing across content, search, social media, paid campaigns, and follow-ups, selected for your audience and resources.\",\"url\":\"https://grosbyte.com/digital-marketing\",\"serviceType\":\"digital-marketing-branding\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\"},\"areaServed\":{\"@type\":\"Country\",\"name\":\"Nepal\"}}"
+    ]
+  },
+  "/services/website-ecommerce-development": {
+    "title": "Website &amp; E-commerce Development | Grosbyte Technologies",
+    "desc": "Business websites and online stores that help visitors understand your offer, browse products, and take the next step.",
+    "canonical": "https://grosbyte.com/services/website-ecommerce-development",
+    "robots": "",
+    "ogTitle": "Website &amp; E-commerce Development | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Website & E-commerce Development\",\"description\":\"Business websites and online stores that help visitors understand your offer, browse products, and take the next step.\",\"url\":\"https://grosbyte.com/services/website-ecommerce-development\",\"serviceType\":\"development-technology\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\"},\"areaServed\":{\"@type\":\"Country\",\"name\":\"Nepal\"}}"
+    ]
+  },
+  "/services/crm-erp-solutions": {
+    "title": "CRM/ERP Solutions | Grosbyte Technologies",
+    "desc": "CRM and ERP solutions scoped around customer relationships, internal processes, reporting, and the information your teams share.",
+    "canonical": "https://grosbyte.com/services/crm-erp-solutions",
+    "robots": "",
+    "ogTitle": "CRM/ERP Solutions | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"CRM/ERP Solutions\",\"description\":\"CRM and ERP solutions scoped around customer relationships, internal processes, reporting, and the information your teams share.\",\"url\":\"https://grosbyte.com/services/crm-erp-solutions\",\"serviceType\":\"business-solutions\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\"},\"areaServed\":{\"@type\":\"Country\",\"name\":\"Nepal\"}}"
+    ]
+  },
+  "/services/business-automation": {
+    "title": "Business Automation | Grosbyte Technologies",
+    "desc": "Workflow automation that connects routine tasks, information, and business tools while keeping exceptions visible.",
+    "canonical": "https://grosbyte.com/services/business-automation",
+    "robots": "",
+    "ogTitle": "Business Automation | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Business Automation\",\"description\":\"Workflow automation that connects routine tasks, information, and business tools while keeping exceptions visible.\",\"url\":\"https://grosbyte.com/services/business-automation\",\"serviceType\":\"business-solutions\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\"},\"areaServed\":{\"@type\":\"Country\",\"name\":\"Nepal\"}}"
+    ]
+  },
+  "/services/ai-automation-integrations": {
+    "title": "AI Automation &amp; Integrations | Grosbyte Technologies",
+    "desc": "AI assistants, knowledge search, document processing, and system integrations designed around a defined business use case.",
+    "canonical": "https://grosbyte.com/services/ai-automation-integrations",
+    "robots": "",
+    "ogTitle": "AI Automation &amp; Integrations | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"AI Automation & Integrations\",\"description\":\"AI assistants, knowledge search, document processing, and system integrations designed around a defined business use case.\",\"url\":\"https://grosbyte.com/services/ai-automation-integrations\",\"serviceType\":\"business-solutions\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\"},\"areaServed\":{\"@type\":\"Country\",\"name\":\"Nepal\"}}"
+    ]
+  },
+  "/services/branding-design": {
+    "title": "Branding &amp; Design | Grosbyte Technologies",
+    "desc": "Brand identity, visual communication, and interface design that bring consistency to your digital presence.",
+    "canonical": "https://grosbyte.com/services/branding-design",
+    "robots": "",
+    "ogTitle": "Branding &amp; Design | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Branding & Design\",\"description\":\"Brand identity, visual communication, and interface design that bring consistency to your digital presence.\",\"url\":\"https://grosbyte.com/services/branding-design\",\"serviceType\":\"digital-marketing-branding\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\"},\"areaServed\":{\"@type\":\"Country\",\"name\":\"Nepal\"}}"
+    ]
+  },
+  "/services/seo": {
+    "title": "SEO | Grosbyte Technologies",
+    "desc": "Search engine optimisation covering technical foundations, on-page content, and search insights relevant to your business.",
+    "canonical": "https://grosbyte.com/services/seo",
+    "robots": "",
+    "ogTitle": "SEO | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"SEO\",\"description\":\"Search engine optimisation covering technical foundations, on-page content, and search insights relevant to your business.\",\"url\":\"https://grosbyte.com/services/seo\",\"serviceType\":\"digital-marketing-branding\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\"},\"areaServed\":{\"@type\":\"Country\",\"name\":\"Nepal\"}}"
+    ]
+  },
+  "/services/social-media-marketing": {
+    "title": "Social Media Marketing | Grosbyte Technologies",
+    "desc": "Social content, campaign planning, and performance review for the platforms your audience uses.",
+    "canonical": "https://grosbyte.com/services/social-media-marketing",
+    "robots": "",
+    "ogTitle": "Social Media Marketing | Grosbyte Technologies",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]",
+      "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Social Media Marketing\",\"description\":\"Social content, campaign planning, and performance review for the platforms your audience uses.\",\"url\":\"https://grosbyte.com/services/social-media-marketing\",\"serviceType\":\"digital-marketing-branding\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\"},\"areaServed\":{\"@type\":\"Country\",\"name\":\"Nepal\"}}"
+    ]
+  },
+  "/_not-found": {
+    "title": "Grosbyte Technologies | Software &amp; Website Development Nepal",
+    "desc": "Practical software, websites, web and mobile applications, automation, and digital marketing for your business. Discuss your project with Grosbyte Technologies in Nepal.",
+    "canonical": "",
+    "robots": "noindex",
+    "ogTitle": "Grosbyte Technologies | Software &amp; Website Development Nepal",
+    "jsonLd": [
+      "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://grosbyte.com/#organization\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"logo\":\"https://grosbyte.com/images/brand/logo.png\",\"description\":\"Practical software, websites, web and mobile applications, automation, and digital marketing for your business.\",\"email\":\"contact@grosbyte.com\",\"telephone\":\"+9779869793130\",\"sameAs\":[\"https://www.instagram.com/grosbyte.tech/\",\"https://www.facebook.com/profile.php?id=61591801983966\",\"https://www.linkedin.com/company/grosbyte-technologies\",\"https://github.com/grosbyte-tech\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://grosbyte.com/#website\",\"name\":\"Grosbyte Technologies\",\"url\":\"https://grosbyte.com\",\"publisher\":{\"@id\":\"https://grosbyte.com/#organization\"},\"inLanguage\":\"en-US\"}]"
+    ]
+  }
+}
