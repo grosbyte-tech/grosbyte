@@ -37,23 +37,49 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 | `npm run lint` | Run ESLint |
 | `npm run format` | Format code with Prettier |
 | `npm run format:check` | Check formatting |
-| `npm run test:contact` | Run contact API tests |
+| `npm test` | Run full automated test suite |
+| `npm run test:contact` | Run contact API endpoint tests |
+| `npm run test:seo` | Run SEO metadata and build artifact tests |
 
 ## Project Structure
 
 ```
 src/
-├── app/            # Next.js App Router pages and API routes
-├── components/     # React components (ui, layout, sections, etc.)
-├── contexts/       # React context providers (theme, language)
-├── lib/            # Shared utilities, types, and data
-└── locales/        # Translation JSON files
+├── app/            # Next.js App Router routes, layouts, and API endpoints
+├── components/     # Component-based presentation layer
+│   ├── about/      # About page sections
+│   ├── blogs/      # Blog listing and detail components
+│   ├── contact/    # Contact form and enquiry UI
+│   ├── effects/    # Text, animation, and decorative visual effects
+│   ├── home/       # Home page sections
+│   ├── layout/     # Header, navbar, mega-menu, and footer
+│   ├── motion/     # Scroll reveal and motion primitives
+│   ├── services/   # Service templates and section components
+│   └── ui/         # Primitives (button, heading, inputs)
+├── config/         # Static site and menu configurations
+├── contexts/       # Language context provider
+├── fonts/          # Local font files
+├── lib/            # Utilities, API handlers, and SEO schemas
+└── locales/        # Localized JSON dictionaries (en, de, ne, es)
 ```
 
 ## Environment Variables
 
-See [.env.example](.env.example) for required configuration.
+See [.env.example](.env.example) for required configuration:
+- `RESEND_API_KEY`: API key for contact email delivery
+- `EMAIL_FROM`: Sender address
+- `CONTACT_EMAIL`: Recipient inbox
+- `NEXT_PUBLIC_SITE_URL`: Canonical site origin (default: `https://grosbyte.com`)
+- `NEXT_PUBLIC_CDN_URL`: Optional asset CDN base URL
 
 ## Deployment
 
-The project uses `output: "standalone"` for containerized deployment. See the `Dockerfile` for the production build configuration.
+The project produces a standalone containerized artifact via `output: "standalone"`.
+
+```bash
+# Build production Docker container
+docker build -t grosbyte .
+
+# Run container
+docker run -p 3000:3000 -e RESEND_API_KEY=... -e EMAIL_FROM=... -e CONTACT_EMAIL=... grosbyte
+```
