@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
+import { arap007 } from "@/fonts";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/language-context";
 import { Navbar } from "@/components/layout/navbar";
@@ -72,7 +73,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${urbanist.variable} light`}
+      className={`${urbanist.variable} ${arap007.variable} light`}
       suppressHydrationWarning
     >
       {/* Extensions may inject body attributes such as cz-shortcut-listen before hydration. */}
