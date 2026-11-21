@@ -468,4 +468,3 @@ export function FoldingText({
   );
 }
 
-export { FoldingText as FoldingTitle };
