@@ -11,19 +11,13 @@ import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
 import { AnimatedCounter } from "@/components/motion/counter";
 import { Button } from "@/components/ui/button";
 import { services } from "@/config/site";
+import {
+  DEFAULT_HIGHLIGHT_WORDS,
+  HOME_STATISTICS,
+  SERVICE_KEYS as serviceKeys,
+  SERVICE_ROUTES as serviceRoutes,
+} from "@/config/statistics";
 import { useTranslation } from "@/contexts/language-context";
-
-const serviceKeys: Record<string, string> = {
-  "Custom Software Development": "customSoftware",
-  "Web, Mobile Application Development": "webMobileApp",
-  "Digital Marketing and Brand Growth": "digitalMarketing",
-};
-
-const serviceRoutes: Record<string, string> = {
-  "Custom Software Development": "/custom-software-development",
-  "Web, Mobile Application Development": "/web-mobile-applications",
-  "Digital Marketing and Brand Growth": "/digital-marketing",
-};
 
 function subscribeToMobile(callback: () => void) {
   const mql = window.matchMedia("(max-width: 767.98px)");
@@ -41,17 +35,14 @@ function getMobileServerSnapshot() {
 
 export function AboutSection() {
   const { t } = useTranslation();
-  const statistics = [
-    { value: "3", label: t("about.stats.services") },
-    { value: "7", label: t("about.stats.stages") },
-    { value: "18+", label: t("about.stats.technologies") },
-  ];
+  const statistics = HOME_STATISTICS.map((stat) => ({
+    value: stat.value,
+    label: t(stat.translationKey),
+  }));
 
-  const highlightWords = (t("about.highlightWords") as unknown as string[]) || [
-    "technology",
-    "partner",
-    "outcomes",
-  ];
+  const highlightWords =
+    (t("about.highlightWords") as unknown as string[]) ||
+    DEFAULT_HIGHLIGHT_WORDS;
 
   return (
     <section className="section about-section" id="about">

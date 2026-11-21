@@ -40,3 +40,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# visual regression artifacts
+tests/visual/baseline/
+tests/visual/current/
+tests/visual/diffs/

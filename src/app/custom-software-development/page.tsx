@@ -24,7 +24,7 @@ export default function CustomSoftwareDevelopmentPage() {
   if (!service) notFound();
 
   return (
-    <main className="cs-page" id="main-content">
+    <main className="cs-page page-custom-software" id="main-content">
       <JsonLd data={getServiceSchema(service)} />
       <CustomSoftwareContent />
     </main>

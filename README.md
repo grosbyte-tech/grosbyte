@@ -40,6 +40,9 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 | `npm test` | Run full automated test suite |
 | `npm run test:contact` | Run contact API endpoint tests |
 | `npm run test:seo` | Run SEO metadata and build artifact tests |
+| `npm run test:seo:snapshot` | Verify SEO metadata snapshot against locked baseline |
+| `npm run test:visual:current` | Capture full-page screenshots across 21 routes & 3 viewports |
+| `npm run test:visual:compare` | Run pixelmatch visual regression against baseline (<0.1% threshold) |
 
 ## Project Structure
 

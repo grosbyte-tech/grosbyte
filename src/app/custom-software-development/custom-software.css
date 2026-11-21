@@ -1,12 +1,12 @@
 /* Custom Software Development Page Styles */
-.cs-page {
+.page-custom-software.cs-page {
   width: 100%;
   overflow-x: hidden;
   background: var(--background, #f8fafc);
   color: var(--text-primary, #0f172a);
 }
 
-.cs-container {
+.page-custom-software .cs-container {
   width: 100%;
   max-width: 1280px;
   margin-inline: auto;
@@ -14,7 +14,7 @@
 }
 
 /* Eyebrows with Blue Bar */
-.cs-eyebrow {
+.page-custom-software .cs-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -26,7 +26,7 @@
   margin-bottom: 14px;
 }
 
-.cs-eyebrow::before {
+.page-custom-software .cs-eyebrow::before {
   content: "";
   display: inline-block;
   width: 26px;
@@ -35,7 +35,7 @@
   border-radius: 9999px;
 }
 
-.cs-gradient-text {
+.page-custom-software .cs-gradient-text {
   background: linear-gradient(135deg, #0966fa 0%, #00a8ff 55%, #00d2ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -46,7 +46,7 @@
 /* ========================================================
    1. HERO SECTION
    ======================================================== */
-.cs-hero-section {
+.page-custom-software .cs-hero-section {
   padding-top: clamp(100px, 11vw, 130px);
   padding-bottom: clamp(60px, 8vw, 100px);
   position: relative;
@@ -54,14 +54,14 @@
   background: #f1f5f9;
 }
 
-.cs-hero-grid {
+.page-custom-software .cs-hero-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: clamp(24px, 4vw, 48px);
   align-items: center;
 }
 
-.cs-hero-pill {
+.page-custom-software .cs-hero-pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -74,7 +74,7 @@
   margin-bottom: 20px;
 }
 
-.cs-hero-pill-dot {
+.page-custom-software .cs-hero-pill-dot {
   width: 7px;
   height: 7px;
   border-radius: 9999px;
@@ -82,7 +82,7 @@
   box-shadow: 0 0 6px rgba(9, 102, 250, 0.4);
 }
 
-.cs-hero-title {
+.page-custom-software .cs-hero-title {
   font-size: clamp(2.5rem, 5vw, 3.85rem);
   font-weight: 800;
   line-height: 1.1;
@@ -91,7 +91,7 @@
   margin-bottom: 20px;
 }
 
-.cs-hero-subtitle {
+.page-custom-software .cs-hero-subtitle {
   font-size: clamp(1.05rem, 1.8vw, 1.2rem);
   line-height: 1.6;
   color: var(--text-secondary, #475569);
@@ -99,14 +99,14 @@
   margin-bottom: 32px;
 }
 
-.cs-hero-actions {
+.page-custom-software .cs-hero-actions {
   display: flex;
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.cs-primary-btn {
+.page-custom-software .cs-primary-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -121,13 +121,13 @@
   transition: all 0.22s ease;
 }
 
-.cs-primary-btn:hover {
+.page-custom-software .cs-primary-btn:hover {
   background: #0856d6;
   transform: translateY(-2px);
   box-shadow: 0 12px 28px -4px rgba(9, 102, 250, 0.48);
 }
 
-.cs-secondary-link {
+.page-custom-software .cs-secondary-link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -140,13 +140,13 @@
   transition: all 0.2s ease;
 }
 
-.cs-secondary-link:hover {
+.page-custom-software .cs-secondary-link:hover {
   color: var(--brand-blue, #0966fa);
   text-decoration-color: var(--brand-blue, #0966fa);
 }
 
 /* Hero Laptop Visual */
-.cs-hero-media-wrap {
+.page-custom-software .cs-hero-media-wrap {
   position: relative;
   display: flex;
   align-items: center;
@@ -154,7 +154,7 @@
   width: 100%;
 }
 
-.cs-hero-bg-glow {
+.page-custom-software .cs-hero-bg-glow {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -173,7 +173,7 @@
   z-index: 0;
 }
 
-.cs-hero-img-box {
+.page-custom-software .cs-hero-img-box {
   position: relative;
   z-index: 10;
   width: 100%;
@@ -184,7 +184,7 @@
   justify-content: center;
 }
 
-.cs-hero-img {
+.page-custom-software .cs-hero-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -195,20 +195,20 @@
 }
 
 @media (min-width: 1024px) {
-  .cs-hero-img {
+  .page-custom-software .cs-hero-img {
     transform: scale(1.08);
     transform-origin: right center;
   }
 }
 
-.cs-laptop-container {
+.page-custom-software .cs-laptop-container {
   position: relative;
   z-index: 1;
   width: 100%;
   max-width: 520px;
 }
 
-.cs-floating-badge {
+.page-custom-software .cs-floating-badge {
   position: absolute;
   z-index: 3;
   display: flex;
@@ -223,26 +223,26 @@
   transition: transform 0.3s ease;
 }
 
-.cs-floating-badge:hover {
+.page-custom-software .cs-floating-badge:hover {
   transform: translateY(-3px);
 }
 
-.cs-badge-top-left {
+.page-custom-software .cs-badge-top-left {
   top: -16px;
   left: -20px;
 }
 
-.cs-badge-right {
+.page-custom-software .cs-badge-right {
   top: 50%;
   right: -24px;
   transform: translateY(-50%);
 }
 
-.cs-badge-right:hover {
+.page-custom-software .cs-badge-right:hover {
   transform: translateY(calc(-50% - 3px));
 }
 
-.cs-badge-icon {
+.page-custom-software .cs-badge-icon {
   width: 38px;
   height: 38px;
   border-radius: 10px;
@@ -254,7 +254,7 @@
   flex-shrink: 0;
 }
 
-.cs-badge-title {
+.page-custom-software .cs-badge-title {
   display: block;
   font-size: 0.92rem;
   font-weight: 700;
@@ -262,7 +262,7 @@
   line-height: 1.2;
 }
 
-.cs-badge-subtitle {
+.page-custom-software .cs-badge-subtitle {
   display: block;
   font-size: 0.76rem;
   color: var(--text-secondary, #64748b);
@@ -272,19 +272,19 @@
 /* ========================================================
    2. WHAT WE BUILD SECTION
    ======================================================== */
-.cs-build-section {
+.page-custom-software .cs-build-section {
   padding: clamp(60px, 8vw, 100px) 0;
   background: #f1f5f9;
 }
 
-.cs-build-grid {
+.page-custom-software .cs-build-grid {
   display: grid;
   grid-template-columns: 0.85fr 1.35fr;
   gap: clamp(32px, 6vw, 72px);
   align-items: flex-start;
 }
 
-.cs-section-heading {
+.page-custom-software .cs-section-heading {
   font-size: clamp(2rem, 3.6vw, 2.75rem);
   font-weight: 800;
   line-height: 1.15;
@@ -293,31 +293,31 @@
   margin-bottom: 16px;
 }
 
-.cs-section-subtitle {
+.page-custom-software .cs-section-subtitle {
   font-size: 1.05rem;
   line-height: 1.6;
   color: var(--text-secondary, #475569);
   max-width: 420px;
 }
 
-.cs-capabilities-grid {
+.page-custom-software .cs-capabilities-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px 24px;
 }
 
-.cs-capability-card {
+.page-custom-software .cs-capability-card {
   display: flex;
   flex-direction: column;
   gap: 8px;
   transition: transform 0.2s ease;
 }
 
-.cs-capability-card:hover {
+.page-custom-software .cs-capability-card:hover {
   transform: translateY(-2px);
 }
 
-.cs-capability-icon {
+.page-custom-software .cs-capability-icon {
   background: transparent;
   border: none;
   color: var(--brand-blue, #0966fa);
@@ -327,13 +327,13 @@
   margin-bottom: 8px;
 }
 
-.cs-capability-title {
+.page-custom-software .cs-capability-title {
   font-size: 1.02rem;
   font-weight: 700;
   color: var(--text-primary, #0f172a);
 }
 
-.cs-capability-desc {
+.page-custom-software .cs-capability-desc {
   font-size: 0.88rem;
   line-height: 1.5;
   color: var(--text-secondary, #64748b);
@@ -342,33 +342,33 @@
 /* ========================================================
    3. WHY CHOOSE US SECTION
    ======================================================== */
-.cs-why-section {
+.page-custom-software .cs-why-section {
   padding: clamp(60px, 8vw, 100px) 0;
   background: #ffffff;
 }
 
-.cs-why-grid {
+.page-custom-software .cs-why-grid {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   gap: clamp(32px, 6vw, 72px);
   align-items: center;
 }
 
-.cs-rocket-visual {
+.page-custom-software .cs-rocket-visual {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.cs-checklist {
+.page-custom-software .cs-checklist {
   display: flex;
   flex-direction: column;
   gap: 14px;
   margin-top: 28px;
 }
 
-.cs-checklist-item {
+.page-custom-software .cs-checklist-item {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -377,7 +377,7 @@
   color: var(--text-primary, #0f172a);
 }
 
-.cs-check-icon {
+.page-custom-software .cs-check-icon {
   width: 22px;
   height: 22px;
   border-radius: 9999px;
@@ -392,19 +392,19 @@
 /* ========================================================
    4. OUR TECH STACK SECTION
    ======================================================== */
-.cs-tech-section {
+.page-custom-software .cs-tech-section {
   padding: clamp(60px, 8vw, 100px) 0;
   background: #ffffff;
 }
 
-.cs-tech-grid-layout {
+.page-custom-software .cs-tech-grid-layout {
   display: grid;
   grid-template-columns: 0.95fr 1.35fr;
   gap: clamp(32px, 6vw, 72px);
   align-items: center;
 }
 
-.cs-tech-logos-row {
+.page-custom-software .cs-tech-logos-row {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -412,7 +412,7 @@
   flex-wrap: wrap;
 }
 
-.cs-tech-item {
+.page-custom-software .cs-tech-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -420,7 +420,7 @@
   min-width: 68px;
 }
 
-.cs-tech-icon-box {
+.page-custom-software .cs-tech-icon-box {
   width: 52px;
   height: 52px;
   display: flex;
@@ -429,24 +429,24 @@
   transition: transform 0.25s ease;
 }
 
-.cs-tech-item:hover .cs-tech-icon-box {
+.page-custom-software .cs-tech-item:hover .cs-tech-icon-box {
   transform: translateY(-4px) scale(1.08);
 }
 
-.cs-tech-name {
+.page-custom-software .cs-tech-name {
   font-size: 0.84rem;
   font-weight: 600;
   color: var(--text-secondary, #64748b);
 }
 
-.cs-tech-more {
+.page-custom-software .cs-tech-more {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 
-.cs-tech-more-dot {
+.page-custom-software .cs-tech-more-dot {
   width: 52px;
   height: 52px;
   border-radius: 9999px;
@@ -463,25 +463,25 @@
 /* ========================================================
    5. FAQ SECTION
    ======================================================== */
-.cs-faq-section {
+.page-custom-software .cs-faq-section {
   padding: clamp(60px, 8vw, 100px) 0;
   background: #f1f5f9;
 }
 
-.cs-faq-grid {
+.page-custom-software .cs-faq-grid {
   display: grid;
   grid-template-columns: 0.85fr 1.35fr;
   gap: clamp(32px, 6vw, 72px);
   align-items: flex-start;
 }
 
-.cs-faq-list {
+.page-custom-software .cs-faq-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.cs-faq-card {
+.page-custom-software .cs-faq-card {
   border-radius: 14px;
   background: var(--surface, #ffffff);
   border: 1px solid rgba(15, 23, 42, 0.08);
@@ -492,12 +492,12 @@
     box-shadow 0.2s ease;
 }
 
-.cs-faq-card[open] {
+.page-custom-software .cs-faq-card[open] {
   border-color: rgba(9, 102, 250, 0.3);
   box-shadow: 0 8px 24px -6px rgba(9, 102, 250, 0.08);
 }
 
-.cs-faq-summary {
+.page-custom-software .cs-faq-summary {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -511,11 +511,11 @@
   user-select: none;
 }
 
-.cs-faq-summary::-webkit-details-marker {
+.page-custom-software .cs-faq-summary::-webkit-details-marker {
   display: none;
 }
 
-.cs-faq-toggle {
+.page-custom-software .cs-faq-toggle {
   font-size: 1.3rem;
   font-weight: 400;
   color: var(--brand-blue, #0966fa);
@@ -523,11 +523,11 @@
   line-height: 1;
 }
 
-.cs-faq-card[open] .cs-faq-toggle {
+.page-custom-software .cs-faq-card[open] .cs-faq-toggle {
   transform: rotate(45deg);
 }
 
-.cs-faq-body {
+.page-custom-software .cs-faq-body {
   padding: 0 22px 18px;
   font-size: 0.94rem;
   line-height: 1.6;
@@ -537,12 +537,12 @@
 /* ========================================================
    6. CLOSING CTA BANNER
    ======================================================== */
-.cs-cta-section {
+.page-custom-software .cs-cta-section {
   padding: 40px 0 clamp(60px, 8vw, 100px);
   background: #f1f5f9;
 }
 
-.cs-cta-banner {
+.page-custom-software .cs-cta-banner {
   border-radius: 24px;
   background: linear-gradient(135deg, #0966fa 0%, #00a8ff 60%, #00d2ff 100%);
   padding: clamp(36px, 6vw, 54px) clamp(28px, 6vw, 56px);
@@ -554,7 +554,7 @@
   color: #ffffff;
 }
 
-.cs-cta-title {
+.page-custom-software .cs-cta-title {
   font-size: clamp(1.8rem, 3.2vw, 2.5rem);
   font-weight: 800;
   line-height: 1.2;
@@ -563,14 +563,14 @@
   margin-bottom: 8px;
 }
 
-.cs-cta-sub {
+.page-custom-software .cs-cta-sub {
   font-size: clamp(1rem, 1.6vw, 1.1rem);
   color: rgba(255, 255, 255, 0.92);
   max-width: 580px;
   margin: 0;
 }
 
-.cs-cta-btn {
+.page-custom-software .cs-cta-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -587,7 +587,7 @@
   transition: all 0.22s ease;
 }
 
-.cs-cta-btn:hover {
+.page-custom-software .cs-cta-btn:hover {
   background: #f8fafc;
   color: var(--brand-blue, #0966fa);
   transform: translateY(-2px);
@@ -598,25 +598,25 @@
    RESPONSIVE DESIGN
    ======================================================== */
 @media (max-width: 1024px) {
-  .cs-hero-grid,
-  .cs-build-grid,
-  .cs-why-grid,
-  .cs-tech-grid-layout,
-  .cs-faq-grid {
+  .page-custom-software .cs-hero-grid,
+  .page-custom-software .cs-build-grid,
+  .page-custom-software .cs-why-grid,
+  .page-custom-software .cs-tech-grid-layout,
+  .page-custom-software .cs-faq-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .cs-capabilities-grid {
+  .page-custom-software .cs-capabilities-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .cs-badge-top-left {
+  .page-custom-software .cs-badge-top-left {
     top: 0;
     left: 0;
   }
 
-  .cs-badge-right {
+  .page-custom-software .cs-badge-right {
     bottom: 0;
     top: auto;
     right: 0;
@@ -625,17 +625,17 @@
 }
 
 @media (max-width: 768px) {
-  .cs-capabilities-grid {
+  .page-custom-software .cs-capabilities-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .cs-cta-banner {
+  .page-custom-software .cs-cta-banner {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .cs-tech-logos-row {
+  .page-custom-software .cs-tech-logos-row {
     gap: 20px;
   }
 }
@@ -643,44 +643,44 @@
 /* ========================================================
    DARK MODE ADAPTATIONS
    ======================================================== */
-html:not(.light) .cs-page,
-html:not(.light) .cs-hero-section,
-html:not(.light) .cs-build-section,
-html:not(.light) .cs-faq-section,
-html:not(.light) .cs-cta-section {
+html:not(.light) .page-custom-software .cs-page,
+html:not(.light) .page-custom-software .cs-hero-section,
+html:not(.light) .page-custom-software .cs-build-section,
+html:not(.light) .page-custom-software .cs-faq-section,
+html:not(.light) .page-custom-software .cs-cta-section {
   background: #0b1120;
   color: #ffffff;
 }
 
-html:not(.light) .cs-hero-title,
-html:not(.light) .cs-section-heading,
-html:not(.light) .cs-capability-title,
-html:not(.light) .cs-checklist-item,
-html:not(.light) .cs-faq-summary,
-html:not(.light) .cs-secondary-link {
+html:not(.light) .page-custom-software .cs-hero-title,
+html:not(.light) .page-custom-software .cs-section-heading,
+html:not(.light) .page-custom-software .cs-capability-title,
+html:not(.light) .page-custom-software .cs-checklist-item,
+html:not(.light) .page-custom-software .cs-faq-summary,
+html:not(.light) .page-custom-software .cs-secondary-link {
   color: #ffffff;
 }
 
-html:not(.light) .cs-floating-badge {
+html:not(.light) .page-custom-software .cs-floating-badge {
   background: rgba(15, 23, 42, 0.92);
   border-color: rgba(255, 255, 255, 0.12);
   box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.5);
 }
 
-html:not(.light) .cs-badge-title {
+html:not(.light) .page-custom-software .cs-badge-title {
   color: #ffffff;
 }
 
-html:not(.light) .cs-faq-card {
+html:not(.light) .page-custom-software .cs-faq-card {
   background: rgba(255, 255, 255, 0.03);
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-html:not(.light) .cs-faq-card[open] {
+html:not(.light) .page-custom-software .cs-faq-card[open] {
   border-color: rgba(9, 102, 250, 0.5);
 }
 
-html:not(.light) .cs-why-section,
-html:not(.light) .cs-tech-section {
+html:not(.light) .page-custom-software .cs-why-section,
+html:not(.light) .page-custom-software .cs-tech-section {
   background: #0d1527;
 }

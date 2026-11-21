@@ -13,6 +13,7 @@ export interface ServerEnv {
 export interface ClientEnv {
   NEXT_PUBLIC_SITE_URL: string;
   NEXT_PUBLIC_CDN_URL?: string;
+  NEXT_PUBLIC_VIDEO_CDN_URL?: string;
 }
 
 export function validateContactServerEnv(): {
@@ -41,4 +42,5 @@ export const clientEnv: ClientEnv = {
   NEXT_PUBLIC_SITE_URL:
     process.env.NEXT_PUBLIC_SITE_URL || "https://grosbyte.com",
   NEXT_PUBLIC_CDN_URL: process.env.NEXT_PUBLIC_CDN_URL,
+  NEXT_PUBLIC_VIDEO_CDN_URL: process.env.NEXT_PUBLIC_VIDEO_CDN_URL,
 };

@@ -6,40 +6,13 @@ import { Reveal } from "@/components/motion/reveal";
 import { FoldingText } from "@/components/effects/folding-text";
 import { AnimatedParagraph } from "@/components/motion/animated-paragraph";
 
-type ProjectKey = "tailr" | "booksansar" | "dhune" | "sopdraft" | "setu";
-
-interface ProjectMeta {
-  key: ProjectKey;
-  image: string;
-}
-
-const projectsMap: Record<ProjectKey, ProjectMeta> = {
-  tailr: {
-    key: "tailr",
-    image: "/images/projects/tailr.png",
-  },
-  booksansar: {
-    key: "booksansar",
-    image: "/images/projects/booksansar.png",
-  },
-  dhune: {
-    key: "dhune",
-    image: "/images/projects/dhune.png",
-  },
-  sopdraft: {
-    key: "sopdraft",
-    image: "/images/projects/sopdraft.png",
-  },
-  setu: {
-    key: "setu",
-    image: "/images/projects/setu.png",
-  },
-};
-
-// 3 Staggered Columns with unique combinations
-const column1Keys: ProjectKey[] = ["tailr", "booksansar", "dhune"];
-const column2Keys: ProjectKey[] = ["dhune", "setu", "sopdraft", "tailr"];
-const column3Keys: ProjectKey[] = ["setu", "sopdraft", "booksansar"];
+import {
+  COLUMN1_KEYS as column1Keys,
+  COLUMN2_KEYS as column2Keys,
+  COLUMN3_KEYS as column3Keys,
+  PROJECTS_MAP as projectsMap,
+  type ProjectKey,
+} from "@/config/projects";
 
 function ProjectFlowCard({
   projectKey,
